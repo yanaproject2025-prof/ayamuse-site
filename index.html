@@ -2,18 +2,195 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Aya Muse World</title>
+  <meta name="description" content="Aya Muse World — a quiet portal into Aya Universe." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Montserrat:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body style="margin:0; font-family: Georgia, serif; background:#f8f5f1; color:#222;">
-  <div style="max-width:900px; margin:0 auto; padding:64px 20px;">
-    <h1 style="font-style:italic; letter-spacing:0.04em;">Aya</h1>
-    <p style="font-size:18px; line-height:1.6;">
-      Aya Muse World is coming alive. ✨
-    </p>
-    <p style="opacity:.7;">
-      Domain: ayamuse.com
-    </p>
-  </div>
+
+<body>
+  <header class="header" role="banner">
+    <div class="header__inner">
+      <a class="brand" href="#cover" aria-label="Aya — Home">
+        <span class="brand__logo">Aya</span>
+      </a>
+
+      <nav class="nav nav--desktop" aria-label="Primary">
+        <a href="#letter">Letter</a>
+        <a href="#news">News</a>
+        <a href="#future">Future</a>
+        <a href="#collections">Collections</a>
+        <a href="#collaborations">Collaborations</a>
+        <a href="#support">Support</a>
+      </nav>
+
+      <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="drawer" hidden>
+      <nav class="nav nav--mobile" aria-label="Mobile">
+        <a href="#letter">Letter</a>
+        <a href="#news">News</a>
+        <a href="#future">Future</a>
+        <a href="#collections">Collections</a>
+        <a href="#collaborations">Collaborations</a>
+        <a href="#support">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="cover" class="section section--cover" aria-label="Aya cover">
+      <div class="cover">
+        <!-- Пока ставим просто фото. Видео добавим позже -->
+        <img class="cover__media" src="assets/images/cover.jpg" alt="Aya — cover" />
+        <div class="cover__overlay">
+          <h1 class="cover__title">Aya</h1>
+          <p class="cover__tagline">A quiet portal into Aya Universe.</p>
+
+          <div class="cover__cta">
+            <a class="btn" href="#collections">Explore Collections</a>
+            <a class="btn btn--ghost" href="#support">Support Aya</a>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-hint" aria-hidden="true">Scroll</div>
+    </section>
+
+    <section id="letter" class="section">
+      <div class="container">
+        <header class="section__header">
+          <h2>Letter from Aya</h2>
+          <p class="section__sub">A note, softly.</p>
+        </header>
+
+        <article class="prose">
+          <p>
+            Welcome to Aya Muse World — a place where beauty speaks quietly, and meaning arrives without noise.
+            This is not a magazine. It is a cover, an entrance, and a promise: you are not alone.
+          </p>
+          <p class="signature">— Aya</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="news" class="section">
+      <div class="container">
+        <header class="section__header">
+          <h2>News</h2>
+          <p class="section__sub">Updates from the Universe.</p>
+        </header>
+
+        <div class="cards">
+          <article class="card">
+            <p class="card__date">Dec 30, 2025</p>
+            <h3 class="card__title">Aya Muse World is live.</h3>
+            <p class="card__text">A soft beginning. New collections and stories are coming soon.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="future" class="section">
+      <div class="container">
+        <header class="section__header">
+          <h2>Future</h2>
+          <p class="section__sub">Coming soon.</p>
+        </header>
+
+        <div class="cards cards--two">
+          <article class="card">
+            <h3 class="card__title">Aya App</h3>
+            <p class="card__text">Emotional compass, gentle rituals, and a safe space — in your pocket.</p>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">Aya Palace</h3>
+            <p class="card__text">A dream of a real-world sanctuary. Details will unfold when the time is right.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="collections" class="section">
+      <div class="container">
+        <header class="section__header">
+          <h2>Collections</h2>
+          <p class="section__sub">Curated pieces — minimal, cinematic, made to keep.</p>
+        </header>
+
+        <div class="cards cards--three">
+          <article class="card">
+            <h3 class="card__title">Quiet Luxury Gifts Aesthetic</h3>
+            <p class="card__text">7 loops — calm, premium, softly hypnotic.</p>
+            <a class="btn btn--small" href="https://gumroad.com/" target="_blank" rel="noopener">Open on Gumroad</a>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">Aya Lunar Journal 2026</h3>
+            <p class="card__text">The Year of Inner Bloom — lunar months, rituals, wallpapers.</p>
+            <a class="btn btn--small" href="https://gumroad.com/" target="_blank" rel="noopener">Open on Gumroad</a>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">Vintage Glam Loops</h3>
+            <p class="card__text">90s Vogue mood — warm light, timeless film feel.</p>
+            <a class="btn btn--small" href="https://gumroad.com/" target="_blank" rel="noopener">Open on Gumroad</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="collaborations" class="section">
+      <div class="container">
+        <header class="section__header">
+          <h2>Collaborations</h2>
+          <p class="section__sub">For brands, editors, and creators.</p>
+        </header>
+
+        <article class="prose">
+          <p>If you feel the Universe aligns, write us.</p>
+          <a class="btn" href="mailto:YANAproject2025@gmail.com">Contact</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="support" class="section">
+      <div class="container">
+        <header class="section__header">
+          <h2>Support Aya</h2>
+          <p class="section__sub">A soft way to keep this world alive.</p>
+        </header>
+
+        <article class="prose">
+          <p>Support the project through donations or by sharing Aya Muse World.</p>
+          <a class="btn" href="mailto:YANAproject2025@gmail.com">Write a note</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div>
+        <p class="footer__brand">Aya Muse World</p>
+        <p class="footer__small">We observe numbers, not people.</p>
+      </div>
+
+      <div class="footer__right">
+        <a href="privacy.html">Privacy</a>
+        <a href="mailto:YANAproject2025@gmail.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

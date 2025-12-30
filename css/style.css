@@ -253,3 +253,21 @@ a:hover{ text-decoration:underline; }
   .cover__tagline{ font-size:16px; }
   .cards--two, .cards--three{ grid-template-columns:1fr; }
 }
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.brand__image{
+  height:38px;
+  width:auto;
+  display:block;
+}
+
+.brand__text{
+  font-family:var(--font-head);
+  font-style:italic;
+  font-size:22px;
+  letter-spacing:0.4px;
+}

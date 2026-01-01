@@ -42,21 +42,21 @@ a:hover{ text-decoration:underline; }
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:14px 24px;
+  padding:18px 28px;
   gap:16px;
 }
 
-/* BRAND — EXACT LIKE FILE 1 */
+/* BRAND (эталон из фото №1) */
 .brand{
   display:flex;
   align-items:center;
-  gap:10px;
+  gap:12px;
   white-space:nowrap;
   text-decoration:none;
 }
 
 .brand__image{
-  height:38px;
+  height:40px;
   width:auto;
   display:block;
 }
@@ -65,17 +65,17 @@ a:hover{ text-decoration:underline; }
   font-family:var(--font-head);
   font-style:italic;
   font-weight:400;
-  font-size:22px;
-  letter-spacing:0.3px;
+  font-size:26px;        /* как в эталоне */
+  letter-spacing:0.4px;  /* лёгкая утончённость */
   line-height:1;
   color:var(--text);
-  transform:translateY(-1px);
+  transform:translateY(-2px);
 }
 
 /* Desktop nav */
 .nav--desktop{
   display:flex;
-  gap:18px;
+  gap:22px;
   font-family:var(--font-ui);
   font-size:12px;
   letter-spacing:0.16em;
@@ -151,10 +151,6 @@ a:hover{ text-decoration:underline; }
   height:100%;
   object-fit:cover;
 }
-
-/* Vogue cover = no text */
-.cover__overlay{ display:none; }
-.scroll-hint{ display:none; }
 
 /* Buttons */
 .btn{
@@ -257,6 +253,9 @@ a:hover{ text-decoration:underline; }
   .cards--two,
   .cards--three{ grid-template-columns:1fr; }
 
-  .brand__image{ height:34px; }
-  .brand__line{ font-size:20px; }
+  .brand__image{ height:36px; }
+  .brand__line{
+    font-size:22px;
+    transform:translateY(-1px);
+  }
 }

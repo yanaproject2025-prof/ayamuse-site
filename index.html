@@ -1,20 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aya - YouAreNotAlone</title>
 
-  <title>Aya Muse World</title>
-  <meta name="description" content="Aya — You Are Not Alone." />
-
-  <link rel="icon" type="image/png" href="/favicon.png">
-
-  <!-- Fonts -->
+  <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Montserrat:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css" />
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -23,9 +20,10 @@
   <header class="header" role="banner">
     <div class="header__inner">
 
-      <!-- BRAND -->
+      <!-- BRAND (logo + Aya - YouAreNotAlone) -->
       <a class="brand" href="#cover" aria-label="Aya - YouAreNotAlone">
-        <span class="brand__name">Aya - YouAreNotAlone</span>
+        <img src="assets/images/logo-aya.png" alt="Aya logo" class="brand__image">
+        <span class="brand__line">Aya - YouAreNotAlone</span>
       </a>
 
       <!-- DESKTOP NAV -->
@@ -62,183 +60,96 @@
     </div>
   </header>
 
-  <main>
+  <!-- COVER SECTION -->
+  <section class="section section--cover" id="cover">
+    <div class="cover">
+      <img src="assets/images/cover.jpg" alt="Cover image" class="cover__media">
+    </div>
+  </section>
 
-    <!-- HERO / COVER -->
-    <section id="cover" class="section section--cover" aria-label="Aya cover">
-      <div class="cover">
-        <img
-          src="assets/images/cover.jpg"
-          alt="Aya — a quiet presence"
-          class="cover__media"
-        />
+  <!-- LETTER -->
+  <section class="section" id="letter">
+    <div class="container">
+      <div class="section__header">
+        <h2>Letter</h2>
       </div>
-    </section>
-
-    <!-- PAUSE / MANIFEST LINE -->
-    <section class="section section--pause" aria-label="Manifest line">
-      <div class="container container--narrow">
-        <p class="manifest">
-          Healing through style.
-        </p>
+      <div class="prose">
+        <p>Content…</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- LETTER -->
-    <section id="letter" class="section">
-      <div class="container">
-        <header class="section__header">
-          <h2>Letter from Aya</h2>
-          <p class="section__sub">A quiet note.</p>
-        </header>
-
-        <article class="prose">
-          <p>
-            This is not a magazine, not a marketplace, not a place to rush.
-            Aya exists as a presence — a reminder that softness can be strong,
-            and beauty can be a form of shelter.
-          </p>
-          <p>
-            If you are here, you are already part of this world.
-          </p>
-          <p class="signature">— Aya</p>
+  <!-- NEWS -->
+  <section class="section" id="news">
+    <div class="container">
+      <div class="section__header">
+        <h2>News</h2>
+      </div>
+      <div class="cards cards--two">
+        <article class="card">
+          <p class="card__date">2024</p>
+          <h3 class="card__title">Title</h3>
+          <p class="card__text">Text…</p>
         </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- NEWS -->
-    <section id="news" class="section">
-      <div class="container">
-        <header class="section__header">
-          <h2>News</h2>
-          <p class="section__sub">From within the Universe.</p>
-        </header>
-
-        <div class="cards">
-          <article class="card">
-            <p class="card__date">December 2025</p>
-            <h3 class="card__title">Aya quietly opens.</h3>
-            <p class="card__text">
-              This is the beginning. Stories, collections, and new forms will appear in time.
-            </p>
-          </article>
-        </div>
+  <!-- FUTURE -->
+  <section class="section" id="future">
+    <div class="container">
+      <div class="section__header">
+        <h2>Future</h2>
       </div>
-    </section>
+      <p class="prose">Content…</p>
+    </div>
+  </section>
 
-    <!-- FUTURE -->
-    <section id="future" class="section">
-      <div class="container">
-        <header class="section__header">
-          <h2>Future</h2>
-          <p class="section__sub">Not rushed.</p>
-        </header>
-
-        <div class="cards cards--two">
-          <article class="card">
-            <h3 class="card__title">Aya App</h3>
-            <p class="card__text">
-              A gentle companion — rituals, reflection, emotional navigation.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3 class="card__title">Aya Palace</h3>
-            <p class="card__text">
-              A real place, imagined slowly. A sanctuary, when the time is right.
-            </p>
-          </article>
-        </div>
+  <!-- COLLECTIONS -->
+  <section class="section" id="collections">
+    <div class="container">
+      <div class="section__header">
+        <h2>Collections</h2>
       </div>
-    </section>
-
-    <!-- COLLECTIONS -->
-    <section id="collections" class="section">
-      <div class="container">
-        <header class="section__header">
-          <h2>Collections</h2>
-          <p class="section__sub">Curated with intention.</p>
-        </header>
-
-        <div class="cards cards--three">
-          <article class="card">
-            <h3 class="card__title">Quiet Luxury Gifts</h3>
-            <p class="card__text">Loops and visuals made to stay.</p>
-            <a class="btn btn--small" href="https://gumroad.com/" target="_blank" rel="noopener">
-              Open on Gumroad
-            </a>
-          </article>
-
-          <article class="card">
-            <h3 class="card__title">Aya Lunar Journal 2026</h3>
-            <p class="card__text">The Year of Inner Bloom.</p>
-            <a class="btn btn--small" href="https://gumroad.com/" target="_blank" rel="noopener">
-              Open on Gumroad
-            </a>
-          </article>
-
-          <article class="card">
-            <h3 class="card__title">Vintage Glam</h3>
-            <p class="card__text">A 90s echo, softened.</p>
-            <a class="btn btn--small" href="https://gumroad.com/" target="_blank" rel="noopener">
-              Open on Gumroad
-            </a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- COLLABORATIONS -->
-    <section id="collaborations" class="section">
-      <div class="container">
-        <header class="section__header">
-          <h2>Collaborations</h2>
-          <p class="section__sub">When values align.</p>
-        </header>
-
-        <article class="prose">
-          <p>
-            Aya collaborates with those who understand silence, aesthetics, and care.
-          </p>
-          <a class="btn" href="mailto:YANAproject2025@gmail.com">Write to us</a>
+      <div class="cards cards--three">
+        <article class="card">
+          <h3 class="card__title">Collection</h3>
+          <p class="card__text">Details…</p>
         </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- SUPPORT -->
-    <section id="support" class="section">
-      <div class="container">
-        <header class="section__header">
-          <h2>Support Aya</h2>
-          <p class="section__sub">A gentle form of care.</p>
-        </header>
-
-        <article class="prose">
-          <p>
-            Supporting Aya means allowing this world to remain quiet, independent, and human.
-          </p>
-          <a class="btn" href="mailto:YANAproject2025@gmail.com">Leave a note</a>
-        </article>
+  <!-- COLLABORATIONS -->
+  <section class="section" id="collaborations">
+    <div class="container">
+      <div class="section__header">
+        <h2>Collaborations</h2>
       </div>
-    </section>
+      <p class="prose">Content…</p>
+    </div>
+  </section>
 
-  </main>
+  <!-- SUPPORT -->
+  <section class="section" id="support">
+    <div class="container">
+      <div class="section__header">
+        <h2>Support</h2>
+      </div>
+      <p class="prose">Content…</p>
+    </div>
+  </section>
 
   <!-- FOOTER -->
-  <footer class="footer" role="contentinfo">
+  <footer class="footer">
     <div class="container footer__inner">
-      <div>
-        <p class="footer__brand">Aya Muse World</p>
-        <p class="footer__small">We observe numbers, not people.</p>
-      </div>
-
+      <div>Aya - YouAreNotAlone</div>
       <div class="footer__right">
-        <a href="privacy.html">Privacy</a>
-        <a href="mailto:YANAproject2025@gmail.com">Contact</a>
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
 </body>
 </html>

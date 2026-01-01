@@ -28,6 +28,7 @@ a:hover{ text-decoration:underline; }
   margin:0 auto;
 }
 
+/* HEADER */
 .header{
   position:sticky;
   top:0;
@@ -45,14 +46,19 @@ a:hover{ text-decoration:underline; }
   gap:16px;
 }
 
-/* BRAND — EXACT: "Aya - YouAreNotAlone" */
+/* BRAND — EXACT LIKE FILE 1 */
 .brand{
   display:flex;
   align-items:center;
+  gap:10px;
   white-space:nowrap;
   text-decoration:none;
-  flex:0 0 auto;
-  margin-right:32px; /* воздух между брендом и меню как в эталоне */
+}
+
+.brand__image{
+  height:38px;
+  width:auto;
+  display:block;
 }
 
 .brand__line{
@@ -61,10 +67,9 @@ a:hover{ text-decoration:underline; }
   font-weight:400;
   font-size:22px;
   letter-spacing:0.3px;
-  line-height:1;               /* фикс, чтобы не плывало */
+  line-height:1;
   color:var(--text);
-  display:block;
-  transform:translateY(-1px);  /* микро-подгонка baseline */
+  transform:translateY(-1px);
 }
 
 /* Desktop nav */
@@ -75,9 +80,9 @@ a:hover{ text-decoration:underline; }
   font-size:12px;
   letter-spacing:0.16em;
   text-transform:uppercase;
-  margin-left:auto; /* меню всегда уходит вправо */
 }
 
+/* Burger */
 .burger{
   display:none;
   border:0;
@@ -147,11 +152,11 @@ a:hover{ text-decoration:underline; }
   object-fit:cover;
 }
 
-/* IMPORTANT: remove hero text/buttons/scroll hint per Vogue-style cover */
+/* Vogue cover = no text */
 .cover__overlay{ display:none; }
 .scroll-hint{ display:none; }
 
-/* Buttons (kept for other sections) */
+/* Buttons */
 .btn{
   display:inline-flex;
   align-items:center;
@@ -220,7 +225,7 @@ a:hover{ text-decoration:underline; }
   opacity:0.9;
 }
 
-/* Footer */
+/* FOOTER */
 .footer{
   border-top:1px solid rgba(34,34,34,0.08);
   padding:26px 0;
@@ -241,7 +246,7 @@ a:hover{ text-decoration:underline; }
   text-transform:uppercase;
 }
 
-/* Responsive */
+/* Mobile */
 @media (max-width: 768px){
   .nav--desktop{ display:none; }
   .burger{ display:block; }
@@ -249,11 +254,9 @@ a:hover{ text-decoration:underline; }
   .section{ padding:64px 0; }
   .section__header h2{ font-size:34px; }
 
-  .cards--two, .cards--three{ grid-template-columns:1fr; }
+  .cards--two,
+  .cards--three{ grid-template-columns:1fr; }
 
-  .brand{ margin-right:0; }
-  .brand__line{
-    font-size:20px;
-    transform:translateY(-1px);
-  }
+  .brand__image{ height:34px; }
+  .brand__line{ font-size:20px; }
 }

@@ -7,7 +7,6 @@
   <meta name="description" content="Aya Muse World — a quiet portal into Aya Universe." />
   <link rel="icon" type="image/png" href="/favicon.png">
 
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Montserrat:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -18,10 +17,13 @@
 <body>
   <header class="header" role="banner">
     <div class="header__inner">
-      <!-- LOGO + SITE NAME -->
-      <a class="brand" href="#cover" aria-label="Aya - YouAreNotAlone — Home">
+      <!-- LOGO + COMPANY NAME + SLOGAN -->
+      <a class="brand" href="#cover" aria-label="Aya Muse World — Home">
         <img src="assets/images/logo-aya.png" alt="Aya logo" class="brand__image">
-        <span class="brand__text">Aya - YouAreNotAlone</span>
+        <span class="brand__stack">
+          <span class="brand__text">Aya Muse World</span>
+          <span class="brand__tagline">Aya — YouAreNotAlone</span>
+        </span>
       </a>
 
       <nav class="nav nav--desktop" aria-label="Primary">
@@ -51,21 +53,11 @@
   </header>
 
   <main>
+    <!-- COVER: only image (no title, no buttons, no scroll) -->
     <section id="cover" class="section section--cover" aria-label="Aya cover">
       <div class="cover">
-        <!-- Cover image -->
         <img class="cover__media" src="assets/images/cover.jpg" alt="Aya — cover" />
-        <div class="cover__overlay">
-          <h1 class="cover__title">Aya</h1>
-          <p class="cover__tagline">A quiet portal into Aya Universe.</p>
-
-          <div class="cover__cta">
-            <a class="btn" href="#collections">Explore Collections</a>
-            <a class="btn btn--ghost" href="#support">Support Aya</a>
-          </div>
-        </div>
       </div>
-      <div class="scroll-hint" aria-hidden="true">Scroll</div>
     </section>
 
     <section id="letter" class="section">

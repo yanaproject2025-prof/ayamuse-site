@@ -42,7 +42,7 @@ a:hover{ text-decoration:underline; }
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:18px 28px;
+  padding:8px 28px;
   gap:16px;
 }
 

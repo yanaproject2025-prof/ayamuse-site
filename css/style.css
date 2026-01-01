@@ -45,44 +45,26 @@ a:hover{ text-decoration:underline; }
   gap:16px;
 }
 
-/* Brand (logo + title + tagline) */
+/* BRAND — EXACT: "Aya - YouAreNotAlone" */
 .brand{
   display:flex;
   align-items:center;
-  gap:10px;
+  white-space:nowrap;
+  text-decoration:none;
+  flex:0 0 auto;
+  margin-right:32px; /* воздух между брендом и меню как в эталоне */
 }
 
-.brand__image{
-  height:38px;
-  width:auto;
-  display:block;
-}
-
-.brand__stack{
-  display:flex;
-  flex-direction:column;
-  line-height:1.1;
-}
-
-.brand__text{
-  font-family:var(--font-head);
-  font-style:italic;
-  font-size:22px;
-  letter-spacing:0.3px;
-  color:var(--text);
-}
-
-/* Tagline: Aya — YouAreNotAlone (use em dash — in HTML) */
-.brand__tagline{
+.brand__line{
   font-family:var(--font-head);
   font-style:italic;
   font-weight:400;
-  font-size:14px;
-  letter-spacing:0.04em;
-  text-transform:none;
-  opacity:0.65;
-  margin-top:4px;
+  font-size:22px;
+  letter-spacing:0.3px;
+  line-height:1;               /* фикс, чтобы не плывало */
   color:var(--text);
+  display:block;
+  transform:translateY(-1px);  /* микро-подгонка baseline */
 }
 
 /* Desktop nav */
@@ -93,6 +75,7 @@ a:hover{ text-decoration:underline; }
   font-size:12px;
   letter-spacing:0.16em;
   text-transform:uppercase;
+  margin-left:auto; /* меню всегда уходит вправо */
 }
 
 .burger{
@@ -164,7 +147,7 @@ a:hover{ text-decoration:underline; }
   object-fit:cover;
 }
 
-/* IMPORTANT: we remove hero text/buttons/scroll hint per Vogue-style cover */
+/* IMPORTANT: remove hero text/buttons/scroll hint per Vogue-style cover */
 .cover__overlay{ display:none; }
 .scroll-hint{ display:none; }
 
@@ -268,14 +251,9 @@ a:hover{ text-decoration:underline; }
 
   .cards--two, .cards--three{ grid-template-columns:1fr; }
 
-  .brand__image{ height:34px; }
-  .brand__text{ font-size:20px; }
-  .brand__tagline{
-    font-family:var(--font-head);
-    font-style:italic;
-    font-size:12px;
-    letter-spacing:0.03em;
-    text-transform:none;
-    opacity:0.6;
+  .brand{ margin-right:0; }
+  .brand__line{
+    font-size:20px;
+    transform:translateY(-1px);
   }
 }

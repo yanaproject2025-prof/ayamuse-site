@@ -65,7 +65,7 @@ a:hover{ text-decoration:underline; }
   font-family:var(--font-head);
   font-style:italic;
   font-weight:400;
-  font-size:26px;        /* как в эталоне */
+  font-size:18px;        /* как в эталоне */
   letter-spacing:0.4px;  /* лёгкая утончённость */
   line-height:1;
   color:var(--text);

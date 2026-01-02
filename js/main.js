@@ -27,3 +27,24 @@
     if (e.key === 'Escape') closeDrawer();
   });
 })();
+
+/* ----------------------------------
+   МОДУЛЬНАЯ ПОДГРУЗКА РАЗДЕЛОВ
+---------------------------------- */
+
+async function loadSection(id, url) {
+  try {
+    const container = document.getElementById(id);
+    if (!container) return;
+
+    const response = await fetch(url);
+    const html = await response.text();
+
+    container.innerHTML = html;
+  } catch (error) {
+    console.error("Error loading section:", id, error);
+  }
+}
+
+/* Загружаем модуль Letter */
+loadSection("letter", "modules/letter/letter.html");

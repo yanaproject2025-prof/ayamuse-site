@@ -272,40 +272,48 @@ a:hover{ text-decoration:underline; }
   border-radius: 0;
 }
 
-.letter__header{
-  display: flex;
-  align-items: flex-start;
-  gap: 32px;
-  margin-bottom: 48px;
-  max-width: 480px;
-  margin-left: auto;
-  margin-right: auto;
+/* ------------------------------ */
+/* HERO LETTER (НОВЫЙ БЛОК)       */
+/* ------------------------------ */
+
+.letter__hero{
+  width: 100%;
+  margin: 0 auto 60px auto;
+  overflow: hidden;
 }
 
-.letter__image{
-  width: 360px;
-  height: 480px;
-  border-radius: 12px;
+.letter__hero-image{
+  width: 100%;
+  height: auto;
   display: block;
   object-fit: cover;
 }
 
+/* ------------------------------ */
+/* TITLES                         */
+/* ------------------------------ */
+
 .letter__title{
   font-family: var(--font-head);
   font-size: 46px;
-  margin: 0;
+  margin: 0 0 6px 0;
+  text-align: center;
 }
 
 .letter__subtitle{
-  margin: 6px 0 0;
+  margin: 6px 0 60px 0;
   font-family: var(--font-ui);
   font-size: 12px;
   letter-spacing: .18em;
   text-transform: uppercase;
   opacity: .7;
+  text-align: center;
 }
 
-/* PINNED LETTER */
+/* ------------------------------ */
+/* PINNED LETTER                  */
+/* ------------------------------ */
+
 .letter__pinned{
   padding: 32px;
   border: 1px solid rgba(34,34,34,0.12);
@@ -329,7 +337,10 @@ a:hover{ text-decoration:underline; }
   margin-bottom: 14px;
 }
 
-/* LIST OF LETTERS + DIARY */
+/* ------------------------------ */
+/* LIST OF LETTERS + DIARY       */
+/* ------------------------------ */
+
 .letter__list{
   display: flex;
   flex-direction: column;
@@ -366,26 +377,18 @@ a:hover{ text-decoration:underline; }
   margin-top: 8px;
 }
 
-/* MOBILE */
+/* ------------------------------ */
+/* MOBILE VERSION                 */
+/* ------------------------------ */
+
 @media (max-width: 768px){
-  .letter_hero{
+
+  .letter{
+    margin: 0 auto 40px auto;
+  }
+
+  .letter__hero{
     margin-bottom: 40px;
-  }
-
-  .letter__header{
-    flex-direction: column;
-    gap: 18px;
-    align-items: center;
-    text-align: center;
-  }
-
-  .letter__image{
-    width: 120px;
-    height: auto;
-    border-radius: 14px;
-    object-fit: cover;
-    margin: 0 auto;
-    display: block;
   }
 
   .letter__title{

@@ -280,8 +280,9 @@ a:hover{ text-decoration:underline; }
 }
 
 .letter__image{
-  width: 100%;
+  width: 140px;
   height: auto;
+  border-radius: 12px;
   display: block;
   object-fit: cover;
 }

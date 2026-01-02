@@ -265,9 +265,11 @@ a:hover{ text-decoration:underline; }
 /* ------------------------------ */
 
 .letter{
+  width: 100%;
   max-width: 820px;
-  margin: 0 auto;
-  padding: 84px 0;
+  margin: 0 auto 60px auto;
+  overflow: hidden;
+  border-radius: 0;
 }
 
 .letter__header{
@@ -278,9 +280,9 @@ a:hover{ text-decoration:underline; }
 }
 
 .letter__image{
-  width: 140px;
+  width: 100%;
   height: auto;
-  border-radius: 12px;
+  display: block;
   object-fit: cover;
 }
 
@@ -362,8 +364,8 @@ a:hover{ text-decoration:underline; }
 
 /* MOBILE */
 @media (max-width: 768px){
-  .letter{
-    padding: 64px 0;
+  .letter_hero{
+    margin-bottom: 40px;
   }
 
   .letter__header{

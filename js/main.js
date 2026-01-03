@@ -46,5 +46,3 @@ async function loadSection(id, url) {
   }
 }
 
-/* Загружаем модуль Letter */
-loadSection("letter", "modules/letter/letter.html");

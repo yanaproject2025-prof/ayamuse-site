@@ -46,7 +46,7 @@ a:hover{ text-decoration:underline; }
   gap:16px;
 }
 
-/* BRAND (эталон из фото №1) */
+/* BRAND */
 .brand{
   display:flex;
   align-items:center;
@@ -65,8 +65,8 @@ a:hover{ text-decoration:underline; }
   font-family:var(--font-head);
   font-style:italic;
   font-weight:400;
-  font-size:18px;        /* как в эталоне */
-  letter-spacing:0.4px;  /* лёгкая утончённость */
+  font-size:18px;
+  letter-spacing:0.4px;
   line-height:1;
   color:var(--text);
   transform:translateY(-2px);
@@ -118,23 +118,6 @@ a:hover{ text-decoration:underline; }
 /* Sections */
 .section{ padding:84px 0; }
 
-.section__header h2{
-  margin:0;
-  font-family:var(--font-head);
-  font-size:46px;
-  letter-spacing:0.2px;
-  font-weight:700;
-}
-
-.section__sub{
-  margin:10px 0 0;
-  font-family:var(--font-ui);
-  font-size:12px;
-  letter-spacing:0.18em;
-  text-transform:uppercase;
-  opacity:0.75;
-}
-
 /* Cover */
 .section--cover{ padding:0; }
 
@@ -152,73 +135,71 @@ a:hover{ text-decoration:underline; }
   object-fit:cover;
 }
 
-/* Buttons */
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:12px 18px;
-  border-radius:999px;
-  border:1px solid rgba(34,34,34,0.22);
+/* ============================== */
+/* SECTION DIVIDERS (FIXED)       */
+/* ============================== */
+
+.section-divider{
+  width:100%;
+  border-top:1px solid rgba(0,0,0,0.07);
+  border-bottom:1px solid rgba(0,0,0,0.07);
+  padding:10px 0;
+  margin:80px 0 40px 0;
+  text-align:center;
+}
+
+.section-divider span{
   font-family:var(--font-ui);
   font-size:12px;
-  letter-spacing:0.16em;
+  letter-spacing:.18em;
   text-transform:uppercase;
-  background:rgba(34,34,34,0.06);
+  opacity:.7;
 }
-.btn:hover{ text-decoration:none; }
-.btn--ghost{ background:transparent; }
-.btn--small{ padding:10px 14px; }
+
+/* Cards grid */
+.grid--2{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:40px;
+}
+
+/* Cards */
+.card{
+  padding:24px;
+  border:1px solid rgba(34,34,34,0.10);
+  background:rgba(255,255,255,0.5);
+  border-radius:var(--radius);
+}
+
+.card__title{
+  font-family:var(--font-head);
+  font-size:26px;
+  margin:0 0 10px;
+}
+
+.card__text{
+  font-family:var(--font-ui);
+  font-size:15px;
+  opacity:.85;
+  line-height:1.6;
+  margin-bottom:16px;
+}
+
+.card__link{
+  font-family:var(--font-ui);
+  font-size:13px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#222;
+  opacity:.7;
+  text-decoration:none;
+}
 
 /* Prose */
 .prose{
   margin-top:26px;
   max-width:820px;
   font-size:18px;
-}
-
-.signature{
-  margin-top:18px;
-  font-family:var(--font-head);
-  font-style:italic;
-  font-size:22px;
-}
-
-/* Cards */
-.cards{
-  margin-top:28px;
-  display:grid;
-  grid-template-columns:1fr;
-  gap:16px;
-}
-.cards--two{ grid-template-columns:repeat(2, 1fr); }
-.cards--three{ grid-template-columns:repeat(3, 1fr); }
-
-.card{
-  border:1px solid rgba(34,34,34,0.10);
-  border-radius:var(--radius);
-  padding:18px 18px 16px;
-  background:rgba(255,255,255,0.18);
-}
-
-.card__date{
-  margin:0 0 8px;
-  font-family:var(--font-ui);
-  font-size:11px;
-  letter-spacing:0.16em;
-  text-transform:uppercase;
-  opacity:0.7;
-}
-
-.card__title{
-  margin:0;
-  font-family:var(--font-head);
-  font-size:24px;
-}
-
-.card__text{
-  margin:10px 0 0;
-  opacity:0.9;
 }
 
 /* FOOTER */
@@ -242,226 +223,137 @@ a:hover{ text-decoration:underline; }
   text-transform:uppercase;
 }
 
-/* Mobile */
-@media (max-width: 768px){
+/* ------------------------------ */
+/* LETTER MODULE                  */
+/* ------------------------------ */
+
+.letter{
+  width:100%;
+  max-width:820px;
+  margin:0 auto 60px auto;
+}
+
+.letter__hero{
+  width:100%;
+  margin:0 auto 60px auto;
+}
+
+.letter__hero-image{
+  width:100%;
+  display:block;
+}
+
+.letter__title{
+  font-family:var(--font-head);
+  font-size:46px;
+  margin:0 0 6px;
+  text-align:center;
+}
+
+.letter__subtitle{
+  margin:6px 0 60px;
+  font-family:var(--font-ui);
+  font-size:12px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  opacity:.7;
+  text-align:center;
+}
+
+.letter__pinned{
+  padding:32px;
+  border:1px solid rgba(34,34,34,0.12);
+  border-radius:var(--radius);
+  background:rgba(255,255,255,0.4);
+  margin-bottom:48px;
+}
+
+.letter__pinned-title{
+  font-family:var(--font-head);
+  font-size:32px;
+  margin:0 0 8px;
+}
+
+.letter__date{
+  font-family:var(--font-ui);
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  opacity:.6;
+  margin-bottom:14px;
+}
+
+.letter__list{
+  display:flex;
+  flex-direction:column;
+  gap:32px;
+}
+
+.letter__entry{
+  padding:24px;
+  border:1px solid rgba(34,34,34,0.10);
+  border-radius:var(--radius);
+  background:rgba(255,255,255,0.3);
+}
+
+.letter__entry-title{
+  font-family:var(--font-head);
+  font-size:28px;
+  margin:0 0 8px;
+}
+
+.diary{
+  background:rgba(255,255,255,0.55);
+}
+
+.diary__label{
+  font-family:var(--font-ui);
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  opacity:.6;
+}
+
+.diary__text{
+  font-size:18px;
+  margin-top:8px;
+}
+
+/* ============================== */
+/* MOBILE                         */
+/* ============================== */
+
+@media (max-width:768px){
+
   .nav--desktop{ display:none; }
   .burger{ display:block; }
 
   .section{ padding:64px 0; }
-  .section__header h2{ font-size:34px; }
 
-  .cards--two,
-  .cards--three{ grid-template-columns:1fr; }
+  .grid--2{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+
+  .section-divider{
+    margin:60px 0 32px;
+  }
 
   .brand__image{ height:36px; }
   .brand__line{
     font-size:22px;
     transform:translateY(-1px);
   }
-}
-
-/* ------------------------------ */
-/* LETTER MODULE                  */
-/* ------------------------------ */
-
-.letter{
-  width: 100%;
-  max-width: 820px;
-  margin: 0 auto 60px auto;
-  overflow: hidden;
-  border-radius: 0;
-}
-
-/* ------------------------------ */
-/* HERO LETTER (НОВЫЙ БЛОК)       */
-/* ------------------------------ */
-
-.letter__hero{
-  width: 100%;
-  margin: 0 auto 60px auto;
-  overflow: hidden;
-}
-
-.letter__hero-image{
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-/* ------------------------------ */
-/* TITLES                         */
-/* ------------------------------ */
-
-.letter__title{
-  font-family: var(--font-head);
-  font-size: 46px;
-  margin: 0 0 6px 0;
-  text-align: center;
-}
-
-.letter__subtitle{
-  margin: 6px 0 60px 0;
-  font-family: var(--font-ui);
-  font-size: 12px;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  opacity: .7;
-  text-align: center;
-}
-
-/* ------------------------------ */
-/* PINNED LETTER                  */
-/* ------------------------------ */
-
-.letter__pinned{
-  padding: 32px;
-  border: 1px solid rgba(34,34,34,0.12);
-  border-radius: var(--radius);
-  background: rgba(255,255,255,0.4);
-  margin-bottom: 48px;
-}
-
-.letter__pinned-title{
-  font-family: var(--font-head);
-  font-size: 32px;
-  margin: 0 0 8px;
-}
-
-.letter__date{
-  font-family: var(--font-ui);
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: .14em;
-  opacity: .6;
-  margin-bottom: 14px;
-}
-
-/* ------------------------------ */
-/* LIST OF LETTERS + DIARY       */
-/* ------------------------------ */
-
-.letter__list{
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-
-.letter__entry{
-  padding: 24px;
-  border: 1px solid rgba(34,34,34,0.10);
-  border-radius: var(--radius);
-  background: rgba(255,255,255,0.3);
-}
-
-.letter__entry-title{
-  font-family: var(--font-head);
-  font-size: 28px;
-  margin: 0 0 8px;
-}
-
-.diary{
-  background: rgba(255,255,255,0.55);
-}
-
-.diary__label{
-  font-family: var(--font-ui);
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: .16em;
-  opacity: .6;
-}
-
-.diary__text{
-  font-size: 18px;
-  margin-top: 8px;
-}
-
-/* ------------------------------ */
-/* MOBILE VERSION                 */
-/* ------------------------------ */
-
-@media (max-width: 768px){
 
   .letter{
-    margin: 0 auto 40px auto;
+    margin-bottom:40px;
   }
 
   .letter__hero{
-    margin-bottom: 40px;
+    margin-bottom:40px;
   }
 
-  .letter__title{
-    font-size: 34px;
-  }
-
-  .letter__pinned-title{
-    font-size: 26px;
-  }
-
-  .letter__entry-title{
-    font-size: 22px;
-  }
- /* SECTION DIVIDERS */
-.section-divider{
-  width: 100%;
-  border-top: 1px solid rgba(0,0,0,0.07);
-  border-bottom: 1px solid rgba(0,0,0,0.07);
-  padding: 10px 0;
-  margin: 60px 0 40px 0;
-}
-
-.section-divider span{
-  font-family: var(--font-ui);
-  font-size: 12px;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  opacity: .7;
-}
-
-/* GRID — 2 COLUMNS */
-.grid--2{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 40px;
-}
-
-/* CARDS */
-.card{
-  padding: 24px;
-  border: 1px solid rgba(34,34,34,0.10);
-  background: rgba(255,255,255,0.5);
-  border-radius: var(--radius);
-}
-
-.card__title{
-  font-family: var(--font-head);
-  font-size: 26px;
-  margin: 0 0 10px;
-}
-
-.card__text{
-  font-family: var(--font-ui);
-  font-size: 15px;
-  opacity: .85;
-  line-height: 1.6;
-  margin-bottom: 16px;
-}
-
-.card__link{
-  font-family: var(--font-ui);
-  font-size: 13px;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: #222;
-  opacity: .7;
-  text-decoration: none;
-}
-
-/* MOBILE */
-@media (max-width: 768px){
-  .grid--2{
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
+  .letter__title{ font-size:34px; }
+  .letter__pinned-title{ font-size:26px; }
+  .letter__entry-title{ font-size:22px; }
 }

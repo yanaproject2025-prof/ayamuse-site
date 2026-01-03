@@ -24,25 +24,21 @@
   <header class="header" role="banner">
     <div class="header__inner">
 
-      <a class="brand" href="#cover" aria-label="Aya - YouAreNotAlone">
+      <a class="brand" href="index.html" aria-label="Aya - YouAreNotAlone">
         <img src="assets/images/logo-aya.png" alt="Aya logo" class="brand__image">
         <span class="brand__line">Aya - YouAreNotAlone</span>
       </a>
 
       <nav class="nav nav--desktop" aria-label="Primary navigation">
         <a href="letter.html">Letter</a>
-        <a href="#news">News</a>
-        <a href="#future">Future</a>
-        <a href="#collections">Collections</a>
-        <a href="#collaborations">Collaborations</a>
-        <a href="#support">Support</a>
+        <a href="news.html">News</a>
+        <a href="future.html">Future</a>
+        <a href="collections.html">Collections</a>
+        <a href="collaborations.html">Collaborations</a>
+        <a href="support.html">Support</a>
       </nav>
 
-      <button class="burger"
-              type="button"
-              aria-label="Open menu"
-              aria-expanded="false"
-              aria-controls="mobileMenu">
+      <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>
       </button>
 
@@ -51,23 +47,23 @@
     <div id="mobileMenu" class="drawer" hidden>
       <nav class="nav nav--mobile" aria-label="Mobile navigation">
         <a href="letter.html">Letter</a>
-        <a href="#news">News</a>
-        <a href="#future">Future</a>
-        <a href="#collections">Collections</a>
-        <a href="#collaborations">Collaborations</a>
-        <a href="#support">Support</a>
+        <a href="news.html">News</a>
+        <a href="future.html">Future</a>
+        <a href="collections.html">Collections</a>
+        <a href="collaborations.html">Collaborations</a>
+        <a href="support.html">Support</a>
       </nav>
     </div>
   </header>
 
-  <!-- COVER -->
+  <!-- COVER (остаётся — как в брендбуке) -->
   <section class="section section--cover" id="cover">
     <div class="cover">
       <img src="assets/images/cover.jpg" alt="Cover image" class="cover__media">
     </div>
   </section>
 
-  <!-- LETTER PREVIEW SECTION -->
+  <!-- LETTER SECTION (Vogue structure) -->
   <section class="section" id="letter">
 
     <div class="section-divider">
@@ -76,7 +72,6 @@
 
     <div class="grid--2">
 
-      <!-- Pinned letter -->
       <article class="card">
         <h3 class="card__title">From Aya — A Letter of Purpose</h3>
         <p class="card__text">
@@ -85,7 +80,6 @@
         <a href="letter.html" class="card__link">Read more →</a>
       </article>
 
-      <!-- Latest entry -->
       <article class="card">
         <h3 class="card__title">Latest entry</h3>
         <p class="card__text">
@@ -100,65 +94,115 @@
 
   </section>
 
-  <!-- NEWS SECTION -->
+  <!-- NEWS SECTION (переписано под Vogue-структуру) -->
   <section class="section" id="news">
-    <div class="container">
-      <div class="section__header">
-        <h2>News</h2>
-      </div>
-      <div class="cards cards--two">
-        <article class="card">
-          <p class="card__date">2024</p>
-          <h3 class="card__title">Title</h3>
-          <p class="card__text">Text…</p>
-        </article>
-      </div>
+
+    <div class="section-divider">
+      <span>NEWS</span>
     </div>
+
+    <div class="grid--2">
+
+      <article class="card">
+        <h3 class="card__title">Latest News Headline</h3>
+        <p class="card__text">
+          A short preview of the newest update from Aya Muse World…
+        </p>
+        <a href="news.html" class="card__link">Read more →</a>
+      </article>
+
+      <article class="card">
+        <h3 class="card__title">Second Latest News</h3>
+        <p class="card__text">
+          Another recent note or announcement…
+        </p>
+        <a href="news.html" class="card__link">Open →</a>
+      </article>
+
+    </div>
+
+    <div class="section-divider"></div>
+
   </section>
 
-  <!-- FUTURE -->
+  <!-- FUTURE SECTION -->
   <section class="section" id="future">
-    <div class="container">
-      <div class="section__header">
-        <h2>Future</h2>
-      </div>
-      <p class="prose">Content…</p>
+
+    <div class="section-divider">
+      <span>FUTURE</span>
     </div>
+
+    <div class="grid--2">
+
+      <article class="card">
+        <h3 class="card__title">Aya App</h3>
+        <p class="card__text">Coming soon — the soft emotional space of Aya in your hands.</p>
+      </article>
+
+      <article class="card">
+        <h3 class="card__title">Aya Palace</h3>
+        <p class="card__text">A future sanctuary — a vision of light, warmth and elegance.</p>
+      </article>
+
+    </div>
+
+    <div class="section-divider"></div>
+
   </section>
 
   <!-- COLLECTIONS -->
   <section class="section" id="collections">
-    <div class="container">
-      <div class="section__header">
-        <h2>Collections</h2>
-      </div>
-      <div class="cards cards--three">
-        <article class="card">
-          <h3 class="card__title">Collection</h3>
-          <p class="card__text">Details…</p>
-        </article>
-      </div>
+
+    <div class="section-divider">
+      <span>COLLECTIONS</span>
     </div>
+
+    <div class="grid--2">
+      <article class="card">
+        <h3 class="card__title">Aya Treasures</h3>
+        <p class="card__text">Curated creations from the world of Aya…</p>
+        <a href="collections.html" class="card__link">Explore →</a>
+      </article>
+
+      <article class="card">
+        <h3 class="card__title">Lunar Series</h3>
+        <p class="card__text">Phases, rhythms and cycles of feminine light…</p>
+        <a href="collections.html" class="card__link">Discover →</a>
+      </article>
+    </div>
+
+    <div class="section-divider"></div>
+
   </section>
 
   <!-- COLLABORATIONS -->
   <section class="section" id="collaborations">
-    <div class="container">
-      <div class="section__header">
-        <h2>Collaborations</h2>
-      </div>
-      <p class="prose">Content…</p>
+
+    <div class="section-divider">
+      <span>COLLABORATIONS</span>
     </div>
+
+    <p class="prose">
+      Aya Muse World welcomes thoughtful and aesthetic partnerships built on beauty, kindness and purpose.
+    </p>
+
+    <div class="section-divider"></div>
+
   </section>
 
   <!-- SUPPORT -->
   <section class="section" id="support">
-    <div class="container">
-      <div class="section__header">
-        <h2>Support</h2>
-      </div>
-      <p class="prose">Content…</p>
+
+    <div class="section-divider">
+      <span>SUPPORT</span>
     </div>
+
+    <p class="prose">
+      If Aya has touched your heart, you can help us grow and bring more light into the world.
+    </p>
+
+    <div class="section-divider"></div>
+
   </section>
 
   <!-- FOOTER -->
@@ -171,6 +215,6 @@
     </div>
   </footer>
 
-<script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

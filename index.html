@@ -56,14 +56,14 @@
     </div>
   </header>
 
-  <!-- COVER (главный баннер — остаётся) -->
+  <!-- MAIN COVER -->
   <section class="section section--cover" id="cover">
     <div class="cover">
       <img src="assets/images/cover.jpg" alt="Cover image" class="cover__media">
     </div>
   </section>
 
-  <!-- LETTER SECTION (Vogue teaser) -->
+  <!-- LETTER SECTION -->
   <section class="section" id="letter">
 
     <div class="section-divider">
@@ -72,20 +72,20 @@
 
     <div class="grid--2">
 
+      <!-- PINNED LETTER -->
       <article class="card">
-        <h3 class="card__title">From Aya — A Letter of Purpose</h3>
-        <p class="card__text">
-          A gentle introduction to the heart of Aya Muse World — its mission, its light, its meaning…
-        </p>
-        <a href="letter.html" class="card__link">Read more →</a>
+        <h3 id="letter-pinned-title" class="card__title">Loading...</h3>
+        <p id="letter-pinned-date" class="card-date"></p>
+        <p id="letter-pinned-excerpt" class="card__text"></p>
+        <a id="letter-pinned-link" href="#" class="card__link">Read →</a>
       </article>
 
+      <!-- LATEST LETTER -->
       <article class="card">
-        <h3 class="card__title">Latest entry</h3>
-        <p class="card__text">
-          The most recent note, reflection or diary entry from Aya…
-        </p>
-        <a href="letter.html" class="card__link">Open →</a>
+        <h3 id="letter-latest-title" class="card__title">Loading...</h3>
+        <p id="letter-latest-date" class="card-date"></p>
+        <p id="letter-latest-excerpt" class="card__text"></p>
+        <a id="letter-latest-link" href="#" class="card__link">Open →</a>
       </article>
 
     </div>
@@ -94,7 +94,7 @@
 
   </section>
 
-  <!-- NEWS SECTION (паспортная структура Vogue) -->
+  <!-- NEWS SECTION -->
   <section class="section" id="news">
 
     <div class="section-divider">
@@ -105,17 +105,13 @@
 
       <article class="card">
         <h3 class="card__title">Latest News Headline</h3>
-        <p class="card__text">
-          A short preview of the newest update from Aya Muse World…
-        </p>
+        <p class="card__text">A short preview of the newest update from Aya Muse World…</p>
         <a href="news.html" class="card__link">Read more →</a>
       </article>
 
       <article class="card">
         <h3 class="card__title">Second Latest News</h3>
-        <p class="card__text">
-          Another recent note or announcement…
-        </p>
+        <p class="card__text">Another recent note or announcement…</p>
         <a href="news.html" class="card__link">Open →</a>
       </article>
 
@@ -125,7 +121,7 @@
 
   </section>
 
-  <!-- FUTURE -->
+  <!-- FUTURE SECTION -->
   <section class="section" id="future">
 
     <div class="section-divider">
@@ -205,14 +201,15 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer__inner">
-      <div>Aya - YouAreNotAlone</div>
-      <div class="footer__right">
-        <a href="privacy.html">Privacy</a>
-      </div>
+    <div>Aya - YouAreNotAlone</div>
+    <div class="footer__right">
+      <a href="privacy.html">Privacy</a>
     </div>
   </footer>
 
+  <!-- LOADER FOR JSON DATA -->
+  <script src="js/load-modules.js"></script>
   <script src="js/main.js"></script>
+
 </body>
 </html>

@@ -116,7 +116,7 @@ a:hover{ text-decoration:underline; }
 }
 
 /* Sections */
-.section{ padding: 20px; }
+.section{ padding: 40px; }
 
 /* Cover */
 .section--cover{ padding:0; }

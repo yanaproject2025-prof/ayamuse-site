@@ -116,7 +116,7 @@ a:hover{ text-decoration:underline; }
 }
 
 /* Sections */
-.section{ padding:50px 0; }
+.section{ padding:20px 0; }
 
 /* Cover */
 .section--cover{ padding:0; }
@@ -144,7 +144,7 @@ a:hover{ text-decoration:underline; }
   border-top:1px solid rgba(0,0,0,0.07);
   border-bottom:1px solid rgba(0,0,0,0.07);
   padding:10px 0;
-  margin:30px 0 30px 0;
+  margin:5px 0 20px 0;
   text-align:center;
 }
 

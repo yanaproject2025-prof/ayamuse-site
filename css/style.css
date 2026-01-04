@@ -421,3 +421,31 @@ body.letter-page .letter__content p {
   line-height: 1.65;
   margin-bottom: 18px;
 }
+
+/* ========================================= */
+/* LETTER PAGE — HERO BANNER (FINAL VERSION) */
+/* ========================================= */
+
+body.letter-page .letter__hero {
+  padding: 20px 0 10px 0;  /* регулирует расстояние после баннера */
+  text-align: center;
+}
+
+body.letter-page .letter__hero-image {
+  max-width: 820px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: inline-block;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  body.letter-page .letter__hero {
+    padding: 18px 0 8px 0;
+  }
+
+  body.letter-page .letter__hero-image {
+    max-width: 92%;
+  }
+}

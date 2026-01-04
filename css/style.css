@@ -449,7 +449,7 @@ body.letter-page .letter__hero-image {
     max-width: 92%;
   }
 
-  /* Match homepage card date style to Letter page date */
+/* Match homepage card date style to Letter page date — DESKTOP + MOBILE */
 .letter__card .letter__date {
   font-family: var(--font-ui);
   font-size: 11px;
@@ -459,5 +459,6 @@ body.letter-page .letter__hero-image {
   text-transform: uppercase;
   display: block;
 }
+
 
 }

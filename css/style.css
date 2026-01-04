@@ -360,40 +360,56 @@ a:hover{ text-decoration:underline; }
 }
 
 /* -------------------------------------- */
-/* LETTER PAGE — BRAND TYPOGRAPHY (LORA)  */
+/* LETTER PAGE TYPOGRAPHY — FIX SIZES     */
 /* -------------------------------------- */
 
 body.letter-page {
   --font-body: 'Lora', serif;
 }
 
-/* Основной текст письма */
-body.letter-page p,
-body.letter-page li {
-  font-family: 'Lora', serif;
-  font-size: 18px;        /* раньше было 20–22 через наследование */
-  line-height: 1.6;
-  color: #222;
-  margin-bottom: 18px;
+/* Главный заголовок Letter from Aya */
+body.letter-page h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;       /* было около 46–50px через наследование */
+  line-height: 1.2;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
-/* Заголовки внутри письма */
-body.letter-page h1,
+/* Подзаголовок под h1 */
+body.letter-page .page-subtitle {
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  opacity: 0.6;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Заголовок внутри карточки (Message from the Founder) */
 body.letter-page h2 {
   font-family: 'Playfair Display', serif;
-  font-weight: 700;
+  font-size: 28px;       /* было 36–40px */
+  line-height: 1.3;
+  margin-bottom: 20px;
 }
 
 /* Дата */
 body.letter-page .letter-date {
-  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   opacity: 0.65;
   margin-bottom: 20px;
 }
 
-/* Тело карточки письма */
+/* Основной текст письма */
+body.letter-page p {
+  font-size: 17px;       /* выглядит идеально */
+  line-height: 1.6;
+  margin-bottom: 18px;
+  color: #222;
+}
+
+/* Контейнер текста */
 body.letter-page .letter__content {
-  max-width: 780px;        /* уже и изящнее */
+  max-width: 760px;      /* красивее и стройнее */
   margin: 0 auto;
 }

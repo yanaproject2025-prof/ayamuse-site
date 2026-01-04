@@ -360,114 +360,63 @@ a:hover{ text-decoration:underline; }
 }
 
 /* ========================================= */
-/* LETTER PAGE — FINAL BRAND BOOK TYPOGRAPHY */
+/* LETTER PAGE — FINAL AYA PREMIUM TYPOGRAPHY */
 /* ========================================= */
 
-/* --- 1. ВЫРАВНИВАНИЕ ПО ЛЕВОМУ КРАЮ В БЛОКЕ --- */
-
+/* --- Left alignment for letter block only --- */
 body.letter-page .letter__pinned,
 body.letter-page .letter__pinned-title,
 body.letter-page .letter__date,
-body.letter-page .letter__pinned p,
-body.letter-page .letter__entry,
-body.letter-page .letter__entry-title,
-body.letter-page .diary__label,
-body.letter-page .diary__text {
+body.letter-page .letter__content,
+body.letter-page .letter__content p {
   text-align: left !important;
 }
 
-
-/* --- 2. ТИПОГРАФИКА ПО БРЕНДБУКУ --- */
-
-/* Заголовок страницы — Letter from Aya */
+/* --- Page title (Letter from Aya) --- */
 body.letter-page .letter__title {
   font-family: var(--font-head);
-  font-size: 56px;
-  font-weight: 500;
-  letter-spacing: 0.2px;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-/* Подзаголовок */
-body.letter-page .letter__subtitle {
-  font-family: var(--font-ui);
-  font-size: 11px;
-  letter-spacing: 0.22em;
-  opacity: 0.6;
-  text-align: center;
-  margin-bottom: 48px;
-}
-
-/* Message from the Founder */
-body.letter-page .letter__pinned-title {
-  font-family: var(--font-head);
-  font-size: 26px;
+  font-size: 42px;         /* уменьшили */
   font-weight: 400;
   margin-bottom: 8px;
 }
 
-/* Дата */
-body.letter-page .letter__date {
+/* Subheading */
+body.letter-page .letter__subtitle {
   font-family: var(--font-ui);
-  font-size: 11px;
-  letter-spacing: 0.14em;
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
   opacity: 0.6;
-  margin-bottom: 14px;
 }
 
-/* Healing through style — акцент */
-body.letter-page .letter__pinned p:first-of-type {
+/* --- Message from the Founder --- */
+body.letter-page .letter__pinned-title {
   font-family: var(--font-head);
-  font-style: italic;
-  font-size: 20px;
-  margin-bottom: 18px;
-}
-
-/* Основной текст письма */
-body.letter-page .letter__pinned p {
-  font-family: var(--font-body);
-  font-size: 18px;
-  line-height: 1.65;
-  margin-bottom: 18px;
-}
-
-/* Архив писем */
-body.letter-page .letter__entry-title {
-  font-family: var(--font-head);
-  font-size: 24px;
+  font-size: 28px;          /* было 32 → слишком громко */
   font-weight: 400;
   margin-bottom: 10px;
 }
 
-body.letter-page .diary__text {
-  font-family: var(--font-body);
-  font-size: 17px;
-  line-height: 1.6;
+/* Date */
+body.letter-page .letter__date {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  opacity: 0.6;
+  letter-spacing: 0.16em;
+  margin-bottom: 14px;
 }
 
+/* Healing through style (first paragraph) */
+body.letter-page .letter__content p:first-child {
+  font-family: var(--font-head);
+  font-style: italic;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
 
-/* --- MOBILE ADAPTATION --- */
-@media (max-width:768px){
-
-  body.letter-page .letter__title {
-    font-size: 38px;
-  }
-
-  body.letter-page .letter__subtitle {
-    font-size: 10px;
-    margin-bottom: 36px;
-  }
-
-  body.letter-page .letter__pinned-title {
-    font-size: 22px;
-  }
-
-  body.letter-page .letter__pinned p:first-of-type {
-    font-size: 18px;
-  }
-
-  body.letter-page .letter__pinned p {
-    font-size: 17px;
-  }
+/* Main text */
+body.letter-page .letter__content p {
+  font-family: var(--font-body);
+  font-size: 17.5px;
+  line-height: 1.65;
+  margin-bottom: 18px;
 }

@@ -13,7 +13,9 @@
   <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
 
   <!-- MAIN CSS -->
   <link rel="stylesheet" href="css/style.css">
@@ -26,12 +28,11 @@
     }
 
     .letter__hero-image {
-      max-width: 820px;    /* ✨ ГЛАВНЫЙ ПАРАМЕТР */
+      max-width: 820px;
       width: 100%;
       height: auto;
-      object-fit: contain; /* НЕ обрезаем изображение */
+      object-fit: contain;
       display: inline-block;
-      border-radius: 0; /* можно поставить 12px если захочешь мягкость */
     }
 
     @media (max-width: 768px) {
@@ -40,11 +41,10 @@
       }
 
       .letter__hero-image {
-        max-width: 92%; /* чуть меньше полей на телефоне */
+        max-width: 92%;
       }
     }
   </style>
-
 </head>
 
 <body>
@@ -66,7 +66,6 @@
       <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>
       </button>
-
     </div>
 
     <div id="mobileMenu" class="drawer" hidden>
@@ -99,7 +98,7 @@
         <div id="pinned-content" class="letter__content"></div>
       </article>
 
-      <!-- LIST OF LETTERS & DIARIES -->
+      <!-- LIST OF OTHER LETTERS -->
       <div id="letter-list" class="letter__list"></div>
 
     </div>

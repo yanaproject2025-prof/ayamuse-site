@@ -363,26 +363,37 @@ a:hover{ text-decoration:underline; }
 /* LETTER PAGE — BRAND TYPOGRAPHY (LORA)  */
 /* -------------------------------------- */
 
-body.letter-page p,
-body.letter-page li {
-  font-family: 'Lora', serif;
-  font-size: 18px;
-  line-height: 1.7;
-  color: #222;
-}
-
-body.letter-page h1,
-body.letter-page h2 {
-  font-family: 'Playfair Display', serif;
-}
-
-body.letter-page .letter-date {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 13px;
-  opacity: 0.65;
-}
-
 body.letter-page {
   --font-body: 'Lora', serif;
 }
 
+/* Основной текст письма */
+body.letter-page p,
+body.letter-page li {
+  font-family: 'Lora', serif;
+  font-size: 18px;        /* раньше было 20–22 через наследование */
+  line-height: 1.6;
+  color: #222;
+  margin-bottom: 18px;
+}
+
+/* Заголовки внутри письма */
+body.letter-page h1,
+body.letter-page h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+/* Дата */
+body.letter-page .letter-date {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  opacity: 0.65;
+  margin-bottom: 20px;
+}
+
+/* Тело карточки письма */
+body.letter-page .letter__content {
+  max-width: 780px;        /* уже и изящнее */
+  margin: 0 auto;
+}

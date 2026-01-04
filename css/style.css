@@ -448,4 +448,16 @@ body.letter-page .letter__hero-image {
   body.letter-page .letter__hero-image {
     max-width: 92%;
   }
+
+  /* Match homepage card date style to Letter page date */
+.letter__card .letter__date {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  opacity: 0.6;
+  letter-spacing: 0.16em;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  display: block;
+}
+
 }

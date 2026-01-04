@@ -186,6 +186,18 @@ a:hover{ text-decoration:underline; }
   margin-bottom:16px;
 }
 
+/* DATE STYLE ON HOMEPAGE CARDS (MAKE SAME AS LETTER PAGE) */
+.card__date {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-style: normal;       
+  opacity: 0.6;
+  letter-spacing: 0.14em;
+  margin-bottom: 10px;
+  display: block;
+}
+
+
 .card__link{
   font-family:var(--font-ui);
   font-size:13px;

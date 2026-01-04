@@ -449,16 +449,7 @@ body.letter-page .letter__hero-image {
   body.letter-page .letter__hero-image {
     max-width: 92%;
   }
-/* FORCE UNIVERSAL DATE STYLE */
-.letter__date {
-  font-family: var(--font-ui) !important;
-  font-size: 11px !important;
-  font-style: normal !important;
-  text-transform: uppercase !important;
-  letter-spacing: .14em !important;
-  opacity: .6 !important;
-  margin-bottom: 14px !important;
-}
+
 
 
 }

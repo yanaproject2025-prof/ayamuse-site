@@ -1,6 +1,9 @@
 {
-  "title": "Welcome to Aya Muse World",
-  "excerpt": "A gentle introduction to the mission, purpose and soft light behind Aya…",
-  "date": "2026-01-01",
-  "url": "/letter.html"
+  "title": "Letter from Aya",
+  "date": "2026-04-01",
+  "content": [
+    "Здесь идёт первый абзац письма...",
+    "Здесь второй абзац...",
+    "И так далее..."
+  ]
 }

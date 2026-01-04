@@ -416,7 +416,7 @@ body.letter-page .letter__content p:first-child {
 /* Main text */
 body.letter-page .letter__content p {
   font-family: var(--font-body);
-  font-size: 17.5px;
+  font-size: 16px;
   line-height: 1.65;
   margin-bottom: 18px;
 }

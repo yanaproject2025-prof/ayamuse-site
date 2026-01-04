@@ -375,23 +375,24 @@ body.letter-page .letter__content p {
 /* --- Page title (Letter from Aya) --- */
 body.letter-page .letter__title {
   font-family: var(--font-head);
-  font-size: 42px;         /* уменьшили */
+  font-size: 42px;
   font-weight: 400;
   margin-bottom: 8px;
 }
 
-/* Subheading */
+/* Subheading under the main title */
 body.letter-page .letter__subtitle {
   font-family: var(--font-ui);
   font-size: 10.5px;
   letter-spacing: 0.22em;
   opacity: 0.6;
+  margin-bottom: 28px; /* уменьшили расстояние до письма */
 }
 
 /* --- Message from the Founder --- */
 body.letter-page .letter__pinned-title {
   font-family: var(--font-head);
-  font-size: 28px;          /* было 32 → слишком громко */
+  font-size: 28px;
   font-weight: 400;
   margin-bottom: 10px;
 }
@@ -416,7 +417,7 @@ body.letter-page .letter__content p:first-child {
 /* Main text */
 body.letter-page .letter__content p {
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 16px; /* как на главной */
   line-height: 1.65;
   margin-bottom: 18px;
 }

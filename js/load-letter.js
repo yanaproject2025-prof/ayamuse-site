@@ -1,12 +1,11 @@
 // ===============================
-// LOAD PINNED, LATEST & ALL POSTS
+// LOAD PINNED & ALL POSTS (WITHOUT LATEST)
 // ===============================
 
 async function loadLetters() {
   try {
-    // ---- Load pinned & latest ----
+    // ---- Load pinned ----
     const pinned = await fetch("/modules/letter/pinned.json").then(r => r.json());
-    const latest = await fetch("/modules/letter/latest.json").then(r => r.json());
 
     // --------------------------
     // 1. RENDER PINNED POST
@@ -22,13 +21,6 @@ async function loadLetters() {
     // 2. LOAD ALL POSTS FROM /posts/
     // --------------------------
     const posts = await loadAllPosts();
-
-    // Put LATEST as full first item
-    posts.unshift({
-      title: latest.title,
-      date: latest.date,
-      content: latest.content
-    });
 
     // --------------------------
     // 3. RENDER ALL LETTERS (FULL FORMAT)
@@ -48,7 +40,7 @@ async function loadLetters() {
 // ===============================
 async function loadAllPosts() {
   try {
-    const files = ["001.json"]; // add more when you publish more posts
+    const files = ["001.json"]; // Add new files here: "002.json", "003.json", ...
 
     const loaded = [];
 
@@ -61,6 +53,7 @@ async function loadAllPosts() {
       });
     }
 
+    // Sort newest first
     return loaded.sort((a, b) => new Date(b.date) - new Date(a.date));
 
   } catch (e) {

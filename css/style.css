@@ -477,15 +477,6 @@ body.letter-page .letter__hero-image {
   opacity: 0.55;
   margin-bottom: 14px;
 }
-.card_date{
-  font-family: var(--font-ui); /* Montserrat */
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  opacity: 0.55;
-  margin-bottom: 14px;
-}
-
 
 
 }

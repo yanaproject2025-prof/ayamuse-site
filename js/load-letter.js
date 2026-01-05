@@ -23,7 +23,7 @@ async function loadLetters() {
     // --------------------------
     const posts = await loadAllPosts();
 
-    // Insert latest.json as FIRST full post
+    // Put LATEST as full first item
     posts.unshift({
       title: latest.title,
       date: latest.date,
@@ -31,10 +31,12 @@ async function loadLetters() {
     });
 
     // --------------------------
-    // 3. RENDER FULL POSTS LENTA
+    // 3. RENDER ALL LETTERS (FULL FORMAT)
     // --------------------------
     const list = document.getElementById("letter-list");
-    list.innerHTML = posts.map(post => createFullEntry(post)).join("");
+    list.innerHTML = posts
+      .map(post => createFullEntry(post))
+      .join("");
 
   } catch (err) {
     console.error("Error loading letters:", err);
@@ -46,10 +48,7 @@ async function loadLetters() {
 // ===============================
 async function loadAllPosts() {
   try {
-    // manually list post files:
-    const files = [
-      "001.json"
-    ];
+    const files = ["001.json"]; // add more when you publish more posts
 
     const loaded = [];
 
@@ -62,7 +61,6 @@ async function loadAllPosts() {
       });
     }
 
-    // Sort newest first
     return loaded.sort((a, b) => new Date(b.date) - new Date(a.date));
 
   } catch (e) {
@@ -72,7 +70,7 @@ async function loadAllPosts() {
 }
 
 // ===============================
-// TEMPLATE FOR FULL LETTER ENTRY
+// TEMPLATE FOR FULL POST
 // ===============================
 function createFullEntry(post) {
   return `
@@ -86,5 +84,4 @@ function createFullEntry(post) {
   `;
 }
 
-// Run loader
 document.addEventListener("DOMContentLoaded", loadLetters);

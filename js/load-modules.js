@@ -13,7 +13,9 @@ async function loadLetterModules() {
   document.getElementById('letter-latest-title').textContent = latest.title;
   document.getElementById('letter-latest-excerpt').textContent = latest.excerpt;
   document.getElementById('letter-latest-date').textContent = latest.date;
-  document.getElementById('letter-latest-link').href = latest.url;
+
+  // 🔥 KEY FIX: correct link to full publication
+  document.getElementById('letter-latest-link').href = `/letter.html?post=${latest.url}`;
 }
 
 document.addEventListener('DOMContentLoaded', loadLetterModules);

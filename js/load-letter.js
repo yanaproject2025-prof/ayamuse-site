@@ -34,6 +34,21 @@ async function loadLetters() {
 
     list.innerHTML = posts.map(post => createFullEntry(post)).join("");
 
+    // --------------------------
+    // 4. AUTO-SCROLL TO SPECIFIC POST
+    // --------------------------
+    const params = new URLSearchParams(window.location.search);
+    const target = params.get("post");
+
+    if (target) {
+      const el = document.getElementById(`post-${target}`);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" });
+        }, 300); // Wait until DOM finishes rendering
+      }
+    }
+
   } catch (err) {
     console.error("❌ Error loading letters:", err);
   }
@@ -64,6 +79,7 @@ async function loadAllPosts() {
       }
 
       loaded.push({
+        id: file.replace(".json", ""), // ← ADDED ID
         title: data.title,
         date: data.date,
         content: data.content
@@ -80,11 +96,11 @@ async function loadAllPosts() {
 
 // ===============================
 // TEMPLATE FOR FULL POST
-// (IDENTICAL STRUCTURE TO PINNED)
+// (WITH ID FOR AUTO-SCROLL)
 // ===============================
 function createFullEntry(post) {
   return `
-    <article class="letter__entry">
+    <article class="letter__entry" id="post-${post.id}">
       <h3 class="letter__entry-title">${post.title}</h3>
       <p class="letter__date">${post.date}</p>
       <div class="letter__content">

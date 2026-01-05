@@ -197,6 +197,17 @@ a:hover{ text-decoration:underline; }
   text-decoration:none;
 }
 
+/* Date style for cards on index.html */
+.card__date {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  opacity: 0.6;
+  margin-bottom: 14px;
+  text-transform: none;
+}
+
+
 /* Prose */
 .prose{
   margin-top:26px;

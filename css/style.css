@@ -394,7 +394,7 @@ body.letter-page .letter__subtitle {
 body.letter-page .letter__pinned-title {
   font-family: var(--font-head);
   font-size: 26px;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 0.2px;
   margin-bottom: 10px;
 }

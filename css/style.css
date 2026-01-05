@@ -465,6 +465,14 @@ body.letter-page .letter__hero-image {
   body.letter-page .letter__hero-image {
     max-width: 92%;
   }
+/* === DIAGNOSTIC TEST === */
+.card .card-date{
+  font-family: var(--font-ui) !important;
+  font-size: 11px !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+  color: red !important;
+}
 
 
 

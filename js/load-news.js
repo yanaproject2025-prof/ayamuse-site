@@ -9,7 +9,7 @@ async function loadNews() {
     container.innerHTML = items.map(item => `
       <article class="card">
         <h3 class="card__title">${item.title}</h3>
-        <p class="letter__date">${item.date}</p>
+        <p class="card_date">${item.date}</p>
         <p class="card__text">${item.excerpt}</p>
         <a href="${item.link}" target="_blank" rel="noopener" class="card__link">
           ${item.link_text}

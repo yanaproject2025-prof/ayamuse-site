@@ -23,21 +23,18 @@ async function loadLetters() {
     // --------------------------
     const posts = await loadAllPosts();
 
-    // Add the latest.json as the "most recent"
+    // Insert latest.json as FIRST full post
     posts.unshift({
       title: latest.title,
       date: latest.date,
-      excerpt: latest.excerpt,
-      url: latest.url
+      content: latest.content
     });
 
     // --------------------------
-    // 3. RENDER LIST OF ALL LETTERS
+    // 3. RENDER FULL POSTS LENTA
     // --------------------------
     const list = document.getElementById("letter-list");
-    list.innerHTML = posts
-      .map(post => createCard(post))
-      .join("");
+    list.innerHTML = posts.map(post => createFullEntry(post)).join("");
 
   } catch (err) {
     console.error("Error loading letters:", err);
@@ -49,8 +46,7 @@ async function loadLetters() {
 // ===============================
 async function loadAllPosts() {
   try {
-    // GitHub Pages cannot list directories,
-    // so you MUST manually list files here.
+    // manually list post files:
     const files = [
       "001.json"
     ];
@@ -62,8 +58,7 @@ async function loadAllPosts() {
       loaded.push({
         title: data.title,
         date: data.date,
-        excerpt: data.excerpt,
-        url: `/letter.html?post=${file.replace(".json", "")}`
+        content: data.content
       });
     }
 
@@ -77,15 +72,16 @@ async function loadAllPosts() {
 }
 
 // ===============================
-// CARD TEMPLATE
+// TEMPLATE FOR FULL LETTER ENTRY
 // ===============================
-function createCard(post) {
+function createFullEntry(post) {
   return `
-    <article class="letter__card">
-      <h3 class="letter__card-title">${post.title}</h3>
+    <article class="letter__entry">
+      <h3 class="letter__entry-title">${post.title}</h3>
       <p class="letter__date">${post.date}</p>
-      <p class="letter__excerpt">${post.excerpt}</p>
-      <a href="${post.url}" class="letter__link">Open →</a>
+      <div class="letter__content">
+        ${post.content.map(p => `<p>${p}</p>`).join("")}
+      </div>
     </article>
   `;
 }

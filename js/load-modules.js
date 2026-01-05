@@ -39,7 +39,7 @@ async function loadNewsModules() {
       <article class="card">
         <h3 class="card__title">${item.title}</h3>
 
-        <p class="card__date">${item.date}</p>  <!-- ВОТ ОНА: ДАТА -->
+        <p class="card_date">${item.date}</p>  <!-- ВОТ ОНА: ДАТА -->
 
         <p class="card__text">${item.excerpt}</p>
 

@@ -465,14 +465,19 @@ body.letter-page .letter__hero-image {
   body.letter-page .letter__hero-image {
     max-width: 92%;
   }
-/* === DIAGNOSTIC TEST === */
-.card .card_date{
-  font-family: var(--font-ui) !important;
-  font-size: 11px !important;
-  letter-spacing: 0.22em !important;
-  text-transform: uppercase !important;
-  color: red !important;
+/* ============================== */
+/* HOME — CARD DATE (FINAL)       */
+/* ============================== */
+
+.card-date{
+  font-family: var(--font-ui); /* Montserrat */
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  margin-bottom: 14px;
 }
+
 
 
 

@@ -26,12 +26,16 @@ async function loadLetters() {
     // 3. RENDER ALL LETTERS (FULL FORMAT)
     // --------------------------
     const list = document.getElementById("letter-list");
-    list.innerHTML = posts
-      .map(post => createFullEntry(post))
-      .join("");
+
+    if (!list) {
+      console.error("❌ Element #letter-list not found in DOM");
+      return;
+    }
+
+    list.innerHTML = posts.map(post => createFullEntry(post)).join("");
 
   } catch (err) {
-    console.error("Error loading letters:", err);
+    console.error("❌ Error loading letters:", err);
   }
 }
 
@@ -39,31 +43,44 @@ async function loadLetters() {
 // LOAD ALL JSON FILES IN /posts/
 // ===============================
 async function loadAllPosts() {
-  try {
-    const files = ["001.json"]; // Add new files here: "002.json", "003.json", ...
+  const files = ["001.json"]; // Add future posts here: "002.json", "003.json", ...
 
-    const loaded = [];
+  const loaded = [];
 
-    for (const file of files) {
-      const data = await fetch(`/modules/letter/posts/${file}`).then(r => r.json());
+  for (const file of files) {
+    try {
+      const res = await fetch(`/modules/letter/posts/${file}`);
+
+      if (!res.ok) {
+        console.error(`❌ File not found: ${file}`);
+        continue;
+      }
+
+      const data = await res.json();
+
+      if (!data.content || !Array.isArray(data.content)) {
+        console.error(`❌ Invalid or missing 'content' in ${file}`);
+        continue;
+      }
+
       loaded.push({
         title: data.title,
         date: data.date,
         content: data.content
       });
+
+    } catch (err) {
+      console.error(`❌ Error loading file ${file}:`, err);
     }
-
-    // Sort newest first
-    return loaded.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-  } catch (e) {
-    console.error("Error loading posts:", e);
-    return [];
   }
+
+  // Sort newest first
+  return loaded.sort((a, b) => new Date(b.date) - new Date(a.date));
 }
 
 // ===============================
 // TEMPLATE FOR FULL POST
+// (IDENTICAL STRUCTURE TO PINNED)
 // ===============================
 function createFullEntry(post) {
   return `

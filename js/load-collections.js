@@ -7,7 +7,7 @@ async function loadCollections() {
     if (!container) return;
 
     container.innerHTML = items.map(item => `
-      <article class="card card--future">
+      <article class="card">
 
         <img src="${item.image}" alt="${item.title}" class="card__image">
 

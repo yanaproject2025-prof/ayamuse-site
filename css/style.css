@@ -196,6 +196,23 @@ a:hover{ text-decoration:underline; }
   opacity:.7;
   text-decoration:none;
 }
+.card__image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 16px;
+}
+.card__soon {
+  font-family: var(--font-ui);
+  font-size: 13px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #222;
+  opacity: .7;
+  display: inline-block;
+  margin-top: 14px;
+}
 
 /* ============================== */
 /* HOME PAGE — CARD DATE STYLE    */

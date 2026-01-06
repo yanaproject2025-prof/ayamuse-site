@@ -1,18 +1,20 @@
 {
   "items": [
     {
-      "title": "Arabic Loop Collection",
+      "title": "Arabic Fairytale — Make a Wish",
       "date": "2026-01-06",
-      "excerpt": "A cinematic collection shaped by the silence of dunes and the glow of Arabian nights — soft loops woven with mystery, warmth, and quiet luxury.",
+      "excerpt": "A luxurious digital collection inspired by the warmth of Middle Eastern nights — where desert dusk, emerald treasures, and the glow of lantern light blend into soft cinematic magic. A gentle world of elegance, mystery, and feminine grace woven into every frame.",
       "image": "/assets/images/collections/arabic-loops.jpg",
-      "coming": "Coming soon →"
+      "link": "https://yanaproject.gumroad.com/l/arabianfairytale",
+      "link_text": "Explore on Gumroad →"
     },
     {
-      "title": "Aya in Paris",
+      "title": "Aya in Paris — A Visual Journey",
       "date": "2026-01-06",
-      "excerpt": "A visual journey through Paris — where Aya walks among fountains, light, and quiet magic. A dream shaped by elegance and feminine softness.",
+      "excerpt": "A dreamy Parisian visual story shaped through soft light, vintage charm, and Aya’s quiet magic. From morning cafés to sunset gardens and the poetic stillness of Versailles — a celebration of feminine elegance, nostalgia, and ethereal beauty.",
       "image": "/assets/images/collections/paris-aya.jpg",
-      "coming": "Coming soon →"
+      "link": "https://www.pinterest.com/yanaproject2025/ayas-paris-where-chlo%C3%A9-once-walked",
+      "link_text": "Explore on Pinterest →"
     }
   ]
 }

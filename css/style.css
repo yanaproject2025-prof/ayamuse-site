@@ -223,6 +223,16 @@ a:hover{ text-decoration:underline; }
 #future .card__link:hover {
   text-decoration: none !important;
 }
+#collections .card__link {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+#collections .card__link:hover {
+  text-decoration: underline;
+}
 
 /* ============================== */
 /* HOME PAGE — CARD DATE STYLE    */

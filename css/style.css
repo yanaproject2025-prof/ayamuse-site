@@ -213,6 +213,16 @@ a:hover{ text-decoration:underline; }
   display: inline-block;
   margin-top: 14px;
 }
+#future .card__link {
+  pointer-events: none;       /* отключить клики только здесь */
+  cursor: default !important; /* обычный курсор */
+  text-decoration: none !important; /* без подчёркивания */
+  opacity: 0.7;               /* оставить твой стиль */
+}
+
+#future .card__link:hover {
+  text-decoration: none !important;
+}
 
 /* ============================== */
 /* HOME PAGE — CARD DATE STYLE    */

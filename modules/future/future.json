@@ -1,0 +1,18 @@
+{
+  "items": [
+    {
+      "title": "Aya App",
+      "date": "2026",
+      "excerpt": "The soft emotional space of Aya — in your hands.",
+      "image": "/assets/images/future-app.jpg",
+      "coming": "Coming Soon →"
+    },
+    {
+      "title": "Aya Palace",
+      "date": "2026",
+      "excerpt": "A future sanctuary — a vision of light, warmth and elegance.",
+      "image": "/assets/images/future-palace.jpg",
+      "coming": "Coming Soon →"
+    }
+  ]
+}

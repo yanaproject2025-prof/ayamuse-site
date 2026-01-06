@@ -86,10 +86,7 @@ async function loadFutureModules() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', loadFutureModules);
 
-  
-}
 
 // ----------------------------------------------------
 // INIT MODULES
@@ -97,3 +94,4 @@ document.addEventListener('DOMContentLoaded', loadFutureModules);
 
 document.addEventListener('DOMContentLoaded', loadLetterModules);
 document.addEventListener('DOMContentLoaded', loadNewsModules);
+document.addEventListener('DOMContentLoaded', loadFutureModules);

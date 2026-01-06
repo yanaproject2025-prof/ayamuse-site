@@ -1,0 +1,18 @@
+{
+  "items": [
+    {
+      "title": "Arabic Loop Collection",
+      "date": "2026-01-06",
+      "excerpt": "A cinematic collection shaped by the silence of dunes and the glow of Arabian nights — soft loops woven with mystery, warmth, and quiet luxury.",
+      "image": "/assets/images/collections/arabic-loops.jpg",
+      "coming": "Coming soon →"
+    },
+    {
+      "title": "Aya in Paris",
+      "date": "2026-01-06",
+      "excerpt": "A visual journey through Paris — where Aya walks among fountains, light, and quiet magic. A dream shaped by elegance and feminine softness.",
+      "image": "/assets/images/collections/paris-aya.jpg",
+      "coming": "Coming soon →"
+    }
+  ]
+}

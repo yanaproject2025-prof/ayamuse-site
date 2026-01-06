@@ -101,8 +101,9 @@ async function loadCollectionsModules() {
 
         <p class="card__text">${item.excerpt}</p>
 
-        <span class="card__soon">${item.coming}</span>
-
+        <a href="${item.link}" target="_blank" rel="noopener" class="card__link">
+          ${item.link_text}
+        </a>  
       </article>
     `).join('');
 

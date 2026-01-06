@@ -79,6 +79,37 @@ async function loadFutureModules() {
     console.error('Error loading future section:', e);
   }
 }
+// ----------------------------------------------------
+// Load data for COLLECTIONS section
+// ----------------------------------------------------
+async function loadCollectionsModules() {
+  try {
+    const data = await fetch('/modules/collections/collections.json').then(r => r.json());
+    const items = data.items.slice(0, 2);
+
+    const container = document.querySelector('#collections .grid--2');
+    if (!container) return;
+
+    container.innerHTML = items.map(item => `
+      <article class="card">
+
+        <img src="${item.image}" alt="${item.title}" class="card__image">
+
+        <h3 class="card__title">${item.title}</h3>
+
+        <p class="card_date">${item.date}</p>
+
+        <p class="card__text">${item.excerpt}</p>
+
+        <span class="card__soon">${item.coming}</span>
+
+      </article>
+    `).join('');
+
+  } catch (e) {
+    console.error('Error loading collections section:', e);
+  }
+}
 
 
 
@@ -88,3 +119,5 @@ async function loadFutureModules() {
 document.addEventListener('DOMContentLoaded', loadLetterModules);
 document.addEventListener('DOMContentLoaded', loadNewsModules);
 document.addEventListener('DOMContentLoaded', loadFutureModules);
+document.addEventListener('DOMContentLoaded', loadCollectionsModules);
+

@@ -576,6 +576,16 @@ body.letter-page .letter__hero-image {
   opacity: .7;
 }
 
+.collab__eyebrow{
+  font-family: var(--font-head);   /* Playfair Display */
+  font-style: italic;
+  font-size: 18px;                 /* как Aya – YouAreNotAlone */
+  letter-spacing: 0.4px;
+  opacity: .85;
+  margin-bottom: 26px;
+}
+
+
 /* MOBILE */
 @media (max-width:768px){
   .collab__lead{

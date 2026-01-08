@@ -639,27 +639,28 @@ body.letter-page .letter__hero-image {
   .card__content {
     padding-right: 0;
   }
- /* 🔴 DEBUG TEST — MUST FORCE SIDE LAYOUT */
- #collaborations .card--collab {
-   display: grid !important;
+  /* ============================== */
+/* COLLABORATIONS — FORCE LAYOUT  */
+/* ============================== */
+
+section#collaborations article.card--collab {
+  display: grid !important;
   grid-template-columns: 320px 1fr !important;
-  align-items: start !important;
+  gap: 36px !important;
 }
 
-#collaborations .card--collab > * {
-  border: 2px solid red;
+section#collaborations article.card--collab > div {
+  border: 2px solid red !important;
 }
 
-#collaborations .card__image {
-  aspect-ratio: auto !important;
+section#collaborations article.card--collab img.card__image {
   width: 100% !important;
   height: 100% !important;
+  aspect-ratio: auto !important;
   margin: 0 !important;
+  display: block !important;
 }
 
-
-
-  
 }
 
   

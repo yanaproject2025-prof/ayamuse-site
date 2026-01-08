@@ -5,53 +5,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Collaborations — Aya Muse World</title>
 
+  <!-- FAVICON -->
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="favicon.png">
 
+  <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
 
+  <!-- MAIN CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="collab-page">
 
-<header class="header">
+<!-- HEADER — ВОЗВРАЩЁН КАК БЫЛ -->
+<header class="header" role="banner">
   <div class="header__inner">
-    <a class="brand" href="index.html">
-      <img src="assets/images/logo-aya.png" class="brand__image">
+
+    <a class="brand" href="index.html" aria-label="Aya - YouAreNotAlone">
+      <img src="assets/images/logo-aya.png" alt="Aya logo" class="brand__image">
       <span class="brand__line">Aya – YouAreNotAlone</span>
     </a>
+
+    <!-- ПРАВАЯ НАДПИСЬ В ШАПКЕ — ВОЗВРАЩЕНА -->
+    <nav class="nav nav--desktop" aria-label="Primary navigation">
+      <span class="nav__single-item">Collaborations</span>
+    </nav>
+
+    <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+
+  <div id="mobileMenu" class="drawer" hidden>
+    <nav class="nav nav--mobile nav--single" aria-label="Mobile navigation">
+      <span class="nav__single-item">Collaborations</span>
+    </nav>
   </div>
 </header>
 
+<!-- MAIN -->
 <main>
 
-<section class="section">
-  <h1 class="page-title">Collaborations</h1>
-</section>
+  <!-- PAGE TITLE + SUBTITLE — ВОЗВРАЩЕНЫ -->
+  <section class="page-head">
+    <h1 class="page-title">Collaborations</h1>
+    <p class="page-subtitle">
+      Healing through style, beauty & meaningful partnerships
+    </p>
+  </section>
 
-<section class="section">
-  <div class="grid--1">
+  <!-- COLLABORATIONS BLOCK — БЕЗ ИЗМЕНЕНИЙ -->
+  <section class="section section--collaborations">
+    <div class="grid--1">
 
-    <article class="card card--collab">
+      <article class="card card--collab">
 
-      <!-- LEFT IMAGE -->
-      <div class="card__image-wrap">
-        <img src="assets/images/aya-footsteps.jpeg" class="collab__image">
-      </div>
+        <!-- LEFT IMAGE -->
+        <div class="card__image-wrap">
+          <img
+            src="assets/images/aya-footsteps.jpeg"
+            alt="Aya footsteps"
+            class="collab__image">
+        </div>
 
-      <!-- RIGHT TEXT -->
-      <div class="card__content" id="collaborations-content"></div>
+        <!-- RIGHT CONTENT -->
+        <div class="card__content" id="collaborations-content"></div>
 
-    </article>
+      </article>
 
-  </div>
-</section>
+    </div>
+  </section>
 
 </main>
 
+<!-- JS -->
 <script src="js/load-collaborations.js"></script>
+
 </body>
 </html>

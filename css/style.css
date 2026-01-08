@@ -639,4 +639,27 @@ body.letter-page .letter__hero-image {
   .card__content {
     padding-right: 0;
   }
+ /* 🔴 DEBUG TEST — MUST FORCE SIDE LAYOUT */
+ #collaborations .card--collab {
+   display: grid !important;
+  grid-template-columns: 320px 1fr !important;
+  align-items: start !important;
 }
+
+#collaborations .card--collab > * {
+  border: 2px solid red;
+}
+
+#collaborations .card__image {
+  aspect-ratio: auto !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+}
+
+
+
+  
+}
+
+  

@@ -635,4 +635,21 @@ body.letter-page .letter__hero-image {
     object-fit: cover;
   }
 }  
+/* ========================================= */
+/* COLLABORATIONS — COSMETIC SPACING ONLY    */
+/* affects ONLY collaborations page          */
+/* ========================================= */
 
+  body.collab-page .page-head {
+    padding-top: 48px;    /* было визуально ~80 */
+    padding-bottom: 32px;
+  }
+
+  body.collab-page .page-subtitle {
+    margin-bottom: 24px; /* сжимаем расстояние до блока */
+  }
+
+  body.collab-page .section--collaborations {
+    padding-top: 24px;   /* вместо общих 40px */
+  }
+ 

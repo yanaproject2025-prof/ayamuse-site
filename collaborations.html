@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collaborations — Aya Muse World</title>
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="letter-page">
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header__inner">
+
+    <!-- ЛОГО → ГЛАВНАЯ -->
+    <a class="brand" href="index.html" aria-label="Aya - YouAreNotAlone">
+      <img src="assets/images/logo-aya.png" alt="Aya logo" class="brand__image">
+      <span class="brand__line">Aya — YouAreNotAlone</span>
+    </a>
+
+    <!-- СПРАВА ТОЛЬКО НАЗВАНИЕ -->
+    <nav class="nav nav--desktop">
+      <span class="nav__static">Collaborations</span>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <div class="letter__hero">
+    <img src="assets/images/aya-footsteps.jpeg" alt="Aya footsteps" class="letter__hero-image">
+  </div>
+
+  <!-- TITLES -->
+  <div class="letter__titles">
+    <h2 class="letter__title">Collaborations</h2>
+    <p class="letter__subtitle">Healing through style</p>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="letter">
+
+    <!-- СЮДА ПОЛНОСТЬЮ ПЕРЕНОСИМ ТЕКСТ ИЗ collab JSON -->
+    <article class="letter__pinned">
+      <div id="collab-content">
+        Loading...
+      </div>
+    </article>
+
+  </div>
+
+</main>
+
+<!-- JS -->
+<script src="js/load-collaborations.js"></script>
+
+</body>
+</html>

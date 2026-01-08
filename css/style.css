@@ -639,7 +639,9 @@ body.letter-page .letter__hero-image {
   .card__content {
     padding-right: 0;
   }
-  /* ============================== */
+}  
+  
+/* ============================== */
 /* COLLABORATIONS — FORCE LAYOUT  */
 /* ============================== */
 
@@ -661,6 +663,6 @@ section#collaborations article.card--collab img.card__image {
   display: block !important;
 }
 
-}
+
 
   

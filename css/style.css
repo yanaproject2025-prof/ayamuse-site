@@ -527,44 +527,53 @@ body.letter-page .letter__hero-image {
 
 }
 /* ============================== */
-/* COLLABORATIONS SECTION         */
+/* COLLABORATIONS = ONE BIG BLOCK */
 /* ============================== */
 
+/* 1) ОДНА БОЛЬШАЯ КАРТОЧКА */
 .collab{
-  align-items: start;
-  gap: 32px;
-
-  /* КЛЮЧ: маленькая вертикальная колонка слева + широкий текст справа */
+  display: grid;
   grid-template-columns: clamp(220px, 22vw, 300px) 1fr;
-}
+  gap: 32px;
+  align-items: start;
 
-/* IMAGE WRAP — маленький вертикальный постер, ПРИЛИПАЕТ ВЛЕВО */
-.collab__image-wrap{
+  /* карточка как у других блоков */
+  padding: 28px;
   border-radius: var(--radius);
-  overflow: hidden;
   border: 1px solid rgba(34,34,34,0.10);
   background: rgba(255,255,255,0.35);
-
-  width: 100%;
-  aspect-ratio: 9 / 16;     /* вертикаль */
-  max-height: 420px;        /* чтобы не раздувалось */
-  justify-self: start;      /* <-- СДВИГАЕТ ВЛЕВО */
 }
 
-/* НЕ ОБРЕЗАЕМ КАРТИНКУ */
+/* 2) ЛЕВАЯ КАРТИНКА — маленький вертикальный постер */
+.collab__image-wrap{
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  max-height: 420px;
+  overflow: hidden;
+  border-radius: calc(var(--radius) - 6px);
+
+  /* убираем “двойную рамку” */
+  border: none;
+  background: transparent;
+
+  justify-self: start; /* прижать влево */
+}
+
+/* НЕ ОБРЕЗАЕМ */
 .collab__image{
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: contain;      /* <-- важно */
+  object-fit: contain; /* важно */
 }
 
-/* CONTENT — НЕ ОБРЕЗАЕМ */
+/* 3) ПРАВАЯ ЧАСТЬ — текст НА ВСЮ ШИРИНУ */
 .collab__content{
-  max-width: 720px;         /* можно 720, чтобы читалось “дорого” */
+  width: 100%;
+  max-width: none; /* чтобы не сужалось */
 }
 
-/* Eyebrow (лозунг) */
+/* лозунг */
 .collab__eyebrow{
   font-family: var(--font-head);
   font-style: italic;
@@ -574,14 +583,14 @@ body.letter-page .letter__hero-image {
   margin: 0 0 12px;
 }
 
-/* Заголовки секций */
+/* заголовки внутри текста */
 .collab__title{
   font-family: var(--font-head);
   font-size: 18px;
   margin: 14px 0 6px;
 }
 
-/* Текст */
+/* основной текст (мельче, как “инфо-блок”) */
 .collab__text{
   font-family: var(--font-ui);
   font-size: 13.5px;
@@ -590,7 +599,6 @@ body.letter-page .letter__hero-image {
   margin: 0 0 10px;
 }
 
-/* Списки */
 .collab__list{
   font-family: var(--font-ui);
   font-size: 13.5px;
@@ -599,19 +607,17 @@ body.letter-page .letter__hero-image {
   opacity: .8;
 }
 
-.collab__list li{
-  margin-bottom: 3px;
-}
+.collab__list li{ margin-bottom: 3px; }
 
-/* Email */
 .collab__email{
   font-family: var(--font-ui);
   font-size: 10.5px;
   letter-spacing: .12em;
   text-transform: uppercase;
   opacity: .7;
-  margin-top: 8px;
+  margin-top: 10px;
 }
+
 
 /* ============================== */
 /* MOBILE                         */
@@ -622,32 +628,18 @@ body.letter-page .letter__hero-image {
   .collab{
     grid-template-columns: 1fr;
     gap: 16px;
+    padding: 18px;
   }
 
-  /* картинка на мобиле: не огромная и не центр-супер, но аккуратно */
   .collab__image-wrap{
-    max-width: 300px;
-    margin: 0;              /* <-- ВЛЕВО, не по центру */
-    max-height: 380px;
-  }
-
-  .collab__eyebrow{
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-
-  .collab__title{
-    font-size: 16px;
-    margin: 12px 0 4px;
+    max-width: 280px;   /* маленький постер */
+    margin: 0;          /* слева */
+    max-height: 360px;
   }
 
   .collab__text,
   .collab__list{
     font-size: 13px;
     line-height: 1.5;
-  }
-
-  .collab__email{
-    font-size: 10px;
   }
 }

@@ -636,20 +636,15 @@ body.letter-page .letter__hero-image {
   }
 }  
 /* ========================================= */
-/* COLLABORATIONS — COSMETIC SPACING ONLY    */
-/* affects ONLY collaborations page          */
+/* COLLABORATIONS — SPACING FIX (LOCAL ONLY) */
 /* ========================================= */
 
+/* 1. Уменьшаем отступ под заголовком */
   body.collab-page .page-head {
-    padding-top: 48px;    /* было визуально ~80 */
-    padding-bottom: 32px;
+    padding-bottom: 24px;
   }
 
-  body.collab-page .page-subtitle {
-    margin-bottom: 24px; /* сжимаем расстояние до блока */
+/* 2. УБИРАЕМ лишний padding у первой секции */
+  body.collab-page main > section.section:first-of-type {
+    padding-top: 24px;
   }
-
-  body.collab-page .section--collaborations {
-    padding-top: 24px;   /* вместо общих 40px */
-  }
- 

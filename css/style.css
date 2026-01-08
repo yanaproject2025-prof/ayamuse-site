@@ -530,57 +530,62 @@ body.letter-page .letter__hero-image {
 /* COLLABORATIONS = ONE BIG BLOCK */
 /* ============================== */
 
-.collab-card{
+.grid--1{
   display: grid;
-  grid-template-columns: 280px 1fr; /* слева картинка, справа текст */
-  gap: 32px;
-
-  padding: 28px;
-  border-radius: var(--radius);
-  border: 1px solid rgba(34,34,34,0.10);
-  background: rgba(255,255,255,0.45);
+  grid-template-columns: 1fr;
 }
 
-/* Left image */
-.collab-card__image img{
+.card--collab{
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 36px;
+
+  padding: 36px;
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.45);
+  border: 1px solid rgba(34,34,34,0.10);
+}
+
+.card__image-wrap{
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.card__image{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: var(--radius);
 }
 
-/* Right content */
-.collab-card__content{
-  font-family: var(--font-body);
-  font-size: 15px;
-  line-height: 1.55;
+.card__content{
+  padding-right: 28px;
 }
 
-.collab-card__eyebrow{
+.card__eyebrow{
   font-family: var(--font-head);
-  font-style: italic;
   font-size: 16px;
-  opacity: .8;
-  margin: 0 0 14px 0;
+  font-style: italic;
+  opacity: .7;
+  margin-bottom: 16px;
 }
 
-.collab-card__email{
+.card__email{
   margin-top: 12px;
   font-family: var(--font-ui);
   font-size: 12px;
-  letter-spacing: .16em;
+  letter-spacing: .15em;
   opacity: .7;
-  text-transform: uppercase;
 }
 
 /* Mobile */
-@media(max-width:768px){
-  .collab-card{
+@media(max-width: 768px){
+  .card--collab{
     grid-template-columns: 1fr;
   }
 
-  .collab-card__image img{
+  .card__image-wrap{
     height: 420px;
-    object-fit: cover;
   }
 }

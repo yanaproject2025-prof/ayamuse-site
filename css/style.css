@@ -582,10 +582,9 @@ body.letter-page .letter__hero-image {
 
 .card--collab .card__image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  aspect-ratio: auto;     /* ❗ НИКАКИХ 16:9 */
-  margin: 0;              /* ❗ убираем card-поведение */
+  height: auto;
+  object-fit: contain;
+  display: block;           
 }
 
 /* CONTENT AREA */
@@ -652,11 +651,12 @@ body.letter-page .letter__hero-image {
 
   .card__image-wrap {
     height: 420px;      /* фиксированная высота, чтобы постер выглядел красиво */
-    max-height: none;
+    
   }
 
-  .card__content {
-    padding-right: 0;
+  .card--collab .collab__image {
+    height: 100%;
+    object-fit: cover;
   }
 }  
 

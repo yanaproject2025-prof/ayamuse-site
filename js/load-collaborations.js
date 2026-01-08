@@ -3,7 +3,7 @@ async function loadCollaborationsModule() {
     const data = await fetch('/modules/collaborations/collaborations.json')
       .then(r => r.json());
 
-    const container = document.getElementById('collab-content');
+    const container = document.getElementById('collaborations-content');
     if (!container) return;
 
     let html = `<p class="card__eyebrow">${data.eyebrow}</p>`;

@@ -642,28 +642,5 @@ body.letter-page .letter__hero-image {
   }
 }  
   
-/* ============================== */
-/* COLLABORATIONS — FORCE LAYOUT  */
-/* ============================== */
-
-  section#collaborations article.card--collab {
-    display: grid !important;
-    grid-template-columns: 320px 1fr !important;
-    gap: 36px !important;
-  }
-
-  section#collaborations article.card--collab > div {
-    border: 2px solid red !important;
-  }
-
-  section#collaborations article.card--collab img.card__image {
-    width: 100% !important;
-    height: 100% !important;
-    aspect-ratio: auto !important;
-    margin: 0 !important;
-    display: block !important;
-  }
-} 
-
 
   

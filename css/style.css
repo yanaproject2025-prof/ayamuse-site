@@ -550,7 +550,8 @@ body.letter-page .letter__hero-image {
 /* IMAGE */
 .card__image-wrap {
   width: 100%;
-  height: auto;
+  height: 100%;
+  max-height: 420px;       /* ограничиваем высоту, чтобы картинка не росла */
   border-radius: var(--radius);
   overflow: hidden;
 }
@@ -632,4 +633,3 @@ body.letter-page .letter__hero-image {
     padding-right: 0;
   }
 }
-

@@ -537,18 +537,6 @@ body.letter-page .letter__hero-image {
   grid-template-columns: 1fr;
 }
 
-/* MAIN CARD BLOCK */
-.card--collab {
-  display: grid;
-  grid-template-columns: 320px 1fr; /* Картинка слева, текст справа */
-  gap: 36px;
-
-  padding: 36px;
-  border-radius: var(--radius);
-  background: rgba(255,255,255,0.45);
-  border: 1px solid rgba(34,34,34,0.10);
-}
-
 
 /* ============================== */
 /* FIX: COLLAB IMAGE SIDE LAYOUT  */

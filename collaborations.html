@@ -1,93 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Collaborations — Aya Muse World</title>
 
-  <!-- FAVICON -->
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="favicon.png">
 
-  <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
 
-  <!-- MAIN CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="collab-page">
+<body>
 
-  <!-- HEADER -->
-  <header class="header" role="banner">
-    <div class="header__inner">
+<header class="header">
+  <div class="header__inner">
+    <a class="brand" href="index.html">
+      <img src="assets/images/logo-aya.png" class="brand__image">
+      <span class="brand__line">Aya – YouAreNotAlone</span>
+    </a>
+  </div>
+</header>
 
-      <a class="brand" href="index.html" aria-label="Aya - YouAreNotAlone">
-        <img src="assets/images/logo-aya.png" alt="Aya logo" class="brand__image">
-        <span class="brand__line">Aya – YouAreNotAlone</span>
-      </a>
+<main>
 
-      <nav class="nav nav--desktop" aria-label="Primary navigation">
-        <span class="nav__single-item">Collaborations</span>
-      </nav>
+<section class="section">
+  <h1 class="page-title">Collaborations</h1>
+</section>
 
-      <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+<section class="section">
+  <div class="grid--1">
 
-    <div id="mobileMenu" class="drawer" hidden>
-      <nav class="nav nav--mobile nav--single" aria-label="Mobile navigation">
-        <span class="nav__single-item">Collaborations</span>
-      </nav>
-    </div>
-    
-  </header>
+    <article class="card card--collab">
 
-  <!-- MAIN -->
-  <main>
-
-    <!-- PAGE TITLE -->
-    <section class="page-head">
-      <h1 class="page-title">Collaborations</h1>
-      <p class="page-subtitle">Healing through style, beauty & meaningful partnerships</p>
-    </section>
-
-    <!-- COLLABORATIONS BLOCK -->
-    <section class="section section--collaborations">
-
-      <div class="grid--1">
-
-        <article class="card card--collaborations">
-
-          <!-- LEFT: IMAGE -->
-          <div class="card__image-wrap">
-            <img
-              src="assets/images/aya-footsteps.jpeg"
-              alt="Aya footsteps"
-              class="collab__image">
-          </div>
-
-          <!-- RIGHT: CONTENT -->
-          <div class="card__content" id="collaborations-content">
-            
-          </div>
-
-        </article>
-
+      <!-- LEFT IMAGE -->
+      <div class="card__image-wrap">
+        <img src="assets/images/aya-footsteps.jpeg" class="collab__image">
       </div>
 
-    </section>
+      <!-- RIGHT TEXT -->
+      <div class="card__content" id="collaborations-content"></div>
 
-  </main>
+    </article>
 
-  <!-- JS -->
-  <script src="js/load-collaborations.js"></script>
+  </div>
+</section>
 
+</main>
+
+<script src="js/load-collaborations.js"></script>
 </body>
 </html>

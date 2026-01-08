@@ -530,116 +530,57 @@ body.letter-page .letter__hero-image {
 /* COLLABORATIONS = ONE BIG BLOCK */
 /* ============================== */
 
-/* 1) ОДНА БОЛЬШАЯ КАРТОЧКА */
-.collab{
+.collab-card{
   display: grid;
-  grid-template-columns: clamp(220px, 22vw, 300px) 1fr;
+  grid-template-columns: 280px 1fr; /* слева картинка, справа текст */
   gap: 32px;
-  align-items: start;
 
-  /* карточка как у других блоков */
   padding: 28px;
   border-radius: var(--radius);
   border: 1px solid rgba(34,34,34,0.10);
-  background: rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.45);
 }
 
-/* 2) ЛЕВАЯ КАРТИНКА — маленький вертикальный постер */
-.collab__image-wrap{
-  width: 100%;
-  aspect-ratio: 9 / 16;
-  max-height: 420px;
-  overflow: hidden;
-  border-radius: calc(var(--radius) - 6px);
-
-  /* убираем “двойную рамку” */
-  border: none;
-  background: transparent;
-
-  justify-self: start; /* прижать влево */
-}
-
-/* НЕ ОБРЕЗАЕМ */
-.collab__image{
+/* Left image */
+.collab-card__image img{
   width: 100%;
   height: 100%;
-  display: block;
-  object-fit: contain; /* важно */
+  object-fit: cover;
+  border-radius: var(--radius);
 }
 
-/* 3) ПРАВАЯ ЧАСТЬ — текст НА ВСЮ ШИРИНУ */
-.collab__content{
-  width: 100%;
-  max-width: none; /* чтобы не сужалось */
+/* Right content */
+.collab-card__content{
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.55;
 }
 
-/* лозунг */
-.collab__eyebrow{
+.collab-card__eyebrow{
   font-family: var(--font-head);
   font-style: italic;
-  font-size: 15px;
-  letter-spacing: 0.3px;
+  font-size: 16px;
   opacity: .8;
-  margin: 0 0 12px;
+  margin: 0 0 14px 0;
 }
 
-/* заголовки внутри текста */
-.collab__title{
-  font-family: var(--font-head);
-  font-size: 18px;
-  margin: 14px 0 6px;
-}
-
-/* основной текст (мельче, как “инфо-блок”) */
-.collab__text{
+.collab-card__email{
+  margin-top: 12px;
   font-family: var(--font-ui);
-  font-size: 13.5px;
-  line-height: 1.55;
-  opacity: .8;
-  margin: 0 0 10px;
-}
-
-.collab__list{
-  font-family: var(--font-ui);
-  font-size: 13.5px;
-  line-height: 1.55;
-  margin: 0 0 10px 16px;
-  opacity: .8;
-}
-
-.collab__list li{ margin-bottom: 3px; }
-
-.collab__email{
-  font-family: var(--font-ui);
-  font-size: 10.5px;
-  letter-spacing: .12em;
-  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: .16em;
   opacity: .7;
-  margin-top: 10px;
+  text-transform: uppercase;
 }
 
-
-/* ============================== */
-/* MOBILE                         */
-/* ============================== */
-
-@media (max-width:768px){
-
-  .collab{
+/* Mobile */
+@media(max-width:768px){
+  .collab-card{
     grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 18px;
   }
 
-  .collab__image-wrap{
-    max-width: 280px;   /* маленький постер */
-    margin: 0;          /* слева */
-    max-height: 360px;
-  }
-
-  .collab__text,
-  .collab__list{
-    font-size: 13px;
-    line-height: 1.5;
+  .collab-card__image img{
+    height: 420px;
+    object-fit: cover;
   }
 }

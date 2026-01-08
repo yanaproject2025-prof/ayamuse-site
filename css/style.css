@@ -639,15 +639,28 @@ body.letter-page .letter__hero-image {
 /* COLLABORATIONS — SPACING FIX (LOCAL ONLY) */
 /* ========================================= */
 
-/* 1. Уменьшаем отступ под заголовком */
   body.collab-page .page-head {
-    padding-bottom: 24px;
+    padding: 32px 0 40px;   /* аккуратно, как на главной */
+}
+
+  body.collab-page main {
+    padding-top: 0;         /* убираем лишнюю компенсацию */
+}
+}
+  body.collab-page .page-title {
+    font-family: var(--font-head);   /* Playfair Display */
+    font-size: 32px;                 /* как заголовки карточек */
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: center;
+    margin: 0 0 12px;
   }
 
-/* 2. УБИРАЕМ лишний padding у первой секции */
-  body.collab-page main > section.section:first-of-type {
-    padding-top: 24px;
-  }
-  body.collab-page section.section--collaborations {
-  padding-top: 0;
+body.collab-page .page-subtitle {
+  font-family: var(--font-body);   /* Lora */
+  font-size: 16px;
+  line-height: 1.55;
+  text-align: center;
+  opacity: 0.85;
+  margin: 0;
 }

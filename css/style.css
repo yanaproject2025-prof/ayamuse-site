@@ -641,6 +641,13 @@ body.letter-page .letter__hero-image {
     padding-right: 0;
   }
 }  
-  
-
-  
+/* ============================== */
+/* COLLABORATIONS — SIDE IMAGE    */
+/* ============================== */ 
+.card--collab .card__image {
+  aspect-ratio: auto;
+  margin-bottom: 0;
+}
+ .card--collab .card__image-wrap {
+  height: auto;
+} 

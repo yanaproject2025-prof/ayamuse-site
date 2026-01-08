@@ -534,11 +534,14 @@ body.letter-page .letter__hero-image {
   align-items: center;
 }
 
+/* IMAGE */
+
 .collab__image-wrap{
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid rgba(34,34,34,0.10);
   background: rgba(255,255,255,0.35);
+  max-height: 420px;              /* ↓ уменьшили */
 }
 
 .collab__image{
@@ -546,53 +549,114 @@ body.letter-page .letter__hero-image {
   height: 100%;
   object-fit: cover;
   display: block;
-  aspect-ratio: 9 / 16; /* ВАЖНО: вертикаль */
+  aspect-ratio: 9 / 16;           /* вертикаль */
 }
+
+/* CONTENT */
 
 .collab__content{
-  max-width: 720px;
+  max-width: 640px;               /* ↓ было 720 */
 }
 
-.collab__lead{
-  font-family: var(--font-head);
-  font-size: 26px;
-  line-height: 1.25;
-  margin: 0 0 18px;
+/* Manifest line */
+
+.collab__eyebrow{
+  font-family: var(--font-head);  /* Playfair */
+  font-style: italic;
+  font-size: 15px;                /* ↓ */
+  letter-spacing: 0.3px;
+  opacity: .8;
+  margin-bottom: 14px;            /* ↓ */
 }
+
+/* Section titles (Who We Are, etc.) */
+
+.collab__title{
+  font-family: var(--font-head);
+  font-size: 18px;                /* ↓ */
+  margin: 18px 0 6px;
+}
+
+/* Paragraphs */
 
 .collab__text{
   font-family: var(--font-ui);
-  font-size: 15px;
-  line-height: 1.7;
-  opacity: .85;
-  margin: 0 0 14px;
+  font-size: 14px;                /* ↓ */
+  line-height: 1.6;
+  opacity: .8;
+  margin: 0 0 10px;               /* ↓ */
 }
+
+/* Lists */
+
+.collab__list{
+  font-family: var(--font-ui);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 12px 16px;
+  opacity: .8;
+}
+
+.collab__list li{
+  margin-bottom: 4px;
+}
+
+/* Email */
 
 .collab__email{
   font-family: var(--font-ui);
-  font-size: 13px;
-  letter-spacing: .12em;
+  font-size: 11px;                /* ↓ */
+  letter-spacing: .14em;
   text-transform: uppercase;
   opacity: .7;
+  margin-top: 6px;
 }
 
-.collab__eyebrow{
-  font-family: var(--font-head);   /* Playfair Display */
-  font-style: italic;
-  font-size: 18px;                 /* как Aya – YouAreNotAlone */
-  letter-spacing: 0.4px;
-  opacity: .85;
-  margin-bottom: 26px;
-}
+/* ============================== */
+/* MOBILE                         */
+/* ============================== */
 
-
-/* MOBILE */
 @media (max-width:768px){
-  .collab__lead{
-    font-size: 22px;
+
+  .collab__image-wrap{
+    max-height: 300px;             /* ↓ компакт */
   }
 
   .collab__image{
-    aspect-ratio: 4 / 5; /* мягче на мобиле */
+    aspect-ratio: 3 / 4;           /* компактнее */
+  }
+
+  .collab__content{
+    max-width: 100%;
+  }
+
+  .collab__eyebrow{
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .collab__title{
+    font-size: 16px;
+    margin: 14px 0 4px;
+  }
+
+  .collab__text{
+    font-size: 13px;
+    line-height: 1.55;
+    margin-bottom: 8px;
+  }
+
+  .collab__list{
+    font-size: 13px;
+    margin: 0 0 10px 14px;
+  }
+
+  .collab__list li{
+    margin-bottom: 3px;
+  }
+
+  .collab__email{
+    font-size: 10px;
+    letter-spacing: .12em;
   }
 }

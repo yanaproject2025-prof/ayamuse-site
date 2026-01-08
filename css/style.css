@@ -573,7 +573,7 @@ body.letter-page .letter__hero-image {
   width: 100%;
   height: auto;
   object-fit: contain;
-  display: block;           
+           
 }
 
 /* CONTENT AREA */

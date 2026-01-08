@@ -530,14 +530,15 @@ body.letter-page .letter__hero-image {
 /* COLLABORATIONS = ONE BIG BLOCK */
 /* ============================== */
 
-.grid--1{
+.grid--1 {
   display: grid;
   grid-template-columns: 1fr;
 }
 
-.card--collab{
+/* MAIN CARD BLOCK */
+.card--collab {
   display: grid;
-  grid-template-columns: 360px 1fr;
+  grid-template-columns: 320px 1fr; /* Картинка слева, текст справа */
   gap: 36px;
 
   padding: 36px;
@@ -546,46 +547,90 @@ body.letter-page .letter__hero-image {
   border: 1px solid rgba(34,34,34,0.10);
 }
 
-.card__image-wrap{
+/* IMAGE */
+.card__image-wrap {
   width: 100%;
   height: 100%;
+  max-height: 420px;       /* ограничиваем высоту, чтобы картинка не росла */
   border-radius: var(--radius);
   overflow: hidden;
 }
 
-.card__image{
+.card__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.card__content{
-  padding-right: 28px;
+/* CONTENT AREA */
+.card__content {
+  padding-right: 20px;
+  font-family: var(--font-body); /* Lora */
+  font-size: 15px;               /* чуть меньше текста */
+  line-height: 1.6;              /* комфортное чтение */
+  opacity: 0.85;
 }
 
-.card__eyebrow{
-  font-family: var(--font-head);
+/* EYEBROW STYLE */
+.card__eyebrow {
+  font-family: var(--font-head); /* Playfair */
   font-size: 16px;
   font-style: italic;
-  opacity: .7;
-  margin-bottom: 16px;
+  opacity: 0.75;
+  margin: 0 0 16px 0;
 }
 
-.card__email{
-  margin-top: 12px;
-  font-family: var(--font-ui);
+/* SECTION TITLES */
+.card__content h3 {
+  font-family: var(--font-head);
+  font-size: 22px;
+  margin: 20px 0 8px;
+  line-height: 1.3;
+}
+
+/* PARAGRAPHS */
+.card__content p {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 0 12px;
+}
+
+/* LISTS */
+.card__content ul {
+  margin: 0 0 14px 20px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* EMAIL FOOTER */
+.card__email {
+  margin-top: 16px;
+  font-family: var(--font-ui); /* Montserrat */
   font-size: 12px;
-  letter-spacing: .15em;
-  opacity: .7;
+  letter-spacing: 0.14em;
+  opacity: 0.7;
+  text-transform: uppercase;
 }
 
-/* Mobile */
-@media(max-width: 768px){
-  .card--collab{
-    grid-template-columns: 1fr;
+/* ============================== */
+/* MOBILE VERSION                 */
+/* ============================== */
+
+@media (max-width: 768px) {
+  .card--collab {
+    grid-template-columns: 1fr; /* картинка сверху */
   }
 
-  .card__image-wrap{
-    height: 420px;
+  .card__image-wrap {
+    height: 420px;      /* фиксированная высота, чтобы постер выглядел красиво */
+    max-height: none;
+  }
+
+  .card__content {
+    padding-right: 0;
   }
 }
+

@@ -6,19 +6,19 @@ async function loadCollaborationsModule() {
     const container = document.getElementById('collab-content');
     if (!container) return;
 
-    let html = `<p class="collab__eyebrow">${data.eyebrow}</p>`;
+    let html = `<p class="card__eyebrow">${data.eyebrow}</p>`;
 
     data.sections.forEach(section => {
-      html += `<h3 class="collab__title">${section.title}</h3>`;
+      html += `<h3 class="card__title">${section.title}</h3>`;
 
       if (section.paragraphs) {
         section.paragraphs.forEach(p => {
-          html += `<p class="collab__text">${p}</p>`;
+          html += `<p class="card__text">${p}</p>`;
         });
       }
 
       if (section.list) {
-        html += `<ul class="collab__list">`;
+        html += `<ul class="card__list">`;
         section.list.forEach(item => {
           html += `<li>${item}</li>`;
         });
@@ -26,12 +26,7 @@ async function loadCollaborationsModule() {
       }
 
       if (section.email) {
-        html += `
-          <p class="collab__email">
-            For collaborations and partnerships:<br>
-            ${section.email}
-          </p>
-        `;
+        html += `<p class="card__email">${section.email}</p>`;
       }
     });
 

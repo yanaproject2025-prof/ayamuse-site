@@ -1,40 +1,33 @@
-async function loadCollaborationsModule() {
-  try {
-    const data = await fetch('/modules/collaborations/collaborations.json')
-      .then(r => r.json());
+async function loadCollaborations() {
+  const res = await fetch('/modules/collaborations/collaborations.json');
+  const data = await res.json();
 
-    const container = document.getElementById('collaborations-content');
-    if (!container) return;
+  const box = document.getElementById('collaborations-content');
+  if (!box) return;
 
-    let html = `<p class="card__eyebrow">${data.eyebrow}</p>`;
+  let html = `<p class="card__eyebrow">${data.eyebrow}</p>`;
 
-    data.sections.forEach(section => {
-      html += `<h3 class="card__title">${section.title}</h3>`;
+  data.sections.forEach(s => {
+    if (s.title) html += `<h3>${s.title}</h3>`;
 
-      if (section.paragraphs) {
-        section.paragraphs.forEach(p => {
-          html += `<p class="card__text">${p}</p>`;
-        });
-      }
+    if (s.paragraphs) {
+      s.paragraphs.forEach(p => {
+        html += `<p>${p}</p>`;
+      });
+    }
 
-      if (section.list) {
-        html += `<ul class="card__list">`;
-        section.list.forEach(item => {
-          html += `<li>${item}</li>`;
-        });
-        html += `</ul>`;
-      }
+    if (s.list) {
+      html += `<ul>`;
+      s.list.forEach(i => html += `<li>${i}</li>`);
+      html += `</ul>`;
+    }
 
-      if (section.email) {
-        html += `<p class="card__email">${section.email}</p>`;
-      }
-    });
+    if (s.email) {
+      html += `<p class="card__email">${s.email}</p>`;
+    }
+  });
 
-    container.innerHTML = html;
-
-  } catch (e) {
-    console.error('Error loading collaborations module:', e);
-  }
+  box.innerHTML = html;
 }
 
-document.addEventListener('DOMContentLoaded', loadCollaborationsModule);
+document.addEventListener('DOMContentLoaded', loadCollaborations);

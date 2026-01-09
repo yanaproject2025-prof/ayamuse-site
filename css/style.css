@@ -430,40 +430,6 @@ a:hover{ text-decoration:underline; }
 /* LETTER PAGE — FINAL AYA PREMIUM TYPOGRAPHY */
 /* ========================================= */
 
-/* --- Left alignment for letter block only --- */
-body.letter-page .letter__pinned,
-body.letter-page .letter__pinned-title,
-body.letter-page .letter__date,
-body.letter-page .letter__content,
-body.letter-page .letter__content p {
-  text-align: left !important;
-}
-
-/* --- Page title (Letter from Aya) --- */
-body.letter-page .letter__title {
-  font-family: var(--font-head);
-  font-size: 42px;
-  font-weight: 400;
-  margin-bottom: 8px;
-}
-
-/* Subheading under the main title */
-body.letter-page .letter__subtitle {
-  font-family: var(--font-ui);
-  font-size: 10.5px;
-  letter-spacing: 0.22em;
-  opacity: 0.6;
-  margin-bottom: 28px; /* уменьшили расстояние до письма */
-}
-
-/* --- Message from the Founder --- */
-body.letter-page .letter__pinned-title {
-  font-family: var(--font-head);
-  font-size: 26px;
-  font-weight: 700;
-  letter-spacing: 0.2px;
-  margin-bottom: 10px;
-}
 
 /* Date */
 body.letter-page .letter__date {
@@ -475,21 +441,7 @@ body.letter-page .letter__date {
   margin: 0 0 12px;
 }
 
-/* Healing through style (first paragraph) */
-body.letter-page .letter__content p:first-child {
-  font-family: var(--font-head);
-  font-style: italic;
-  font-size: 18px;
-  margin-bottom: 20px;
-}
 
-/* Main text */
-body.letter-page .letter__content p {
-  font-family: var(--font-body);
-  font-size: 18px; /* как на главной */
-  line-height: 1.55;
-  color: var(--text);
-}
 /* SUPPORT — основной текст Montserrat */
 .support-block p,
 .support-block li {

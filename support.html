@@ -1,106 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Support — Aya Muse World</title>
 
   <!-- FAVICON -->
-  <link rel="icon" type="image/png" href="favicon.png" />
-  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
 
-  <!-- FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
 
   <!-- MAIN CSS -->
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="support-page">
+<body class="letter-page">
 
-  <!-- HEADER — только SUPPORT -->
+  <!-- HEADER (как в LETTER, только Support в навигации) -->
   <header class="header" role="banner">
     <div class="header__inner">
 
-      <a class="brand" href="index.html">
-        <img src="assets/images/logo-aya.png" alt="Aya logo" class="brand__image" />
-        <span class="brand__line">Aya - YouAreNotAlone</span>
+      <a class="brand" href="index.html" aria-label="Aya - YouAreNotAlone">
+        <img src="assets/images/logo-aya.png" alt="Aya logo" class="brand__image">
+        <span class="brand__line">Aya – YouAreNotAlone</span>
       </a>
 
-      <nav class="nav nav--desktop">
+      <nav class="nav nav--desktop" aria-label="Primary navigation">
         <a href="support.html" class="active">Support</a>
       </nav>
 
-      <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>
       </button>
     </div>
 
     <div id="mobileMenu" class="drawer" hidden>
-      <nav class="nav nav--mobile">
-        <a href="support.html">Support</a>
+      <nav class="nav nav--mobile" aria-label="Mobile navigation">
+        <a href="support.html" class="active">Support</a>
       </nav>
     </div>
   </header>
 
-  <!-- TITLE BLOCK (как на index) -->
-  <section class="section">
+  <!-- MAIN CONTENT (строго как в LETTER, только без hero) -->
+  <main>
 
-    <div class="section-divider">
-      <span>SUPPORT</span>
+    <!-- TITLES (как в LETTER, только заменяем текст) -->
+    <div class="letter__titles">
+      <h2 class="letter__title">Support</h2>
+      <p class="letter__subtitle">Soft guidance, connection & meaningful assistance</p>
     </div>
 
-    <h1 class="letter__title">Support</h1>
+    <div class="letter">
 
-    <p class="letter__subtitle">
-      Soft guidance, connection & meaningful assistance
-    </p>
+      <!-- SUPPORT SECTIONS -->
 
-  </section>
+      <article class="letter__pinned">
+        <h3>General Support</h3>
+        <p>
+          General Support goes beyond technical questions. It is also a space for gentle guidance, human connection,
+          and quiet support.
+        </p>
+        <p>
+          You can reach out if something feels unclear or if you simply need to be heard while exploring Aya Muse
+          World. Every message is met with care, respect, and attention.
+        </p>
+      </article>
 
-  <!-- GENERAL SUPPORT -->
-  <section class="section">
-    <h3>General Support</h3>
-    <p>
-      General Support goes beyond technical questions. It is also a space for gentle guidance, human connection, and quiet support.
-    </p>
-    <p>
-      You can reach out if something feels unclear or if you simply need to be heard while exploring Aya Muse World. Every message is met with care, respect, and attention.
-    </p>
-  </section>
+      <article class="letter__pinned">
+        <h3>Collaborations & Partnerships</h3>
+        <p>For brands, media, creative collaborations, and partnership proposals.</p>
+        <p>This space is open for thoughtful collaborations that resonate with the values, aesthetics, and vision of Aya Muse World.</p>
+      </article>
 
-  <!-- COLLABORATIONS -->
-  <section class="section">
-    <h3>Collaborations & Partnerships</h3>
-    <p>For brands, media, creative collaborations, and partnership proposals.</p>
-    <p>
-      This space is open for thoughtful collaborations that resonate with the values, aesthetics, and vision of Aya Muse World.
-    </p>
-  </section>
+      <article class="letter__pinned">
+        <h3>Independent Support</h3>
+        <p>For those who wish to support Aya Muse World independently.</p>
+        <p>This form of support helps sustain the project and its ongoing creative work.</p>
 
-  <!-- INDEPENDENT SUPPORT -->
-  <section class="section">
-    <h3>Independent Support</h3>
+        <p>
+          <a href="https://nowpayments.io/donation/ayamuse" target="_blank" rel="noopener">
+            Independent Support →
+          </a>
+        </p>
 
-    <p>For those who wish to support Aya Muse World independently.</p>
+        <p>Support is voluntary — a gesture of resonance, not obligation.</p>
+      </article>
 
-    <p>This form of support helps sustain the project and its ongoing creative work.</p>
+      <article class="letter__pinned">
+        <h3>Contact</h3>
+        <p>yanaproject2025@gmail.com</p>
+      </article>
 
-    <a href="https://nowpayments.io/donation/ayamuse" target="_blank" rel="noopener" class="support-link">
-      Independent Support →
-    </a>
+    </div>
 
-    <p>Support is voluntary — a gesture of resonance, not obligation.</p>
-  </section>
+  </main>
 
-  <!-- CONTACT -->
-  <section class="section">
-    <h3>Contact</h3>
-    <p class="contact-email">yanaproject2025@gmail.com</p>
-  </section>
-
-  <script src="js/load-modules.js"></script>
 </body>
 </html>

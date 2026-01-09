@@ -4,25 +4,57 @@
   <meta charset="UTF-8" />
   <title>Support — Aya Muse World</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- GOOGLE FONTS (как на главной) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="support-page">
 
-  <!-- PAGE TITLE -->
-  <section>
+  <!-- HEADER (как на главной, но в навигации только Support) -->
+  <header class="header" role="banner">
+    <div class="header__inner">
+
+      <a class="brand" href="index.html" aria-label="Aya - YouAreNotAlone">
+        <img src="assets/images/logo-aya.png" alt="Aya logo" class="brand__image">
+        <span class="brand__line">Aya - YouAreNotAlone</span>
+      </a>
+
+      <nav class="nav nav--desktop" aria-label="Primary navigation">
+        <a href="support.html">Support</a>
+      </nav>
+
+      <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+
+    <div id="mobileMenu" class="drawer" hidden>
+      <nav class="nav nav--mobile" aria-label="Mobile navigation">
+        <a href="support.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE INTRO -->
+  <section class="support-intro">
     <h1>Support</h1>
-    <p class="tagline">Soft guidance, connection & meaningful assistance</p>
+    <p class="support-tagline">Soft guidance, connection & meaningful assistance</p>
   </section>
 
   <!-- GENERAL SUPPORT -->
-  <section>
+  <section class="support-section">
     <h3>General Support</h3>
-
     <p>
       General Support goes beyond technical questions.
       It is also a space for gentle guidance, human connection, and quiet support.
     </p>
-
     <p>
       You can reach out if something feels unclear or if you simply need to be heard
       while exploring Aya Muse World. Every message is met with care, respect, and attention.
@@ -30,13 +62,9 @@
   </section>
 
   <!-- COLLABORATIONS -->
-  <section>
+  <section class="support-section">
     <h3>Collaborations & Partnerships</h3>
-
-    <p>
-      For brands, media, creative collaborations, and partnership proposals.
-    </p>
-
+    <p>For brands, media, creative collaborations, and partnership proposals.</p>
     <p>
       This space is open for thoughtful collaborations that resonate with the values,
       aesthetics, and vision of Aya Muse World.
@@ -44,16 +72,10 @@
   </section>
 
   <!-- INDEPENDENT SUPPORT -->
-  <section>
+  <section class="support-section">
     <h3>Independent Support</h3>
-
-    <p>
-      For those who wish to support Aya Muse World independently.
-    </p>
-
-    <p>
-      This form of support helps sustain the project and its ongoing creative work.
-    </p>
+    <p>For those who wish to support Aya Muse World independently.</p>
+    <p>This form of support helps sustain the project and its ongoing creative work.</p>
 
     <a
       href="https://nowpayments.io/donation/ayamuse"
@@ -64,16 +86,17 @@
       Independent Support →
     </a>
 
-    <p>
-      Support is voluntary — a gesture of resonance, not obligation.
-    </p>
+    <p class="support-note">Support is voluntary — a gesture of resonance, not obligation.</p>
   </section>
 
   <!-- CONTACT -->
-  <section class="contact">
+  <section class="support-section contact">
     <h3>Contact</h3>
-    <p>yanaproject2025@gmail.com</p>
+    <p class="contact-email">yanaproject2025@gmail.com</p>
   </section>
+
+  <!-- Burger / drawer script (если у тебя он в load-modules.js как на других страницах) -->
+  <script src="js/load-modules.js"></script>
 
 </body>
 </html>

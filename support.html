@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Support — Aya Muse World</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Aya Muse World</title>
 
-  <!-- GOOGLE FONTS (как на главной) -->
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -15,12 +19,8 @@
 </head>
 
 <body class="support-page">
-  
-  <!-- FAVICON -->
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
-  
-  <!-- HEADER (как на главной, но в навигации только Support) -->
+
+  <!-- HEADER — только SUPPORT -->
   <header class="header" role="banner">
     <div class="header__inner">
 
@@ -30,7 +30,7 @@
       </a>
 
       <nav class="nav nav--desktop" aria-label="Primary navigation">
-        <a href="support.html">Support</a>
+        <a href="support.html" class="active">Support</a>
       </nav>
 
       <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
@@ -46,26 +46,22 @@
     </div>
   </header>
 
-  <!-- SUPPORT SECTION -->
-  <section class="section" id="support">
 
+  <!-- SUPPORT TITLE BLOCK -->
+  <section class="section">
     <div class="section-divider">
       <span>SUPPORT</span>
     </div>
 
-    <h1 class="letter__title" style="text-align:left; margin-bottom:16px;">
-      Support
-    </h1>
-
-    <p class="letter__subtitle" style="text-align:left; margin-bottom:48px;">
+    <h1 class="letter__title">Support</h1>
+    <p class="letter__subtitle">
       Soft guidance, connection & meaningful assistance
     </p>
-
   </section>
 
-  
+
   <!-- GENERAL SUPPORT -->
-  <section class="support-section">
+  <section class="section">
     <h3>General Support</h3>
     <p>
       General Support goes beyond technical questions.
@@ -77,8 +73,9 @@
     </p>
   </section>
 
+
   <!-- COLLABORATIONS -->
-  <section class="support-section">
+  <section class="section">
     <h3>Collaborations & Partnerships</h3>
     <p>For brands, media, creative collaborations, and partnership proposals.</p>
     <p>
@@ -87,8 +84,9 @@
     </p>
   </section>
 
+
   <!-- INDEPENDENT SUPPORT -->
-  <section class="support-section">
+  <section class="section">
     <h3>Independent Support</h3>
     <p>For those who wish to support Aya Muse World independently.</p>
     <p>This form of support helps sustain the project and its ongoing creative work.</p>
@@ -102,16 +100,18 @@
       Independent Support →
     </a>
 
-    <p class="support-note">Support is voluntary — a gesture of resonance, not obligation.</p>
+    <p>Support is voluntary — a gesture of resonance, not obligation.</p>
   </section>
 
+
   <!-- CONTACT -->
-  <section class="support-section contact">
+  <section class="section">
     <h3>Contact</h3>
     <p class="contact-email">yanaproject2025@gmail.com</p>
   </section>
 
-  <!-- Burger / drawer script (если у тебя он в load-modules.js как на других страницах) -->
+
+  <!-- SCRIPTS -->
   <script src="js/load-modules.js"></script>
 
 </body>

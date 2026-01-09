@@ -712,3 +712,62 @@ body.letter-page .letter__hero-image {
      line-height: 1.6;
      opacity: 0.9;
    }
+    /* ==============================
+    SUPPORT PAGE — FINAL STYLES
+    ============================== */
+
+  .support-page{
+    background: var(--bg);
+    padding: 120px 8vw 160px;
+  }
+
+  /* Заголовки */
+  .support-page h1{
+    font-family: var(--font-head);
+    font-size: 56px;
+    font-weight: 400;
+    margin: 0 0 16px;
+  }
+
+  .support-page h3{
+    font-family: var(--font-head);
+    font-size: 26px;
+    font-weight: 400;
+    margin: 64px 0 16px;
+  }
+
+  /* Подзаголовок */
+  .support-page .tagline{
+    font-family: var(--font-body);
+    font-size: 18px;
+    opacity: .7;
+    margin-bottom: 72px;
+}
+
+ /* Основной текст */
+  .support-page p{
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.65;
+    max-width: 720px;
+    margin-bottom: 14px;
+  }
+
+  /* Ссылка поддержки */
+  .support-page .support-link{
+    font-family: var(--font-ui);
+    font-size: 12px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 24px 0 40px;
+  }
+
+  /* Контакт */
+  .support-page .contact p{
+    font-family: var(--font-ui);
+    font-size: 13px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    margin-top: 12px;
+  }

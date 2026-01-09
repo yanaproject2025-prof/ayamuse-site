@@ -673,8 +673,23 @@ body.letter-page .letter__hero-image {
   }
 
 /* 5. Блок с карточкой — убираем двойные отступы */
-body.collab-page .section--collaborations {
+  body.collab-page .section--collaborations {
     padding-top: 16px !important;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  /* ========================================= */
+  /* COLLAB PAGE — FIX LEFT OFFSET (FINAL)     */
+  /* ========================================= */
+
+  body.collab-page .section--collaborations {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  body.collab-page .section--collaborations .grid--1 {
+    max-width: var(--max);              /* 1120px */
+    margin: 0 auto;                     /* центр */
     padding-left: 24px;
     padding-right: 24px;
   }

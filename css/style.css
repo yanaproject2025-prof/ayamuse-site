@@ -636,15 +636,24 @@ body.letter-page .letter__hero-image {
   }
 }  
 /* ========================================= */
-/* COLLAB PAGE — HEADER SPACING  */
+/* COLLAB PAGE — FINAL ALIGN & TYPOGRAPHY 
 /* ========================================= */
 
+  /* 1. Первый блок под хедером (убираем лишний воздух) */
   body.collab-page main > section:first-child {
     padding-top: 16px !important;
-    padding-bottom: 24px !important;
-  } 
-     
+    padding-bottom: 12px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 
+/* 2. Контейнер — как на главной */
+  body.collab-page main > section:first-child > .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+/* 3. Заголовок страницы */
   body.collab-page .page-title{
     font-family: var(--font-head); /* Playfair Display */
     font-size: 32px;
@@ -653,6 +662,7 @@ body.letter-page .letter__hero-image {
     margin: 0 0 10px;
   }
 
+/* 4. Подзаголовок — как section divider на главной */
   body.collab-page .page-subtitle{
     font-family: var(--font-ui);   /* Montserrat */
     font-size: 12px;
@@ -660,4 +670,11 @@ body.letter-page .letter__hero-image {
     text-transform: uppercase;
     opacity: 0.65;
     margin: 0;
+  }
+
+/* 5. Блок с карточкой — убираем двойные отступы */
+body.collab-page .section--collaborations {
+    padding-top: 16px !important;
+    padding-left: 24px;
+    padding-right: 24px;
   }

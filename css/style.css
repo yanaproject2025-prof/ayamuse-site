@@ -678,6 +678,27 @@ body.letter-page .letter__hero-image {
     padding-left: 24px;
     padding-right: 24px;
   }
+
+  /* ========================================= */
+/* COLLECTIONS — TYPOGRAPHY FIX (FINAL)      */
+/* ========================================= */
+
+/* Заголовок карточки */
+  body.collections-page h2,
+  body.collections-page .card__title {
+    font-family: var(--font-head); /* Playfair Display */
+    font-weight: 400;
+    font-size: 26px;       /* как на главной */
+    line-height: 1.25;
+    letter-spacing: 0;
+  }
+
+/* Основной текст карточки */
+  body.collections-page p {
+    font-family: var(--font-body); /* Lora */
+    font-size: 15px;
+    line-height: 1.6;
+  }
   /* ========================================= */
   /* COLLAB PAGE — FIX LEFT OFFSET (FINAL)     */
   /* ========================================= */

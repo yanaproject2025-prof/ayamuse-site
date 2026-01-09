@@ -321,6 +321,17 @@ a:hover{ text-decoration:underline; }
   background:rgba(255,255,255,0.4);
   margin-bottom:48px;
 }
+.letter__pinned h3 {
+  font-family: var(--font-head); /* Playfair — как было раньше */
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.letter__pinned p {
+  font-family: var(--font-body); /* Lora — как было раньше */
+  font-size: 18px;
+  line-height: 1.55;
+}
 
 .letter__pinned-title{
   font-family:var(--font-head);
@@ -472,9 +483,19 @@ body.letter-page .letter__content p:first-child {
 /* Main text */
 body.letter-page .letter__content p {
   font-family: var(--font-body);
-  font-size: 16px; /* как на главной */
-  line-height: 1.65;
-  margin-bottom: 18px;
+  font-size: 18px; /* как на главной */
+  line-height: 1.55;
+}
+.support-block h3 {
+  font-family: var(--font-head);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.support-block p {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.55;
 }
 
 /* ========================================= */

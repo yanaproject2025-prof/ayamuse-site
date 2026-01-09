@@ -323,7 +323,7 @@ a:hover{ text-decoration:underline; }
 }
 .letter__pinned h3 {
   font-family: var(--font-head); /* Playfair — как было раньше */
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 700;
 }
 
@@ -335,7 +335,7 @@ a:hover{ text-decoration:underline; }
 
 .letter__pinned-title{
   font-family:var(--font-head);
-  font-size:32px;
+  font-size:26px;
   margin:0 0 8px;
 }
 
@@ -485,10 +485,11 @@ body.letter-page .letter__content p {
   font-family: var(--font-body);
   font-size: 18px; /* как на главной */
   line-height: 1.55;
+  color: var(--text);
 }
 .support-block h3 {
   font-family: var(--font-head);
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 700;
 }
 
@@ -496,6 +497,7 @@ body.letter-page .letter__content p {
   font-family: var(--font-body);
   font-size: 18px;
   line-height: 1.55;
+  color: var(--text);
 }
 
 /* ========================================= */

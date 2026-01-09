@@ -639,9 +639,10 @@ body.letter-page .letter__hero-image {
 /* COLLAB PAGE — HEADER SPACING  */
 /* ========================================= */
 
-  body.collab-page .section:first-of-type {
-    padding-top: 20px;   /* вместо 40px */
-    padding-bottom: 24px;
+  body.collab-page main > section:first-child {
+    padding-top: 16px !important;
+    padding-bottom: 24px !important;
+  } 
      
   }
 

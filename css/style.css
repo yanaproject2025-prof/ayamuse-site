@@ -305,7 +305,7 @@ a:hover{ text-decoration:underline; }
 }
 
 .letter__subtitle{
-  margin:6px 0 60px;
+  margin:6px 0 24px;
   font-family:var(--font-ui);
   font-size:12px;
   letter-spacing:.18em;

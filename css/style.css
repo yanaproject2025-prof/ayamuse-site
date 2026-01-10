@@ -791,6 +791,28 @@ body.letter-page .letter__hero-image {
     text-decoration: underline;
     opacity: 1;
   }
+ .footer__socials {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+  }
+  
+  .footer__socials .icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .footer__socials img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+ }
+
+ .footer__socials a:hover img {
+   opacity: 1;
+ }
 
 /* MOBILE */
   @media (max-width: 768px) {

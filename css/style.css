@@ -554,12 +554,23 @@ body.letter-page .letter__hero-image {
   grid-template-columns: 1fr;
 }
  
- @media (max-width: 768px) {
-   body.collab-page .section--collaborations .grid--1 {
-     padding-left: 0;
-     padding-right: 0;
-   }
- }
+ /* ==============================
+   MOBILE — COLLAB ALIGN FIX
+   ============================== */
+  @media (max-width: 768px) {
+
+    .section--collaborations {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    .section--collaborations .container {
+      padding-left: 24px !important;
+      padding-right: 24px !important;
+      margin: 0 auto;
+    }
+
+  }
 
 /* ============================== */
 /* FIX: COLLAB IMAGE SIDE LAYOUT  */

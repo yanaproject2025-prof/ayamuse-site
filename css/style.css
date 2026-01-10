@@ -507,9 +507,13 @@ body.letter-page .letter__hero-image {
   }
 
   body.letter-page .letter__hero-image {
-    max-width: 92%;
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
   }
-}  
+}
+ 
 /* ============================== */
 /* HOME — CARD DATE (FINAL)       */
 /* ============================== */

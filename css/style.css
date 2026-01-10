@@ -483,18 +483,20 @@ body.letter-page .letter__date {
 /* Hero block — same style as homepage */
 body.letter-page .letter__hero {
   width: 100%;
-  max-width: 1120px;      /* как на главной */
-  margin: 0 auto 60px;
-  border-radius: 18px;    /* те же скругления */
-  overflow: hidden;       /* обязательно */
-  background: #fdfbf8;    /* нейтральный фон как у карточек */
+  max-width: 820px;
+  margin: 0 auto 40px;
+  padding: 0;            /* важно: убрать возможные отступы */
+  border-radius: 22px;   /* как на Collaborations */
+  overflow: hidden;      /* чтобы скруглить саму картинку */
+  
 }
 
 body.letter-page .letter__hero-image {
+  max-width: 820px;
   width: 100%;
   height: auto;
-  display: block;
-  object-fit: cover;
+  inline-block;
+  object-fit: cover;     /* нормальное поведение */
 }
 
 /* Mobile */

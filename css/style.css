@@ -720,42 +720,51 @@ body.letter-page .letter__hero-image {
      line-height: 1.6;
      opacity: 0.9;
    }
- /* ============================== */
- /* FOOTER — AYA PREMIUM EDITION   */
- /* ============================== */
+  /* ============================== */
+  /* FOOTER — AYA CLEAN EDITION     */
+  /* ============================== */
 
   .footer {
-    background: #F2EEE8; /* немного темнее фона сайта */
+    background: #F8F5F1; /* чистый фирменный фон */
     border-top: 1px solid rgba(34,34,34,0.08);
-    padding: 60px 0 50px;
-    margin-top: 80px;
+    padding: 28px 0 26px;
+    margin-top: 32px;
     font-family: var(--font-ui);
   }
 
   .footer__inner {
-    width: min(var(--max), calc(100% - 48px));
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 36px;
+    gap: 16px;
     text-align: left;
   }
 
-/* SOCIAL ICONS */
+  /* SOCIAL ICONS */
   .footer__socials {
     display: flex;
-    gap: 22px;
+    gap: 14px;
+    margin: 10px 0 6px;
   }
 
-  .footer__socials a svg {
-    stroke: #222;
-    transition: 0.25s ease;
-    opacity: 0.75;
+  .footer__socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
   }
 
-  .footer__socials a:hover svg {
+  .footer__socials img {
+    width: 22px !important;
+    height: 22px !important;
+    max-width: 22px !important;
+    max-height: 22px !important;
+    object-fit: contain;
+    opacity: 0.6;
+    transition: opacity 0.25s ease;
+  }
+
+  .footer__socials a:hover img {
     opacity: 1;
-    stroke: #000;
   }
 
   /* COMPANY INFO */
@@ -772,11 +781,11 @@ body.letter-page .letter__hero-image {
     margin: 4px 0;
   }
 
-/* LEGAL LINKS */
+  /* LEGAL LINKS */
   .footer__links {
     display: flex;
     flex-wrap: wrap;
-    gap: 18px 26px;
+    gap: 14px 22px;
     font-size: 13px;
     opacity: 0.85;
   }
@@ -791,42 +800,19 @@ body.letter-page .letter__hero-image {
     text-decoration: underline;
     opacity: 1;
   }
-  .footer__socials {
-    display: flex;
-    gap: 24px;
-    margin: 28px 0;
-  }
 
-  .footer__socials a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    line-height: 1;
-  }
-
-  .footer__socials img {
-    width: 24px !important;
-    height: 24px !important;
-    max-width: 24px !important;
-    max-height: 24px !important;
-    object-fit: contain;
-    opacity: 0.55;
-  }
-
- .footer__socials a:hover img {
-   opacity: 1;
- }
-
-/* MOBILE */
+  /* MOBILE */
   @media (max-width: 768px) {
+    .footer {
+      padding: 24px 0 22px;
+      margin-top: 28px;
+    }
+
     .footer__inner {
-      gap: 28px;
+      gap: 14px;
     }
 
     .footer__socials {
-      gap: 18px;
+      gap: 16px;
     }
   }
-
-

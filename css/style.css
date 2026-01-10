@@ -755,7 +755,10 @@ body.letter-page .letter__hero-image {
     flex-direction: column;
     gap: 16px;
     text-align: left;
-    margin-left: -12px;
+    margin-left: 0;
+    padding-left: 12px;
+    padding-right: 12px;
+    box-sizing: border-box;
   }
 
   /* SOCIAL ICONS */

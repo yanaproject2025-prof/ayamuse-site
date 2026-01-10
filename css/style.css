@@ -652,6 +652,10 @@ body.letter-page .letter__hero-image {
     height: 100%;
     object-fit: cover;
   }
+    body.collab-page .section--collaborations .grid--1 {
+    padding-left: 0;
+    padding-right: 0;
+  }  
 }  
 /* ========================================= */
 /* COLLAB PAGE — FINAL ALIGN & TYPOGRAPHY 

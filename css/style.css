@@ -725,7 +725,7 @@ body.letter-page .letter__hero-image {
   /* ============================== */
 
   .footer {
-    background: #F8F5F1; /* чистый фирменный фон */
+    background: #FCFBF9; 
     border-top: 1px solid rgba(34,34,34,0.08);
     padding: 28px 0 26px;
     margin-top: 32px;
@@ -737,6 +737,7 @@ body.letter-page .letter__hero-image {
     flex-direction: column;
     gap: 16px;
     text-align: left;
+    margin-left: -12px;
   }
 
   /* SOCIAL ICONS */
@@ -809,7 +810,7 @@ body.letter-page .letter__hero-image {
     }
 
     .footer__inner {
-      gap: 14px;
+       margin-left: 0;
     }
 
     .footer__socials {

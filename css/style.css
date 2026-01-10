@@ -428,6 +428,16 @@ a:hover{ text-decoration:underline; }
     transform:translateY(-1px);
   }
 
+    /* HOME PAGE – tighter rhythm on mobile */
+   body.home .section{
+     padding:40px 0;
+  }
+
+   body.home .section-divider{
+     margin:32px 0 24px;
+  }
+
+}
   .letter{
     margin-bottom:40px;
   }

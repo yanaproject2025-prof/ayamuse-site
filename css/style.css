@@ -553,7 +553,25 @@ body.letter-page .letter__hero-image {
   display: grid;
   grid-template-columns: 1fr;
 }
+@media (max-width: 768px) {
 
+   /* ВАЖНО: убираем внутренние padding'и, чтобы ничего не сжималось */
+  body.collab-page .section--collaborations {
+    padding: 16px 0 !important;
+  }
+
+  /* Делаем как на Letter: ширина = экран минус поля, и центрируем */
+  body.collab-page .section--collaborations .grid--1 {
+    width: min(var(--max), calc(100% - 48px)); /* 24px слева + 24px справа */
+    margin: 0 auto;
+    padding: 0; /* ключевое: не сжимать карточку */
+  }
+
+  /* На всякий — чтобы карточка не пыталась быть шире контейнера */
+  body.collab-page .card--collab {
+    width: 100%;
+  }
+}
 
 /* ============================== */
 /* FIX: COLLAB IMAGE SIDE LAYOUT  */
@@ -651,10 +669,7 @@ body.letter-page .letter__hero-image {
   .card--collab .collab__image {
     height: 100%;
     object-fit: cover;
-  }
-    body.collab-page .section--collaborations .grid--1 {
-    padding-left: 0;
-    padding-right: 0;
+  
   }  
 }  
 /* ========================================= */

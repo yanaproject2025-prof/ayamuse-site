@@ -45,4 +45,28 @@ async function loadSection(id, url) {
     console.error("Error loading section:", id, error);
   }
 }
+   /* ----------------------------------
+   FIX ANCHOR SCROLL FOR DYNAMIC SECTIONS
+  ---------------------------------- */
+  (function () {
+    const hash = window.location.hash;
+    if (!hash) return;
 
+    let tries = 0;
+    const maxTries = 60;
+
+    function scrollWhenReady() {
+      const target = document.querySelector(hash);
+      if (target) {
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      } else if (tries < maxTries) {
+        tries++;
+        setTimeout(scrollWhenReady, 50);
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", scrollWhenReady);
+  })();

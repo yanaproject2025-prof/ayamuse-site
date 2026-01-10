@@ -557,20 +557,16 @@ body.letter-page .letter__hero-image {
  /* ==============================
    MOBILE — COLLAB ALIGN FIX
    ============================== */
-  @media (max-width: 768px) {
+  
+@media (max-width: 768px) {
 
-    .section--collaborations {
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-    }
-
-    .section--collaborations .container {
-      padding-left: 24px !important;
-      padding-right: 24px !important;
-      margin: 0 auto;
-    }
-
+  body.collab-page .card--collab {
+    max-width: calc(100vw - 32px);
+    margin-left: auto;
+    margin-right: auto;
   }
+  
+}
 
 /* ============================== */
 /* FIX: COLLAB IMAGE SIDE LAYOUT  */

@@ -480,17 +480,21 @@ body.letter-page .letter__date {
 /* LETTER PAGE — HERO BANNER (FINAL VERSION) */
 /* ========================================= */
 
+/* Hero block — same style as homepage */
 body.letter-page .letter__hero {
-  padding: 20px 0 10px 0;  /* регулирует расстояние после баннера */
-  text-align: center;
+  width: 100%;
+  max-width: 1120px;      /* как на главной */
+  margin: 0 auto 60px;
+  border-radius: 18px;    /* те же скругления */
+  overflow: hidden;       /* обязательно */
+  background: #fdfbf8;    /* нейтральный фон как у карточек */
 }
 
 body.letter-page .letter__hero-image {
-  max-width: 820px;
   width: 100%;
   height: auto;
-  object-fit: contain;
-  display: inline-block;
+  display: block;
+  object-fit: cover;
 }
 
 /* Mobile */

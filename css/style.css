@@ -553,13 +553,13 @@ body.letter-page .letter__hero-image {
   display: grid;
   grid-template-columns: 1fr;
 }
-@media (max-width: 768px) {
-
-  body.collab-page .card--collab {
-    box-sizing: border-box;
-    width: 100%;
-  }
-}
+ 
+ @media (max-width: 768px) {
+   body.collab-page .section--collaborations .grid--1 {
+     padding-left: 0;
+     padding-right: 0;
+   }
+ }
 
 /* ============================== */
 /* FIX: COLLAB IMAGE SIDE LAYOUT  */

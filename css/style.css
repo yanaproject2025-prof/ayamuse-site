@@ -755,7 +755,7 @@ body.letter-page .letter__hero-image {
     flex-direction: column;
     gap: 16px;
     text-align: left;
-    margin-left: 0;
+  
     padding-left: 12px;
     padding-right: 12px;
     box-sizing: border-box;
@@ -822,7 +822,10 @@ body.letter-page .letter__hero-image {
     text-decoration: underline;
     opacity: 1;
   }
-
+  .footer .container{
+    max-width: none;
+    width: calc(100% - 48px); /* те же 24px слева/справа */
+  }
   /* MOBILE */
   @media (max-width: 768px) {
     .footer {

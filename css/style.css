@@ -484,10 +484,11 @@ body.letter-page .letter__date {
 body.letter-page .letter__hero {
   width: 100%;
   max-width: 820px;
-  padding: 20px 0 10px 0;  /* регулирует расстояние после баннера */
-  padding: 0;            /* важно: убрать возможные отступы */
-  border-radius: 22px;   /* как на Collaborations */
-  overflow: hidden;      /* чтобы скруглить саму картинку */
+  margin: 0 auto 40px;
+  padding: 20px 0 10px 0;  
+        
+  border-radius: 22px;  
+  overflow: hidden;     
   
 }
 

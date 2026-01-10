@@ -835,3 +835,4 @@ body.letter-page .letter__hero-image {
       gap: 16px;
     }
   }
+     body { outline: 6px solid red !important; }

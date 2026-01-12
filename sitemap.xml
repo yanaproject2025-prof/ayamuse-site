@@ -29,7 +29,7 @@
     <priority>0.75</priority>
   </url>
 
-  <!-- POLICY PAGE (Privacy + Terms on same page) -->
+  <!-- POLICY PAGE -->
   <url>
     <loc>https://ayamuse.com/policy.html</loc>
     <changefreq>yearly</changefreq>

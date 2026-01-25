@@ -383,6 +383,17 @@ a:hover{ text-decoration:underline; }
   line-height: 1.6;
   opacity: 0.9;
 }
+/* FIX: keep dates small in Letter page */
+.letter__pinned .letter__date,
+.letter__entry .letter__date {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  opacity: .55;
+  margin: 0 0 14px;
+  line-height: 1.2;
+}
 
 
 .diary{

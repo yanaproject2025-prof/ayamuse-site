@@ -58,7 +58,7 @@ async function loadLetters() {
 // LOAD ALL JSON FILES IN /posts/
 // ===============================
 async function loadAllPosts() {
-  const files = ["001.json"]; // Add future posts here: "002.json", "003.json", ...
+  const files = ["001.json", "002.json"]; // Add future posts here: "002.json", "003.json", ...
 
   const loaded = [];
 

@@ -18,7 +18,7 @@
   <!-- MAIN CSS -->
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- Travelpayouts verification (оставляем как в index) -->
+  <!-- Travelpayouts verification -->
   <script data-noptimize="1" data-cfasync="false" data-wpfc-render="false">
     (function () {
         var script = document.createElement("script");
@@ -28,124 +28,191 @@
     })();
   </script>
 
+  <!-- AVIASALES WHITE LABEL -->
+  <script data-noptimize="1" data-cfasync="false" data-wpfc-render="false">
+    (function () {
+      var script = document.createElement("script");
+      script.async = true;
+      script.type = "module";
+      script.src = "https://tpwdg.com/wl_web/main.js?wl_id=5659";
+      document.head.appendChild(script);
+    })();
+  </script>
+
 </head>
 
 <body>
 
-  <!-- HEADER (копия из index) -->
-  <header class="header" role="banner">
-    <div class="header__inner">
+<header class="header" role="banner">
+  <div class="header__inner">
 
-      <a class="brand" href="/" aria-label="Aya - YouAreNotAlone">
-        <img src="assets/images/logo-aya.png" alt="Aya logo" class="brand__image">
-        <span class="brand__line">Aya - YouAreNotAlone</span>
-      </a>
+    <a class="brand" href="/" aria-label="Aya - YouAreNotAlone">
+      <img src="assets/images/logo-aya.png" alt="Aya logo" class="brand__image">
+      <span class="brand__line">Aya - YouAreNotAlone</span>
+    </a>
 
-      <nav class="nav nav--desktop" aria-label="Primary navigation">
-        <a href="letter.html">Letter</a>
-        <!-- <a href="travel.html">Travel</a> -->
-        <a href="index.html#news">NEWS</a>
-        <a href="index.html#future">FUTURE</a>
-        <a href="index.html#collections">Collections</a>
-        <a href="collaborations.html">Collaborations</a>
-        <a href="support.html">Support</a>
-      </nav>
+    <!-- DESKTOP NAV -->
+    <nav class="nav nav--desktop" aria-label="Primary navigation">
+      <a href="letter.html">Letter</a>
+      <!-- <a href="travel.html">Travel</a> -->
+      <a href="index.html#news">NEWS</a>
+      <a href="index.html#future">FUTURE</a>
+      <a href="index.html#collections">Collections</a>
+      <a href="collaborations.html">Collaborations</a>
+      <a href="support.html">Support</a>
+    </nav>
 
-      <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-        <span></span><span></span><span></span>
-      </button>
+    <!-- BURGER -->
+    <button class="burger" type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mobileMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
+  </div>
+
+  <!-- MOBILE NAV -->
+  <div id="mobileMenu" class="drawer" hidden>
+    <nav class="nav nav--mobile" aria-label="Mobile navigation">
+      <a href="letter.html">Letter</a>
+      <!-- <a href="travel.html">Travel</a> -->
+      <a href="index.html#news">NEWS</a>
+      <a href="index.html#future">FUTURE</a>
+      <a href="index.html#collections">Collections</a>
+      <a href="collaborations.html">Collaborations</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="section">
+    <div class="container">
+      <h1>Journeys with Aya</h1>
+
+      <p>Travel is not an escape. It is a return to yourself.</p>
+      <p>Sometimes you need to change the horizon to hear your inner rhythm again.</p>
+      <p>This space is not about where to go. It is about how to rest — in body and in soul.</p>
+      <p>Through beauty. Through calm. Through a conscious choice of place.</p>
+    </div>
+  </section>
+
+  <!-- REGIONS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-divider">
+        <span>REGIONS</span>
+      </div>
+
+      <p>
+        <a href="#">Sunlit Horizons</a> /
+        <a href="#">Eastern Light</a> /
+        <a href="#">Timeless Europe</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- AVIASALES -->
+  <section class="section">
+    <div class="container">
+      <div class="section-divider">
+        <span>BEGIN YOUR JOURNEY</span>
+      </div>
+
+      <div id="tpwl-search"></div>
+    </div>
+  </section>
+
+  <!-- CURATED SHOWCASE -->
+  <!-- CURATED SHOWCASE -->
+<section class="section">
+  <div class="container">
+
+    <!-- Caribbean Cruise -->
+    <div style="display:flex; gap:40px; align-items:center; margin-bottom:80px; flex-wrap:wrap;">
+      <div style="flex:1; min-width:280px;">
+        <img src="assets/images/travel/caribbean-cruise.jpg" alt="Caribbean Cruise"
+             style="width:100%; height:auto; display:block;">
+      </div>
+      <div style="flex:1; min-width:280px;">
+        <h2>Caribbean Cruise</h2>
+        <p>
+          There are journeys that do not rush you.
+          The sea carries you slowly, without pressure,
+          without noise, without urgency.
+        </p>
+        <p>
+          A cruise is not only about destinations.
+          It is about rhythm — waking up to the horizon,
+          dining under the open sky,
+          allowing time to stretch.
+        </p>
+        <p>
+          <a href="#" target="_blank">Explore available cruises</a>
+        </p>
+      </div>
     </div>
 
-    <div id="mobileMenu" class="drawer" hidden>
-      <nav class="nav nav--mobile" aria-label="Mobile navigation">
-        <a href="letter.html">Letter</a>
-        <!-- <a href="travel.html">Travel</a> -->
-        <a href="index.html#news">NEWS</a>
-        <a href="index.html#future">FUTURE</a>
-        <a href="index.html#collections">Collections</a>
-        <a href="collaborations.html">Collaborations</a>
-        <a href="support.html">Support</a>
-      </nav>
+    <!-- Bali -->
+    <div style="display:flex; gap:40px; align-items:center; margin-bottom:80px; flex-wrap:wrap;">
+      <div style="flex:1; min-width:280px;">
+        <img src="assets/images/travel/bali.jpg" alt="Bali"
+             style="width:100%; height:auto; display:block;">
+      </div>
+      <div style="flex:1; min-width:280px;">
+        <h2>Bali</h2>
+        <p>
+          Bali is softness.
+          Warm air on your skin.
+          Slow mornings.
+          Light moving through palm leaves.
+        </p>
+        <p>
+          It is a place where your breath becomes deeper,
+          where silence feels kind,
+          where the body finally relaxes.
+        </p>
+        <p>
+          <a href="#" target="_blank">Discover stays in Bali</a>
+        </p>
+      </div>
     </div>
-  </header>
 
-  <main>
-
-    <!-- HERO -->
-    <section class="section">
-      <div class="container">
-        <h1>Journeys with Aya</h1>
-
+    <!-- Maldives -->
+    <div style="display:flex; gap:40px; align-items:center; flex-wrap:wrap;">
+      <div style="flex:1; min-width:280px;">
+        <img src="assets/images/travel/maldives.jpg" alt="Maldives"
+             style="width:100%; height:auto; display:block;">
+      </div>
+      <div style="flex:1; min-width:280px;">
+        <h2>Maldives</h2>
         <p>
-          Travel is not an escape.
-          It is a return to yourself.
+          Some places are built for stillness.
+          White sand. Clear water.
+          Space between you and the world.
         </p>
-
         <p>
-          Sometimes you need to change the horizon
-          to hear your inner rhythm again.
+          In the Maldives, time slows down.
+          You are not performing.
+          You are simply existing.
         </p>
-
         <p>
-          This space is not about where to go.
-          It is about how to rest — in body and in soul.
-        </p>
-
-        <p>
-          Through beauty.
-          Through calm.
-          Through a conscious choice of place.
+          <a href="#" target="_blank">See island retreats</a>
         </p>
       </div>
-    </section>
+    </div>
 
-    <!-- MENU -->
-    <section class="section">
-      <div class="container">
-        <div class="section-divider">
-          <span>REGIONS</span>
-        </div>
+  </div>
+</section>
 
-        <p>
-          <a href="travel/sunlit-horizons.html">Sunlit Horizons</a> /
-          <a href="travel/eastern-light.html">Eastern Light</a> /
-          <a href="travel/timeless-europe.html">Timeless Europe</a>
-        </p>
-      </div>
-    </section>
+</main>
 
-    <!-- AVIASALES BLOCK -->
-    <section class="section">
-      <div class="container">
-        <div class="section-divider">
-          <span>Begin Your Journey</span>
-        </div>
-
-        <!-- СЮДА ВСТАВИМ WIDGET -->
-        <div id="tpwl-search"></div>
-      </div>
-    </section>
-
-    <!-- CURATED SHOWCASE -->
-    <section class="section">
-      <div class="container">
-
-        <!-- Caribbean Cruise -->
-        <!-- Фото слева / текст справа — добавим в следующем шаге -->
-
-        <!-- Bali -->
-
-        <!-- Maldives -->
-
-      </div>
-    </section>
-
-  </main>
-
-
-
-  <script src="js/main.js"></script>
+<script src="js/main.js"></script>
 
 </body>
 </html>

@@ -873,60 +873,68 @@ body.letter-page .letter__hero-image {
       gap: 16px;
     }
 
-  /* ========================================= */
-  /* TRAVEL PAGE LAYOUT — FINAL VERSION        */
+   /* ========================================= */
+  /* TRAVEL PAGE LAYOUT — AYA PREMIUM VERSION  */
   /* ========================================= */
 
+  /* DESKTOP (основной макет) */
   .travel-card {
       display: grid;
-      grid-template-columns: 520px 1fr;
-      gap: 80px;
-      margin: 100px 0;
+      grid-template-columns: 520px 1fr; /* фото слева, текст справа */
+      gap: 64px;
+      margin: 90px 0;
       align-items: center;
   }
 
   .travel-card__media img {
       width: 100%;
+      height: auto;
       border-radius: 22px;
       display: block;
+      object-fit: cover;
   }
 
+  /* TYPOGRAPHY строго как на Letter/Future */
   .travel-card__title {
-      font-family: var(--font-head);
+      font-family: var(--font-head);   /* Playfair */
       font-size: 32px;
-      margin-bottom: 20px;
-      color: var(--main-accent-color);
+      font-weight: 400;
+      margin: 0 0 20px;
+      line-height: 1.25;
   }
 
   .travel-card__content p {
-      font-family: var(--font-body);
-      font-size: 16px;
-      line-height: 1.8;
+      font-family: var(--font-body);   /* Lora */
+      font-size: 17px;
+      line-height: 1.75;
       margin-bottom: 18px;
-      color: #444;
+      opacity: 0.92;
   }
 
   .travel-card__link {
-      font-family: var(--font-ui);
+      font-family: var(--font-ui);     /* Montserrat */
       font-size: 12px;
       letter-spacing: .18em;
       text-transform: uppercase;
-      color: var(--main-accent-color);
+      margin-top: 12px;
+      display: inline-block;
+      opacity: .75;
   }
 
+  /* ========================================= */
+  /* MOBILE */
+  /* ========================================= */
 
-  /* Mobile */
   @media (max-width: 900px) {
       .travel-card {
-          grid-template-columns: 1fr;
-          gap: 40px;
+          grid-template-columns: 1fr; /* фото сверху */
+          gap: 32px;
           margin: 60px 0;
       }
+
+      .travel-card__media img {
+          width: 100%;
+          height: auto;
+          border-radius: 20px;
+      }
   }
-
-
-
- 
-
-   
-    

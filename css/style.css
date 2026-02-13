@@ -873,116 +873,80 @@ body.letter-page .letter__hero-image {
       gap: 16px;
     }
 
-    /* ========================================= */
-  /* TRAVEL PAGE — AYA SYSTEM STYLE            */
   /* ========================================= */
+/* TRAVEL — CLEAN LAYOUT VERSION             */
+/* ========================================= */
 
-  /* Page Title */
-  .page-title{
-    font-family: var(--font-head); /* Playfair */
-    font-size: 34px;
-    font-weight: 400;
-    line-height: 1.25;
-    margin: 0 0 18px;
-  }
+.travel-card{
+  display: grid;
+  grid-template-columns: 520px 1fr;
+  gap: 70px;
+  align-items: center;
+  margin-bottom: 120px;
+}
 
-  /* Hero text */
-  .travel-hero p{
-    font-family: var(--font-body); /* Lora */
-    font-size: 16px;
-    line-height: 1.65;
-    margin: 0 0 16px;
-    max-width: 720px;
-  }
+/* Image */
+.travel-card__media{
+  border-radius: var(--radius);
+  overflow: hidden;
+}
 
-  /* Regions */
-  .travel-regions{
-    font-family: var(--font-ui); /* Montserrat */
-    font-size: 12px;
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    opacity: .7;
-  }
+.travel-card__media img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
-  .travel-regions a{
-    text-decoration: none;
-  }
+/* Title */
+.travel-card__title{
+  font-family: var(--font-head);
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0 0 22px;
+}
 
-  .travel-sep{
-    margin: 0 10px;
-    opacity: .4;
-  }
+/* Text */
+.travel-card__content p{
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.75;
+  margin: 0 0 16px;
+  max-width: 520px;
+  opacity: .9;
+}
 
-  /* Travel Cards */
+/* CTA */
+.travel-card__link{
+  font-family: var(--font-ui);
+  font-size: 12px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  opacity: .7;
+  display: inline-block;
+  margin-top: 18px;
+}
+
+.travel-card__link:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px){
   .travel-card{
-    display: grid;
-    grid-template-columns: 520px 1fr;
-    gap: 60px;
-    align-items: center;
-    margin-bottom: 100px;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 90px;
   }
 
-  /* Image */
-  .travel-card__media img{
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: var(--radius);
-  }
-
-  /* Content */
   .travel-card__title{
-    font-family: var(--font-head); /* Playfair */
-    font-size: 28px;
-    font-weight: 400;
-    margin: 0 0 18px;
+    font-size: 26px;
   }
+}
 
-  .travel-card__content p{
-    font-family: var(--font-body); /* Lora */
-    font-size: 15px;
-    line-height: 1.7;
-    margin: 0 0 14px;
-    opacity: .9;
-  }
-
-  /* CTA Link */
-  .travel-card__link{
-    font-family: var(--font-ui); /* Montserrat */
-    font-size: 12px;
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    text-decoration: none;
-    opacity: .7;
-    display: inline-block;
-    margin-top: 12px;
-  }
-
-  .travel-card__link:hover{
-    text-decoration: underline;
-    opacity: 1;
-  }
-
-  /* ========================================= */
-  /* MOBILE                                    */
-  /* ========================================= */
-
-  @media (max-width: 768px){
-
-    .travel-card{
-      grid-template-columns: 1fr;
-      gap: 32px;
-      margin-bottom: 70px;
-    }
-
-    .travel-card__title{
-      font-size: 24px;
-    }
-
-    .travel-hero p{
-      font-size: 15px;
-    }
- }
+ 
 
    
     

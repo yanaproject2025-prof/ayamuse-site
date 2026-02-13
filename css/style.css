@@ -874,85 +874,84 @@ body.letter-page .letter__hero-image {
     }
 
   /* ============================= */
-/* TRAVEL FINAL CLEAN LAYOUT     */
-/* ============================= */
-
-.section .travel-card{
-  display: grid;
-  grid-template-columns: 520px 1fr;
-  gap: 80px;
-  align-items: center;
-  margin-top: 60px;
-  margin-bottom: 140px;
-}
-
-/* IMAGE LEFT */
-
-.section .travel-card__media{
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.section .travel-card__media img{
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 20px;
-}
-
-/* TEXT RIGHT */
-
-.section .travel-card__content{
-  max-width: 520px;
-}
-
-.section .travel-card__title{
-  font-family: var(--font-head);
-  font-size: 32px;
-  font-weight: 400;
-  margin-bottom: 24px;
-}
-
-.section .travel-card__content p{
-  font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.8;
-  margin-bottom: 18px;
-}
-
-/* CTA */
-
-.section .travel-card__link{
-  font-family: var(--font-ui);
-  font-size: 12px;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  text-decoration: none;
-  opacity: .7;
-  display: inline-block;
-  margin-top: 20px;
-}
-
-.section .travel-card__link:hover{
-  opacity: 1;
-  text-decoration: underline;
-}
-
-/* MOBILE */
-
-@media (max-width: 900px){
+  /* TRAVEL FINAL CLEAN LAYOUT     */
+  /* ============================= */
 
   .section .travel-card{
-    grid-template-columns: 1fr;
-    gap: 40px;
-    margin-bottom: 90px;
+    display: grid;
+    grid-template-columns: 520px 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 140px;
+  }
+
+  /* IMAGE LEFT */
+
+  .section .travel-card__media{
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .section .travel-card__media img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+  }
+
+  /* TEXT RIGHT */
+
+  .section .travel-card__content{
+    max-width: 520px;
   }
 
   .section .travel-card__title{
-    font-size: 26px;
+    font-family: var(--font-head);
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 24px;
   }
 
-}
+  .section .travel-card__content p{
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+  }
+
+  /* CTA */
+
+  .section .travel-card__link{
+    font-family: var(--font-ui);
+    font-size: 12px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    opacity: .7;
+    display: inline-block;
+    margin-top: 20px;
+  }
+
+  .section .travel-card__link:hover{
+    opacity: 1;
+    text-decoration: underline;
+  }
+
+  /* MOBILE */
+
+  @media (max-width: 900px){
+
+    .section .travel-card{
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-bottom: 90px;
+    }
+
+    .section .travel-card__title{
+      font-size: 26px;
+    }
+ }
 
 
 

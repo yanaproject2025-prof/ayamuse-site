@@ -872,7 +872,7 @@ body.letter-page .letter__hero-image {
     .footer__socials {
       gap: 16px;
     }
-
+  }
      /* TRAVEL FINAL LAYOUT — GRID IMAGE LEFT, TEXT RIGHT */
   .travel-card {
       display: grid;

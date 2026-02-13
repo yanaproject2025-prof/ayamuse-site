@@ -873,63 +873,85 @@ body.letter-page .letter__hero-image {
       gap: 16px;
     }
   }
-     /* TRAVEL FINAL LAYOUT — GRID IMAGE LEFT, TEXT RIGHT */
-  .travel-card {
-      display: grid;
-      grid-template-columns: minmax(380px, 520px) 1fr;
-      gap: 64px;
-      margin: 90px 0;
-      align-items: flex-start;
-  }
 
-  /* Ensure this overrides global article rules */
-  section .travel-card {
-      display: grid;
-  }
+  /* ============================================
+   TRAVEL — PREMIUM CARD LAYOUT (Aya Standard)
+   ============================================ */
 
-  /* IMAGE */
-  .travel-card__media img {
-      width: 100%;
-      height: auto;
-      border-radius: 22px;
-      object-fit: cover;
-      display: block;
-  }
+.travel-card {
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 40px;
+    margin: 80px 0;
+    display: grid;
+    grid-template-columns: 420px 1fr;   /* фото уменьшено */
+    gap: 48px;
+    align-items: start;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.06);  /* как Future */
+}
 
-  /* TITLE */
-  .travel-card__title {
-      font-family: var(--font-head);
-      font-size: 36px;
-      font-weight: 400;
-      line-height: 1.25;
-      margin-bottom: 20px;
-  }
+/* Изоляция от глобальных article-правил */
+section .travel-card {
+    display: grid;
+}
 
-  /* PARAGRAPHS */
-  .travel-card__content p {
-      font-family: var(--font-body);
-      font-size: 17px;
-      line-height: 1.75;
-      margin-bottom: 18px;
-      opacity: .92;
-  }
+/* ---------- IMAGE ---------- */
+.travel-card__media img {
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+}
 
-  /* LINK */
-  .travel-card__link {
-      font-family: var(--font-ui);
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: .18em;
-      margin-top: 20px;
-      display: inline-block;
-      opacity: .75;
-  }
+/* ---------- TITLE (как в Future / Collections / Letter) ---------- */
+.travel-card__title {
+    font-family: var(--font-head);
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-bottom: 20px;
+    color: #222;
+}
 
-  /* MOBILE */
-  @media (max-width: 900px) {
-      .travel-card {
-          grid-template-columns: 1fr;
-          gap: 32px;
-          margin: 60px 0;
-      }
-  }
+/* ---------- PARAGRAPHS (Lora, как везде) ---------- */
+.travel-card__content p {
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.75;
+    opacity: .92;
+    margin-bottom: 16px;
+    color: #333;
+}
+
+/* ---------- LINK (Montserrat uppercase, как в Future) ---------- */
+.travel-card__link {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    opacity: .75;
+    margin-top: 18px;
+    display: inline-block;
+}
+
+/* ============================================
+   MOBILE
+   ============================================ */
+@media (max-width: 900px) {
+    .travel-card {
+        grid-template-columns: 1fr;
+        padding: 28px;
+        gap: 32px;
+        margin: 50px 0;
+    }
+
+    .travel-card__media img {
+        width: 100%;
+    }
+
+    .travel-card__title {
+        font-size: 26px;
+    }
+}

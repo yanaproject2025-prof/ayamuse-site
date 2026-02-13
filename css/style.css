@@ -873,61 +873,67 @@ body.letter-page .letter__hero-image {
       gap: 16px;
     }
 
-  /* ========================================= */
-/* TRAVEL — CLEAN LAYOUT VERSION             */
-/* ========================================= */
+  /* ============================= */
+/* TRAVEL FINAL CLEAN LAYOUT     */
+/* ============================= */
 
-.travel-card{
+.section .travel-card{
   display: grid;
   grid-template-columns: 520px 1fr;
-  gap: 70px;
+  gap: 80px;
   align-items: center;
-  margin-bottom: 120px;
+  margin-top: 60px;
+  margin-bottom: 140px;
 }
 
-/* Image */
-.travel-card__media{
-  border-radius: var(--radius);
+/* IMAGE LEFT */
+
+.section .travel-card__media{
+  border-radius: 20px;
   overflow: hidden;
 }
 
-.travel-card__media img{
+.section .travel-card__media img{
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 20px;
 }
 
-/* Title */
-.travel-card__title{
+/* TEXT RIGHT */
+
+.section .travel-card__content{
+  max-width: 520px;
+}
+
+.section .travel-card__title{
   font-family: var(--font-head);
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 400;
-  margin: 0 0 22px;
+  margin-bottom: 24px;
 }
 
-/* Text */
-.travel-card__content p{
+.section .travel-card__content p{
   font-family: var(--font-body);
   font-size: 16px;
-  line-height: 1.75;
-  margin: 0 0 16px;
-  max-width: 520px;
-  opacity: .9;
+  line-height: 1.8;
+  margin-bottom: 18px;
 }
 
 /* CTA */
-.travel-card__link{
+
+.section .travel-card__link{
   font-family: var(--font-ui);
   font-size: 12px;
-  letter-spacing: .16em;
+  letter-spacing: .18em;
   text-transform: uppercase;
   text-decoration: none;
   opacity: .7;
   display: inline-block;
-  margin-top: 18px;
+  margin-top: 20px;
 }
 
-.travel-card__link:hover{
+.section .travel-card__link:hover{
   opacity: 1;
   text-decoration: underline;
 }
@@ -935,16 +941,20 @@ body.letter-page .letter__hero-image {
 /* MOBILE */
 
 @media (max-width: 900px){
-  .travel-card{
+
+  .section .travel-card{
     grid-template-columns: 1fr;
     gap: 40px;
     margin-bottom: 90px;
   }
 
-  .travel-card__title{
+  .section .travel-card__title{
     font-size: 26px;
   }
+
 }
+
+
 
  
 

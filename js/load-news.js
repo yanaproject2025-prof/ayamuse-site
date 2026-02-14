@@ -7,21 +7,18 @@ async function loadNews() {
     if (!container) return;
 
     container.innerHTML = items.map(item => `
-      <article class="future-card">
+      <article class="card">
 
         ${item.image ? `
-          <img src="${item.image}" alt="${item.title}" class="future-card__image">
+          <img src="${item.image}" alt="${item.title}" class="card__image">
         ` : ''}
 
-        <div class="future-card__content">
-          <h3 class="future-card__title">${item.title}</h3>
-          <p class="future-card__date">${item.date}</p>
-          <p class="future-card__text">${item.excerpt}</p>
-          <a href="${item.link}" target="_blank" class="future-card__link">
-            ${item.link_text}
-          </a>
-        </div>
-
+        <h3 class="card__title">${item.title}</h3>
+        <p class="card_date">${item.date}</p>
+        <p class="card__text">${item.excerpt}</p>
+        <a href="${item.link}" target="_blank" rel="noopener" class="card__link">
+          ${item.link_text}
+        </a>
       </article>
     `).join('');
 

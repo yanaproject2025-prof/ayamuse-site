@@ -986,8 +986,6 @@ section .travel-card {
   opacity: 0.6;
 }
 
-/* HOME — reduce space after NEWS section */
-body.home #news {
-  padding-bottom: 10px;   /* было 40px */
+#future {
+  padding-top: 10px;
 }
-

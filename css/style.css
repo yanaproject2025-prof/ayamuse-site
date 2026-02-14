@@ -991,37 +991,27 @@ section .travel-card {
 }
 
 /* ========================================= */
-/* TRAVEL — MATCH INDEX CARD TYPOGRAPHY     */
+/* TRAVEL — SAME TYPOGRAPHY AS INDEX CARDS  */
 /* ========================================= */
 
-/* Hero заголовок — как заголовки карточек */
-.travel-hero__title {
+body.travel-page h1,
+body.travel-page h2,
+body.travel-page h3 {
   font-family: var(--font-head);
   font-weight: 400;
-  font-size: 42px;
-  line-height: 1.2;
-  margin-bottom: 28px;
+  letter-spacing: normal;
 }
 
-/* Hero текст — как текст карточек */
-.travel-hero__text p {
+body.travel-page p {
   font-family: var(--font-body);
-  font-size: 18px;
-  line-height: 1.75;
-  margin-bottom: 18px;
-}
-
-/* Заголовки карточек */
-.travel-card__title {
-  font-family: var(--font-head);
   font-weight: 400;
-  font-size: 36px;
-  line-height: 1.2;
+  line-height: 1.7;
 }
 
-/* Текст карточек */
-.travel-card__content p {
-  font-family: var(--font-body);
-  font-size: 18px;
-  line-height: 1.75;
+body.travel-page .travel-card h2 {
+  font-size: 32px;
+}
+
+body.travel-page .travel-card p {
+  font-size: 17px;
 }

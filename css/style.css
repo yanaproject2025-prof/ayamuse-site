@@ -967,5 +967,23 @@ section .travel-card {
   margin:0 auto;         /* центрируем */
 }
 
+ .news__archive-link {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.archive-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #6e6e6e;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.archive-link:hover {
+  opacity: 0.6;
+}
 
 

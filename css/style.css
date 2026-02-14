@@ -991,40 +991,37 @@ section .travel-card {
 }
 
 /* ========================================= */
-/* TRAVEL — FORCE TYPOGRAPHY STANDARD       */
+/* TRAVEL — MATCH INDEX CARD TYPOGRAPHY     */
 /* ========================================= */
 
-body.news-page .travel-hero p {
-  font-family: var(--font-body);
-  font-size: 17px;
-  line-height: 1.7;
-}
-
-/* Карточки — весь текст */
-body.news-page .travel-card__content p {
-  font-family: var(--font-body);
-  font-size: 17px;
-  line-height: 1.7;
-}
-
-/* Заголовки карточек */
-body.news-page .travel-card__title {
+/* Hero заголовок — как заголовки карточек */
+.travel-hero__title {
   font-family: var(--font-head);
   font-weight: 400;
-  font-size: 30px;
-  line-height: 1.25;
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 28px;
+}
+
+/* Hero текст — как текст карточек */
+.travel-hero__text p {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.75;
   margin-bottom: 18px;
 }
 
-/* Hero заголовок */
-body.news-page .letter__title {
+/* Заголовки карточек */
+.travel-card__title {
   font-family: var(--font-head);
   font-weight: 400;
+  font-size: 36px;
+  line-height: 1.2;
 }
 
-/* Hero subtitle */
-body.news-page .letter__subtitle {
-  font-family: var(--font-ui);
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+/* Текст карточек */
+.travel-card__content p {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.75;
 }

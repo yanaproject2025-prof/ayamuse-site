@@ -955,3 +955,17 @@ section .travel-card {
         font-size: 26px;
     }
 }
+/* ============================== */
+/* NEWS PAGE — DIGEST LAYOUT     */
+/* ============================== */
+
+.news-digest{
+  display:flex;
+  flex-direction:column;
+  gap:40px;
+  max-width:820px;       /* как Letter — красиво и не растянуто */
+  margin:0 auto;         /* центрируем */
+}
+
+
+

@@ -989,5 +989,7 @@ section .travel-card {
 #future {
   padding-top: 0px;
 }
-
+.letter__title {
+    font-weight: 700 !important;
+}
 

@@ -991,58 +991,18 @@ section .travel-card {
 }
 
 /* ========================================= */
-/* TRAVEL PAGE — MATCH INDEX TYPOGRAPHY      */
+/* TRAVEL — MATCH INDEX STYLE               */
 /* ========================================= */
 
-body.travel-page .page-title{
+body.travel-page .travel-hero__title {
   font-family: var(--font-head);
-  font-weight: 700;              /* как в card__title (h3 по умолчанию bold) */
+  font-weight: 700;
   font-size: 48px;
   line-height: 1.1;
-  text-align: center;
   margin: 0 0 18px;
 }
 
-body.travel-page .travel-hero{
-  max-width: 860px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-body.travel-page .travel-hero p{
-  font-family: var(--font-ui);   /* как card__text в index */
-  font-size: 15px;
-  line-height: 1.7;
-  margin: 0 0 12px;
-  opacity: .9;
-}
-
-/* Карточки Travel — как card в index */
-body.travel-page .travel-card{
-  background: rgba(255,255,255,0.5);
-  border: 1px solid rgba(34,34,34,0.10);
-  border-radius: var(--radius);
-  box-shadow: none;
-  padding: 24px;
-  gap: 24px;
-  align-items: start;
-}
-
-body.travel-page .travel-card__image{
-  border-radius: var(--radius);
-}
-
-/* Заголовок в карточке — как card__title (Playfair + bold) */
-body.travel-page .travel-card__content h2{
-  font-family: var(--font-head);
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 1.15;
-  margin: 0 0 12px;
-}
-
-/* Текст в карточке — как card__text (Montserrat) */
-body.travel-page .travel-card__content .travel-card__lead{
+body.travel-page .travel-hero__text p {
   font-family: var(--font-ui);
   font-size: 15px;
   line-height: 1.7;
@@ -1050,7 +1010,16 @@ body.travel-page .travel-card__content .travel-card__lead{
   opacity: .9;
 }
 
-body.travel-page .travel-card__content p{
+/* Карточки travel как card index */
+body.travel-page .travel-card__content h2 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.15;
+  margin: 0 0 12px;
+}
+
+body.travel-page .travel-card__content p {
   font-family: var(--font-ui);
   font-size: 15px;
   line-height: 1.7;

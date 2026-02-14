@@ -989,3 +989,42 @@ section .travel-card {
 #future {
   padding-top: 0px;
 }
+
+/* ========================================= */
+/* TRAVEL — FORCE TYPOGRAPHY STANDARD       */
+/* ========================================= */
+
+body.news-page .travel-hero p {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Карточки — весь текст */
+body.news-page .travel-card__content p {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Заголовки карточек */
+body.news-page .travel-card__title {
+  font-family: var(--font-head);
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+
+/* Hero заголовок */
+body.news-page .letter__title {
+  font-family: var(--font-head);
+  font-weight: 400;
+}
+
+/* Hero subtitle */
+body.news-page .letter__subtitle {
+  font-family: var(--font-ui);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}

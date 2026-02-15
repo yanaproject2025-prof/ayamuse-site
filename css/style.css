@@ -1087,24 +1087,24 @@ body.travel-page .travel-card {
 
   /* Общие секции */
   body.travel-page .section {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   /* Hero (манифест) */
   body.travel-page .section:first-of-type {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 5px;
   }
 
   /* Regions */
   body.travel-page .travel-regions {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
 
   /* После Aviasales */
   body.travel-page .aviasales-wrapper {
-    margin-bottom: 30px;
+    margin-bottom: 5px;
   }
 
   /* Featured destinations */

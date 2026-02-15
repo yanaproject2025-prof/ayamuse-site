@@ -1026,3 +1026,42 @@ body.travel-page .travel-card__content p {
   margin: 0 0 12px;
   opacity: .9;
 }
+
+/* ========================================= */
+/* TRAVEL — MATCH INDEX / NEWS TYPOGRAPHY  */
+/* ========================================= */
+
+/* PAGE TITLE — как News */
+body.travel-page .page-title {
+  font-family: var(--font-head);   /* Playfair */
+  font-size: 46px;
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0 0 12px;
+}
+
+/* HERO TEXT — как prose / letter body */
+body.travel-page .travel-hero p {
+  font-family: var(--font-body);   /* Lora */
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0 0 12px;
+  max-width: 820px;
+}
+
+/* REGIONS line */
+body.travel-page .travel-regions {
+  font-family: var(--font-body);   /* Lora */
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Links inside regions */
+body.travel-page .travel-regions a {
+  text-decoration: none;
+}
+
+body.travel-page .travel-regions a:hover {
+  text-decoration: underline;
+}

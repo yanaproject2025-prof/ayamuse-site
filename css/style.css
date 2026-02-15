@@ -1062,7 +1062,9 @@ body.travel-page .section:nth-of-type(2) {
 body.travel-page .section:nth-of-type(3) {
   padding-bottom: 10px;
 }
-
+body.travel-page .section-divider {
+  margin-bottom: 12px;
+}
 
 
 

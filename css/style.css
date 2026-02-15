@@ -1054,5 +1054,5 @@ body.travel-page .travel-sep {
 
 body.travel-page .section:first-of-type {
   padding-top: 20px;   /* меньше воздуха до заголовка */
-  padding-bottom: 20px; /* меньше воздуха после манифеста */
+  padding-bottom: 0px; /* меньше воздуха после манифеста */
 }

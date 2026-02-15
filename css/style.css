@@ -1027,24 +1027,25 @@ body.travel-page .travel-card__content p {
   opacity: .9;
 }
 
-/* TRAVEL REGIONS — use existing system */
+/* TRAVEL PAGE — REGIONS TYPOGRAPHY */
 
-.travel-regions {
-  font-family: var(--font-head);  /* Playfair */
+body.travel-page .travel-regions {
+  font-family: var(--font-head);
   font-size: 22px;
   font-weight: 400;
+  line-height: 1.4;
   margin: 0;
 }
 
-.travel-regions a {
+body.travel-page .travel-regions a {
   text-decoration: none;
 }
 
-.travel-regions a:hover {
+body.travel-page .travel-regions a:hover {
   text-decoration: underline;
 }
 
-.travel-sep {
+body.travel-page .travel-sep {
   margin: 0 12px;
   opacity: 0.35;
 }

@@ -1065,7 +1065,9 @@ body.travel-page .section:nth-of-type(3) {
 body.travel-page .section-divider {
   margin-bottom: 12px;
 }
-
+body.travel-page .travel-card {
+  margin-top: 0;
+}
 
 
 

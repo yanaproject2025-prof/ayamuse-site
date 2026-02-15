@@ -1027,3 +1027,24 @@ body.travel-page .travel-card__content p {
   opacity: .9;
 }
 
+/* TRAVEL REGIONS — use existing system */
+
+.travel-regions {
+  font-family: var(--font-head);  /* Playfair */
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.travel-regions a {
+  text-decoration: none;
+}
+
+.travel-regions a:hover {
+  text-decoration: underline;
+}
+
+.travel-sep {
+  margin: 0 12px;
+  opacity: 0.35;
+}

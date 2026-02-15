@@ -1049,3 +1049,10 @@ body.travel-page .travel-sep {
   margin: 0 12px;
   opacity: 0.35;
 }
+
+/* TRAVEL — tighten hero spacing */
+
+body.travel-page .section:first-of-type {
+  padding-top: 20px;   /* меньше воздуха до заголовка */
+  padding-bottom: 20px; /* меньше воздуха после манифеста */
+}

@@ -1063,11 +1063,12 @@ body.travel-page .section:nth-of-type(3) {
   padding-bottom: 10px;
 }
 body.travel-page .section-divider {
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
 body.travel-page .travel-card {
-  margin-top: 15;
+  margin-top: 0;
 }
+
 /* Desktop */
 .travel-card img {
   width: 85%;

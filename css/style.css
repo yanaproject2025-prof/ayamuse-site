@@ -1085,6 +1085,32 @@ body.travel-page .travel-card {
     aspect-ratio: 4 / 5;
   }
 
-}
+  /* Общие секции */
+  body.travel-page .section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 
+  /* Hero (манифест) */
+  body.travel-page .section:first-of-type {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  /* Regions */
+  body.travel-page .travel-regions {
+    margin-bottom: 20px;
+  }
+
+  /* После Aviasales */
+  body.travel-page .aviasales-wrapper {
+    margin-bottom: 30px;
+  }
+
+  /* Featured destinations */
+  body.travel-page .curated-destinations {
+    padding-top: 30px;
+  }
+
+}
 

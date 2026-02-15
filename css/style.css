@@ -1051,9 +1051,8 @@ body.travel-page .travel-sep {
 }
 
 /* TRAVEL — tighten hero spacing */
-body.travel-page .letter__titles {
-  margin-bottom: 0;
-}
-body.travel-page .section-divider {
-  margin-top: 20px;
+
+body.travel-page .section:first-of-type {
+  padding-top: 20px;   /* меньше воздуха до заголовка */
+  padding-bottom: 20px; /* меньше воздуха после манифеста */
 }

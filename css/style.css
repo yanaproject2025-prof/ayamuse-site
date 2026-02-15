@@ -1068,7 +1068,22 @@ body.travel-page .section-divider {
 body.travel-page .travel-card {
   margin-top: 15;
 }
+/* Desktop */
+.travel-card img {
+  width: 85%;
+  max-width: 420px;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
 
+  .travel-card img {
+    width: 100%;        /* на мобиле картинка должна быть шириной карточки */
+    max-width: 100%;
+    aspect-ratio: 4 / 5;
+  }
 
+}
 
 

@@ -1114,3 +1114,6 @@ body.travel-page .travel-card {
 
 }
 
+  html {
+  scroll-behavior: smooth;
+}

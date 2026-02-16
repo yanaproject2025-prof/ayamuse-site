@@ -1112,6 +1112,10 @@ body.travel-page .travel-card {
     padding-top: 30px;
   }
 
+} 
+
+  .section-divider {
+  scroll-margin-top: 120px;
 }
 
   html {

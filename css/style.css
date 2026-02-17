@@ -1149,19 +1149,7 @@ body.travel-page .travel-card {
   transform: translateY(-3px);
   background: #ddd7cf;
 }
-/* =========================
-   TRAVEL TEASER IMAGE FIX
-========================= */
 
-#journeys .card__image {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: contain;   /* ключевое */
-  background: #f6f3ef;   /* твой светлый фон */
-  padding: 8px;          /* лёгкий воздух */
-  border-radius: 20px;
-}
 
 
 

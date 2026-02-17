@@ -1149,6 +1149,17 @@ body.travel-page .travel-card {
   transform: translateY(-3px);
   background: #ddd7cf;
 }
- 
+/* =========================
+   TRAVEL TEASER CARDS FIX
+========================= */
+
+#journeys .card__image {
+  width: 100%;
+  height: auto;              /* убираем фиксированную высоту */
+  aspect-ratio: 16 / 10;     /* аккуратная пропорция */
+  object-fit: cover;
+  object-position: center;
+}
+
 
 

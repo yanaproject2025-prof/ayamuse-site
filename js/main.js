@@ -70,3 +70,25 @@ async function loadSection(id, url) {
 
     window.addEventListener("DOMContentLoaded", scrollWhenReady);
   })();
+
+   /* =========================
+   SCROLL TO TOP BUTTON
+========================= */
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollBtn = document.getElementById("scrollTopBtn");
+  if (!scrollBtn) return;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 500) {
+      scrollBtn.style.display = "flex";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  });
+
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
+
+

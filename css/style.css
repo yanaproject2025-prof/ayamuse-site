@@ -1158,7 +1158,9 @@ body.travel-page .travel-card {
   opacity:0.35;
   font-size:8px;
 }
- 
+.flight-map iframe{
+  border-radius:16px;
+}
 
 
 

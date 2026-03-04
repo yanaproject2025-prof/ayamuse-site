@@ -1150,7 +1150,15 @@ body.travel-page .travel-card {
   background: #ddd7cf;
 }
 
-
+.flight-map{
+  margin-top:70px;
+  margin-bottom:40px;
+}
+.tp-powered-by {
+  opacity:0.35;
+  font-size:11px;
+}
+ 
 
 
 

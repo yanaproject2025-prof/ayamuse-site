@@ -1151,11 +1151,11 @@ body.travel-page .travel-card {
 }
 
 .flight-map{
-  margin-top:10px;
-  margin-bottom:10px;
+  margin-top:15px;
+  margin-bottom:0px;
 }
 .tp-powered-by {
-  opacity:0.45;
+  opacity:0.35;
   font-size:8px;
 }
  

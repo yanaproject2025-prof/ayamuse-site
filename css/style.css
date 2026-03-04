@@ -1161,6 +1161,21 @@ body.travel-page .travel-card {
 .flight-map iframe{
   border-radius:16px;
 }
+ /* KLOOK WIDGET FIX */
 
+.tours-widget{
+  width:100%;
+  max-width:1200px;
+  margin:60px auto 80px auto;
+}
+
+.tours-widget iframe{
+  width:100% !important;
+  max-width:100% !important;
+}
+
+.tours-widget div{
+  width:100% !important;
+}
 
 

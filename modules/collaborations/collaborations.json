@@ -1,69 +1,84 @@
 {
-  "eyebrow": "Healing through style.",
+  "eyebrow": "Not just collaborations — but atmospheres people remember.",
   "sections": [
     {
-      "title": "Who We Are",
+      "title": "Collaborations with Aya",
       "paragraphs": [
-        "Aya Muse World is an international aesthetic project creating a system of support and restoration through style, beauty, and atmosphere.",
-        "We work at the intersection of aesthetics, wellness, and community, shaping environments where visual language becomes a form of care and emotional grounding.",
-        "Aya began as a space of support for women and is now evolving into a broader ecosystem, open to international collaboration."
+        "Some collaborations promote a brand. Ours create a world around it.",
+        "Aya Muse World designs aesthetic environments where beauty becomes emotion, and emotion becomes connection.",
+        "We don’t place products — we shape experiences that stay with people long after they leave."
       ]
     },
     {
-      "title": "Geography & Scale",
+      "title": "Why Aya",
       "paragraphs": [
-        "Aya Muse World is an international project. We are not bound to a specific language, country, or culture.",
-        "We are open to partnerships worldwide and collaborate with brands and spaces for whom values matter more than location.",
-        "The language of aesthetics and care is universal — and it is the language Aya speaks."
+        "Today, people don’t remember what they saw — they remember how it felt.",
+        "Aya creates visual language that transforms brands into atmospheres: quiet, sensual, intimate, and deeply memorable.",
+        "This is where aesthetics becomes a form of care — and connection."
       ]
+    },
+    {
+      "title": "What We Create",
+      "list": [
+        "boutique hotel and retreat concepts",
+        "beauty and fragrance storytelling",
+        "wellness and soft luxury environments",
+        "editorial campaigns and visual worlds",
+        "digital aesthetic ecosystems and curated experiences"
+      ]
+    },
+    {
+      "title": "Visual Portfolio",
+      "paragraphs": [
+        "Explore our collaboration concepts and visual worlds.",
+        "Aya x Brands is a curated portfolio of aesthetic campaigns, brand atmospheres, and storytelling directions created through the Aya lens."
+      ],
+      "link_label": "Explore Pinterest Portfolio",
+      "link": "https://www.pinterest.com/yanaproject2025/aya-x-brands-aesthetic-collaborations"
     },
     {
       "title": "Who We Work With",
+      "paragraphs": [
+        "We collaborate with brands that value depth, beauty, and emotional resonance.",
+        "Our partners seek not just visibility — but meaning, atmosphere, and long-term connection with their audience."
+      ],
       "list": [
         "boutique hotels, spas, and retreat spaces",
         "niche and artisanal fragrance brands",
         "aesthetic fashion and accessories brands",
-        "wellness projects focused on restoration and inner states",
-        "visual platforms, media, and curatorial communities shaping contemporary culture of beauty and stillness"
-      ],
-      "paragraphs": [
-        "We seek partners oriented toward depth, longevity, and meaningful connection with their audience."
+        "wellness projects focused on inner states",
+        "media and platforms shaping contemporary visual culture"
       ]
     },
     {
-      "title": "Why We Collaborate",
-      "list": [
-        "aesthetics serve as a tool for emotional support",
-        "brands exist not as advertising, but as part of the environment",
-        "trust and emotional connection are cultivated",
-        "long-term value is created beyond one-time impact"
-      ],
+      "title": "Collaboration Approach",
       "paragraphs": [
-        "For us, collaboration is not placement — it is the shared creation of meaning and experience."
-      ]
-    },
-    {
-      "title": "Collaboration Formats",
-      "list": [
-        "aesthetic and editorial collaborations",
-        "curated digital projects and visual series",
-        "brand integration within the Aya ecosystem",
-        "joint online and offline initiatives",
-        "strategic and long-term partnerships"
+        "For us, collaboration is not placement — it is the creation of a shared world.",
+        "Each partnership is built around emotion, aesthetic coherence, and long-term value."
       ],
-      "paragraphs": [
-        "Collaboration formats are discussed individually."
+      "list": [
+        "concept and creative direction",
+        "visual storytelling and moodboards",
+        "editorial and campaign development",
+        "integration into the Aya ecosystem",
+        "long-term aesthetic partnerships"
       ]
     },
     {
       "title": "Development Direction",
       "paragraphs": [
-        "Aya Muse World is evolving from a digital ecosystem of support toward physical spaces of restoration and quiet.",
-        "We are open to strategic and investment partnerships within hospitality and wellness."
+        "Aya Muse World is evolving from a digital ecosystem into physical spaces of restoration, beauty, and quiet.",
+        "We are open to strategic and investment partnerships within hospitality, wellness, and experience design."
       ]
     },
     {
-      "title": "Contact",
+      "title": "Start a Collaboration",
+      "paragraphs": [
+        "If your brand speaks the language of beauty, atmosphere, and emotion — we would love to create something together.",
+        "Explore our visual portfolio or reach out directly to begin the conversation."
+      ],
+      "link_label": "View Portfolio",
+      "link": "https://www.pinterest.com/yanaproject2025/aya-x-brands-aesthetic-collaborations",
       "email": "collab@ayamuse.com"
     }
   ]

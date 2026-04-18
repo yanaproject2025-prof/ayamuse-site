@@ -22,6 +22,14 @@ async function loadCollaborations() {
       html += `</ul>`;
     }
 
+    if (s.link) {
+      html += `
+        <a href="${s.link}" target="_blank" class="collab-link">
+          ${s.link_label || 'Explore'}
+        </a>
+      `;
+    }
+    
     if (s.email) {
       html += `<p class="card__email">${s.email}</p>`;
     }

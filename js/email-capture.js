@@ -1,7 +1,7 @@
 import { getFirestore, collection, addDoc, serverTimestamp } 
 from 'https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js';
 
-const db = getFirestore();
+const db = window.db;
 
 const form = document.getElementById('ayaForm');
 const input = document.getElementById('ayaEmail');

@@ -1,29 +1,31 @@
 import { getFirestore, collection, addDoc, serverTimestamp } 
-from 'https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js';
 
-const db = window.db;
+if (!form) return;  
+  from 'https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js';
 
-const form = document.getElementById('ayaForm');
-const input = document.getElementById('ayaEmail');
-const success = document.getElementById('ayaSuccess');
+  const db = window.db;
 
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
+  const form = document.getElementById('ayaForm');
+  const input = document.getElementById('ayaEmail');
+  const success = document.getElementById('ayaSuccess');
 
-  const email = input.value.trim();
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-  try {
-    await addDoc(collection(db, 'email_signups'), {
-      email: email,
-      source: 'website',
-      page: 'index',
-      createdAt: serverTimestamp(),
-    });
+    const email = input.value.trim();
 
-    form.style.display = "none";
-    success.style.display = "block";
+    try {
+      await addDoc(collection(db, 'email_signups'), {
+        email: email,
+        source: 'website',
+        page: 'index',
+        createdAt: serverTimestamp(),
+      });
 
-  } catch (err) {
-    console.log(err);
-  }
-});
+      form.style.display = "none";
+      success.style.display = "block";
+
+    } catch (err) {
+      console.log(err);
+    }
+ });

@@ -1180,26 +1180,54 @@ body.travel-page .travel-card {
 }
 
 .aya-capture {
-  text-align: left;
-  margin: 0;
-  max-width: 300px;
+  margin-top: 6px;
+  max-width: 260px;
 }
 
+/* текст — мягкий, как подпись */
+.aya-capture p {
+  margin: 0 0 8px;
+  font-size: 13px;
+  line-height: 1.4;
+  opacity: 0.7;
+}
 
+/* строка ввода */
 #ayaForm {
   display: flex;
-  justify-content: center;
-  gap: 8px;
+  align-items: center;
+  gap: 10px;
 }
 
+/* input как линия */
 #ayaEmail {
-  padding: 8px;
-  border: 1px solid #ccc;
+  border: none;
+  border-bottom: 1px solid rgba(34,34,34,0.25);
+  background: transparent;
+  padding: 4px 0;
+  font-size: 13px;
+  outline: none;
+  width: 140px;
 }
 
+/* при фокусе — чуть темнее */
+#ayaEmail:focus {
+  border-bottom: 1px solid rgba(34,34,34,0.6);
+}
+
+/* кнопка как текст */
 #ayaForm button {
-  padding: 8px 12px;
-  border: 1px solid #000;
+  border: none;
   background: transparent;
+  padding: 0;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   cursor: pointer;
+  opacity: 0.7;
+}
+
+/* hover — лёгкий эффект */
+#ayaForm button:hover {
+  opacity: 1;
 }

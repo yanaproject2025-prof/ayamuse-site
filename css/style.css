@@ -1180,8 +1180,15 @@ body.travel-page .travel-card {
 }
 
 .aya-capture {
-  text-align: center;
-  margin: 20px 0;
+  text-align: left;
+  margin: 0;
+  max-width: 300px;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .aya-capture__text {

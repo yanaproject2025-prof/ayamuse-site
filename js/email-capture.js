@@ -1,27 +1,21 @@
-import { getFirestore, collection, addDoc, serverTimestamp } 
-from 'https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js';
-
 const db = window.db;
 
 const form = document.getElementById('ayaForm');
 const input = document.getElementById('ayaEmail');
 const success = document.getElementById('ayaSuccess');
 
-// если формы нет — ничего не делаем
-if (!form) {
-  console.log('Form not found');
-} else {
+if (form) {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const email = input.value.trim();
 
     try {
-      await addDoc(collection(db, 'email_signups'), {
+      await window.firebase.firestore().collection('email_signups').add({
         email: email,
         source: 'website',
         page: 'index',
-        createdAt: serverTimestamp(),
+        createdAt: new Date()
       });
 
       form.style.display = "none";

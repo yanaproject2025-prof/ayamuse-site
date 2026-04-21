@@ -1201,30 +1201,28 @@ body.travel-page .travel-card {
 
 /* input как линия */
 #ayaEmail {
-  border: none;
-  border-bottom: 1px solid rgba(34,34,34,0.25);
+  padding: 6px 10px;
+  border: 1px solid rgba(34,34,34,0.15); /* очень мягкая рамка */
   background: transparent;
-  padding: 4px 0;
   font-size: 13px;
   outline: none;
-  width: 140px;
+  width: 150px;
 }
 
-/* при фокусе — чуть темнее */
 #ayaEmail:focus {
-  border-bottom: 1px solid rgba(34,34,34,0.6);
+  border: 1px solid rgba(34,34,34,0.35); /* чуть темнее при фокусе */
 }
 
 /* кнопка как текст */
 #ayaForm button {
-  border: none;
+  border: 1px solid rgba(34,34,34,0.4);
   background: transparent;
-  padding: 0;
-  font-size: 12px;
+  padding: 6px 12px;
+  font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   cursor: pointer;
-  opacity: 0.7;
+  white-space: nowrap; /* 👈 ВАЖНО — не переносится */
 }
 
 /* hover — лёгкий эффект */

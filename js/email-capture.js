@@ -15,6 +15,8 @@ form.addEventListener('submit', async (e) => {
   try {
     await addDoc(collection(db, 'email_signups'), {
       email: email,
+      source: 'website',
+      page: 'index',
       createdAt: serverTimestamp(),
     });
 

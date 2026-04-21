@@ -1185,17 +1185,6 @@ body.travel-page .travel-card {
   max-width: 300px;
 }
 
-.footer__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.aya-capture__text {
-  font-family: 'Playfair Display', serif;
-  font-size: 16px;
-  margin-bottom: 10px;
-}
 
 #ayaForm {
   display: flex;

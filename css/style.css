@@ -1178,3 +1178,32 @@ body.travel-page .travel-card {
 .collab-link:hover {
   opacity: 0.6;
 }
+
+.aya-capture {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.aya-capture__text {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#ayaForm {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+#ayaEmail {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+#ayaForm button {
+  padding: 8px 12px;
+  border: 1px solid #000;
+  background: transparent;
+  cursor: pointer;
+}

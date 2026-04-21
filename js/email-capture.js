@@ -13,6 +13,12 @@ if (form) {
 
     const email = input.value.trim();
 
+    // ✅ ВСТАВИТЬ СЮДА
+    if (!email.includes("@")) {
+      alert("Enter a valid email");
+      return;
+    }
+
     try {
       await addDoc(collection(db, 'email_signups'), {
         email: email,

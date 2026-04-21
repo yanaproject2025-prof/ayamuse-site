@@ -1,3 +1,6 @@
+import { collection, addDoc, serverTimestamp } 
+from "https://www.gstatic.com/firebasejs/12.12.1/firebase-firestore.js";
+
 const db = window.db;
 
 const form = document.getElementById('ayaForm');
@@ -11,18 +14,18 @@ if (form) {
     const email = input.value.trim();
 
     try {
-      await window.firebase.firestore().collection('email_signups').add({
+      await addDoc(collection(db, 'email_signups'), {
         email: email,
         source: 'website',
         page: 'index',
-        createdAt: new Date()
+        createdAt: serverTimestamp(),
       });
 
       form.style.display = "none";
       success.style.display = "block";
 
     } catch (err) {
-      console.log(err);
+      console.log("ERROR:", err);
     }
   });
 }

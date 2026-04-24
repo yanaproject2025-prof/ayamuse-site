@@ -1,19 +1,23 @@
 import { collection, addDoc, serverTimestamp } 
 from "https://www.gstatic.com/firebasejs/12.12.1/firebase-firestore.js";
 
-const db = window.db;
+document.addEventListener("DOMContentLoaded", () => {
+  const db = window.db;
 
-const form = document.getElementById('ayaForm');
-const input = document.getElementById('ayaEmail');
-const success = document.getElementById('ayaSuccess');
+  const form = document.getElementById('ayaForm');
+  const input = document.getElementById('ayaEmail');
+  const success = document.getElementById('ayaSuccess');
 
-if (form) {
+  if (!form || !db) {
+    console.error("Form or DB not found");
+    return;
+  }
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const email = input.value.trim();
 
-    // ✅ ВСТАВИТЬ СЮДА
     if (!email.includes("@")) {
       alert("Enter a valid email");
       return;
@@ -31,7 +35,7 @@ if (form) {
       success.style.display = "block";
 
     } catch (err) {
-      console.log("ERROR:", err);
+      console.error("ERROR:", err);
     }
   });
-}
+});

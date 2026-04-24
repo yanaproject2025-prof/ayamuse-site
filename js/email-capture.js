@@ -32,6 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       form.style.display = "none";
+      const note = document.querySelector('.aya-note');
+      if (note) note.style.display = "none";
       success.style.display = "block";
 
     } catch (err) {

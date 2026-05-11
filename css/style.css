@@ -82,6 +82,19 @@ a:hover{ text-decoration:underline; }
   text-transform:uppercase;
 }
 
+@media (max-width: 1220px) {
+  .header__inner{
+    padding-left:20px;
+    padding-right:20px;
+  }
+
+  .nav--desktop{
+    gap:16px;
+    font-size:11px;
+    letter-spacing:0.12em;
+  }
+}
+
 /* Burger */
 .burger{
   display:none;
@@ -1452,6 +1465,63 @@ body.travel-page .travel-card {
   opacity: 0.74;
 }
 
+body.atelier-page .footer {
+  margin-top: 18px;
+  padding: 22px 0 20px;
+}
+
+body.atelier-page .footer--minimal,
+.footer--minimal {
+  margin-top: 18px;
+  padding: 22px 0 20px;
+}
+
+body.atelier-page .footer__inner {
+  gap: 12px;
+}
+
+body.atelier-page .footer--minimal .footer__inner,
+.footer--minimal .footer__inner {
+  gap: 12px;
+}
+
+body.atelier-page .footer__socials {
+  margin: 4px 0 2px;
+}
+
+body.atelier-page .footer--minimal .footer__socials,
+.footer--minimal .footer__socials {
+  margin: 4px 0 2px;
+}
+
+body.atelier-page .footer__title {
+  font-size: 17px;
+}
+
+body.atelier-page .footer--minimal .footer__title,
+.footer--minimal .footer__title {
+  font-size: 17px;
+}
+
+body.atelier-page .footer__location,
+body.atelier-page .footer__copy,
+body.atelier-page .footer__links {
+  font-size: 12px;
+}
+
+body.atelier-page .footer--minimal .footer__location,
+body.atelier-page .footer--minimal .footer__copy,
+body.atelier-page .footer--minimal .footer__links,
+.footer--minimal .footer__location,
+.footer--minimal .footer__copy,
+.footer--minimal .footer__links {
+  font-size: 12px;
+}
+
+body.home .section--atelier-teaser {
+  padding-top: 30px;
+}
+
 .atelier-teaser {
   display: grid;
   grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1fr);
@@ -1459,10 +1529,11 @@ body.travel-page .travel-card {
   align-items: center;
   max-width: var(--max);
   margin: 0 auto;
-  padding: 38px;
+  padding: 34px;
   background: rgba(255,255,255,0.45);
   border: 1px solid rgba(34,34,34,0.09);
   border-radius: 18px;
+  overflow: hidden;
 }
 
 .atelier-teaser__content h2 {
@@ -1484,31 +1555,35 @@ body.travel-page .travel-card {
 
 .atelier-teaser__moodboard {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  grid-template-rows: auto auto;
-  gap: 14px;
-  align-items: start;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 16px;
+  align-items: center;
 }
 
-.atelier-teaser__moodboard img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
+.atelier-teaser__frame {
+  height: 170px;
+  overflow: hidden;
   border-radius: 14px;
   border: 1px solid rgba(34,34,34,0.08);
   background: rgba(255,255,255,0.7);
   box-shadow: 0 10px 26px rgba(34,34,34,0.07);
 }
 
-.atelier-teaser__moodboard img:nth-child(2) {
-  margin-top: 28px;
+.atelier-teaser__frame--large {
+  grid-row: span 2;
+  height: 360px;
 }
 
-.atelier-teaser__moodboard img:nth-child(3) {
-  grid-column: 1 / -1;
-  justify-self: center;
-  max-width: 68%;
+.atelier-teaser__frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.atelier-teaser__frame:nth-child(3) img {
+  object-position: center top;
 }
 
 @media (max-width: 900px) {
@@ -1545,9 +1620,30 @@ body.travel-page .travel-card {
   .atelier-teaser {
     padding: 26px;
   }
+
+  .atelier-teaser__frame,
+  .atelier-teaser__frame--large {
+    height: 220px;
+  }
 }
 
 @media (max-width: 768px) {
+  body.atelier-page .atelier-hero {
+    padding: 38px 0 18px;
+  }
+
+  body.atelier-page .atelier-intro.section {
+    padding: 10px 0 22px;
+  }
+
+  body.atelier-page .atelier-worlds.section {
+    padding: 22px 0 30px;
+  }
+
+  body.atelier-page .atelier-cta.section {
+    padding: 30px 0 34px;
+  }
+
   .atelier-hero .container,
   .atelier-worlds .container,
   .atelier-intro .container,
@@ -1557,7 +1653,49 @@ body.travel-page .travel-card {
 
   .atelier-intro__inner,
   .atelier-cta__inner {
-    padding: 28px 20px;
+    padding: 24px 20px;
+  }
+
+  .atelier-worlds__heading {
+    margin-bottom: 28px;
+  }
+
+  body.atelier-page .section-divider {
+    margin: 24px 0 18px;
+  }
+
+  .atelier-category {
+    gap: 20px;
+  }
+
+  .atelier-category__divider {
+    margin: 8px 0 12px;
+  }
+
+  .atelier-projects,
+  .atelier-category__projects {
+    gap: 42px;
+  }
+
+  .atelier-project__eyebrow {
+    display: none;
+  }
+
+  .atelier-project__title {
+    margin-bottom: 18px;
+  }
+
+  .atelier-project__meta {
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .atelier-project__meta div {
+    padding-bottom: 10px;
+  }
+
+  .atelier-project__description {
+    line-height: 1.65;
   }
 
   .atelier-teaser {
@@ -1568,9 +1706,141 @@ body.travel-page .travel-card {
     grid-template-columns: 1fr;
   }
 
-  .atelier-teaser__moodboard img:nth-child(2),
-  .atelier-teaser__moodboard img:nth-child(3) {
+  .atelier-teaser__frame:nth-child(2),
+  .atelier-teaser__frame:nth-child(3) {
+    display: none;
+  }
+
+  .atelier-teaser__frame,
+  .atelier-teaser__frame--large {
+    height: 260px;
+  }
+}
+
+/* ========================================= */
+/* MOBILE — AYA RHYTHM POLISH                */
+/* ========================================= */
+
+@media (max-width: 768px) {
+  body.letter-page:not(.support-page):not(.atelier-page) main,
+  body.news-page main,
+  body.support-page main,
+  body.collab-page main {
+    padding-top: 22px;
+  }
+
+  body.letter-page .letter__titles,
+  body.news-page .letter__titles,
+  body.support-page .letter__titles {
+    width: calc(100% - 32px);
+    margin: 0 auto 20px;
+  }
+
+  body.letter-page .letter__title,
+  body.news-page .letter__title,
+  body.support-page .letter__title {
+    font-size: 34px;
+    line-height: 1.08;
+    margin-bottom: 8px;
+  }
+
+  body.letter-page .letter__subtitle,
+  body.news-page .letter__subtitle,
+  body.support-page .letter__subtitle {
+    font-size: 11px;
+    line-height: 1.45;
+    letter-spacing: 0.14em;
+    margin: 0;
+  }
+
+  body.letter-page .letter,
+  body.support-page .letter {
+    width: calc(100% - 32px);
+    margin-bottom: 28px;
+  }
+
+  body.letter-page .letter__hero {
     margin-top: 0;
-    max-width: 100%;
+    margin-bottom: 22px;
+  }
+
+  body.letter-page .letter__pinned,
+  body.letter-page .letter__entry {
+    padding: 22px;
+    margin-bottom: 24px;
+  }
+
+  body.support-page .letter__pinned {
+    margin-bottom: 18px;
+  }
+
+  body.letter-page .letter__list {
+    gap: 24px;
+  }
+
+  body.news-page .section {
+    padding: 10px 0 34px;
+  }
+
+  body.news-page .news-digest {
+    gap: 24px;
+    width: 100%;
+  }
+
+  body.news-page .card {
+    padding: 22px;
+  }
+
+  body.collab-page main > section:first-child {
+    padding: 24px 0 14px !important;
+  }
+
+  body.collab-page .section--collaborations {
+    padding: 8px 0 30px !important;
+  }
+
+  body.collab-page .card--collab {
+    padding: 22px;
+    gap: 22px;
+  }
+
+  body.collab-page .card__image-wrap {
+    height: 320px;
+  }
+
+  body.collab-page .card__content h3 {
+    margin: 22px 0 10px;
+  }
+
+  body.travel-page .section {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  body.travel-page .letter__titles {
+    width: calc(100% - 32px);
+    margin: 0 auto 14px;
+  }
+
+  body.travel-page .section-divider {
+    margin: 28px 0 18px;
+  }
+
+  body.travel-page .travel-card {
+    padding: 22px;
+    gap: 22px;
+    margin: 30px 0;
+  }
+
+  body.travel-page .travel-card__content h2 {
+    font-size: 28px;
+  }
+
+  body.travel-page .travel-card__content p {
+    line-height: 1.6;
+  }
+
+  .footer {
+    margin-top: 18px;
   }
 }

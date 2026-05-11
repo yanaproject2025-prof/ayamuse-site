@@ -32,6 +32,10 @@ async function loadNewsModules() {
 
     container.innerHTML = items.map(item => `
       <article class="card">
+        ${item.image ? `
+          <img src="${item.image}" alt="${item.title}" class="card__image">
+        ` : ''}
+
         <h3 class="card__title">${item.title}</h3>
         <p class="card_date">${item.date}</p>
         <p class="card__text">${item.excerpt}</p>

@@ -1229,3 +1229,348 @@ body.travel-page .travel-card {
 #ayaForm button:hover {
   opacity: 1;
 }
+
+/* ========================================= */
+/* ATELIER — BOUTIQUE DIGITAL ATELIER        */
+/* ========================================= */
+
+.atelier-hero {
+  padding: 72px 0 36px;
+}
+
+.atelier-hero .container {
+  max-width: 920px;
+  text-align: center;
+}
+
+.atelier-hero__eyebrow,
+.atelier-teaser__eyebrow,
+.atelier-project__eyebrow,
+.atelier-cta__eyebrow {
+  font-family: var(--font-ui);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.62;
+  margin: 0 0 14px;
+}
+
+.atelier-hero__title {
+  font-family: var(--font-head);
+  font-size: clamp(42px, 7vw, 86px);
+  font-weight: 400;
+  line-height: 1;
+  margin: 0 0 22px;
+}
+
+.atelier-hero__subtitle {
+  max-width: 760px;
+  margin: 0 auto;
+  font-family: var(--font-head);
+  font-size: clamp(24px, 3vw, 38px);
+  line-height: 1.24;
+  opacity: 0.86;
+}
+
+.atelier-intro {
+  padding-top: 16px;
+}
+
+.atelier-intro__inner {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 30px 34px;
+  border-top: 1px solid rgba(34,34,34,0.1);
+  border-bottom: 1px solid rgba(34,34,34,0.1);
+  text-align: center;
+}
+
+.atelier-intro__inner p,
+.atelier-worlds__heading p,
+.atelier-cta__inner p {
+  font-family: var(--font-ui);
+  font-size: 15px;
+  line-height: 1.7;
+  opacity: 0.86;
+  margin: 0;
+}
+
+.atelier-worlds {
+  padding-top: 24px;
+}
+
+.atelier-worlds__heading {
+  max-width: 760px;
+  margin: 0 auto 58px;
+  text-align: center;
+}
+
+.atelier-worlds__heading h2 {
+  font-family: var(--font-head);
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 400;
+  line-height: 1.12;
+  margin: 0 0 16px;
+}
+
+.atelier-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.atelier-category {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.atelier-category__divider {
+  margin-top: 10px;
+}
+
+.atelier-category__projects {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.atelier-project {
+  display: grid;
+  grid-template-columns: minmax(0, 1.04fr) minmax(320px, 0.76fr);
+  gap: 54px;
+  align-items: start;
+}
+
+.atelier-project--reverse {
+  grid-template-columns: minmax(320px, 0.76fr) minmax(0, 1.04fr);
+}
+
+.atelier-project--reverse .atelier-project__media {
+  order: 2;
+}
+
+.atelier-project--reverse .atelier-project__content {
+  order: 1;
+}
+
+.atelier-project__media {
+  padding: 14px;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid rgba(34,34,34,0.08);
+  border-radius: 18px;
+  box-shadow: 0 12px 34px rgba(34,34,34,0.06);
+}
+
+.atelier-project__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.atelier-project__content {
+  position: sticky;
+  top: 96px;
+  padding: 28px 0;
+}
+
+.atelier-project__title {
+  font-family: var(--font-head);
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 400;
+  line-height: 1.08;
+  margin: 0 0 24px;
+}
+
+.atelier-project__meta {
+  display: grid;
+  gap: 14px;
+  margin: 0 0 24px;
+}
+
+.atelier-project__meta div {
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(34,34,34,0.09);
+}
+
+.atelier-project__meta dt {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.56;
+  margin-bottom: 5px;
+}
+
+.atelier-project__meta dd {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+.atelier-project__description {
+  font-family: var(--font-ui);
+  font-size: 15px;
+  line-height: 1.75;
+  opacity: 0.88;
+  margin: 0;
+}
+
+.atelier-cta {
+  padding-top: 22px;
+}
+
+.atelier-cta__inner {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 46px;
+  text-align: center;
+  background: linear-gradient(135deg, #E7E0D7 0%, #F8F5F1 52%, #DCE7E8 100%);
+  border: 1px solid rgba(34,34,34,0.08);
+  border-radius: 18px;
+}
+
+.atelier-cta__inner h2 {
+  font-family: var(--font-head);
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 400;
+  line-height: 1.12;
+  margin: 0 0 18px;
+}
+
+.atelier-cta__link,
+.atelier-teaser__content a {
+  display: inline-block;
+  margin-top: 24px;
+  font-family: var(--font-ui);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.74;
+}
+
+.atelier-teaser {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1fr);
+  gap: 42px;
+  align-items: center;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 38px;
+  background: rgba(255,255,255,0.45);
+  border: 1px solid rgba(34,34,34,0.09);
+  border-radius: 18px;
+}
+
+.atelier-teaser__content h2 {
+  font-family: var(--font-head);
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 400;
+  line-height: 1.12;
+  margin: 0 0 18px;
+}
+
+.atelier-teaser__content p:not(.atelier-teaser__eyebrow) {
+  max-width: 520px;
+  font-family: var(--font-ui);
+  font-size: 15px;
+  line-height: 1.7;
+  opacity: 0.86;
+  margin: 0;
+}
+
+.atelier-teaser__moodboard {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-rows: auto auto;
+  gap: 14px;
+  align-items: start;
+}
+
+.atelier-teaser__moodboard img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 14px;
+  border: 1px solid rgba(34,34,34,0.08);
+  background: rgba(255,255,255,0.7);
+  box-shadow: 0 10px 26px rgba(34,34,34,0.07);
+}
+
+.atelier-teaser__moodboard img:nth-child(2) {
+  margin-top: 28px;
+}
+
+.atelier-teaser__moodboard img:nth-child(3) {
+  grid-column: 1 / -1;
+  justify-self: center;
+  max-width: 68%;
+}
+
+@media (max-width: 900px) {
+  .atelier-hero {
+    padding: 52px 0 22px;
+  }
+
+  .atelier-project,
+  .atelier-project--reverse,
+  .atelier-teaser {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .atelier-project--reverse .atelier-project__media,
+  .atelier-project--reverse .atelier-project__content {
+    order: initial;
+  }
+
+  .atelier-project__content {
+    position: static;
+    padding: 0;
+  }
+
+  .atelier-project__media {
+    padding: 10px;
+  }
+
+  .atelier-projects,
+  .atelier-category__projects {
+    gap: 52px;
+  }
+
+  .atelier-teaser {
+    padding: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .atelier-hero .container,
+  .atelier-worlds .container,
+  .atelier-intro .container,
+  .atelier-cta .container {
+    width: calc(100% - 32px);
+  }
+
+  .atelier-intro__inner,
+  .atelier-cta__inner {
+    padding: 28px 20px;
+  }
+
+  .atelier-teaser {
+    width: calc(100% - 32px);
+  }
+
+  .atelier-teaser__moodboard {
+    grid-template-columns: 1fr;
+  }
+
+  .atelier-teaser__moodboard img:nth-child(2),
+  .atelier-teaser__moodboard img:nth-child(3) {
+    margin-top: 0;
+    max-width: 100%;
+  }
+}

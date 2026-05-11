@@ -1,0 +1,100 @@
+{
+  "categories": [
+    "Signature Aya Worlds",
+    "Rituals, Beauty & Self-Care",
+    "Travel, Retreats & Atmosphere",
+    "Wellness, Movement & Personal Brands"
+  ],
+  "items": [
+    {
+      "title": "Aya Muse World",
+      "category": "Signature Aya Worlds",
+      "type": "Website + app presentation concept",
+      "world": "Emotional wellness / digital sanctuary",
+      "mood": "Soft luxury, calm, editorial, intimate",
+      "image": "assets/images/atelier/01-aya-muse-world-homepage.png",
+      "description": "A complete digital home for a wellness app: hero section, emotional positioning, feature blocks, app screens, content sections, download area and footer. This concept shows how an app can be presented not just as a product, but as a full brand world with clear navigation, emotional value and a premium visual identity."
+    },
+    {
+      "title": "Aya Maison",
+      "category": "Signature Aya Worlds",
+      "type": "Website + app ecosystem concept",
+      "world": "Wellness / rituals / private digital sanctuary",
+      "mood": "Chateau-inspired, warm, elegant, immersive",
+      "image": "assets/images/atelier/02-aya-maison-homepage.png",
+      "description": "A premium website concept for a ritual-based wellness experience. The structure combines brand storytelling, app promotion, curated experiences, private spaces and conversion blocks. It is designed for brands that want to sell not only a service, but a lifestyle, a feeling and a reason to return."
+    },
+    {
+      "title": "Aya Journeys",
+      "category": "Travel, Retreats & Atmosphere",
+      "type": "Travel website + app concept",
+      "world": "Curated travel / emotional journeys",
+      "mood": "Cinematic, warm, destination-led, editorial",
+      "image": "assets/images/atelier/03-aya-journeys-homepage.png",
+      "description": "A travel platform concept with destinations, curated experiences, journal content, app promotion and subscription capture. The layout is built to support both inspiration and conversion: users can discover journeys, explore experiences, read travel stories and move naturally toward booking or app download."
+    },
+    {
+      "title": "Aya Beauty Studio",
+      "category": "Rituals, Beauty & Self-Care",
+      "type": "Beauty studio website concept",
+      "world": "Beauty / skincare / advanced treatments",
+      "mood": "Clean, luminous, modern, feminine",
+      "image": "assets/images/atelier/04-aya-beauty-studio-homepage.png",
+      "description": "A high-end beauty studio concept with service navigation, signature treatments, technology positioning, trust indicators and appointment booking. The page is designed to make a beauty brand look premium, professional and easy to book, while keeping the visual experience soft and elegant."
+    },
+    {
+      "title": "Travel Beautifully",
+      "category": "Travel, Retreats & Atmosphere",
+      "type": "Boutique travel website concept",
+      "world": "Travel / curated experiences / lifestyle tourism",
+      "mood": "European, warm, cinematic, personal",
+      "image": "assets/images/atelier/05-travel-beautifully-homepage.png",
+      "description": "A full travel website concept for curated trips, local experiences and destination storytelling. It includes destination cards, experience blocks, upcoming journeys, testimonials, journal content and newsletter capture. The structure helps a travel brand move from inspiration to inquiry while keeping a strong editorial identity."
+    },
+    {
+      "title": "Lina Stretch",
+      "category": "Wellness, Movement & Personal Brands",
+      "type": "Studio website concept",
+      "world": "Stretch studio / aerial practice / movement wellness",
+      "mood": "Calm, grounded, warm, body-focused",
+      "image": "assets/images/atelier/06-lina-stretch-homepage.png",
+      "description": "A boutique studio website for stretch, mobility and aerial classes. The structure includes class categories, benefits, atmosphere gallery, schedule CTA and booking section. It is built for local wellness studios that need to clearly explain their offer, show the space and convert visitors into booked classes."
+    },
+    {
+      "title": "Lume Beauty Studio",
+      "category": "Rituals, Beauty & Self-Care",
+      "type": "Beauty studio website + booking app concept",
+      "world": "Beauty / holistic care / client retention",
+      "mood": "Ritual, natural, premium, trustworthy",
+      "image": "assets/images/atelier/07-lume-beauty-studio-homepage.png",
+      "description": "A beauty studio concept focused on services, booking, client trust and repeat visits. The page includes service cards, brand benefits, app companion, reviews and appointment CTA. It is designed for beauty businesses that want a polished digital presence and a smoother client journey from discovery to booking."
+    },
+    {
+      "title": "Lume Beauty System",
+      "category": "Rituals, Beauty & Self-Care",
+      "type": "Visual system + website direction",
+      "world": "Beauty / skincare / service brand identity",
+      "mood": "Warm, tactile, editorial, commercial",
+      "image": "assets/images/atelier/08-lume-beauty-collage.png",
+      "description": "A visual direction study for a beauty brand, showing how one identity can expand across website sections, product visuals, client stories, app promotion and offers. This concept is useful for brands that need not just one landing page, but a consistent digital system for marketing, sales and retention."
+    },
+    {
+      "title": "Solstice Skincare",
+      "category": "Rituals, Beauty & Self-Care",
+      "type": "E-commerce website + app concept",
+      "world": "Skincare / sun care / daily product rituals",
+      "mood": "Coastal, warm, natural, product-focused",
+      "image": "assets/images/atelier/09-solstice-skincare-homepage.png",
+      "description": "A skincare e-commerce concept with product cards, brand positioning, ingredient storytelling, routine education and app-based product guidance. The layout supports direct sales while explaining product value clearly, making it suitable for beauty, SPF, skincare and wellness product brands."
+    },
+    {
+      "title": "Lina Moraes",
+      "category": "Wellness, Movement & Personal Brands",
+      "type": "Personal brand website concept",
+      "world": "Fitness coaching / transformation / personal expert brand",
+      "mood": "Strong, minimal, confident, results-driven",
+      "image": "assets/images/atelier/10-lina-moraes-fitness-homepage.png",
+      "description": "A personal brand website for a fitness coach with programs, benefits, transformation proof, testimonials and a strong booking CTA. The structure is made for experts who need to build trust quickly, show real outcomes and convert visitors into coaching clients or program buyers."
+    }
+  ]
+}

@@ -1923,3 +1923,41 @@ body.home .section--atelier-teaser {
     margin-top: 18px;
   }
 }
+
+/* ========================================= */
+/* HOME MOBILE — TIGHTER SECTION RHYTHM      */
+/* ========================================= */
+
+@media (max-width: 768px) {
+  body.home .section:not(.section--cover) {
+    padding: 26px 0;
+  }
+
+  body.home .section--cover {
+    padding: 0;
+  }
+
+  body.home #letter {
+    padding-top: 28px;
+  }
+
+  body.home .section-divider {
+    margin: 0 0 18px;
+  }
+
+  body.home .grid--2 {
+    gap: 18px;
+  }
+
+  body.home .card {
+    padding: 22px;
+  }
+
+  body.home .news__archive-link {
+    margin-top: 26px;
+  }
+
+  body.home .footer {
+    margin-top: 8px;
+  }
+}

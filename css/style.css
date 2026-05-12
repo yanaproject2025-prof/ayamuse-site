@@ -147,8 +147,8 @@ a:hover{ text-decoration:underline; }
   width:100%;
   height:100%;
   object-fit:cover;
-  transform:scale(1.01);
-  animation:ayaCoverBreath 18s ease-in-out infinite alternate;
+  transform:scale(1.025);
+  animation:ayaCoverBreath 11s ease-in-out infinite alternate;
   will-change:transform;
 }
 
@@ -163,49 +163,51 @@ a:hover{ text-decoration:underline; }
 .cover::before{
   z-index:1;
   background:
-    radial-gradient(circle at 31% 64%, rgba(255,255,255,0.42) 0 1px, transparent 2px),
-    radial-gradient(circle at 44% 33%, rgba(255,255,255,0.34) 0 1px, transparent 2px),
-    radial-gradient(circle at 59% 42%, rgba(255,255,255,0.34) 0 1px, transparent 2px),
-    radial-gradient(circle at 72% 61%, rgba(255,255,255,0.28) 0 1px, transparent 2px),
-    radial-gradient(circle at 83% 48%, rgba(255,255,255,0.24) 0 1px, transparent 2px);
+    radial-gradient(circle at 28% 66%, rgba(255,255,255,0.58) 0 1px, transparent 2px),
+    radial-gradient(circle at 42% 31%, rgba(255,255,255,0.48) 0 1px, transparent 2px),
+    radial-gradient(circle at 58% 42%, rgba(255,255,255,0.46) 0 1px, transparent 2px),
+    radial-gradient(circle at 72% 61%, rgba(255,255,255,0.38) 0 1px, transparent 2px),
+    radial-gradient(circle at 84% 46%, rgba(255,255,255,0.34) 0 1px, transparent 2px);
   background-size: 100% 100%;
-  opacity:.42;
+  opacity:.52;
   mix-blend-mode:screen;
-  animation:ayaCoverDust 12s ease-in-out infinite alternate;
+  animation:ayaCoverDust 7s ease-in-out infinite alternate;
+  will-change:opacity, transform;
 }
 
 .cover::after{
   z-index:2;
   background:
-    radial-gradient(ellipse at 48% 31%, rgba(255,255,255,0.24), transparent 34%),
-    radial-gradient(ellipse at 50% 44%, rgba(236,244,236,0.16), transparent 42%),
-    linear-gradient(105deg, transparent 28%, rgba(255,255,255,0.16) 47%, transparent 66%);
-  opacity:.4;
+    radial-gradient(ellipse at 48% 31%, rgba(255,255,255,0.3), transparent 34%),
+    radial-gradient(ellipse at 50% 44%, rgba(236,244,236,0.2), transparent 42%),
+    linear-gradient(105deg, transparent 24%, rgba(255,255,255,0.24) 47%, transparent 70%);
+  opacity:.48;
   mix-blend-mode:soft-light;
   transform:translateX(-5%);
-  animation:ayaCoverLight 14s ease-in-out infinite alternate;
+  animation:ayaCoverLight 8s ease-in-out infinite alternate;
+  will-change:opacity, transform;
 }
 
 @keyframes ayaCoverBreath{
-  from{ transform:scale(1.01) translate3d(0,0,0); }
-  to{ transform:scale(1.035) translate3d(-0.35%, -0.25%, 0); }
+  from{ transform:scale(1.025) translate3d(0,0,0); }
+  to{ transform:scale(1.06) translate3d(-0.75%, -0.45%, 0); }
 }
 
 @keyframes ayaCoverDust{
-  from{ opacity:.22; transform:translate3d(-4px, 8px, 0); }
-  to{ opacity:.5; transform:translate3d(8px, -8px, 0); }
+  from{ opacity:.26; transform:translate3d(-10px, 14px, 0); }
+  to{ opacity:.62; transform:translate3d(14px, -14px, 0); }
 }
 
 @keyframes ayaCoverLight{
-  from{ opacity:.24; transform:translateX(-7%); }
-  to{ opacity:.46; transform:translateX(5%); }
+  from{ opacity:.24; transform:translateX(-12%); }
+  to{ opacity:.58; transform:translateX(10%); }
 }
 
 @media (prefers-reduced-motion: reduce){
   .cover__media,
   .cover::before,
   .cover::after{
-    animation:none;
+    animation-duration:24s;
   }
 }
 

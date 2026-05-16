@@ -2041,6 +2041,17 @@ body.home .section--atelier-teaser {
     padding: 24px 20px;
   }
 
+  .atelier-brandbook__copy {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .atelier-brandbook__note {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .atelier-worlds__heading {
     margin-bottom: 28px;
   }
@@ -2125,21 +2136,64 @@ body.home .section--atelier-teaser {
   }
 
   .brandbook-viewer__stack {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    justify-content: center;
-    min-height: 300px;
-    padding: 34px 10px 22px;
+    display: block;
+    min-height: 260px;
+    padding: 18px 0 20px;
     overflow: visible;
   }
 
   .brandbook-stack__page {
-    width: min(158px, 32vw);
+    position: absolute;
+    left: 50%;
+    top: 58px;
+    width: min(310px, 76vw);
+  }
+
+  .brandbook-stack__page--1 {
+    transform: translateX(-86%) translateY(48px) scale(0.64) rotate(-10deg);
+    z-index: 1;
+  }
+
+  .brandbook-stack__page--2 {
+    transform: translateX(-70%) translateY(28px) scale(0.78) rotate(-5deg);
+    z-index: 2;
+  }
+
+  .brandbook-stack__page--3 {
+    transform: translateX(-50%) translateY(12px) scale(0.92) rotate(0deg);
+    z-index: 3;
+  }
+
+  .brandbook-stack__page--4 {
+    transform: translateX(-30%) translateY(28px) scale(0.78) rotate(5deg);
+    z-index: 2;
+  }
+
+  .brandbook-stack__page--5 {
+    transform: translateX(-14%) translateY(48px) scale(0.64) rotate(10deg);
+    z-index: 1;
   }
 
   .brandbook-stack__page:hover,
   .brandbook-stack__page:focus-visible,
-  .brandbook-stack__page.is-zoomed {
-    transform: translateY(-28px) scale(1.92) rotate(0deg);
+  .brandbook-stack__page.is-zoomed,
+  .brandbook-stack__page--1:hover,
+  .brandbook-stack__page--1:focus-visible,
+  .brandbook-stack__page--1.is-zoomed,
+  .brandbook-stack__page--2:hover,
+  .brandbook-stack__page--2:focus-visible,
+  .brandbook-stack__page--2.is-zoomed,
+  .brandbook-stack__page--3:hover,
+  .brandbook-stack__page--3:focus-visible,
+  .brandbook-stack__page--3.is-zoomed,
+  .brandbook-stack__page--4:hover,
+  .brandbook-stack__page--4:focus-visible,
+  .brandbook-stack__page--4.is-zoomed,
+  .brandbook-stack__page--5:hover,
+  .brandbook-stack__page--5:focus-visible,
+  .brandbook-stack__page--5.is-zoomed {
+    transform: translateX(-50%) translateY(-8px) scale(1.14) rotate(0deg);
+    z-index: 20;
   }
 
   .brandbook-viewer__controls {

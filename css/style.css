@@ -1938,7 +1938,7 @@ body.home .section--atelier-teaser {
 
 .atelier-teaser__moodboard {
   position: relative;
-  min-height: 460px;
+  min-height: 500px;
   overflow: visible;
 }
 
@@ -1954,40 +1954,40 @@ body.home .section--atelier-teaser {
 }
 
 .atelier-teaser__frame--vertical {
-  width: min(204px, 29%);
+  width: min(190px, 27%);
   aspect-ratio: 2 / 3;
 }
 
 .atelier-teaser__frame--left {
-  left: -3%;
-  top: 28px;
+  left: -7%;
+  top: 36px;
   z-index: 1;
-  transform: rotate(-8deg);
+  transform: rotate(-9deg);
 }
 
 .atelier-teaser__frame--brandbook {
   left: 50%;
-  width: min(380px, 54%);
+  width: min(360px, 51%);
   aspect-ratio: 16 / 9;
 }
 
 .atelier-teaser__frame--parfum {
-  top: 72px;
+  top: 54px;
   z-index: 4;
-  transform: translateX(-50%) translateX(-22px) rotate(-1.5deg);
+  transform: translateX(-50%) translateX(-26px) rotate(-1deg);
 }
 
 .atelier-teaser__frame--yacht {
-  top: 254px;
+  top: 286px;
   z-index: 3;
-  transform: translateX(-50%) translateX(28px) rotate(1.5deg);
+  transform: translateX(-50%) translateX(34px) rotate(1deg);
 }
 
 .atelier-teaser__frame--right {
-  right: -3%;
-  top: 30px;
+  right: -7%;
+  top: 40px;
   z-index: 2;
-  transform: rotate(7deg);
+  transform: rotate(8deg);
 }
 
 .atelier-teaser__frame:hover {
@@ -2000,11 +2000,11 @@ body.home .section--atelier-teaser {
 }
 
 .atelier-teaser__frame--brandbook:hover {
-  transform: translateX(-50%) translateX(-22px) translateY(-14px) scale(1.1) rotate(0deg);
+  transform: translateX(-50%) translateX(-26px) translateY(-14px) scale(1.08) rotate(0deg);
 }
 
 .atelier-teaser__frame--yacht:hover {
-  transform: translateX(-50%) translateX(28px) translateY(-14px) scale(1.1) rotate(0deg);
+  transform: translateX(-50%) translateX(34px) translateY(-14px) scale(1.08) rotate(0deg);
 }
 
 .atelier-teaser__frame--right:hover {
@@ -2058,23 +2058,23 @@ body.home .section--atelier-teaser {
   }
 
   .atelier-teaser__moodboard {
-    min-height: 410px;
+    min-height: 450px;
   }
 
   .atelier-teaser__frame--vertical {
-    width: min(164px, 29%);
+    width: min(154px, 27%);
   }
 
   .atelier-teaser__frame--brandbook {
-    width: min(320px, 56%);
+    width: min(304px, 53%);
   }
 
   .atelier-teaser__frame--parfum {
-    top: 72px;
+    top: 54px;
   }
 
   .atelier-teaser__frame--yacht {
-    top: 220px;
+    top: 250px;
   }
 
   .brandbook-viewer__stack {
@@ -2195,37 +2195,37 @@ body.home .section--atelier-teaser {
   }
 
   .atelier-teaser__moodboard {
-    min-height: 350px;
+    min-height: 390px;
   }
 
   .atelier-teaser__frame--vertical {
-    width: 28%;
+    width: 25%;
   }
 
   .atelier-teaser__frame--left {
-    left: -1%;
-    top: 28px;
-    transform: rotate(-7deg);
+    left: -4%;
+    top: 30px;
+    transform: rotate(-8deg);
   }
 
   .atelier-teaser__frame--brandbook {
-    width: 58%;
+    width: 54%;
   }
 
   .atelier-teaser__frame--right {
-    right: -1%;
-    top: 32px;
-    transform: rotate(7deg);
+    right: -4%;
+    top: 34px;
+    transform: rotate(8deg);
   }
 
   .atelier-teaser__frame--parfum {
-    top: 76px;
-    transform: translateX(-50%) translateX(-10px) rotate(-1.5deg);
+    top: 64px;
+    transform: translateX(-50%) translateX(-12px) rotate(-1deg);
   }
 
   .atelier-teaser__frame--yacht {
-    top: 196px;
-    transform: translateX(-50%) translateX(12px) rotate(1.5deg);
+    top: 224px;
+    transform: translateX(-50%) translateX(14px) rotate(1deg);
   }
 
   .atelier-teaser__frame--left:hover {
@@ -2233,11 +2233,11 @@ body.home .section--atelier-teaser {
   }
 
   .atelier-teaser__frame--brandbook:hover {
-    transform: translateX(-50%) translateX(-10px) translateY(-8px) scale(1.05) rotate(0deg);
+    transform: translateX(-50%) translateX(-12px) translateY(-8px) scale(1.04) rotate(0deg);
   }
 
   .atelier-teaser__frame--yacht:hover {
-    transform: translateX(-50%) translateX(12px) translateY(-8px) scale(1.05) rotate(0deg);
+    transform: translateX(-50%) translateX(14px) translateY(-8px) scale(1.04) rotate(0deg);
   }
 
   .atelier-teaser__frame--right:hover {

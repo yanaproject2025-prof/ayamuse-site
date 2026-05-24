@@ -7,13 +7,14 @@
   ],
   "items": [
     {
-      "title": "Aya Muse World",
+      "title": "VAIA",
       "category": "Signature Aya Worlds",
-      "type": "Website + app presentation concept",
-      "world": "Emotional wellness / digital sanctuary",
-      "mood": "Soft luxury, calm, editorial, intimate",
-      "image": "assets/images/atelier/01-aya-muse-world-homepage.png",
-      "description": "A complete digital home for a wellness app: hero section, emotional positioning, feature blocks, app screens, content sections, download area and footer. This concept shows how an app can be presented not just as a product, but as a full brand world with clear navigation, emotional value and a premium visual identity."
+      "type": "Restaurant landing page",
+      "world": "Botanical restaurant / wine room / private dining",
+      "mood": "Mediterranean, warm, botanical, cinematic, elegant",
+      "image": "assets/images/atelier/01-vaia-restaurant-homepage.jpg",
+      "url": "https://vaia-restaurant.netlify.app",
+      "description": "A live landing page for a botanical restaurant and wine room: immersive hero section, atmospheric storytelling, menu highlights, private dining moments, gallery-style details, reservation flow and footer. This project shows how a restaurant can be presented not only as a place to dine, but as a complete sensory world with clear navigation, emotional depth and a premium visual identity."
     },
     {
       "title": "Aya Maison",

@@ -35,11 +35,18 @@ async function loadAtelierProjects() {
 
 function createAtelierProject(item, index) {
   const isReversed = index % 2 === 1 ? ' atelier-project--reverse' : '';
+  const media = `<img src="${item.image}" alt="${item.title}" loading="lazy">`;
+  const linkedMedia = item.url
+    ? `<a class="atelier-project__media-link" href="${item.url}" target="_blank" rel="noopener noreferrer" aria-label="View ${item.title} live project">${media}</a>`
+    : media;
+  const liveLink = item.url
+    ? `<a class="atelier-project__live-link" href="${item.url}" target="_blank" rel="noopener noreferrer">View live project</a>`
+    : '';
 
   return `
     <article class="atelier-project${isReversed}">
       <div class="atelier-project__media">
-        <img src="${item.image}" alt="${item.title}" loading="lazy">
+        ${linkedMedia}
       </div>
 
       <div class="atelier-project__content">
@@ -62,6 +69,7 @@ function createAtelierProject(item, index) {
         </dl>
 
         <p class="atelier-project__description">${item.description}</p>
+        ${liveLink}
       </div>
     </article>
   `;

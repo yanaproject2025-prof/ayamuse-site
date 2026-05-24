@@ -1687,6 +1687,10 @@ body.travel-page .travel-card {
   box-shadow: 0 12px 34px rgba(34,34,34,0.06);
 }
 
+.atelier-project__media-link {
+  display: block;
+}
+
 .atelier-project__media img {
   width: 100%;
   height: auto;
@@ -1742,6 +1746,16 @@ body.travel-page .travel-card {
   line-height: 1.75;
   opacity: 0.88;
   margin: 0;
+}
+
+.atelier-project__live-link {
+  display: inline-block;
+  margin-top: 24px;
+  font-family: var(--font-ui);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.74;
 }
 
 .atelier-cta {

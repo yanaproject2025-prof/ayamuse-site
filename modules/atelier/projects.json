@@ -26,6 +26,26 @@
       "description": "A premium website concept for a ritual-based wellness experience. The structure combines brand storytelling, app promotion, curated experiences, private spaces and conversion blocks. It is designed for brands that want to sell not only a service, but a lifestyle, a feeling and a reason to return."
     },
     {
+      "title": "Aya Club",
+      "category": "Signature Aya Worlds",
+      "type": "Private club landing page",
+      "world": "Private members club / women of taste / curated leisure",
+      "mood": "Elegant, confidential, feminine, heritage, cinematic",
+      "image": "assets/images/atelier/03-aya-private-club-homepage.jpg",
+      "url": "https://aya-private-club.netlify.app",
+      "description": "A live landing page for a private women's club: immersive hero section, membership positioning, signature moments, leisure experiences, application tiers, gallery atmosphere and footer. This project presents a club not only as a membership offer, but as a refined world of belonging, discretion and curated beauty."
+    },
+    {
+      "title": "Toscana Palace",
+      "category": "Signature Aya Worlds",
+      "type": "Boutique hotel landing page",
+      "world": "Tuscan estate / hospitality / seasonal escapes",
+      "mood": "Golden, romantic, heritage, warm, cinematic",
+      "image": "assets/images/atelier/04-toscana-palace-homepage.jpg",
+      "url": "https://toscana-palace.netlify.app",
+      "description": "A live landing page for a boutique Tuscan hotel: cinematic hero section, estate storytelling, suites and villas, dining moments, wine cellar, wellness rituals, experiences, seasonal escapes and booking flow. This project shows how hospitality can be shaped into a complete destination world with warmth, clarity and emotional depth."
+    },
+    {
       "title": "Aya Journeys",
       "category": "Travel, Retreats & Atmosphere",
       "type": "Travel website + app concept",
@@ -60,24 +80,6 @@
       "mood": "Calm, grounded, warm, body-focused",
       "image": "assets/images/atelier/06-lina-stretch-homepage.png",
       "description": "A boutique studio website for stretch, mobility and aerial classes. The structure includes class categories, benefits, atmosphere gallery, schedule CTA and booking section. It is built for local wellness studios that need to clearly explain their offer, show the space and convert visitors into booked classes."
-    },
-    {
-      "title": "Lumé Beauty Studio",
-      "category": "Rituals, Beauty & Self-Care",
-      "type": "Beauty studio website + booking app concept",
-      "world": "Beauty / holistic care / client retention",
-      "mood": "Ritual, natural, premium, trustworthy",
-      "image": "assets/images/atelier/07-lume-beauty-studio-homepage.png",
-      "description": "A beauty studio concept focused on services, booking, client trust and repeat visits. The page includes service cards, brand benefits, app companion, reviews and appointment CTA. It is designed for beauty businesses that want a polished digital presence and a smoother client journey from discovery to booking."
-    },
-    {
-      "title": "Lumé Beauty System",
-      "category": "Rituals, Beauty & Self-Care",
-      "type": "Visual system + website direction",
-      "world": "Beauty / skincare / service brand identity",
-      "mood": "Warm, tactile, editorial, commercial",
-      "image": "assets/images/atelier/08-lume-beauty-collage.png",
-      "description": "A visual direction study for a beauty brand, showing how one identity can expand across website sections, product visuals, client stories, app promotion and offers. This concept is useful for brands that need not just one landing page, but a consistent digital system for marketing, sales and retention."
     },
     {
       "title": "Solstice Skincare",

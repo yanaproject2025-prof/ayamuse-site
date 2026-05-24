@@ -1,14 +1,14 @@
 {
   "categories": [
-    "Signature Aya Worlds",
-    "Rituals, Beauty & Self-Care",
+    "Signature Digital Worlds",
+    "Beauty, Rituals & Self-Care",
     "Travel, Retreats & Atmosphere",
     "Wellness, Movement & Personal Brands"
   ],
   "items": [
     {
       "title": "VAIA",
-      "category": "Signature Aya Worlds",
+      "category": "Signature Digital Worlds",
       "type": "Restaurant landing page",
       "world": "Botanical restaurant / wine room / private dining",
       "mood": "Mediterranean, warm, botanical, cinematic, elegant",
@@ -18,7 +18,7 @@
     },
     {
       "title": "Aya Maison",
-      "category": "Signature Aya Worlds",
+      "category": "Signature Digital Worlds",
       "type": "Website + app ecosystem concept",
       "world": "Wellness / rituals / private digital sanctuary",
       "mood": "Château-inspired, warm, elegant, immersive",
@@ -27,7 +27,7 @@
     },
     {
       "title": "Aya Club",
-      "category": "Signature Aya Worlds",
+      "category": "Signature Digital Worlds",
       "type": "Private club landing page",
       "world": "Private members club / women of taste / curated leisure",
       "mood": "Elegant, confidential, feminine, heritage, cinematic",
@@ -37,7 +37,7 @@
     },
     {
       "title": "Toscana Palace",
-      "category": "Signature Aya Worlds",
+      "category": "Signature Digital Worlds",
       "type": "Boutique hotel landing page",
       "world": "Tuscan estate / hospitality / seasonal escapes",
       "mood": "Golden, romantic, heritage, warm, cinematic",
@@ -56,7 +56,7 @@
     },
     {
       "title": "Aya Beauty Studio",
-      "category": "Rituals, Beauty & Self-Care",
+      "category": "Beauty, Rituals & Self-Care",
       "type": "Beauty studio website concept",
       "world": "Beauty / skincare / advanced treatments",
       "mood": "Clean, luminous, modern, feminine",
@@ -83,7 +83,7 @@
     },
     {
       "title": "Solstice Skincare",
-      "category": "Rituals, Beauty & Self-Care",
+      "category": "Beauty, Rituals & Self-Care",
       "type": "E-commerce website + app concept",
       "world": "Skincare / sun care / daily product rituals",
       "mood": "Coastal, warm, natural, product-focused",

@@ -1401,6 +1401,12 @@ body.travel-page .travel-card {
   margin: 0 auto;
 }
 
+.atelier-brandbook__editorial + .atelier-brandbook__editorial {
+  margin-top: 52px;
+  padding-top: 48px;
+  border-top: 1px solid rgba(34,34,34,0.08);
+}
+
 .atelier-brandbook__copy {
   padding-right: 10px;
 }
@@ -1618,6 +1624,46 @@ body.travel-page .travel-card {
   object-fit: cover;
   background: transparent;
   display: block;
+}
+
+.brandbook-viewer--parfum .brandbook-viewer__stack {
+  min-height: 340px;
+  padding-top: 34px;
+  padding-bottom: 22px;
+}
+
+.brandbook-viewer--parfum .brandbook-stack__page {
+  width: min(250px, 19vw);
+}
+
+.brandbook-viewer--parfum .brandbook-stack__page--1:hover,
+.brandbook-viewer--parfum .brandbook-stack__page--1:focus-visible,
+.brandbook-viewer--parfum .brandbook-stack__page--1.is-zoomed {
+  transform: translateX(218px) translateY(-42px) scale(2.44) rotate(0deg);
+}
+
+.brandbook-viewer--parfum .brandbook-stack__page--2:hover,
+.brandbook-viewer--parfum .brandbook-stack__page--2:focus-visible,
+.brandbook-viewer--parfum .brandbook-stack__page--2.is-zoomed {
+  transform: translateX(96px) translateY(-42px) scale(2.44) rotate(0deg);
+}
+
+.brandbook-viewer--parfum .brandbook-stack__page--3:hover,
+.brandbook-viewer--parfum .brandbook-stack__page--3:focus-visible,
+.brandbook-viewer--parfum .brandbook-stack__page--3.is-zoomed {
+  transform: translateY(-42px) scale(2.44) rotate(0deg);
+}
+
+.brandbook-viewer--parfum .brandbook-stack__page--4:hover,
+.brandbook-viewer--parfum .brandbook-stack__page--4:focus-visible,
+.brandbook-viewer--parfum .brandbook-stack__page--4.is-zoomed {
+  transform: translateX(-96px) translateY(-42px) scale(2.44) rotate(0deg);
+}
+
+.brandbook-viewer--parfum .brandbook-stack__page--5:hover,
+.brandbook-viewer--parfum .brandbook-stack__page--5:focus-visible,
+.brandbook-viewer--parfum .brandbook-stack__page--5.is-zoomed {
+  transform: translateX(-218px) translateY(-42px) scale(2.44) rotate(0deg);
 }
 
 .atelier-worlds {
@@ -2019,6 +2065,19 @@ body.home .section--atelier-teaser {
   .atelier-brandbook__copy {
     padding-right: 0;
   }
+
+  .atelier-brandbook__editorial + .atelier-brandbook__editorial {
+    margin-top: 40px;
+    padding-top: 36px;
+  }
+
+  .brandbook-viewer--parfum .brandbook-viewer__stack {
+    min-height: 300px;
+  }
+
+  .brandbook-viewer--parfum .brandbook-stack__page {
+    width: min(220px, 28vw);
+  }
 }
 
 @media (max-width: 768px) {
@@ -2163,6 +2222,15 @@ body.home .section--atelier-teaser {
     width: min(310px, 76vw);
   }
 
+  .brandbook-viewer--parfum .brandbook-viewer__stack {
+    min-height: 220px;
+    padding-top: 8px;
+  }
+
+  .brandbook-viewer--parfum .brandbook-stack__page {
+    width: min(300px, 74vw);
+  }
+
   .brandbook-stack__page--1 {
     transform: translateX(-86%) translateY(48px) scale(0.64) rotate(-10deg);
     z-index: 1;
@@ -2208,6 +2276,27 @@ body.home .section--atelier-teaser {
   .brandbook-stack__page--5.is-zoomed {
     transform: translateX(-50%) translateY(-8px) scale(1.14) rotate(0deg);
     z-index: 20;
+  }
+
+  .brandbook-viewer--parfum .brandbook-stack__page:hover,
+  .brandbook-viewer--parfum .brandbook-stack__page:focus-visible,
+  .brandbook-viewer--parfum .brandbook-stack__page.is-zoomed,
+  .brandbook-viewer--parfum .brandbook-stack__page--1:hover,
+  .brandbook-viewer--parfum .brandbook-stack__page--1:focus-visible,
+  .brandbook-viewer--parfum .brandbook-stack__page--1.is-zoomed,
+  .brandbook-viewer--parfum .brandbook-stack__page--2:hover,
+  .brandbook-viewer--parfum .brandbook-stack__page--2:focus-visible,
+  .brandbook-viewer--parfum .brandbook-stack__page--2.is-zoomed,
+  .brandbook-viewer--parfum .brandbook-stack__page--3:hover,
+  .brandbook-viewer--parfum .brandbook-stack__page--3:focus-visible,
+  .brandbook-viewer--parfum .brandbook-stack__page--3.is-zoomed,
+  .brandbook-viewer--parfum .brandbook-stack__page--4:hover,
+  .brandbook-viewer--parfum .brandbook-stack__page--4:focus-visible,
+  .brandbook-viewer--parfum .brandbook-stack__page--4.is-zoomed,
+  .brandbook-viewer--parfum .brandbook-stack__page--5:hover,
+  .brandbook-viewer--parfum .brandbook-stack__page--5:focus-visible,
+  .brandbook-viewer--parfum .brandbook-stack__page--5.is-zoomed {
+    transform: translateX(-50%) translateY(-8px) scale(1.12) rotate(0deg);
   }
 
   .brandbook-viewer__controls {

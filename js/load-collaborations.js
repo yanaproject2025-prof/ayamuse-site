@@ -31,7 +31,7 @@ async function loadCollaborations() {
     }
     
     if (s.email) {
-      html += `<p class="card__email">${s.email}</p>`;
+      html += `<p class="card__email"><a href="mailto:${s.email}">${s.email}</a></p>`;
     }
   });
 

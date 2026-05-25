@@ -764,6 +764,16 @@ body.letter-page .letter__hero-image {
   text-transform: uppercase;
 }
 
+.card__email a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card__email a:hover {
+  text-decoration: underline;
+}
+
 /* ============================== */
 /* MOBILE VERSION                 */
 /* ============================== */

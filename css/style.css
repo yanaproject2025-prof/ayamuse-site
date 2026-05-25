@@ -1838,9 +1838,25 @@ body.travel-page .travel-card {
   opacity: 0.74;
 }
 
+.atelier-cta__link {
+  padding: 12px 18px;
+  border: 1px solid rgba(34,34,34,0.28);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.35);
+  color: var(--text);
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.atelier-cta__link:hover {
+  background: rgba(255,255,255,0.68);
+  border-color: rgba(34,34,34,0.5);
+  opacity: 1;
+}
+
 body.atelier-page .footer {
   margin-top: 18px;
-  padding: 22px 0 20px;
+  padding: 26px 0 22px;
 }
 
 body.atelier-page .footer--minimal,
@@ -1850,12 +1866,12 @@ body.atelier-page .footer--minimal,
 }
 
 body.atelier-page .footer__inner {
-  gap: 12px;
+  gap: 16px;
 }
 
 body.atelier-page .footer--minimal .footer__inner,
 .footer--minimal .footer__inner {
-  gap: 12px;
+  gap: 16px;
 }
 
 body.atelier-page .footer__socials {

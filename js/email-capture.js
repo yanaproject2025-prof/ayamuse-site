@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
       await addDoc(collection(db, 'email_signups'), {
         email: email,
         source: 'website',
-        page: 'index',
+        page: window.location.pathname || 'index',
         createdAt: serverTimestamp(),
       });
 

@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css?v=20260525-contact-fixes">
+  <link rel="stylesheet" href="css/style.css?v=20260525-contact-reset">
 </head>
 
 <body class="atelier-page">
@@ -184,33 +184,6 @@
           </a>
         </div>
 
-        <div class="aya-capture">
-          <p class="aya-capture__text">
-            Aya is quiet... but she listens.
-          </p>
-
-          <form id="ayaForm">
-            <input
-              type="email"
-              id="ayaEmail"
-              placeholder="your@email.com"
-              required
-            >
-
-            <button type="submit" id="ayaSubmit">
-              Let her find you
-            </button>
-          </form>
-
-          <p class="aya-note">
-            By submitting your email, you agree to receive occasional messages from Aya.
-          </p>
-
-          <p id="ayaSuccess" style="display:none;">
-            Aya heard you.
-          </p>
-        </div>
-
         <div class="footer__company">
           <p class="footer__title">Aya Muse World LLC</p>
           <p class="footer__location">Sheridan, Wyoming, USA</p>
@@ -231,28 +204,6 @@
   <script src="js/load-atelier.js"></script>
   <script src="js/brandbook.js"></script>
   <script src="js/main.js"></script>
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-analytics.js";
-    import { getFirestore } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-firestore.js";
-
-    const firebaseConfig = {
-      apiKey: "AIzaSyB-fokMlQOock5Q33vH7vzJ3zcSPiT-xC8",
-      authDomain: "aya-app-9201f.firebaseapp.com",
-      projectId: "aya-app-9201f",
-      storageBucket: "aya-app-9201f.firebasestorage.app",
-      messagingSenderId: "743338349184",
-      appId: "1:743338349184:web:b8ac2a17cadc9068ffcc65",
-      measurementId: "G-C82M5Z55HM"
-    };
-
-    const app = initializeApp(firebaseConfig);
-    getAnalytics(app);
-
-    const db = getFirestore(app);
-    window.db = db;
-  </script>
-  <script type="module" src="js/email-capture.js"></script>
 
 </body>
 </html>

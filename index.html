@@ -349,7 +349,7 @@
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-app.js";
       import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-analytics.js";
-      import { getFirestore } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-firestore.js";
+      import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-firestore.js";
 
       const firebaseConfig = {
         apiKey: "AIzaSyB-fokMlQOock5Q33vH7vzJ3zcSPiT-xC8",
@@ -366,13 +366,19 @@
 
       const db = getFirestore(app);
       window.db = db;
+      window.ayaSubmitEmail = (email) => addDoc(collection(db, 'email_signups'), {
+        email: email,
+        source: 'website',
+        page: window.location.pathname || 'index',
+        createdAt: serverTimestamp(),
+      });
     </script>
  
   <!-- LOADER FOR JSON DATA -->
   <script src="js/load-modules.js"></script>
   <script src="js/main.js"></script>
   <script src="js/load-collaborations.js"></script>
-  <script type="module" src="js/email-capture.js"></script>
+  <script src="js/email-capture.js?v=20260525-email-fix"></script>
 
 
 </body>

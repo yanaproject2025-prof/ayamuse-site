@@ -1,43 +1,54 @@
-import { collection, addDoc, serverTimestamp } 
-from "https://www.gstatic.com/firebasejs/12.12.1/firebase-firestore.js";
+(function () {
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('ayaForm');
+    const input = document.getElementById('ayaEmail');
+    const success = document.getElementById('ayaSuccess');
 
-document.addEventListener("DOMContentLoaded", () => {
-  const db = window.db;
+    if (!form || !input) return;
 
-  const form = document.getElementById('ayaForm');
-  const input = document.getElementById('ayaEmail');
-  const success = document.getElementById('ayaSuccess');
+    function waitForSubmitter() {
+      return new Promise((resolve, reject) => {
+        const startedAt = Date.now();
+        const timer = window.setInterval(() => {
+          if (typeof window.ayaSubmitEmail === 'function') {
+            window.clearInterval(timer);
+            resolve(window.ayaSubmitEmail);
+            return;
+          }
 
-  if (!form || !db) {
-    console.error("Form or DB not found");
-    return;
-  }
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const email = input.value.trim();
-
-    if (!email.includes("@")) {
-      alert("Enter a valid email");
-      return;
-    }
-
-    try {
-      await addDoc(collection(db, 'email_signups'), {
-        email: email,
-        source: 'website',
-        page: window.location.pathname || 'index',
-        createdAt: serverTimestamp(),
+          if (Date.now() - startedAt > 6000) {
+            window.clearInterval(timer);
+            reject(new Error('Email service is not ready'));
+          }
+        }, 120);
       });
-
-      form.style.display = "none";
-      const note = document.querySelector('.aya-note');
-      if (note) note.style.display = "none";
-      success.style.display = "block";
-
-    } catch (err) {
-      console.error("ERROR:", err);
     }
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const email = input.value.trim();
+      const submitButton = form.querySelector('button[type="submit"]');
+
+      if (!email.includes('@')) {
+        alert('Enter a valid email');
+        return;
+      }
+
+      try {
+        if (submitButton) submitButton.disabled = true;
+        const submitEmail = await waitForSubmitter();
+        await submitEmail(email);
+
+        form.style.display = 'none';
+        const note = document.querySelector('.aya-note');
+        if (note) note.style.display = 'none';
+        if (success) success.style.display = 'block';
+      } catch (error) {
+        console.error('ERROR:', error);
+        alert('Something went wrong. Please try again.');
+        if (submitButton) submitButton.disabled = false;
+      }
+    });
   });
-});
+})();

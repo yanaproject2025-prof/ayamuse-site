@@ -59,7 +59,8 @@ async function loadSection(id, url) {
       const target = document.querySelector(hash);
       if (target) {
         const header = document.querySelector(".header");
-        const headerOffset = header ? header.getBoundingClientRect().height + 28 : 96;
+        const extraOffset = window.matchMedia("(max-width: 768px)").matches ? 56 : 28;
+        const headerOffset = header ? header.getBoundingClientRect().height + extraOffset : 96;
         const targetTop = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
 
         window.scrollTo({

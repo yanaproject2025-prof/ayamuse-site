@@ -1224,6 +1224,12 @@ body.travel-page .travel-card[id] {
   scroll-margin-top: 120px;
 }
 
+@media (max-width: 768px) {
+  body.travel-page .travel-card[id] {
+    scroll-margin-top: 150px;
+  }
+}
+
   html {
   scroll-behavior: smooth;
 }

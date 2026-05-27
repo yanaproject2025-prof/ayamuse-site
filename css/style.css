@@ -2524,3 +2524,19 @@ body.home .section--atelier-teaser {
   white-space: nowrap;
   border: 0;
 }
+
+/* Travel hero — lead paragraph style (overrides base eyebrow look of .letter__subtitle for longer prose) */
+body.travel-page .letter__subtitle {
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 17px;
+  font-family: var(--font-body);
+  line-height: 1.7;
+  opacity: 0.88;
+  margin: 0 auto 14px;
+  max-width: 640px;
+}
+
+body.travel-page .letter__title {
+  margin-bottom: 20px;
+}

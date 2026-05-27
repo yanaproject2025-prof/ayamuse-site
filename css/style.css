@@ -1220,13 +1220,16 @@ body.travel-page .travel-card {
   scroll-margin-top: 60px;
 }
 
-body.travel-page .travel-card[id] {
+body.travel-page .travel-anchor {
+  display: block;
+  height: 1px;
+  margin-top: -1px;
   scroll-margin-top: 120px;
 }
 
 @media (max-width: 768px) {
-  body.travel-page .travel-card[id] {
-    scroll-margin-top: 150px;
+  body.travel-page .travel-anchor {
+    scroll-margin-top: 170px;
   }
 }
 

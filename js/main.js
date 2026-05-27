@@ -55,17 +55,17 @@ async function loadSection(id, url) {
     let tries = 0;
     const maxTries = 60;
 
-    function scrollWhenReady() {
+    function scrollWhenReady(behavior = "smooth") {
       const target = document.querySelector(hash);
       if (target) {
         const header = document.querySelector(".header");
-        const extraOffset = window.matchMedia("(max-width: 768px)").matches ? 56 : 28;
+        const extraOffset = window.matchMedia("(max-width: 768px)").matches ? 88 : 36;
         const headerOffset = header ? header.getBoundingClientRect().height + extraOffset : 96;
         const targetTop = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
 
         window.scrollTo({
           top: targetTop,
-          behavior: "smooth"
+          behavior
         });
       } else if (tries < maxTries) {
         tries++;
@@ -73,7 +73,9 @@ async function loadSection(id, url) {
       }
     }
 
-    window.addEventListener("DOMContentLoaded", scrollWhenReady);
+    window.addEventListener("DOMContentLoaded", () => scrollWhenReady("smooth"));
+    window.addEventListener("load", () => scrollWhenReady("smooth"));
+    setTimeout(() => scrollWhenReady("auto"), 450);
   })();
 
    /* =========================

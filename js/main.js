@@ -58,9 +58,13 @@ async function loadSection(id, url) {
     function scrollWhenReady() {
       const target = document.querySelector(hash);
       if (target) {
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
+        const header = document.querySelector(".header");
+        const headerOffset = header ? header.getBoundingClientRect().height + 28 : 96;
+        const targetTop = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: targetTop,
+          behavior: "smooth"
         });
       } else if (tries < maxTries) {
         tries++;

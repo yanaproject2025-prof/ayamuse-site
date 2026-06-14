@@ -108,6 +108,14 @@ async function loadCollectionsModules() {
         <a href="${item.link}" target="_blank" rel="noopener" class="card__link">
           ${item.link_text}
         </a>  
+        ${item.secondary_text ? `
+          <p class="card__text">${item.secondary_text}</p>
+        ` : ''}
+        ${item.secondary_link ? `
+          <a href="${item.secondary_link}" target="_blank" rel="noopener" class="card__link">
+            ${item.secondary_link_text}
+          </a>
+        ` : ''}
       </article>
     `).join('');
 

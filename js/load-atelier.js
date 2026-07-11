@@ -1,10 +1,13 @@
 async function loadAtelierProjects() {
   try {
-    const response = await fetch('/modules/atelier/projects.json');
+    const response = await fetch('modules/atelier/projects.json');
     const data = await response.json();
     const container = document.getElementById('atelier-projects');
 
     if (!container) return;
+
+    const worldsSection = container.closest('.atelier-worlds');
+    if (worldsSection) worldsSection.removeAttribute('hidden');
 
     const categories = data.categories || [];
     const items = data.items || [];
@@ -30,17 +33,20 @@ async function loadAtelierProjects() {
 
   } catch (error) {
     console.error('Error loading atelier projects:', error);
+    const failedSection = document.querySelector('.atelier-worlds');
+    if (failedSection) failedSection.setAttribute('hidden', '');
   }
 }
 
 function createAtelierProject(item, index) {
   const isReversed = index % 2 === 1 ? ' atelier-project--reverse' : '';
+  const status = item.status || (item.url ? 'Live Demonstration' : 'Independent Concept');
   const media = `<img src="${item.image}" alt="${item.title}" loading="lazy">`;
   const linkedMedia = item.url
-    ? `<a class="atelier-project__media-link" href="${item.url}" target="_blank" rel="noopener noreferrer" aria-label="View ${item.title} live project">${media}</a>`
+    ? `<a class="atelier-project__media-link" href="${item.url}" target="_blank" rel="noopener noreferrer" aria-label="View ${item.title} live demonstration">${media}</a>`
     : media;
   const liveLink = item.url
-    ? `<a class="atelier-project__live-link" href="${item.url}" target="_blank" rel="noopener noreferrer">View live project</a>`
+    ? `<a class="atelier-project__live-link" href="${item.url}" target="_blank" rel="noopener noreferrer">View live demonstration</a>`
     : '';
 
   return `
@@ -50,6 +56,7 @@ function createAtelierProject(item, index) {
       </div>
 
       <div class="atelier-project__content">
+        <p class="atelier-status">${status}</p>
         <p class="atelier-project__eyebrow">${item.category}</p>
         <h2 class="atelier-project__title">${item.title}</h2>
 

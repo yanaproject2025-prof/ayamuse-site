@@ -9,6 +9,7 @@
     {
       "title": "VAIA",
       "category": "Signature Digital Worlds",
+      "status": "Live Demonstration",
       "type": "Restaurant landing page",
       "world": "Botanical restaurant / wine room / private dining",
       "mood": "Mediterranean, warm, botanical, cinematic, elegant",
@@ -19,6 +20,7 @@
     {
       "title": "Aya Maison",
       "category": "Signature Digital Worlds",
+      "status": "Independent Concept",
       "type": "Website + app ecosystem concept",
       "world": "Wellness / rituals / private digital sanctuary",
       "mood": "Château-inspired, warm, elegant, immersive",
@@ -28,6 +30,7 @@
     {
       "title": "Aya Club",
       "category": "Signature Digital Worlds",
+      "status": "Live Demonstration",
       "type": "Private club landing page",
       "world": "Private members club / women of taste / curated leisure",
       "mood": "Elegant, confidential, feminine, heritage, cinematic",
@@ -38,6 +41,7 @@
     {
       "title": "Toscana Palace",
       "category": "Signature Digital Worlds",
+      "status": "Live Demonstration",
       "type": "Boutique hotel landing page",
       "world": "Tuscan estate / hospitality / seasonal escapes",
       "mood": "Golden, romantic, heritage, warm, cinematic",
@@ -48,6 +52,7 @@
     {
       "title": "Aya Journeys",
       "category": "Travel, Retreats & Atmosphere",
+      "status": "Independent Concept",
       "type": "Travel website + app concept",
       "world": "Curated travel / emotional journeys",
       "mood": "Cinematic, warm, destination-led, editorial",
@@ -57,6 +62,7 @@
     {
       "title": "Aya Beauty Studio",
       "category": "Beauty, Rituals & Self-Care",
+      "status": "Independent Concept",
       "type": "Beauty studio website concept",
       "world": "Beauty / skincare / advanced treatments",
       "mood": "Clean, luminous, modern, feminine",
@@ -66,6 +72,7 @@
     {
       "title": "Travel Beautifully",
       "category": "Travel, Retreats & Atmosphere",
+      "status": "Independent Concept",
       "type": "Boutique travel website concept",
       "world": "Travel / curated experiences / lifestyle tourism",
       "mood": "European, warm, cinematic, personal",
@@ -75,6 +82,7 @@
     {
       "title": "Lina Stretch",
       "category": "Wellness, Movement & Personal Brands",
+      "status": "Independent Concept",
       "type": "Studio website concept",
       "world": "Stretch studio / aerial practice / movement wellness",
       "mood": "Calm, grounded, warm, body-focused",
@@ -84,6 +92,7 @@
     {
       "title": "Solstice Skincare",
       "category": "Beauty, Rituals & Self-Care",
+      "status": "Independent Concept",
       "type": "E-commerce website + app concept",
       "world": "Skincare / sun care / daily product rituals",
       "mood": "Coastal, warm, natural, product-focused",
@@ -93,6 +102,7 @@
     {
       "title": "Lina Moraes",
       "category": "Wellness, Movement & Personal Brands",
+      "status": "Independent Concept",
       "type": "Personal brand website concept",
       "world": "Fitness coaching / transformation / personal expert brand",
       "mood": "Strong, minimal, confident, results-driven",

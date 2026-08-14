@@ -41,12 +41,13 @@ async function loadAtelierProjects() {
 function createAtelierProject(item, index) {
   const isReversed = index % 2 === 1 ? ' atelier-project--reverse' : '';
   const status = item.status || (item.url ? 'Live Demonstration' : 'Independent Concept');
+  const linkLabel = item.linkLabel || 'View live demonstration';
   const media = `<img src="${item.image}" alt="${item.title}" loading="lazy">`;
   const linkedMedia = item.url
-    ? `<a class="atelier-project__media-link" href="${item.url}" target="_blank" rel="noopener noreferrer" aria-label="View ${item.title} live demonstration">${media}</a>`
+    ? `<a class="atelier-project__media-link" href="${item.url}" target="_blank" rel="noopener noreferrer" aria-label="${linkLabel}: ${item.title}">${media}</a>`
     : media;
   const liveLink = item.url
-    ? `<a class="atelier-project__live-link" href="${item.url}" target="_blank" rel="noopener noreferrer">View live demonstration</a>`
+    ? `<a class="atelier-project__live-link" href="${item.url}" target="_blank" rel="noopener noreferrer">${linkLabel}</a>`
     : '';
 
   return `
@@ -57,7 +58,7 @@ function createAtelierProject(item, index) {
 
       <div class="atelier-project__content">
         <p class="atelier-status">${status}</p>
-        <p class="atelier-project__eyebrow">${item.category}</p>
+        <p class="atelier-project__eyebrow">${item.eyebrow || item.category}</p>
         <h2 class="atelier-project__title">${item.title}</h2>
 
         <dl class="atelier-project__meta">

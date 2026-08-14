@@ -100,14 +100,17 @@
       "description": "A skincare e-commerce and app concept built around daily ritual, coastal warmth and natural light. Made for beauty brands that need to sell products without losing the world those products belong to."
     },
     {
-      "title": "Lina Moraes",
+      "title": "Mara Vale",
       "category": "Wellness, Movement & Personal Brands",
-      "status": "Independent Concept",
-      "type": "Personal brand website concept",
-      "world": "Fitness coaching / transformation / personal expert brand",
-      "mood": "Strong, minimal, confident, results-driven",
-      "image": "assets/images/atelier/10-lina-moraes-fitness-homepage.png",
-      "description": "A personal brand website concept for a fitness coach — strong, minimal and confident. Built for experts with a clear system, where programs, proof and booking all move toward trust."
+      "eyebrow": "Personal Brand · Creative Direction · Digital World",
+      "status": "Independent Portfolio Study",
+      "type": "Personal Brand World",
+      "world": "Creative direction / fashion / digital realism / motion",
+      "mood": "Cinematic, editorial, intelligent, quietly magnetic",
+      "image": "assets/images/atelier/10-mara-vale-homepage.jpg",
+      "url": "https://maravale.netlify.app",
+      "linkLabel": "View project",
+      "description": "A personal brand concept exploring how a founder, creative or public-facing expert can become a complete visual world. From first impression to website, imagery and motion — every element is shaped around one recognisable point of view."
     }
   ]
 }

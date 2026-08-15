@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css?v=20260721-atelier-positioning">
+  <link rel="stylesheet" href="css/style.css?v=20260816-rubedo-feature">
 </head>
 
 <body class="atelier-page">
@@ -199,6 +199,31 @@
       </div>
     </section>
 
+    <section class="section atelier-rubedo" aria-labelledby="rubedo-feature-title">
+      <div class="atelier-rubedo__watermark" aria-hidden="true">RUBEDO</div>
+
+      <div class="container atelier-rubedo__inner">
+        <div class="atelier-rubedo__content">
+          <p class="atelier-rubedo__eyebrow">Featured Brand World</p>
+          <h2 id="rubedo-feature-title">RUBEDO</h2>
+          <p class="atelier-rubedo__subtitle">The House of the Red Hour.</p>
+          <p class="atelier-rubedo__description">
+            A fictional couture maison born from the red hour — carried through identity, imagery, film and digital atmosphere. Built to show how one central idea becomes a complete brand world, felt long before it is explained and remembered beyond the screen.
+          </p>
+          <a class="atelier-rubedo__link" href="https://rubedoweb.netlify.app/" target="_blank" rel="noopener noreferrer">
+            Enter RUBEDO <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <a class="atelier-rubedo__film" href="https://rubedoweb.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Enter RUBEDO — The House of the Red Hour">
+          <video class="atelier-rubedo__video" muted loop playsinline preload="metadata" poster="assets/video/rubedo-feature-poster.jpg" aria-hidden="true">
+            <source src="assets/video/rubedo-feature.mp4" type="video/mp4">
+          </video>
+          <span class="atelier-rubedo__film-label">Enter the world <span aria-hidden="true">↗</span></span>
+        </a>
+      </div>
+    </section>
+
     <section class="section atelier-begin" aria-labelledby="atelier-begin-title">
       <div class="container">
         <div class="section-divider">
@@ -284,6 +309,22 @@
     </div>
   </footer>
 
+  <script>
+    (() => {
+      const video = document.querySelector('.atelier-rubedo__video');
+      if (!video) return;
+
+      const observer = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      }, { threshold: 0.25 });
+
+      observer.observe(video);
+    })();
+  </script>
   <script src="js/load-atelier.js"></script>
   <script src="js/brandbook.js"></script>
   <script src="js/main.js"></script>

@@ -2758,3 +2758,243 @@ body.travel-page .letter__title {
     max-width: 100%;
   }
 }
+
+/* ========================================= */
+/* ATELIER — FEATURED RUBEDO WORLD           */
+/* ========================================= */
+
+.atelier-rubedo.section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  margin-top: 34px;
+  padding: clamp(72px, 8vw, 122px) 0;
+  color: #eee8df;
+  background:
+    radial-gradient(circle at 78% 24%, rgba(112, 23, 29, 0.32), transparent 36%),
+    radial-gradient(circle at 16% 82%, rgba(95, 26, 31, 0.2), transparent 34%),
+    #100708;
+}
+
+.atelier-rubedo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(115deg, rgba(255,255,255,0.025), transparent 42%);
+}
+
+.atelier-rubedo__watermark {
+  position: absolute;
+  top: 50%;
+  left: -0.035em;
+  z-index: -1;
+  transform: translateY(-50%);
+  color: rgba(238, 232, 223, 0.026);
+  font-family: var(--font-head);
+  font-size: clamp(150px, 27vw, 520px);
+  font-weight: 400;
+  line-height: 0.8;
+  letter-spacing: -0.055em;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.atelier-rubedo__inner {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.88fr) minmax(340px, 1.12fr);
+  align-items: center;
+  gap: clamp(54px, 8vw, 132px);
+  min-width: 0;
+}
+
+.atelier-rubedo__content {
+  max-width: 540px;
+  min-width: 0;
+}
+
+.atelier-rubedo__eyebrow {
+  margin: 0 0 28px;
+  color: #b7966f;
+  font-family: var(--font-ui);
+  font-size: 11px;
+  line-height: 1.4;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.atelier-rubedo__content h2 {
+  margin: 0;
+  color: rgba(246, 240, 232, 0.94);
+  font-family: var(--font-head);
+  font-size: clamp(72px, 9vw, 150px);
+  font-weight: 400;
+  line-height: 0.82;
+  letter-spacing: -0.055em;
+}
+
+.atelier-rubedo__subtitle {
+  margin: 30px 0 0;
+  color: rgba(238, 232, 223, 0.72);
+  font-family: var(--font-head);
+  font-size: clamp(24px, 2.4vw, 36px);
+  font-style: italic;
+  line-height: 1.15;
+}
+
+.atelier-rubedo__description {
+  max-width: 505px;
+  margin: 30px 0 0;
+  color: rgba(238, 232, 223, 0.6);
+  font-family: var(--font-ui);
+  font-size: 14px;
+  line-height: 1.78;
+}
+
+.atelier-rubedo__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 38px;
+  padding: 16px 0 13px;
+  color: rgba(246, 240, 232, 0.82);
+  border-bottom: 1px solid rgba(183, 150, 111, 0.55);
+  font-family: var(--font-ui);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  transition: color 240ms ease, border-color 240ms ease, gap 240ms ease;
+}
+
+.atelier-rubedo__link:hover,
+.atelier-rubedo__link:focus-visible {
+  gap: 28px;
+  color: #fffaf3;
+  border-color: #b7966f;
+}
+
+.atelier-rubedo__film {
+  position: relative;
+  display: block;
+  justify-self: end;
+  width: min(100%, 430px);
+  aspect-ratio: 720 / 1290;
+  overflow: hidden;
+  background: #170b0d;
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.46);
+}
+
+.atelier-rubedo__film::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border: 1px solid rgba(238, 232, 223, 0.13);
+  box-shadow: inset 0 0 70px rgba(0, 0, 0, 0.12);
+}
+
+.atelier-rubedo__video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(0.92) contrast(1.03) brightness(0.9);
+  transform: scale(1.002);
+  transition: transform 1.2s cubic-bezier(.22,.61,.36,1), filter 600ms ease;
+}
+
+.atelier-rubedo__film:hover .atelier-rubedo__video,
+.atelier-rubedo__film:focus-visible .atelier-rubedo__video {
+  filter: saturate(1) contrast(1.02) brightness(0.96);
+  transform: scale(1.035);
+}
+
+.atelier-rubedo__film-label {
+  position: absolute;
+  right: 24px;
+  bottom: 22px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: rgba(255, 250, 243, 0.76);
+  font-family: var(--font-ui);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 15px rgba(0,0,0,0.72);
+}
+
+@media (max-width: 900px) {
+  .atelier-rubedo.section {
+    margin-top: 26px;
+  }
+
+  .atelier-rubedo__inner {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.72fr);
+    gap: 42px;
+  }
+
+  .atelier-rubedo__content h2 {
+    font-size: clamp(66px, 11vw, 104px);
+  }
+
+  .atelier-rubedo__film {
+    width: min(100%, 370px);
+  }
+}
+
+@media (max-width: 680px) {
+  .atelier-rubedo.section {
+    padding: 64px 0 70px;
+  }
+
+  .atelier-rubedo__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .atelier-rubedo__content {
+    max-width: none;
+  }
+
+  .atelier-rubedo__eyebrow {
+    margin-bottom: 22px;
+  }
+
+  .atelier-rubedo__content h2 {
+    max-width: 100%;
+    font-size: clamp(62px, 20vw, 82px);
+    letter-spacing: -0.065em;
+  }
+
+  .atelier-rubedo__subtitle {
+    margin-top: 24px;
+  }
+
+  .atelier-rubedo__description {
+    margin-top: 24px;
+    font-size: 13px;
+    line-height: 1.72;
+  }
+
+  .atelier-rubedo__link {
+    margin-top: 30px;
+  }
+
+  .atelier-rubedo__film {
+    justify-self: center;
+    width: min(100%, 360px);
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .atelier-rubedo__video,
+  .atelier-rubedo__link {
+    transition: none;
+  }
+}

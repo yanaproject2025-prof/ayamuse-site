@@ -107,12 +107,11 @@ function createAtelierFeaturedProject(item) {
           </a>
         </div>
 
-        <a class="atelier-rubedo__film" href="${item.url}" target="_blank" rel="noopener noreferrer" aria-label="${linkLabel} — ${item.subtitle}">
+        <div class="atelier-rubedo__film">
           <video class="atelier-rubedo__video" muted loop playsinline preload="metadata" poster="${item.poster}" aria-hidden="true" data-feature-video>
             <source src="${item.video}" type="video/mp4">
           </video>
-          <span class="atelier-rubedo__film-label">Enter the world <span aria-hidden="true">↗</span></span>
-        </a>
+        </div>
       </div>
     </article>
   `;

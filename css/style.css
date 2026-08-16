@@ -2666,9 +2666,13 @@ body.travel-page .letter__title {
 .atelier-hero__title--statement {
   font-size: clamp(30px, 4.6vw, 56px);
   line-height: 1.12;
-  max-width: 15ch;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.atelier-hero__title--statement span {
+  display: block;
 }
 
 .atelier-hero__cta {
@@ -2756,6 +2760,10 @@ body.travel-page .letter__title {
 
   .atelier-hero__title--statement {
     max-width: 100%;
+  }
+
+  .atelier-hero__title--statement span {
+    display: inline;
   }
 }
 
@@ -2903,12 +2911,6 @@ body.travel-page .letter__title {
   filter: saturate(0.92) contrast(1.03) brightness(0.9);
   transform: scale(1.002);
   transition: transform 1.2s cubic-bezier(.22,.61,.36,1), filter 600ms ease;
-}
-
-.atelier-rubedo__film:hover .atelier-rubedo__video,
-.atelier-rubedo__film:focus-visible .atelier-rubedo__video {
-  filter: saturate(1) contrast(1.02) brightness(0.96);
-  transform: scale(1.035);
 }
 
 .atelier-rubedo__film-label {

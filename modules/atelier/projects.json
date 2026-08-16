@@ -18,14 +18,17 @@
       "description": "A live landing page for a Lisbon botanical restaurant and wine room — coastal light, warm stone, olive green and the feeling of a long table waiting. Built to make the restaurant feel like a destination before the guest reaches the reservation flow."
     },
     {
-      "title": "Aya Maison",
+      "title": "FAUVE",
       "category": "Signature Digital Worlds",
-      "status": "Independent Concept",
-      "type": "Website + app ecosystem concept",
-      "world": "Wellness / rituals / private digital sanctuary",
-      "mood": "Château-inspired, warm, elegant, immersive",
-      "image": "assets/images/atelier/02-aya-maison-homepage.png",
-      "description": "A website and mobile app concept for a ritual-based wellness sanctuary, imagined as a digital château. Seasonal rituals, quiet rooms and app paths are woven into one world — built for wellness brands people want to return to."
+      "layout": "featured",
+      "status": "Independent Portfolio Study",
+      "eyebrow": "Featured Brand World",
+      "subtitle": "Land, bloodline, and the tawny hour.",
+      "video": "assets/video/fauve-feature.mp4",
+      "poster": "assets/video/fauve-feature-poster.jpg",
+      "url": "https://fauve.netlify.app/",
+      "linkLabel": "Enter FAUVE",
+      "description": "A fictional equestrian wine estate shaped from one idea — land, bloodline and the tawny hour. Carried through identity, imagery, film and digital atmosphere to show how a brand becomes a place that can be felt before it is explained."
     },
     {
       "title": "Aya Club",

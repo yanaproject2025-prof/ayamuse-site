@@ -31,6 +31,8 @@ async function loadAtelierProjects() {
       `;
     }).join('');
 
+    initAtelierFeatureVideos(container);
+
   } catch (error) {
     console.error('Error loading atelier projects:', error);
     const failedSection = document.querySelector('.atelier-worlds');
@@ -39,6 +41,10 @@ async function loadAtelierProjects() {
 }
 
 function createAtelierProject(item, index) {
+  if (item.layout === 'featured') {
+    return createAtelierFeaturedProject(item);
+  }
+
   const isReversed = index % 2 === 1 ? ' atelier-project--reverse' : '';
   const status = item.status || (item.url ? 'Live Demonstration' : 'Independent Concept');
   const linkLabel = item.linkLabel || 'View live demonstration';
@@ -81,6 +87,56 @@ function createAtelierProject(item, index) {
       </div>
     </article>
   `;
+}
+
+function createAtelierFeaturedProject(item) {
+  const linkLabel = item.linkLabel || `Enter ${item.title}`;
+
+  return `
+    <article class="section atelier-rubedo atelier-fauve" aria-labelledby="fauve-feature-title">
+      <div class="atelier-rubedo__watermark" aria-hidden="true">${item.title}</div>
+
+      <div class="container atelier-rubedo__inner">
+        <div class="atelier-rubedo__content">
+          <p class="atelier-rubedo__eyebrow">${item.eyebrow}</p>
+          <h2 id="fauve-feature-title">${item.title}</h2>
+          <p class="atelier-rubedo__subtitle">${item.subtitle}</p>
+          <p class="atelier-rubedo__description">${item.description}</p>
+          <a class="atelier-rubedo__link" href="${item.url}" target="_blank" rel="noopener noreferrer">
+            ${linkLabel} <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <a class="atelier-rubedo__film" href="${item.url}" target="_blank" rel="noopener noreferrer" aria-label="${linkLabel} — ${item.subtitle}">
+          <video class="atelier-rubedo__video" muted loop playsinline preload="metadata" poster="${item.poster}" aria-hidden="true" data-feature-video>
+            <source src="${item.video}" type="video/mp4">
+          </video>
+          <span class="atelier-rubedo__film-label">Enter the world <span aria-hidden="true">↗</span></span>
+        </a>
+      </div>
+    </article>
+  `;
+}
+
+function initAtelierFeatureVideos(scope) {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  scope.querySelectorAll('[data-feature-video]').forEach(video => {
+    if (reduceMotion) {
+      video.pause();
+      return;
+    }
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+      }
+    }, { threshold: 0.25 });
+
+    observer.observe(video);
+  });
 }
 
 function slugify(value) {

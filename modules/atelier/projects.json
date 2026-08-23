@@ -21,6 +21,7 @@
       "title": "FAUVE",
       "category": "Signature Digital Worlds",
       "layout": "featured",
+      "theme": "fauve",
       "status": "Independent Portfolio Study",
       "eyebrow": "Featured Brand World",
       "subtitle": "Land, bloodline, and the tawny hour.",
@@ -53,14 +54,18 @@
       "description": "A live landing page for a boutique Tuscan estate hotel — golden afternoon light, terracotta, cypresses and the slow rhythm of seasonal escapes. Built to make a weekend feel already imagined before the guest reaches the booking flow."
     },
     {
-      "title": "Aya Journeys",
+      "title": "PARIS",
       "category": "Travel, Retreats & Atmosphere",
-      "status": "Independent Concept",
-      "type": "Travel website + app concept",
-      "world": "Curated travel / emotional journeys",
-      "mood": "Cinematic, warm, destination-led, editorial",
-      "image": "assets/images/atelier/03-aya-journeys-homepage.png",
-      "description": "A travel website and app concept built for emotional journey curation, not search-and-book. Destinations and stories are shaped for travel brands that sell longing, atmosphere and return — not discounts."
+      "layout": "featured",
+      "theme": "paris",
+      "status": "Independent Portfolio Study",
+      "eyebrow": "Featured Digital Journey",
+      "subtitle": "Not a list. A way through the city.",
+      "video": "assets/video/paris-feature.mp4",
+      "poster": "assets/video/paris-feature-poster.png",
+      "url": "https://paris-concept.netlify.app/",
+      "linkLabel": "Enter PARIS",
+      "description": "A cinematic walk through Paris, shaped through rooms, balconies, Montmartre, the Opéra and the Seine. A digital travel world built from movement, memory and everything the city leaves behind."
     },
     {
       "title": "Aya Beauty Studio",

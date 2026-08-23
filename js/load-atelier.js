@@ -91,15 +91,17 @@ function createAtelierProject(item, index) {
 
 function createAtelierFeaturedProject(item) {
   const linkLabel = item.linkLabel || `Enter ${item.title}`;
+  const theme = slugify(item.theme || item.title);
+  const titleId = `${theme}-feature-title`;
 
   return `
-    <article class="section atelier-rubedo atelier-fauve" aria-labelledby="fauve-feature-title">
+    <article class="section atelier-rubedo atelier-${theme}" aria-labelledby="${titleId}">
       <div class="atelier-rubedo__watermark" aria-hidden="true">${item.title}</div>
 
       <div class="container atelier-rubedo__inner">
         <div class="atelier-rubedo__content">
           <p class="atelier-rubedo__eyebrow">${item.eyebrow}</p>
-          <h2 id="fauve-feature-title">${item.title}</h2>
+          <h2 id="${titleId}">${item.title}</h2>
           <p class="atelier-rubedo__subtitle">${item.subtitle}</p>
           <p class="atelier-rubedo__description">${item.description}</p>
           <a class="atelier-rubedo__link" href="${item.url}" target="_blank" rel="noopener noreferrer">

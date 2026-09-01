@@ -1,132 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Letters from Aya — Soft Reflections</title>
-  <meta name="description" content="Soft reflections, founder notes and quiet guidance — letters written from the heart of Aya Muse World.">
-  <link rel="canonical" href="https://ayamuse.com/letter.html">
-  
-
-  <!-- FAVICON -->
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
-
-  <!-- GOOGLE FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
-    rel="stylesheet">
-
-  <!-- MAIN CSS -->
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f1ece3">
+<title>Letters from Aya — Soft Reflections</title>
+<meta name="description" content="Soft reflections and founder notes, written from the heart of Aya Muse World.">
+<link rel="canonical" href="https://ayamuse.com/letter.html">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f1ece3;--mist:#ece3d2;--ink:#27211d;--muted:#786f67;--soft-ink:#5c534b;--wine:#351019;--red:#671d2a;--brass:#a18457;--line:rgba(39,33,29,.16);--line-soft:rgba(39,33,29,.1);--serif:"Instrument Serif",Georgia,serif;--sans:"Manrope",Arial,sans-serif;--ease:cubic-bezier(.22,1,.36,1);--pad:clamp(20px,4vw,64px)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--paper)}
+body{background:var(--paper);color:var(--ink);font:400 16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+::selection{color:var(--paper);background:var(--red)}
+.skip{position:fixed;top:-60px;left:16px;z-index:200;padding:10px 14px;background:var(--ink);color:var(--paper)}.skip:focus{top:16px}
+/* header (always light on reading pages) */
+.header{position:fixed;z-index:100;inset:0 0 auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;min-height:76px;padding:14px var(--pad);background:rgba(241,236,227,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);color:var(--ink)}
+.brand{display:flex;align-items:center;gap:12px;width:max-content;text-decoration:none;color:inherit}
+.brand img{width:30px;height:30px;object-fit:contain}
+.brand-text{display:flex;flex-direction:column;line-height:1;text-transform:uppercase}
+.brand-text strong{font-size:13px;font-weight:600;letter-spacing:.2em}
+.brand-text span{margin-top:6px;color:var(--brass);font-size:9px;font-weight:600;letter-spacing:.14em}
+.nav{display:flex;gap:clamp(18px,2.6vw,38px)}
+.nav a,.switch-link{font-size:11px;font-weight:600;letter-spacing:.08em;text-decoration:none;text-transform:uppercase;opacity:.72;transition:opacity .2s;color:inherit}
+.nav a:hover,.switch-link:hover{opacity:1}
+.switch-link{justify-self:end;padding-bottom:5px;border-bottom:1px solid currentColor}
+.menu{display:none;width:40px;height:40px;border:0;background:none;color:inherit;font-size:20px;cursor:pointer}
+.eyebrow{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--red)}
+/* page title */
+.page-head{padding:clamp(120px,18vh,180px) var(--pad) clamp(30px,5vh,50px);text-align:center}
+.page-head .eyebrow{margin-bottom:18px}
+.page-head h1{font:400 clamp(3rem,7vw,6.4rem)/.98 var(--serif)}
+.page-head h1 em{color:#9a8c80}
+.page-head p{max-width:52ch;margin:20px auto 0;color:var(--muted)}
+.epigraph{max-width:640px;margin:8px auto 0;padding:0 var(--pad);text-align:center;color:var(--soft-ink);font:italic 400 clamp(1.15rem,2vw,1.5rem)/1.5 var(--serif)}
+/* reading column */
+.doc{max-width:720px;margin:0 auto;padding:clamp(30px,5vh,60px) var(--pad) clamp(70px,10vh,120px)}
+.doc-updated{margin-bottom:40px;color:var(--muted);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.sec{padding-top:clamp(34px,5vh,52px);margin-top:clamp(34px,5vh,52px);border-top:1px solid var(--line)}
+.sec:first-of-type{border-top:0;margin-top:0;padding-top:0}
+.sec h3{font:400 clamp(1.7rem,3.4vw,2.6rem)/1.05 var(--serif);color:var(--ink);margin-bottom:18px}
+.sec p{margin:0 0 16px;max-width:64ch}
+.sec p strong{color:var(--ink);font-weight:600}
+.sec ul{margin:0 0 16px;padding-left:22px}
+.sec li{margin:6px 0;color:var(--soft-ink)}
+.sec .lead{color:var(--muted)}
+.sec a{color:var(--red)}
+/* letters */
+.letter-entry{padding-top:clamp(44px,6vh,72px);margin-top:clamp(44px,6vh,72px);border-top:1px solid var(--line)}
+.letter-entry:first-of-type{border-top:0;margin-top:0;padding-top:0}
+.letter-entry time{display:block;color:var(--red);font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.letter-entry h2{margin:16px 0 24px;font:400 clamp(2rem,4vw,3.4rem)/1.02 var(--serif)}
+.letter-entry.pinned h2{color:var(--ink)}
+.letter-entry .tag{color:var(--brass);font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.letter-entry p{margin:0 0 18px;color:var(--soft-ink)}
+.letter-entry p:first-of-type{color:var(--ink)}
+.back-inline{display:inline-flex;align-items:center;gap:8px;margin-top:8px;padding-bottom:4px;border-bottom:1px solid;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--red)}
+/* footer (mirrors the Atelier / world footer) */
+.footer{display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:30px;padding:30px var(--pad) 28px;border-top:1px solid var(--line);background:var(--paper);color:var(--muted);font-size:10px;letter-spacing:.02em}
+.footer-col{display:flex;flex-direction:column;gap:14px;justify-self:start}
+.footer-social{display:flex;gap:12px}
+.footer-social a{display:grid;place-items:center;width:32px;height:32px;border:1px solid var(--line);border-radius:100px;transition:.2s}
+.footer-social a:hover{background:var(--ink)}
+.footer-social img{width:14px;height:14px;object-fit:contain}
+.footer-social a:hover img{filter:invert(1)}
+.footer-links{display:flex;gap:18px;justify-self:center}
+.footer-links a{text-decoration:none}
+.footer>a{justify-self:end;text-decoration:none;color:var(--wine);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+@media(max-width:980px){
+.header{grid-template-columns:1fr auto}.nav,.switch-link{display:none}.menu{display:block;justify-self:end}
+.nav.open{position:absolute;top:66px;left:0;right:0;display:grid;padding:8px var(--pad) 20px;background:rgba(241,236,227,.98);border-bottom:1px solid var(--line)}
+.nav.open a{padding:14px 0;border-bottom:1px solid var(--line);opacity:.85}
+}
+@media(max-width:680px){
+.footer{grid-template-columns:1fr;align-items:start;gap:18px}.footer-links,.footer>a{justify-self:start}
+.page-head{padding-top:120px}
+}
+.nav a.nav-world{display:none}@media(max-width:980px){.nav.open a.nav-world{display:block}}
+</style>
 </head>
-
-<body class="letter-page">
-
-  
-  <!-- HEADER -->
-  <header class="header" role="banner">
-    <div class="header__inner">
-
-      <a class="brand" href="/" aria-label="Aya - YouAreNotAlone">
-
-        <img src="assets/images/logo-aya.png" alt="Aya logo" class="brand__image">
-        <span class="brand__line">Aya - YouAreNotAlone</span>
-      </a>
-
-      <nav class="nav nav--desktop" aria-label="Primary navigation">
-        <a href="letter.html">Letter</a>
-        <a href="travel.html">Travel</a>
-        <a href="atelier.html">Atelier</a>
-        <a href="/#collections">Collections</a>
-        <a href="collaborations.html">Collaborations</a>
-        <a href="support.html">Support</a>
-      </nav>
-
-      <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-        <span></span><span></span><span></span>
-      </button>
-
-    </div>
-
-    <div id="mobileMenu" class="drawer" hidden>
-      <nav class="nav nav--mobile" aria-label="Mobile navigation">
-        <a href="letter.html">Letter</a>
-        <a href="travel.html">Travel</a>
-        <a href="atelier.html">Atelier</a>
-        <a href="/#collections">Collections</a>
-        <a href="collaborations.html">Collaborations</a>
-        <a href="support.html">Support</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- MAIN CONTENT -->
-  <main>
-
-    <!-- EDITORIAL HERO -->
-    <div class="letter__hero">
-      <img src="assets/images/letter-hero.jpg" alt="Aya writes" class="letter__hero-image">
-    </div>
-
-    <!-- TITLES -->
-    <div class="letter__titles">
-      <h2 class="letter__title">Letter from Aya</h2>
-      <p class="letter__subtitle">Thoughts, reflections & gentle guidance</p>
-    </div>
-
-    <div class="letter">
-
-      <!-- PINNED LETTER -->
-      <article class="letter__pinned">
-        <h3 id="pinned-title" class="letter__pinned-title">Loading...</h3>
-        <p id="pinned-date" class="letter__date"></p>
-        <div id="pinned-content" class="letter__content"></div>
-      </article>
-
-      <!-- LIST OF OTHER LETTERS -->
-      <div id="letter-list" class="letter__list"></div>
-
-    </div>
-
-  </main>
-
-  <footer class="footer footer--minimal">
-    <div class="container">
-      <div class="footer__inner">
-        <div class="footer__socials">
-          <a href="https://www.pinterest.com/yanaproject2025" target="_blank" aria-label="Pinterest">
-            <span class="icon"><img src="/assets/images/pinterest.svg" alt="Pinterest"></span>
-          </a>
-          <a href="https://www.instagram.com/aya_boutique_atelier" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <span class="icon"><img src="/assets/images/instagram.svg" alt="Instagram"></span>
-          </a>
-          <a href="https://x.com/Aya_speaks" target="_blank" aria-label="X">
-            <span class="icon"><img src="/assets/images/x.svg" alt="X"></span>
-          </a>
-        </div>
-
-        <div class="footer__company">
-          <p class="footer__title">Aya Muse World LLC</p>
-          <p class="footer__location">Sheridan, Wyoming, USA</p>
-          <p class="footer__copy">© 2026 Aya Muse World LLC. All rights reserved.</p>
-        </div>
-
-        <div class="footer__links">
-          <a href="policy.html#privacy">Privacy Policy</a>
-          <a href="policy.html#terms">Terms of Use</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- JS LOADER -->
-  <script src="js/load-letter.js"></script>
-  <script src="/js/main.js"></script>
-
-
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+<header class="header" id="header"><a class="brand" href="aya-world-visual-reference.html#top" aria-label="Aya — YouAreNotAlone"><img src="assets/images/logo-aya.png" alt="Aya butterfly logo"><span class="brand-text"><strong>Aya</strong><span>YouAreNotAlone</span></span></a><nav class="nav" id="nav" aria-label="Primary navigation"><a href="aya-world-visual-reference.html#letters">Letters</a><a href="aya-world-visual-reference.html#future">Future</a><a href="aya-world-visual-reference.html#collections">Collections</a><a class="nav-world" href="aya-visual-reference.html">Enter the Atelier</a></nav><a class="switch-link" href="aya-visual-reference.html">Enter the Atelier</a><button class="menu" id="menu" type="button" aria-label="Open menu" aria-expanded="false">+</button></header>
+<main id="main">
+<div class="page-head"><p class="eyebrow">The author’s letters</p><h1>Letters for <em>quiet hours</em></h1><p>Soft reflections and founder notes, written from the heart of Aya Muse World.</p></div><p class="epigraph">Aya Muse World was never made to dress the body. It was made to hold the inner life.</p><div class="doc"><article class="letter-entry pinned" id="post-pinned"><span class="tag">Pinned · From the founder</span><h2>Message from the Founder</h2><p>Healing through style.</p><p>My dear ones, this project was born with a quiet but deeply important purpose — to remind every one of you how extraordinary you are. How beautiful your soul is, how whole, intelligent, gentle, powerful, and radiant you truly are.</p><p>We, women, carry a strength within us that we sometimes forget. We rise even from the ashes. We gather ourselves piece by piece. We keep walking when no one believes in us. We continue to love even when the heart aches.</p><p>This strength is not loud. It is soft, luminous — like the first morning light. And yet, it warms the entire world.</p><p>Who is Aya? Aya is the voice of each of you. She belongs to no nationality, no religion, no language. Aya is the energy of your inner beauty and resilience. She is a gentle reminder that you are already magnificent — in your thoughts, in your choices, in your silence, in your steps, in your journey.</p><p>Every time Aya appears, she whispers only one truth: “You are beautiful. You are strong. You are not alone.”</p><p>The purpose of this project is to create a space where women from all over the world can feel connected, even if they live oceans apart. A space to be inspired, to share, to rest, to be heard, to support one another — or simply to feel understood.</p><p>Very soon, the Aya mobile app is coming — a soft home where you can speak to Aya, explore your healing, find inner grounding, and rediscover your own radiance.</p><p>And later, Aya Palace will open — a place of light and style where we can meet in person, heart to heart.</p><p>But even now, you can write to Aya. To complain, to talk, to say you're lonely, anxious, bored, confused — or to share your joy. Aya will always answer.</p><p>And if this project helps even one woman in the world feel happier — Aya will be twice as happy.</p><p>With love, The Founder of Aya Muse World.</p></article><article class="letter-entry" id="post-005"><time datetime="2026-04-23">23 April 2026</time><h2>She Changed Her Wallpaper</h2><p>It started with nothing.</p><p>A Tuesday. The kind that doesn’t announce itself — just arrives, grey and slightly too loud, full of notifications and small demands.</p><p>She was sitting in a café, waiting for her coffee to cool.</p><p>She picked up her phone — out of habit, not out of need — and for a moment just looked at the screen.</p><p>The wallpaper was a screenshot of something. A note, maybe. Or a reminder. She couldn’t even remember when she’d set it.</p><p>It looked exactly like how she felt.</p><p>So she changed it.</p><p>It took less than a minute.</p><p>She scrolled through her camera roll and stopped on an image she had saved months ago — soft light through curtains, pale, quiet, unhurried. Something that looked the way a slow morning feels.</p><p>She set it as her wallpaper and put the phone face down.</p><p>When she picked it up again, something had shifted.</p><p>Not the day.</p><p>The day was exactly the same.</p><p>The café was still loud. The coffee was still cooling. Tuesday was still Tuesday.</p><p>But the first thing she saw — instead of a notification, instead of a task — was something quiet.</p><p>Something that reminded her, without words, that beauty exists. That softness is allowed. That not every moment has to be productive to be real.</p><p>I’ve been thinking about this ever since.</p><p>We spend more time looking at our phone screens than almost anything else.</p><p>We look at them first thing in the morning, before we’ve said a word.</p><p>We look at them last at night, in the dark, when we are most open to whatever they show us.</p><p>And most of the time, we’ve never consciously chosen what greets us there.</p><p>It seems like such a small thing. A wallpaper. A background image. Nothing that should matter.</p><p>But I don’t think that’s true.</p><p>I think small things are exactly where everything begins to change.</p><p>The image your eyes meet first — it sets something in motion.</p><p>A feeling. A tone. A quiet agreement with yourself about what kind of day this might be.</p><p>If you see chaos, you start in chaos.</p><p>If you see something calm, something beautiful, something that feels like you — you start from there instead.</p><p>This is not magic.</p><p>It is attention. Directed, gently, toward something that nourishes rather than depletes.</p><p>I made the Aya wallpaper collection for exactly this reason.</p><p>Not as decoration. Not as something to save and forget.</p><p>But as something you return to.</p><p>Every time you reach for your phone.</p><p>Every time the day feels heavier than it should.</p><p>Every time you need a small reminder that not everything has to be rushed.</p><p>That something can be quiet.</p><p>And still matter.</p><p>Because most of the time, we don’t change our lives all at once.</p><p>We change what we look at.</p><p>And slowly, it changes us back.</p><p>With love, Aya</p></article><article class="letter-entry" id="post-004"><time datetime="2026-03-06">6 March 2026</time><h2>On Courage, History &amp; the Strength of Women</h2><p>Today, many people see March 8 as a day of flowers and congratulations. But the story of this day began very differently.</p><p>At the beginning of the 20th century, women in many countries had no right to vote, limited access to education, and almost no voice in political life. Their work was often difficult and largely unrecognized.</p><p>In 1910, at the International Conference of Working Women in Copenhagen, German activist Clara Zetkin proposed creating a day that would remind the world of the struggle for women’s rights. Her idea was simple: one day each year that would unite women from different countries, cultures, and professions.</p><p>Just a year later, the day was observed for the first time in several European countries. Then, in 1917, women in Petrograd took to the streets demanding “Bread and Peace.” Their protest became one of the events that helped change the course of history. That is how March 8 was established as International Women’s Day.</p><p>More than a century has passed since then. During this time, women gained the right to vote, to study, to lead companies, to work in science, to create art, and to shape economies and societies.</p><p>But perhaps the most important change is this: women’s voices are now heard.</p><p>Today, millions of women around the world build businesses, raise families, drive innovation, create culture, and shape the future. Each of them is part of this story — a story of courage and of moving forward.</p><p>That is why March 8 is not simply a celebration. It is a reminder. A reminder of courage. Of dignity. Of the right to be yourself.</p><p>And of the truth that when women support one another, a powerful force emerges — one that can change the world.</p><p>Because together, we are a great force.</p><p>And today I would like to say something to every woman, wherever she may be — in a large city or a small town, on a busy street or in a quiet room.</p><p>May you always have the courage to walk your own path.</p><p>May you be surrounded by people who recognize your worth.</p><p>May your dreams never feel too big.</p><p>May your voice be heard.</p><p>May your life truly belong to you.</p><p>And may you always remember that you are never alone.</p><p>Happy International Women’s Day to women everywhere.</p><p>With love, Aya</p></article><article class="letter-entry" id="post-003"><time datetime="2026-02-14">14 February 2026</time><h2>On Love &amp; Self-Respect — A Valentine’s Reflection</h2><p>There is one old idea I like to return to on Valentine’s Day.</p><p>People say that an invisible connection can exist between two people. Not something mystical. Not something written by fate. Simply a connection that forms when two people truly meet.</p><p>It does not appear in a single evening. It is not created by beautiful words. It grows from respect, from honesty, from small, consistent actions.</p><p>Sometimes it is strong. Sometimes it is fragile. And sometimes we weaken it ourselves when we accept less than we deserve.</p><p>Many believe love means finding someone who will hold that connection carefully in their hands. But the truth is — you hold it first.</p><p>The way you treat yourself becomes the foundation of every future love. If you allow yourself to be diminished, the connection becomes painful. If you ignore your feelings, it begins to tear. If you betray yourself for someone else’s comfort, it stops being real.</p><p>Real love does not demand proof. It does not require you to endure humiliation. It does not ask you to become smaller.</p><p>It creates stability. Without anxiety. Without fear of losing yourself.</p><p>Today many people will celebrate. Some with a partner. Some alone. Some in the middle of letting go.</p><p>And in every one of these situations, it is important to remember: Your worth does not increase because someone chose you. And it does not decrease because someone didn’t.</p><p>The connection that truly matters begins within you.</p><p>Love does not always look like romance. Often it looks like maturity. Like respect. Like the decision not to stay where it hurts.</p><p>Love does not save those who forget themselves. It comes to those who know how not to betray themselves.</p><p>And perhaps that is exactly why it has the power to change the world.</p></article><article class="letter-entry" id="post-002"><time datetime="2026-01-25">25 January 2026</time><h2>A Dress Behind the Glass</h2><p>Today I accidentally witnessed a small scene that felt like a whole story.</p><p>I stopped by a boutique window — one of those calm streets where the world looks polished, as if nothing truly hurts there.</p><p>Inside, a girl was choosing a dress. She was breathtaking — not in an obvious, loud way, but in that quiet, rare way that makes you soften without understanding why.</p><p>I watched her hands touch the fabric. I watched her smile at her own reflection — not vanity, but a tender kind of hope. Like she was preparing to step into a moment where everything would finally be right.</p><p>She paid, held the bag close to her chest, and walked out into the winter air. For a second she looked almost weightless — as if the day had decided to be kind.</p><p>Then her phone rang.</p><p>She answered. And whatever she heard on the other end changed her face so fast it scared me — as if someone had turned off the lights in a room without warning.</p><p>She ended the call, took two steps, and suddenly started to cry — not quietly, but with those tears that come from a place too deep to control.</p><p>Her friend rushed to her. I heard the question, urgent and broken: “What happened?”</p><p>The girl’s voice shook. “He just left me. Like that. On the phone.”</p><p>Her friend didn’t argue. She didn’t tell her to be strong. She simply held her — right there on the sidewalk — while the girl cried, clutching a new dress she no longer cared about, on an ordinary street that suddenly felt unbearable.</p><p>And I thought: how many women have stood in the exact same place — dressed beautifully, holding something new, while their hearts were being treated as if they were disposable.</p><p>So I want to say this clearly, like a small vow: nobody is worth your tears when they are caused by cruelty, indifference, or ego.</p><p>Beauty is not a performance for someone who may not even know how to love. Beauty is a home you build for yourself — a quiet room inside you where your worth is not negotiated.</p><p>Dress for yourself. Glow for yourself. Choose yourself — even when your hands are shaking.</p><p>And if a call breaks your day, let the tears come. Then gently lift your chin. Not to prove anything — but to remember: you were whole before him, and you will be whole after him.</p></article><article class="letter-entry" id="post-001"><time datetime="2026-01-05">5 January 2026</time><h2>Diary Entry — On the Days When You Don't Feel Strong</h2><p>You know… there are days when you simply can't push anymore. Not because you're weak, not because something is wrong, but because there's a quiet emptiness inside that asks for rest.</p><p>I've felt this too. You wake up and the whole world seems heavier. You don't want to talk, don't want to pretend, don't want to force yourself into anything.</p><p>And I want to tell you something simple and honest: this happens to everyone. And it's okay.</p><p>We often expect ourselves to be strong all the time — to hold everything together, to keep going, to smile, to push through. But the truth is, no one can live like that every single day.</p><p>Strength isn't about shining constantly. Strength is being able to say: 'Today is hard for me.'</p><p>And allowing yourself to stop. To breathe. To be quiet. To not pretend.</p><p>You don't become weaker because you feel low. You become more honest with yourself — and that matters so much more than trying to be unbreakable.</p><p>So if today is one of those days for you… if everything feels heavy, if you don't want to talk, if you just want to lie down and be still — it simply means your heart is asking for care.</p><p>And you have every right to give that care to yourself.</p><p>Even on days like these, you are still strong. Your strength is just quieter today.</p></article></div>
+</main>
+<footer class="footer"><div class="footer-col"><div class="footer-social"><a href="https://www.pinterest.com/yanaproject2025" target="_blank" rel="noopener" aria-label="Pinterest"><img src="assets/images/pinterest.svg" alt="Pinterest"></a><a href="https://www.instagram.com/aya_boutique_atelier" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/images/instagram.svg" alt="Instagram"></a><a href="https://x.com/Aya_speaks" target="_blank" rel="noopener" aria-label="X"><img src="assets/images/x.svg" alt="X"></a></div><span>Aya Muse World LLC · Wyoming, USA · © 2026</span></div><div class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div><a href="#top">Back to top</a></footer>
+<script>var n=document.getElementById("nav"),m=document.getElementById("menu");if(m){m.addEventListener("click",function(){var o=n.classList.toggle("open");m.textContent=o?"\u00d7":"+";m.setAttribute("aria-expanded",o)})}</script><script>var t=new URLSearchParams(location.search).get("post");if(t){var el=document.getElementById("post-"+t);if(el)setTimeout(function(){el.scrollIntoView({behavior:"smooth"})},350)}</script>
 </body>
 </html>

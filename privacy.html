@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f1ece3">
+<title>Privacy — Aya Muse World</title>
+<meta name="description" content="How Aya Muse World handles data across the website and the Aya app: the enquiry form, external platforms, app data, AI in the Tea Room, storage, deletion and your rights.">
+<link rel="canonical" href="https://ayamuse.com/privacy.html">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f1ece3;--mist:#ece3d2;--ink:#27211d;--muted:#786f67;--soft-ink:#5c534b;--wine:#351019;--red:#671d2a;--brass:#a18457;--line:rgba(39,33,29,.16);--line-soft:rgba(39,33,29,.1);--serif:"Instrument Serif",Georgia,serif;--sans:"Manrope",Arial,sans-serif;--ease:cubic-bezier(.22,1,.36,1);--pad:clamp(20px,4vw,64px)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--paper)}
+body{background:var(--paper);color:var(--ink);font:400 16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+::selection{color:var(--paper);background:var(--red)}
+.skip{position:fixed;top:-60px;left:16px;z-index:200;padding:10px 14px;background:var(--ink);color:var(--paper)}.skip:focus{top:16px}
+/* header (always light on reading pages) */
+.header{position:fixed;z-index:100;inset:0 0 auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;min-height:76px;padding:14px var(--pad);background:rgba(241,236,227,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);color:var(--ink)}
+.brand{display:flex;align-items:center;gap:12px;width:max-content;text-decoration:none;color:inherit}
+.brand img{width:30px;height:30px;object-fit:contain}
+.brand-text{display:flex;flex-direction:column;line-height:1;text-transform:uppercase}
+.brand-text strong{font-size:13px;font-weight:600;letter-spacing:.2em}
+.brand-text span{margin-top:6px;color:var(--brass);font-size:9px;font-weight:600;letter-spacing:.14em}
+.nav{display:flex;gap:clamp(18px,2.6vw,38px)}
+.nav a,.switch-link{font-size:11px;font-weight:600;letter-spacing:.08em;text-decoration:none;text-transform:uppercase;opacity:.72;transition:opacity .2s;color:inherit}
+.nav a:hover,.switch-link:hover{opacity:1}
+.switch-link{justify-self:end;padding-bottom:5px;border-bottom:1px solid currentColor}
+.menu{display:none;width:40px;height:40px;border:0;background:none;color:inherit;font-size:20px;cursor:pointer}
+.eyebrow{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--red)}
+/* page title */
+.page-head{padding:clamp(120px,18vh,180px) var(--pad) clamp(30px,5vh,50px);text-align:center}
+.page-head .eyebrow{margin-bottom:18px}
+.page-head h1{font:400 clamp(3rem,7vw,6.4rem)/.98 var(--serif)}
+.page-head h1 em{color:#9a8c80}
+.page-head p{max-width:52ch;margin:20px auto 0;color:var(--muted)}
+.epigraph{max-width:640px;margin:8px auto 0;padding:0 var(--pad);text-align:center;color:var(--soft-ink);font:italic 400 clamp(1.15rem,2vw,1.5rem)/1.5 var(--serif)}
+/* reading column */
+.doc{max-width:720px;margin:0 auto;padding:clamp(30px,5vh,60px) var(--pad) clamp(70px,10vh,120px)}
+.doc-updated{margin-bottom:40px;color:var(--muted);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.sec{padding-top:clamp(34px,5vh,52px);margin-top:clamp(34px,5vh,52px);border-top:1px solid var(--line)}
+.sec:first-of-type{border-top:0;margin-top:0;padding-top:0}
+.sec h3{font:400 clamp(1.7rem,3.4vw,2.6rem)/1.05 var(--serif);color:var(--ink);margin-bottom:18px}
+.sec p{margin:0 0 16px;max-width:64ch}
+.sec p strong{color:var(--ink);font-weight:600}
+.sec ul{margin:0 0 16px;padding-left:22px}
+.sec li{margin:6px 0;color:var(--soft-ink)}
+.sec .lead{color:var(--muted)}
+.sec a{color:var(--red)}
+/* letters */
+.letter-entry{padding-top:clamp(44px,6vh,72px);margin-top:clamp(44px,6vh,72px);border-top:1px solid var(--line)}
+.letter-entry:first-of-type{border-top:0;margin-top:0;padding-top:0}
+.letter-entry time{display:block;color:var(--red);font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.letter-entry h2{margin:16px 0 24px;font:400 clamp(2rem,4vw,3.4rem)/1.02 var(--serif)}
+.letter-entry.pinned h2{color:var(--ink)}
+.letter-entry .tag{color:var(--brass);font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.letter-entry p{margin:0 0 18px;color:var(--soft-ink)}
+.letter-entry p:first-of-type{color:var(--ink)}
+.back-inline{display:inline-flex;align-items:center;gap:8px;margin-top:8px;padding-bottom:4px;border-bottom:1px solid;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--red)}
+/* footer (mirrors the Atelier / world footer) */
+.footer{display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:30px;padding:30px var(--pad) 28px;border-top:1px solid var(--line);background:var(--paper);color:var(--muted);font-size:10px;letter-spacing:.02em}
+.footer-col{display:flex;flex-direction:column;gap:14px;justify-self:start}
+.footer-social{display:flex;gap:12px}
+.footer-social a{display:grid;place-items:center;width:32px;height:32px;border:1px solid var(--line);border-radius:100px;transition:.2s}
+.footer-social a:hover{background:var(--ink)}
+.footer-social img{width:14px;height:14px;object-fit:contain}
+.footer-social a:hover img{filter:invert(1)}
+.footer-links{display:flex;gap:18px;justify-self:center}
+.footer-links a{text-decoration:none}
+.footer>a{justify-self:end;text-decoration:none;color:var(--wine);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+@media(max-width:980px){
+.header{grid-template-columns:1fr auto}.nav,.switch-link{display:none}.menu{display:block;justify-self:end}
+.nav.open{position:absolute;top:66px;left:0;right:0;display:grid;padding:8px var(--pad) 20px;background:rgba(241,236,227,.98);border-bottom:1px solid var(--line)}
+.nav.open a{padding:14px 0;border-bottom:1px solid var(--line);opacity:.85}
+}
+@media(max-width:680px){
+.footer{grid-template-columns:1fr;align-items:start;gap:18px}.footer-links,.footer>a{justify-self:start}
+.page-head{padding-top:120px}
+}
+.nav a.nav-world{display:none}@media(max-width:980px){.nav.open a.nav-world{display:block}}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+<header class="header" id="header"><a class="brand" href="aya-world-visual-reference.html#top" aria-label="Aya — YouAreNotAlone"><img src="assets/images/logo-aya.png" alt="Aya butterfly logo"><span class="brand-text"><strong>Aya</strong><span>YouAreNotAlone</span></span></a><nav class="nav" id="nav" aria-label="Primary navigation"><a href="aya-world-visual-reference.html#letters">Letters</a><a href="aya-world-visual-reference.html#future">Future</a><a href="aya-world-visual-reference.html#collections">Collections</a><a class="nav-world" href="aya-visual-reference.html">Enter the Atelier</a></nav><a class="switch-link" href="aya-visual-reference.html">Enter the Atelier</a><button class="menu" id="menu" type="button" aria-label="Open menu" aria-expanded="false">+</button></header>
+<main id="main">
+<div class="page-head"><p class="eyebrow">Legal</p><h1>Privacy</h1><p>How personal data is handled across the Aya Muse World website and the Aya application.</p></div><div class="doc"><p class="doc-updated">Aya Muse World LLC · Effective 1 September 2026</p><section class="sec"><h3>Scope</h3><p>This Privacy Notice explains how personal data is handled across Aya Muse World — the website (Aya’s World and Aya Atelier) and the Aya mobile application.</p><p>Aya Muse World is an international, independent aesthetic and emotional-support project. We aim to collect as little as possible and to be clear about what happens with what we do collect.</p></section><section class="sec"><h3>The website</h3><p>The website does not use advertising analytics, profiling or marketing cookies.</p><p>The Atelier enquiry form stores the details you submit — your name, email, brand or place, project type, budget range and message — in our database so that we can read and reply to your enquiry. It is used for that purpose only. If the form cannot reach our database, it opens your email app instead so your message is not lost.</p><p>The “Write to Aya” link and other email links simply open your email app; a message is sent only if you choose to send it, and we use your email and message only to reply.</p><p>Our website host may automatically process technical information such as IP address, request time and security logs to keep the site running safely. Fonts are loaded from Google Fonts, which may receive technical request information when the page loads.</p></section><section class="sec"><h3>External platforms</h3><p>When you follow a link to an outside platform, that platform handles your data under its own policy:</p><ul><li>Gumroad processes any purchase you make there.</li><li>The Apple App Store (Apple) handles app downloads, in-app purchases and their billing.</li><li>Social media platforms process data under their own policies.</li></ul><p>Aya Muse World does not receive or store your payment-card details from these platforms. Where a feature requires it, we may receive only the limited information needed to confirm a purchase or grant access.</p></section><section class="sec"><h3>Data processed in the Aya application</h3><p>The Aya application is designed to hold personal, emotional content, so it processes more than the website. Depending on the features you use, this may include:</p><ul><li>your email address and account identifier</li><li>letters and journal entries you write, including letters to your future self</li><li>entries you place in the Word Chest and items you keep in Treasures</li><li>photos or files you choose to attach</li><li>messages you send in the Tea Room chat with Aya</li><li>a push-notification token, if you enable notifications</li><li>technical and security information needed to run the app safely</li><li>your purchase or subscription status, if paid features are added</li></ul></section><section class="sec"><h3>How the data is used</h3><p>We use this information to:</p><ul><li>create your account and let you sign in</li><li>save and show your own content back to you</li><li>deliver scheduled letters and the notifications you choose</li><li>generate Aya’s responses in the Tea Room</li><li>keep the service secure and prevent errors or abuse</li><li>provide support when you contact us</li><li>confirm your access to app features</li></ul></section><section class="sec"><h3>Service providers</h3><p>We rely on a small number of trusted providers to run the service:</p><ul><li>Google Firebase — authentication, database, file storage, notifications and server infrastructure</li><li>Apple — app distribution, in-app purchases and push infrastructure</li><li>OpenAI — processing Tea Room messages to generate Aya’s replies</li><li>our website host and email provider</li><li>Gumroad — only when you choose to visit Gumroad</li></ul></section><section class="sec"><h3>AI and the Tea Room</h3><p>When you write to Aya in the Tea Room, your message is sent to an AI provider to create a response.</p><p>The Tea Room is a space for gentle reflection. It is not private therapy or a crisis line, and you should not send information you would not want processed by a service provider.</p><p>Where our configuration allows, Tea Room messages are not used to train AI models.</p></section><section class="sec"><h3>Storage, retention &amp; deletion</h3><p>Your data is kept while your account exists or while it is needed to provide a feature.</p><p>You can delete individual items within the app, and the Delete Account option removes your account and its associated data, except anything we are required to keep by law. Backups may take some time to clear.</p><p>You can also send a request to <a href="mailto:hello@ayamuse.com">hello@ayamuse.com</a>.</p></section><section class="sec"><h3>Your rights</h3><p>Depending on where you live, you may have the right to:</p><ul><li>access the personal data we hold about you</li><li>correct inaccurate data</li><li>delete your data</li><li>receive a copy of your data</li><li>withdraw consent</li><li>object to certain kinds of processing</li><li>complain to your local data-protection authority</li></ul></section><section class="sec"><h3>What we do not do</h3><p>We do not run advertising, build advertising or profiling profiles of you, or sell your personal data.</p></section><section class="sec"><h3>Governing entity</h3><p>Aya Muse World is operated by Aya Muse World LLC, Sheridan, Wyoming, USA.</p></section><section class="sec"><h3>Contact</h3><p><a href="mailto:hello@ayamuse.com">hello@ayamuse.com</a></p></section><section class="sec"><h3>A closing note</h3><p>Aya Muse World exists as a quiet space in a noisy digital world.</p><p>Our intention is care, not control.<br>Presence, not surveillance.<br>Beauty, not pressure.</p><p>You are welcome here.</p></section><section class="sec"><div style="display:flex;gap:28px;flex-wrap:wrap"><a class="back-inline" href="aya-world-visual-reference.html#top">Return to Aya’s World</a><a class="back-inline" href="aya-visual-reference.html">Enter the Atelier</a></div></section></div>
+</main>
+<footer class="footer"><div class="footer-col"><div class="footer-social"><a href="https://www.pinterest.com/yanaproject2025" target="_blank" rel="noopener" aria-label="Pinterest"><img src="assets/images/pinterest.svg" alt="Pinterest"></a><a href="https://www.instagram.com/aya_boutique_atelier" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/images/instagram.svg" alt="Instagram"></a><a href="https://x.com/Aya_speaks" target="_blank" rel="noopener" aria-label="X"><img src="assets/images/x.svg" alt="X"></a></div><span>Aya Muse World LLC · Wyoming, USA · © 2026</span></div><div class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div><a href="#top">Back to top</a></footer>
+<script>var n=document.getElementById("nav"),m=document.getElementById("menu");if(m){m.addEventListener("click",function(){var o=n.classList.toggle("open");m.textContent=o?"\u00d7":"+";m.setAttribute("aria-expanded",o)})}</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f1ece3">
+<title>Terms — Aya Muse World</title>
+<meta name="description" content="Terms of use for the Aya Muse World website and app: respectful use, external purchases, the Aya disclaimer, intellectual property and Atelier enquiries.">
+<link rel="canonical" href="https://ayamuse.com/terms.html">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f1ece3;--mist:#ece3d2;--ink:#27211d;--muted:#786f67;--soft-ink:#5c534b;--wine:#351019;--red:#671d2a;--brass:#a18457;--line:rgba(39,33,29,.16);--line-soft:rgba(39,33,29,.1);--serif:"Instrument Serif",Georgia,serif;--sans:"Manrope",Arial,sans-serif;--ease:cubic-bezier(.22,1,.36,1);--pad:clamp(20px,4vw,64px)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--paper)}
+body{background:var(--paper);color:var(--ink);font:400 16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+::selection{color:var(--paper);background:var(--red)}
+.skip{position:fixed;top:-60px;left:16px;z-index:200;padding:10px 14px;background:var(--ink);color:var(--paper)}.skip:focus{top:16px}
+/* header (always light on reading pages) */
+.header{position:fixed;z-index:100;inset:0 0 auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;min-height:76px;padding:14px var(--pad);background:rgba(241,236,227,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);color:var(--ink)}
+.brand{display:flex;align-items:center;gap:12px;width:max-content;text-decoration:none;color:inherit}
+.brand img{width:30px;height:30px;object-fit:contain}
+.brand-text{display:flex;flex-direction:column;line-height:1;text-transform:uppercase}
+.brand-text strong{font-size:13px;font-weight:600;letter-spacing:.2em}
+.brand-text span{margin-top:6px;color:var(--brass);font-size:9px;font-weight:600;letter-spacing:.14em}
+.nav{display:flex;gap:clamp(18px,2.6vw,38px)}
+.nav a,.switch-link{font-size:11px;font-weight:600;letter-spacing:.08em;text-decoration:none;text-transform:uppercase;opacity:.72;transition:opacity .2s;color:inherit}
+.nav a:hover,.switch-link:hover{opacity:1}
+.switch-link{justify-self:end;padding-bottom:5px;border-bottom:1px solid currentColor}
+.menu{display:none;width:40px;height:40px;border:0;background:none;color:inherit;font-size:20px;cursor:pointer}
+.eyebrow{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--red)}
+/* page title */
+.page-head{padding:clamp(120px,18vh,180px) var(--pad) clamp(30px,5vh,50px);text-align:center}
+.page-head .eyebrow{margin-bottom:18px}
+.page-head h1{font:400 clamp(3rem,7vw,6.4rem)/.98 var(--serif)}
+.page-head h1 em{color:#9a8c80}
+.page-head p{max-width:52ch;margin:20px auto 0;color:var(--muted)}
+.epigraph{max-width:640px;margin:8px auto 0;padding:0 var(--pad);text-align:center;color:var(--soft-ink);font:italic 400 clamp(1.15rem,2vw,1.5rem)/1.5 var(--serif)}
+/* reading column */
+.doc{max-width:720px;margin:0 auto;padding:clamp(30px,5vh,60px) var(--pad) clamp(70px,10vh,120px)}
+.doc-updated{margin-bottom:40px;color:var(--muted);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.sec{padding-top:clamp(34px,5vh,52px);margin-top:clamp(34px,5vh,52px);border-top:1px solid var(--line)}
+.sec:first-of-type{border-top:0;margin-top:0;padding-top:0}
+.sec h3{font:400 clamp(1.7rem,3.4vw,2.6rem)/1.05 var(--serif);color:var(--ink);margin-bottom:18px}
+.sec p{margin:0 0 16px;max-width:64ch}
+.sec p strong{color:var(--ink);font-weight:600}
+.sec ul{margin:0 0 16px;padding-left:22px}
+.sec li{margin:6px 0;color:var(--soft-ink)}
+.sec .lead{color:var(--muted)}
+.sec a{color:var(--red)}
+/* letters */
+.letter-entry{padding-top:clamp(44px,6vh,72px);margin-top:clamp(44px,6vh,72px);border-top:1px solid var(--line)}
+.letter-entry:first-of-type{border-top:0;margin-top:0;padding-top:0}
+.letter-entry time{display:block;color:var(--red);font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.letter-entry h2{margin:16px 0 24px;font:400 clamp(2rem,4vw,3.4rem)/1.02 var(--serif)}
+.letter-entry.pinned h2{color:var(--ink)}
+.letter-entry .tag{color:var(--brass);font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.letter-entry p{margin:0 0 18px;color:var(--soft-ink)}
+.letter-entry p:first-of-type{color:var(--ink)}
+.back-inline{display:inline-flex;align-items:center;gap:8px;margin-top:8px;padding-bottom:4px;border-bottom:1px solid;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--red)}
+/* footer (mirrors the Atelier / world footer) */
+.footer{display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:30px;padding:30px var(--pad) 28px;border-top:1px solid var(--line);background:var(--paper);color:var(--muted);font-size:10px;letter-spacing:.02em}
+.footer-col{display:flex;flex-direction:column;gap:14px;justify-self:start}
+.footer-social{display:flex;gap:12px}
+.footer-social a{display:grid;place-items:center;width:32px;height:32px;border:1px solid var(--line);border-radius:100px;transition:.2s}
+.footer-social a:hover{background:var(--ink)}
+.footer-social img{width:14px;height:14px;object-fit:contain}
+.footer-social a:hover img{filter:invert(1)}
+.footer-links{display:flex;gap:18px;justify-self:center}
+.footer-links a{text-decoration:none}
+.footer>a{justify-self:end;text-decoration:none;color:var(--wine);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+@media(max-width:980px){
+.header{grid-template-columns:1fr auto}.nav,.switch-link{display:none}.menu{display:block;justify-self:end}
+.nav.open{position:absolute;top:66px;left:0;right:0;display:grid;padding:8px var(--pad) 20px;background:rgba(241,236,227,.98);border-bottom:1px solid var(--line)}
+.nav.open a{padding:14px 0;border-bottom:1px solid var(--line);opacity:.85}
+}
+@media(max-width:680px){
+.footer{grid-template-columns:1fr;align-items:start;gap:18px}.footer-links,.footer>a{justify-self:start}
+.page-head{padding-top:120px}
+}
+.nav a.nav-world{display:none}@media(max-width:980px){.nav.open a.nav-world{display:block}}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+<header class="header" id="header"><a class="brand" href="aya-world-visual-reference.html#top" aria-label="Aya — YouAreNotAlone"><img src="assets/images/logo-aya.png" alt="Aya butterfly logo"><span class="brand-text"><strong>Aya</strong><span>YouAreNotAlone</span></span></a><nav class="nav" id="nav" aria-label="Primary navigation"><a href="aya-world-visual-reference.html#letters">Letters</a><a href="aya-world-visual-reference.html#future">Future</a><a href="aya-world-visual-reference.html#collections">Collections</a><a class="nav-world" href="aya-visual-reference.html">Enter the Atelier</a></nav><a class="switch-link" href="aya-visual-reference.html">Enter the Atelier</a><button class="menu" id="menu" type="button" aria-label="Open menu" aria-expanded="false">+</button></header>
+<main id="main">
+<div class="page-head"><p class="eyebrow">Legal</p><h1>Terms</h1><p>How to use Aya Muse World, and the symbolic, non-clinical nature of Aya.</p></div><div class="doc"><p class="doc-updated">Aya Muse World LLC · Effective 1 September 2026</p><section class="sec"><h3>Use of the website &amp; application</h3><p>These Terms apply to the Aya Muse World website, including its two connected spaces — Aya’s World and Aya Atelier — and to the Aya mobile application where these Terms are linked.</p><p>The website is provided for editorial, informational and portfolio purposes. It can be viewed without creating an account. Certain features of the Aya application may require registration.</p><p>By using the website or application, you agree to:</p><ul><li>use the content respectfully</li><li>refrain from misuse, abuse or unlawful activity</li><li>understand the symbolic and non-clinical nature of the project</li></ul></section><section class="sec"><h3>Purchases &amp; the app</h3><p>Aya Muse World does not sell products or process payments directly through this website. Links to digital products on Gumroad and to the Aya application on the App Store lead to independent third-party platforms.</p><p>Payments are processed by those platforms. Their terms, any product-specific terms shown there, and applicable consumer law govern purchases, billing, cancellations and refunds. Aya Muse World does not receive or store your payment-card details.</p></section><section class="sec"><h3>Aya Atelier enquiries</h3><p>Aya Atelier presents portfolio work and information about creative services. Sending an enquiry or contacting Aya Atelier does not create a client relationship, obligation or binding agreement.</p><p>Any commissioned work begins only after the parties enter into a separate written agreement, proposal or statement of work.</p></section><section class="sec"><h3>Aya is not a substitute for professional help</h3><p>Aya is a symbolic, poetic and aesthetic presence — a companion for reflection, not a service, a therapist or a promise of rescue. She represents emotional softness, inner reflection and feminine resilience, and she does not replace human connection, professional care or real-world support systems.</p><p>Aya Muse World and Aya content are not a substitute for professional help. Please read carefully:</p><ul><li>Aya is not a licensed therapist, psychologist, medical professional or crisis service.</li><li>Aya does not provide medical, psychological or therapeutic advice.</li><li>All content is intended for inspiration, emotional reflection and gentle support only.</li></ul><p>Some features of the Aya application may provide automated or AI-generated responses. These responses may be incomplete or inaccurate and must not be relied upon for medical, psychological, legal or emergency decisions.</p><p>If you are experiencing severe distress or crisis, or feel that you may harm yourself or others, please seek immediate assistance from qualified professionals or local emergency services.</p><p>You are responsible for how you choose to use Aya’s content. Nothing in these Terms limits any rights or remedies that cannot lawfully be excluded.</p></section><section class="sec"><h3>Intellectual property &amp; content sharing</h3><p>The original texts, artwork, photographs, designs, software and other creative materials published by Aya Muse World are protected by applicable copyright and intellectual-property laws. Aya Muse World names, logos and brand elements may also be protected under applicable trademark laws.</p><p>Publicly available website and social-media content may be shared for non-commercial purposes with clear credit and without alteration or misrepresentation. Purchased or downloadable products may not be copied, redistributed, resold or made publicly available except as permitted by the terms displayed with the relevant product.</p></section><section class="sec"><h3>Respectful use</h3><p>You may not use Aya Muse World platforms to harass others, distribute unlawful or harmful material, interfere with the operation of the platforms or misuse their content.</p><p>Aya Muse World is created for a global audience. We stand for inclusivity, cultural respect, non-discrimination and emotional safety, and the project does not promote harm, exclusion or judgment based on nationality, race, gender, belief or background.</p></section><section class="sec"><h3>Third-party services &amp; links</h3><p>The website links to independent platforms — including Gumroad, the Apple App Store and social media — which operate under their own terms and privacy policies. Aya Muse World is not responsible for the content or practices of those platforms.</p></section><section class="sec"><h3>Age</h3><p>The Aya application is intended for users aged 16 and over. The website may be viewed by a general audience, but its emotional and reflective content is written with grown readers in mind. If you are under the age required in your country to consent to the processing of personal data, please use Aya only with the involvement of a parent or guardian.</p></section><section class="sec"><h3>Changes to these Terms</h3><p>We may update these Terms from time to time. The version published here, with its effective date, is always the current one. Continued use after an update means you accept the revised Terms.</p></section><section class="sec"><h3>Governing entity &amp; law</h3><p>These Terms are governed by the laws of the State of Wyoming, United States, without prejudice to any mandatory consumer protections that apply in your country of residence.</p><p>Aya Muse World LLC<br>Sheridan, Wyoming, USA</p></section><section class="sec"><h3>Contact</h3><p><a href="mailto:hello@ayamuse.com">hello@ayamuse.com</a></p></section><section class="sec"><h3>A closing note</h3><p>Aya Muse World exists as a quiet space in a noisy digital world.</p><p>Our intention is care, not control.<br>Presence, not surveillance.<br>Beauty, not pressure.</p><p>You are welcome here.</p></section><section class="sec"><div style="display:flex;gap:28px;flex-wrap:wrap"><a class="back-inline" href="aya-world-visual-reference.html#top">Return to Aya’s World</a><a class="back-inline" href="aya-visual-reference.html">Enter the Atelier</a></div></section></div>
+</main>
+<footer class="footer"><div class="footer-col"><div class="footer-social"><a href="https://www.pinterest.com/yanaproject2025" target="_blank" rel="noopener" aria-label="Pinterest"><img src="assets/images/pinterest.svg" alt="Pinterest"></a><a href="https://www.instagram.com/aya_boutique_atelier" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/images/instagram.svg" alt="Instagram"></a><a href="https://x.com/Aya_speaks" target="_blank" rel="noopener" aria-label="X"><img src="assets/images/x.svg" alt="X"></a></div><span>Aya Muse World LLC · Wyoming, USA · © 2026</span></div><div class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div><a href="#top">Back to top</a></footer>
+<script>var n=document.getElementById("nav"),m=document.getElementById("menu");if(m){m.addEventListener("click",function(){var o=n.classList.toggle("open");m.textContent=o?"\u00d7":"+";m.setAttribute("aria-expanded",o)})}</script>
+</body>
+</html>

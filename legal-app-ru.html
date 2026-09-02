@@ -1,469 +1,99 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Политика конфиденциальности и условия использования — Aya</title>
-  <meta name="description" content="Политика конфиденциальности и условия использования мобильного приложения Aya: дисклеймеры, обработка данных и ответственность пользователя." />
-
-  <link rel="canonical" href="https://ayamuse.com/legal-app-ru.html" />
-
-  <!-- FAVICON -->
-  <link rel="icon" type="image/png" href="favicon.png" />
-  <link rel="apple-touch-icon" href="favicon.png" />
-
-  <!-- GOOGLE FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
-    rel="stylesheet" />
-
-  <!-- MAIN CSS -->
-  <link rel="stylesheet" href="css/style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f1ece3">
+<title>Политика конфиденциальности и условия использования — Aya</title>
+<meta name="description" content="Политика конфиденциальности и условия использования мобильного приложения Aya: дисклеймеры, обработка данных, функции ИИ и ответственность пользователя.">
+<link rel="canonical" href="https://ayamuse.com/legal-app-ru.html">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f1ece3;--mist:#ece3d2;--ink:#27211d;--muted:#786f67;--soft-ink:#5c534b;--wine:#351019;--red:#671d2a;--brass:#a18457;--line:rgba(39,33,29,.16);--line-soft:rgba(39,33,29,.1);--serif:"Instrument Serif",Georgia,serif;--sans:"Manrope",Arial,sans-serif;--ease:cubic-bezier(.22,1,.36,1);--pad:clamp(20px,4vw,64px)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--paper)}
+body{background:var(--paper);color:var(--ink);font:400 16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+::selection{color:var(--paper);background:var(--red)}
+.skip{position:fixed;top:-60px;left:16px;z-index:200;padding:10px 14px;background:var(--ink);color:var(--paper)}.skip:focus{top:16px}
+/* header (always light on reading pages) */
+.header{position:fixed;z-index:100;inset:0 0 auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;min-height:76px;padding:14px var(--pad);background:rgba(241,236,227,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);color:var(--ink)}
+.brand{display:flex;align-items:center;gap:12px;width:max-content;text-decoration:none;color:inherit}
+.brand img{width:30px;height:30px;object-fit:contain}
+.brand-text{display:flex;flex-direction:column;line-height:1;text-transform:uppercase}
+.brand-text strong{font-size:13px;font-weight:600;letter-spacing:.2em}
+.brand-text span{margin-top:6px;color:var(--brass);font-size:9px;font-weight:600;letter-spacing:.14em}
+.nav{display:flex;gap:clamp(18px,2.6vw,38px)}
+.nav a,.switch-link{font-size:11px;font-weight:600;letter-spacing:.08em;text-decoration:none;text-transform:uppercase;opacity:.72;transition:opacity .2s;color:inherit}
+.nav a:hover,.switch-link:hover{opacity:1}
+.switch-link{justify-self:end;padding-bottom:5px;border-bottom:1px solid currentColor}
+.menu{display:none;width:40px;height:40px;border:0;background:none;color:inherit;font-size:20px;cursor:pointer}
+.eyebrow{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--red)}
+/* page title */
+.page-head{padding:clamp(120px,18vh,180px) var(--pad) clamp(30px,5vh,50px);text-align:center}
+.page-head .eyebrow{margin-bottom:18px}
+.page-head h1{font:400 clamp(3rem,7vw,6.4rem)/.98 var(--serif)}
+.page-head h1 em{color:#9a8c80}
+.page-head p{max-width:52ch;margin:20px auto 0;color:var(--muted)}
+.epigraph{max-width:640px;margin:8px auto 0;padding:0 var(--pad);text-align:center;color:var(--soft-ink);font:italic 400 clamp(1.15rem,2vw,1.5rem)/1.5 var(--serif)}
+/* reading column */
+.doc{max-width:720px;margin:0 auto;padding:clamp(30px,5vh,60px) var(--pad) clamp(70px,10vh,120px)}
+.doc-updated{margin-bottom:40px;color:var(--muted);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.sec{padding-top:clamp(34px,5vh,52px);margin-top:clamp(34px,5vh,52px);border-top:1px solid var(--line)}
+.sec:first-of-type{border-top:0;margin-top:0;padding-top:0}
+.sec h3{font:400 clamp(1.7rem,3.4vw,2.6rem)/1.05 var(--serif);color:var(--ink);margin-bottom:18px}
+.sec p{margin:0 0 16px;max-width:64ch}
+.sec p strong{color:var(--ink);font-weight:600}
+.sec ul{margin:0 0 16px;padding-left:22px}
+.sec li{margin:6px 0;color:var(--soft-ink)}
+.sec .lead{color:var(--muted)}
+.sec a{color:var(--red)}
+/* letters */
+.letter-entry{padding-top:clamp(44px,6vh,72px);margin-top:clamp(44px,6vh,72px);border-top:1px solid var(--line)}
+.letter-entry:first-of-type{border-top:0;margin-top:0;padding-top:0}
+.letter-entry time{display:block;color:var(--red);font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.letter-entry h2{margin:16px 0 24px;font:400 clamp(2rem,4vw,3.4rem)/1.02 var(--serif)}
+.letter-entry.pinned h2{color:var(--ink)}
+.letter-entry .tag{color:var(--brass);font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.letter-entry p{margin:0 0 18px;color:var(--soft-ink)}
+.letter-entry p:first-of-type{color:var(--ink)}
+.back-inline{display:inline-flex;align-items:center;gap:8px;margin-top:8px;padding-bottom:4px;border-bottom:1px solid;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--red)}
+/* footer (mirrors the Atelier / world footer) */
+.footer{display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:30px;padding:30px var(--pad) 28px;border-top:1px solid var(--line);background:var(--paper);color:var(--muted);font-size:10px;letter-spacing:.02em}
+.footer-col{display:flex;flex-direction:column;gap:14px;justify-self:start}
+.footer-social{display:flex;gap:12px}
+.footer-social a{display:grid;place-items:center;width:32px;height:32px;border:1px solid var(--line);border-radius:100px;transition:.2s}
+.footer-social a:hover{background:var(--ink)}
+.footer-social img{width:14px;height:14px;object-fit:contain}
+.footer-social a:hover img{filter:invert(1)}
+.footer-links{display:flex;gap:18px;justify-self:center}
+.footer-links a{text-decoration:none}
+.footer>a{justify-self:end;text-decoration:none;color:var(--wine);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+@media(max-width:980px){
+.header{grid-template-columns:1fr auto}.nav,.switch-link{display:none}.menu{display:block;justify-self:end}
+.nav.open{position:absolute;top:66px;left:0;right:0;display:grid;padding:8px var(--pad) 20px;background:rgba(241,236,227,.98);border-bottom:1px solid var(--line)}
+.nav.open a{padding:14px 0;border-bottom:1px solid var(--line);opacity:.85}
+}
+@media(max-width:680px){
+.footer{grid-template-columns:1fr;align-items:start;gap:18px}.footer-links,.footer>a{justify-self:start}
+.page-head{padding-top:120px}
+}
+.nav a.nav-world{display:none}@media(max-width:980px){.nav.open a.nav-world{display:block}}
+</style>
+<style>.page-head h1,.sec h3,.doc,.sec{overflow-wrap:break-word}@media(max-width:520px){.page-head h1{font-size:clamp(1.9rem,8.5vw,3rem)}}</style>
 </head>
-
-<body class="letter-page">
-
-  <!-- HEADER -->
-  <header class="header" role="banner">
-
-    <div class="header__inner">
-
-      <a class="brand" href="/" aria-label="Aya - YouAreNotAlone">
-
-        <img
-          src="assets/images/logo-aya.png"
-          alt="Aya logo"
-          class="brand__image" />
-
-        <span class="brand__line">
-          Aya - YouAreNotAlone
-        </span>
-
-      </a>
-
-      <nav class="nav nav--desktop" aria-label="Primary navigation">
-        <a href="letter.html">Letter</a>
-        <a href="travel.html">Travel</a>
-        <a href="atelier.html">Atelier</a>
-        <a href="/#collections">Collections</a>
-        <a href="collaborations.html">Collaborations</a>
-        <a href="support.html">Support</a>
-      </nav>
-
-      <button
-        class="burger"
-        type="button"
-        aria-label="Open menu"
-        aria-expanded="false"
-        aria-controls="mobileMenu">
-
-        <span></span>
-        <span></span>
-        <span></span>
-
-      </button>
-
-    </div>
-
-    <!-- MOBILE MENU -->
-    <div id="mobileMenu" class="drawer" hidden>
-
-      <nav class="nav nav--mobile" aria-label="Mobile navigation">
-        <a href="letter.html">Letter</a>
-        <a href="travel.html">Travel</a>
-        <a href="atelier.html">Atelier</a>
-        <a href="/#collections">Collections</a>
-        <a href="collaborations.html">Collaborations</a>
-        <a href="support.html">Support</a>
-      </nav>
-
-    </div>
-
-  </header>
-
-  <!-- MAIN -->
-  <main>
-
-    <!-- TITLE -->
-    <div class="letter__titles">
-
-      <h2 class="letter__title">
-        Политика конфиденциальности
-        <br />
-        и условия использования
-      </h2>
-
-      <p class="letter__subtitle">
-        Aya — пространство эмоциональной поддержки,
-        саморефлексии и цифровой заботы
-      </p>
-
-    </div>
-
-    <!-- CONTENT -->
-    <div class="letter">
-
-      <!-- INTRO -->
-      <article class="letter__pinned">
-
-        <h3>1. Общие положения</h3>
-
-        <p>
-          Aya — это приложение эмоциональной поддержки,
-          саморефлексии и личного пространства пользователя.
-        </p>
-
-        <p>
-          Настоящая Политика конфиденциальности и условия
-          использования («Политика») применяются к мобильному
-          приложению Aya, сайту Aya Muse World и связанным
-          цифровым сервисам проекта.
-        </p>
-
-        <p>
-          Используя Aya, пользователь подтверждает,
-          что ознакомился с настоящей Политикой
-          и принимает её условия.
-        </p>
-
-      </article>
-
-      <!-- DISCLAIMER -->
-      <article class="letter__pinned">
-
-        <h3>2. Важный дисклеймер</h3>
-
-        <p>
-          Aya не является медицинским,
-          психотерапевтическим или кризисным сервисом.
-        </p>
-
-        <p>
-          Aya не предоставляет медицинские,
-          психиатрические или психологические консультации.
-        </p>
-
-        <p>
-          Все материалы, ответы и функции приложения
-          предназначены исключительно для эмоциональной
-          поддержки, саморефлексии и вдохновения.
-        </p>
-
-        <p>
-          Некоторые ответы внутри Aya могут быть
-          сгенерированы с использованием технологий
-          искусственного интеллекта и не всегда
-          могут быть точными или подходящими
-          для конкретной ситуации.
-        </p>
-
-        <p>
-          Если вы находитесь в кризисной ситуации
-          или испытываете угрозу для себя или окружающих,
-          обратитесь к профильным специалистам
-          или в экстренные службы.
-        </p>
-
-      </article>
-
-      <!-- DATA -->
-      <article class="letter__pinned">
-
-        <h3>3. Какие данные могут собираться</h3>
-
-        <p>
-          Aya может собирать и обрабатывать
-          минимально необходимые данные пользователя,
-          включая:
-        </p>
-
-        <ul>
-          <li>адрес электронной почты;</li>
-          <li>данные авторизации;</li>
-          <li>пользовательские записи, письма и заметки;</li>
-          <li>выбранные эмоциональные состояния;</li>
-          <li>технические данные устройства и приложения;</li>
-          <li>данные, необходимые для работы push-уведомлений.</li>
-        </ul>
-
-        <p>
-          Aya не продаёт и не передаёт
-          персональные данные пользователей
-          третьим лицам в рекламных целях.
-        </p>
-
-      </article>
-
-      <!-- DATA USAGE -->
-      <article class="letter__pinned">
-
-        <h3>4. Использование данных</h3>
-
-        <p>
-          Данные используются исключительно для:
-        </p>
-
-        <ul>
-          <li>работы и улучшения приложения;</li>
-          <li>персонализации пользовательского опыта;</li>
-          <li>сохранения пользовательских данных;</li>
-          <li>обеспечения безопасности и стабильности сервиса;</li>
-          <li>работы AI-функций Aya.</li>
-        </ul>
-
-      </article>
-
-      <!-- AI -->
-      <article class="letter__pinned">
-
-        <h3>5. Искусственный интеллект и сторонние сервисы</h3>
-
-        <p>
-          Некоторые функции Aya работают
-          с использованием технологий
-          искусственного интеллекта
-          и облачной инфраструктуры сторонних сервисов,
-          включая OpenAI и Google Firebase.
-        </p>
-
-        <p>
-          При использовании AI-функций
-          отдельные пользовательские сообщения
-          могут обрабатываться соответствующими сервисами
-          исключительно для генерации ответа
-          и работы функционала приложения.
-        </p>
-
-      </article>
-
-      <!-- STORAGE -->
-      <article class="letter__pinned">
-
-        <h3>6. Хранение и защита данных</h3>
-
-        <p>
-          Aya использует разумные технические меры
-          для защиты пользовательских данных.
-        </p>
-
-        <p>
-          Отдельные функции приложения
-          могут использовать локальное шифрование
-          и защищённое хранение данных
-          на устройстве пользователя.
-        </p>
-
-        <p>
-          Данные могут храниться
-          на защищённой облачной инфраструктуре.
-        </p>
-
-      </article>
-
-      <!-- DATA RETENTION -->
-      <article class="letter__pinned">
-
-        <h3>7. Хранение и удаление данных</h3>
-
-        <p>
-          Aya хранит пользовательские данные только
-          в течение срока, необходимого для работы
-          функций приложения, поддержки аккаунта,
-          выполнения юридических обязанностей
-          и обеспечения безопасности сервиса.
-        </p>
-
-        <p>
-          Пользователь может запросить удаление
-          аккаунта и связанных с ним данных
-          через настройки приложения или связавшись
-          с нами по контактному адресу.
-        </p>
-
-        <p>
-          После удаления аккаунта отдельные ограниченные
-          данные могут сохраняться только в случаях,
-          когда это требуется законом, безопасностью,
-          предотвращением злоупотреблений или
-          законными операционными целями.
-        </p>
-
-      </article>
-
-      <!-- USER RESPONSIBILITY -->
-      <article class="letter__pinned">
-
-        <h3>8. Использование приложения</h3>
-
-        <p>
-          Пользователь обязуется:
-        </p>
-
-        <ul>
-          <li>использовать Aya добросовестно;</li>
-          <li>не использовать приложение в незаконных целях;</li>
-          <li>не публиковать вредоносный, незаконный или оскорбительный контент;</li>
-          <li>понимать символический и немедицинский характер проекта Aya.</li>
-        </ul>
-
-      </article>
-
-      <!-- COPYRIGHT -->
-      <article class="letter__pinned">
-
-        <h3>9. Интеллектуальная собственность</h3>
-
-        <p>
-          Все материалы Aya, включая тексты,
-          визуальные элементы, дизайн,
-          логотипы, иллюстрации и цифровые материалы,
-          принадлежат Aya Muse World
-          и защищены законодательством
-          об интеллектуальной собственности.
-        </p>
-
-      </article>
-
-      <!-- CHILDREN -->
-      <article class="letter__pinned">
-
-        <h3>10. Дети и возрастные ограничения</h3>
-
-        <p>
-          Aya не предназначена для детей младше возраста,
-          с которого применимое местное законодательство
-          разрешает самостоятельно пользоваться цифровыми
-          сервисами без согласия родителей или законных
-          представителей.
-        </p>
-
-        <p>
-          Если нам станет известно, что мы получили
-          персональные данные ребёнка без необходимого
-          согласия, мы примем разумные меры для удаления
-          таких данных.
-        </p>
-
-      </article>
-
-      <!-- INTERNATIONAL USERS -->
-      <article class="letter__pinned">
-
-        <h3>11. Международные пользователи</h3>
-
-        <p>
-          Aya может использоваться людьми из разных стран
-          и регионов. Используя приложение, пользователь
-          понимает, что его данные могут обрабатываться
-          и храниться в юрисдикциях за пределами страны
-          его проживания.
-        </p>
-
-        <p>
-          Мы стремимся соблюдать применимые принципы
-          конфиденциальности, включая прозрачность,
-          минимизацию данных, безопасность и контроль
-          пользователя над своими данными.
-        </p>
-
-      </article>
-
-      <!-- POLICY CHANGES -->
-      <article class="letter__pinned">
-
-        <h3>12. Изменения политики</h3>
-
-        <p>
-          Aya Muse World вправе обновлять
-          настоящую Политику.
-        </p>
-
-        <p>
-          Актуальная версия всегда доступна
-          на официальном сайте проекта.
-        </p>
-
-      </article>
-
-      <!-- CONTACT -->
-      <article class="letter__pinned">
-
-        <h3>13. Контакты</h3>
-
-        <p>
-          Aya Muse World LLC
-          <br />
-          Sheridan, Wyoming, USA
-        </p>
-
-        <p>
-          hello@ayamuse.com
-        </p>
-
-      </article>
-
-      <!-- CLOSING -->
-      <article class="letter__pinned">
-
-        <h3>Заключение</h3>
-
-        <p>
-          Aya создана как тихое пространство
-          поддержки в шумном цифровом мире.
-        </p>
-
-        <p>
-          Наша цель —
-          забота, а не давление.
-          Поддержка, а не контроль.
-        </p>
-
-        <p>
-          Вы здесь не одни.
-        </p>
-
-      </article>
-
-    </div>
-
-  </main>
-
-  <footer class="footer footer--minimal">
-    <div class="container">
-      <div class="footer__inner">
-        <div class="footer__socials">
-          <a href="https://www.pinterest.com/yanaproject2025" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
-            <span class="icon"><img src="/assets/images/pinterest.svg" alt="Pinterest"></span>
-          </a>
-          <a href="https://www.instagram.com/aya_boutique_atelier" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <span class="icon"><img src="/assets/images/instagram.svg" alt="Instagram"></span>
-          </a>
-          <a href="https://x.com/Aya_speaks" target="_blank" rel="noopener noreferrer" aria-label="X">
-            <span class="icon"><img src="/assets/images/x.svg" alt="X"></span>
-          </a>
-        </div>
-        <div class="footer__company">
-          <p class="footer__title">Aya Muse World LLC</p>
-          <p class="footer__location">Sheridan, Wyoming, USA</p>
-          <p class="footer__copy">© 2026 Aya Muse World LLC. All rights reserved.</p>
-        </div>
-        <div class="footer__links">
-          <a href="policy.html#privacy">Privacy Policy</a>
-          <a href="policy.html#terms">Terms of Use</a>
-          <a href="mailto:hello@ayamuse.com">Contact</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- JS -->
-  <script src="/js/main.js"></script>
-
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+<header class="header" id="header"><a class="brand" href="aya-world.html#top" aria-label="Aya — YouAreNotAlone"><img src="assets/images/logo-aya.png" alt="Aya butterfly logo"><span class="brand-text"><strong>Aya</strong><span>YouAreNotAlone</span></span></a><nav class="nav" id="nav" aria-label="Primary navigation"><a href="aya-world.html#top">Мир Aya</a><a href="legal-app-en.html">English</a><a class="nav-world" href="/">Ателье</a></nav><a class="switch-link" href="legal-app-en.html">English</a><button class="menu" id="menu" type="button" aria-label="Open menu" aria-expanded="false">+</button></header>
+<main id="main">
+<div class="page-head"><p class="eyebrow">Приложение Aya · Правовая информация</p><h1>Конфиденциальность <em>и условия</em></h1><p>Для мобильного приложения Aya — пространства эмоциональной поддержки, саморефлексии и цифровой заботы.</p></div><div class="doc"><p class="doc-updated">Aya Muse World LLC · Действует с 1 сентября 2026</p><section class="sec"><h3>1. Общие положения</h3><p>Aya — это мобильное приложение эмоциональной поддержки, саморефлексии и личного пространства пользователя.</p><p>Настоящая Политика конфиденциальности и условия использования («Политика») применяются к мобильному приложению Aya, сайту Aya Muse World и связанным цифровым сервисам проекта.</p><p>Используя Aya, пользователь подтверждает, что ознакомился с настоящей Политикой и принимает её условия.</p></section><section class="sec"><h3>2. Важный дисклеймер</h3><p>Aya не является медицинским, психологическим, психиатрическим, психотерапевтическим или кризисным сервисом.</p><p>Aya не предоставляет медицинские консультации, диагностику психического здоровья, терапию, лечение или экстренную помощь.</p><p>Все материалы, функции, размышления и ответы, сгенерированные ИИ, предназначены исключительно для эмоциональной поддержки, саморефлексии, вдохновения и личных записей.</p><p>Некоторые ответы внутри Aya могут быть сгенерированы с помощью искусственного интеллекта и не всегда могут быть точными, полными или подходящими для вашей ситуации.</p><p>Если вы находитесь в кризисной ситуации, испытываете сильный эмоциональный стресс или чувствуете, что можете навредить себе или окружающим, немедленно обратитесь к профильным специалистам или в экстренные службы.</p></section><section class="sec"><h3>3. Какие данные могут собираться</h3><p>Aya может собирать и обрабатывать только данные, необходимые для работы и улучшения приложения, включая:</p><ul><li>адрес электронной почты</li><li>данные авторизации</li><li>пользовательские записи, письма, дневниковые заметки и размышления</li><li>записи в «Ящике слов» и элементы, сохранённые в «Сокровищах»</li><li>сообщения в чате с Aya (Tea Room)</li><li>фотографии или файлы, которые вы прикрепляете</li><li>выбранные эмоциональные состояния и действия в приложении</li><li>технические данные устройства и приложения</li><li>данные, необходимые для работы push-уведомлений</li><li>статус покупок или подписки, если применимы платные функции</li></ul><p>Aya не продаёт, не сдаёт в аренду и не передаёт персональные данные в рекламных целях.</p></section><section class="sec"><h3>4. Использование данных</h3><p>Данные используются исключительно для следующих целей:</p><ul><li>работа и улучшение приложения</li><li>персонализация пользовательского опыта</li><li>сохранение вашего контента и прогресса</li><li>обеспечение безопасности, надёжности и стабильности</li><li>работа функций на основе искусственного интеллекта</li><li>отправка уведомлений, если вы их включили</li><li>подтверждение доступа к функциям приложения</li></ul></section><section class="sec"><h3>5. Искусственный интеллект и сторонние сервисы</h3><p>Некоторые функции Aya работают с использованием искусственного интеллекта и надёжной облачной инфраструктуры сторонних сервисов, включая OpenAI и Google Firebase.</p><p>При использовании функций на основе ИИ отдельные сообщения или данные могут обрабатываться этими сервисами исключительно для генерации ответа и работы приложения.</p><p>Распространение приложения и покупки внутри приложения осуществляются магазинами приложений — App Store, Google Play и RuStore — на условиях их собственных правил и политик конфиденциальности.</p><p>Сторонние сервисы обрабатывают данные согласно собственным практикам конфиденциальности и безопасности. Aya использует такие сервисы только в объёме, необходимом для базового функционала.</p></section><section class="sec"><h3>6. Хранение, защита и шифрование данных</h3><p>Aya использует разумные технические и организационные меры для защиты пользовательских данных.</p><p>Отдельные функции могут использовать локальное шифрование и защищённое хранение данных на устройстве пользователя.</p><p>Некоторые данные могут храниться на защищённой облачной инфраструктуре, например Google Firebase.</p><p>Ни один способ электронного хранения или передачи не является полностью безопасным, однако мы стремимся защищать ваши данные с помощью надлежащих мер.</p></section><section class="sec"><h3>7. Хранение и удаление данных</h3><p>Aya хранит пользовательские данные только в течение срока, необходимого для работы функций приложения, поддержки аккаунта, выполнения юридических обязанностей и обеспечения безопасности сервиса.</p><p>Вы можете удалять отдельные элементы внутри приложения, а функция «Удалить аккаунт» удаляет ваш аккаунт и связанные с ним данные.</p><p>После удаления отдельные ограниченные данные могут сохраняться только в случаях, предусмотренных законом, безопасностью, предотвращением злоупотреблений или законными операционными целями. Резервные копии могут очищаться с некоторой задержкой.</p></section><section class="sec"><h3>8. Использование приложения</h3><p>Используя Aya, пользователь обязуется:</p><ul><li>использовать приложение добросовестно и законно</li><li>не нарушать работу сервиса и не пытаться причинить ему вред</li><li>не публиковать незаконный, вредоносный, оскорбительный контент</li><li>понимать символический, рефлексивный и немедицинский характер Aya</li><li>нести ответственность за свои личные решения и действия</li></ul></section><section class="sec"><h3>9. Интеллектуальная собственность</h3><p>Все материалы Aya — включая тексты, визуальные элементы, дизайн, логотипы, иллюстрации, повествования и цифровые материалы — принадлежат Aya Muse World и защищены законодательством об интеллектуальной собственности.</p><p>Запрещается копировать, воспроизводить, изменять, распространять, продавать или использовать материалы Aya в коммерческих целях без предварительного письменного разрешения.</p></section><section class="sec"><h3>10. Возраст</h3><p>Aya предназначена для пользователей от 16 лет. Если вы младше возраста, с которого в вашей стране можно самостоятельно давать согласие на обработку персональных данных, пользуйтесь Aya только с участием родителя или законного представителя.</p><p>Если нам станет известно, что мы получили персональные данные ребёнка без необходимого согласия, мы примем разумные меры для удаления таких данных.</p></section><section class="sec"><h3>11. Международные пользователи</h3><p>Aya может использоваться людьми из разных стран и регионов. Используя приложение, пользователь понимает, что его данные могут обрабатываться и храниться в юрисдикциях за пределами страны его проживания.</p><p>Мы стремимся соблюдать применимые принципы конфиденциальности, включая прозрачность, минимизацию данных, безопасность и контроль пользователя над своими данными.</p></section><section class="sec"><h3>12. Изменения политики</h3><p>Aya Muse World вправе периодически обновлять настоящую Политику. Актуальная версия с датой вступления в силу всегда доступна на официальном сайте проекта.</p></section><section class="sec"><h3>13. Контакты</h3><p>Aya Muse World LLC<br>Sheridan, Wyoming, USA</p><p><a href="mailto:hello@ayamuse.com">hello@ayamuse.com</a></p></section><section class="sec"><h3>Заключение</h3><p>Aya создана как тихое пространство поддержки в шумном цифровом мире.</p><p>Наша цель — забота, а не давление.<br>Поддержка, а не контроль.</p><p>Вы здесь не одни.</p></section><section class="sec"><div style="display:flex;gap:28px;flex-wrap:wrap"><a class="back-inline" href="aya-world.html#top">Вернуться в мир Aya</a><a class="back-inline" href="legal-app-en.html">English version</a></div></section></div>
+</main>
+<footer class="footer"><div class="footer-col"><div class="footer-social"><a href="https://www.pinterest.com/yanaproject2025" target="_blank" rel="noopener" aria-label="Pinterest"><img src="assets/images/pinterest.svg" alt="Pinterest"></a><a href="https://www.instagram.com/aya_boutique_atelier" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/images/instagram.svg" alt="Instagram"></a><a href="https://x.com/Aya_speaks" target="_blank" rel="noopener" aria-label="X"><img src="assets/images/x.svg" alt="X"></a></div><span>Aya Muse World LLC · Wyoming, USA · © 2026</span></div><div class="footer-links"><a href="legal-app-en.html">English</a><a href="legal-app-ru.html">Русский</a></div><a href="#top">Back to top</a></footer>
+<script>var n=document.getElementById("nav"),m=document.getElementById("menu");if(m){m.addEventListener("click",function(){var o=n.classList.toggle("open");m.textContent=o?"\u00d7":"+";m.setAttribute("aria-expanded",o)})}</script>
 </body>
-
 </html>

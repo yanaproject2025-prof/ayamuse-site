@@ -2,32 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ayamuse.com/</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-09-02</lastmod>
   </url>
   <url>
     <loc>https://ayamuse.com/aya-world.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-09-02</lastmod>
   </url>
   <url>
     <loc>https://ayamuse.com/letter.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-09-02</lastmod>
   </url>
   <url>
     <loc>https://ayamuse.com/privacy.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <lastmod>2026-09-02</lastmod>
   </url>
   <url>
     <loc>https://ayamuse.com/terms.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <lastmod>2026-09-02</lastmod>
+  </url>
+  <url>
+    <loc>https://ayamuse.com/legal-app-en.html</loc>
+    <lastmod>2026-09-02</lastmod>
+  </url>
+  <url>
+    <loc>https://ayamuse.com/legal-app-ru.html</loc>
+    <lastmod>2026-09-02</lastmod>
   </url>
 </urlset>

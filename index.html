@@ -325,14 +325,18 @@ addEventListener("resize",()=>{clearTimeout(reelResize);reelResize=setTimeout(()
 const bookViewers=[...document.querySelectorAll(".book-stage")].map(stage=>{
 const viewport=stage.querySelector(".book-window"),track=stage.querySelector(".book-track"),toggle=stage.querySelector("[data-book-toggle]");
 const reverse=track.classList.contains("reverse");
-const state={stage,viewport,track,toggle,active:false,userPaused:reduced,direction:reverse?-1:1,duration:reverse?34000:30000,dragging:false};
+const state={stage,viewport,track,toggle,active:false,userPaused:reduced,direction:reverse?-1:1,duration:reverse?34000:30000,dragging:false,touching:false,interacting:false,resumeTimer:0};
 function syncToggle(){toggle.textContent=state.userPaused?"Play":"Pause";toggle.setAttribute("aria-pressed",String(state.userPaused));toggle.setAttribute("aria-label",state.userPaused?"Resume automatic movement":"Pause automatic movement")}
 function pauseForUser(){state.userPaused=true;syncToggle()}
 syncToggle();
 toggle.addEventListener("click",()=>{state.userPaused=!state.userPaused;syncToggle();requestBookMotion()});
 stage.querySelector("[data-book-prev]").addEventListener("click",()=>{pauseForUser();state.direction=-1;viewport.scrollBy({left:-viewport.clientWidth*.82,behavior:"smooth"})});
 stage.querySelector("[data-book-next]").addEventListener("click",()=>{pauseForUser();state.direction=1;viewport.scrollBy({left:viewport.clientWidth*.82,behavior:"smooth"})});
-viewport.addEventListener("touchstart",pauseForUser,{passive:true});
+function resumeAfterTouch(){clearTimeout(state.resumeTimer);state.resumeTimer=setTimeout(()=>{state.interacting=false;requestBookMotion()},180)}
+viewport.addEventListener("touchstart",()=>{clearTimeout(state.resumeTimer);state.touching=true;state.interacting=true},{passive:true});
+viewport.addEventListener("touchend",()=>{state.touching=false;resumeAfterTouch()},{passive:true});
+viewport.addEventListener("touchcancel",()=>{state.touching=false;resumeAfterTouch()},{passive:true});
+viewport.addEventListener("scroll",()=>{if(state.interacting&&!state.touching)resumeAfterTouch()},{passive:true});
 viewport.addEventListener("pointerdown",event=>{
 if(event.pointerType!=="mouse"||event.button!==0)return;pauseForUser();state.dragging=true;state.startX=event.clientX;state.startScroll=viewport.scrollLeft;viewport.classList.add("dragging");viewport.setPointerCapture(event.pointerId)
 });
@@ -345,7 +349,7 @@ return state;
 let bookFrame=0,bookLast=0;
 function requestBookMotion(){if(!bookFrame){bookLast=performance.now();bookFrame=requestAnimationFrame(moveBooks)}}
 function moveBooks(now){bookFrame=0;const elapsed=Math.min(40,now-bookLast);bookLast=now;let moving=false;
-bookViewers.forEach(state=>{if(!state.active||state.userPaused||state.dragging)return;const max=Math.max(0,state.viewport.scrollWidth-state.viewport.clientWidth);if(!max)return;if(state.viewport.scrollLeft>=max-1)state.direction=-1;else if(state.viewport.scrollLeft<=1)state.direction=1;state.viewport.scrollLeft+=state.direction*elapsed*(max/state.duration);moving=true});
+bookViewers.forEach(state=>{if(!state.active||state.userPaused||state.dragging||state.interacting)return;const max=Math.max(0,state.viewport.scrollWidth-state.viewport.clientWidth);if(!max)return;if(state.viewport.scrollLeft>=max-1)state.direction=-1;else if(state.viewport.scrollLeft<=1)state.direction=1;state.viewport.scrollLeft+=state.direction*elapsed*(max/state.duration);moving=true});
 if(moving)bookFrame=requestAnimationFrame(moveBooks)
 }
 const bookObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{const state=bookViewers.find(item=>item.stage===entry.target);if(!state)return;state.active=entry.isIntersecting;if(state.active)requestBookMotion()}),{threshold:.08,rootMargin:"12% 0px 12% 0px"});

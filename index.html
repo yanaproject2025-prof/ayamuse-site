@@ -71,9 +71,9 @@
 <header class="header" id="header">
 <a class="brand" href="#top" aria-label="Aya Muse World Atelier home"><strong>Aya Muse World</strong><span>Atelier</span></a>
 <nav class="nav" id="nav" aria-label="Primary navigation">
-<a href="#work">Work</a><a href="#services">Services</a><a href="#studio">Studio</a><a href="#contact">Contact</a><a class="nav-world" href="aya-world-visual-reference.html">Enter Aya's World</a>
+<a href="#work">Work</a><a href="#services">Services</a><a href="#studio">Studio</a><a href="#contact">Contact</a><a class="nav-world" href="aya-world.html">Enter Aya's World</a>
 </nav>
-<a class="world-link" href="aya-world-visual-reference.html">Enter Aya's World</a>
+<a class="world-link" href="aya-world.html">Enter Aya's World</a>
 <button class="menu" id="menu" type="button" aria-label="Open menu" aria-expanded="false">+</button>
 </header>
 <main id="main">
@@ -252,7 +252,7 @@
 <section class="studio" id="studio" aria-labelledby="studio-title">
 <div class="studio-copy">
 <div><p class="eyebrow reveal">The studio</p><h2 class="reveal" id="studio-title">Aya Muse World has two <em>expressions</em></h2></div>
-<div class="studio-detail"><p class="reveal">Aya's World is home to its letters, app and editorial collections. The Atelier brings the same sensibility into commercial work — brand identities, websites and complete visual worlds.</p><a class="link reveal" href="aya-world-visual-reference.html">Enter Aya's World</a></div>
+<div class="studio-detail"><p class="reveal">Aya's World is home to its letters, app and editorial collections. The Atelier brings the same sensibility into commercial work — brand identities, websites and complete visual worlds.</p><a class="link reveal" href="aya-world.html">Enter Aya's World</a></div>
 </div>
 </section>
 <section class="contact" id="contact" aria-labelledby="contact-title">
@@ -352,10 +352,10 @@ location.href="mailto:hello@ayamuse.com?subject="+subject+"&body="+body;
 (function(){
   if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;
   var veil=document.getElementById("ax-veil");
-  document.querySelectorAll('a[href="aya-world-visual-reference.html"]').forEach(function(a){
+  document.querySelectorAll('a[href="aya-world.html"]').forEach(function(a){
     a.addEventListener("click",function(e){
       e.preventDefault();veil.classList.add("show");
-      setTimeout(function(){location.href="aya-world-visual-reference.html"},760);
+      setTimeout(function(){location.href="aya-world.html"},760);
     });
   });
 })();

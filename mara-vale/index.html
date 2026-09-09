@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mara Vale — Creative Direction · AI Art · Visual Culture</title>
+<meta name="description" content="Mara Vale is not a portfolio. It is a point of view rendered as a world — creative direction, brand & art direction, motion and image. An independent portfolio study by Aya Muse World." />
+<meta name="robots" content="index, follow" />
+<meta property="og:title" content="Mara Vale — Creative direction for worlds that do not exist yet" />
+<meta property="og:description" content="A personal brand world: identity, editorial website, motion and selected work shaped around one recognisable presence." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="assets/images/hero-portrait.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor-light" aria-hidden="true"></div>
+
+<nav class="nav" aria-label="Primary">
+  <a class="nav-mark" href="#hero">MARA VALE</a>
+  <button class="nav-cta" data-scroll="#inquiry">Inquiry</button>
+</nav>
+
+<!-- 1 · HERO -->
+<header class="hero section-noir" id="hero">
+  <div class="hero-portrait" aria-hidden="true">
+    <div class="hero-portrait-img"></div>
+    <div class="hero-vignette"></div>
+  </div>
+  <div class="hero-copy">
+    <p class="eyebrow reveal">Creative Director · Designer · Visual Storyteller</p>
+    <h1 class="hero-name">
+      <span class="hero-line" data-splay="1">MARA</span>
+      <span class="hero-line" data-splay="2">VALE</span>
+    </h1>
+    <p class="hero-tagline reveal">Creative direction for worlds that do not exist yet.</p>
+  </div>
+  <button class="scroll-cue" data-scroll="#splay" aria-label="Scroll">
+    <span class="scroll-cue-line"></span>
+  </button>
+</header>
+
+<!-- 2 · SPLAY / STATEMENT -->
+<section class="splay section-noir" id="splay">
+  <div class="splay-name" aria-hidden="true">
+    <span class="splay-word" data-drift="left">MARA</span>
+    <span class="splay-word" data-drift="right">VALE</span>
+  </div>
+  <p class="splay-statement">
+    <span>I work somewhere between</span>
+    <span><em>image, instinct</em> and <em>technology.</em></span>
+  </p>
+</section>
+
+<!-- 3 · THREE WORLDS · editorial hover reveal -->
+<section class="worlds section-noir" id="worlds">
+  <p class="section-index reveal">Selected worlds</p>
+  <div class="worlds-layout">
+    <ul class="worlds-list" role="list">
+      <li class="world" data-world="0">
+        <span class="world-num">01</span>
+        <span class="world-name">Fashion</span>
+        <span class="world-sub">Couture, drawn from memory</span>
+        <div class="world-thumb"><img class="crop-silk" src="assets/images/work-silk.jpg" alt="A sculptural white couture gown" loading="lazy" /></div>
+      </li>
+      <li class="world" data-world="1">
+        <span class="world-num">02</span>
+        <span class="world-name">Digital&nbsp;Realism</span>
+        <span class="world-sub">Objects that were never photographed</span>
+        <div class="world-thumb"><img class="crop-scent" src="assets/images/work-scent.jpg" alt="A luminous perfume bottle in low light" loading="lazy" /></div>
+      </li>
+      <li class="world" data-world="2">
+        <span class="world-num">03</span>
+        <span class="world-name">Motion</span>
+        <span class="world-sub">The second a presence turns</span>
+        <div class="world-thumb"><img class="crop-lookback" src="assets/images/work-lookback.jpg" alt="Mara Vale turning to look back in a gallery" loading="lazy" /></div>
+      </li>
+    </ul>
+    <figure class="worlds-reveal" aria-hidden="true">
+      <img class="worlds-reveal-img crop-silk" data-world-image="0" src="assets/images/work-silk.jpg" alt="" />
+      <img class="worlds-reveal-img crop-scent" data-world-image="1" src="assets/images/work-scent.jpg" alt="" />
+      <img class="worlds-reveal-img crop-lookback" data-world-image="2" src="assets/images/work-lookback.jpg" alt="" />
+    </figure>
+  </div>
+</section>
+
+<!-- 4 · EDITORIAL SPREAD -->
+<section class="spread section-milk" id="spread">
+  <div class="spread-type reveal-lines">
+    <span>A personal brand should not explain</span>
+    <span>the person <em>before you can feel them.</em></span>
+  </div>
+  <figure class="spread-figure spread-mask">
+    <img class="crop-spread" src="assets/images/spread-milk.jpg" alt="Mara Vale, editorial portrait in a black tailored jacket against a milk-white ground" loading="lazy" />
+  </figure>
+</section>
+
+<!-- 5 · SELECTED WORK / FILMSTRIP -->
+<section class="work section-noir" id="work">
+  <div class="work-head">
+    <p class="section-index reveal">Selected work</p>
+    <button class="work-hint reveal" id="filmstripAdvance" type="button" aria-controls="filmstrip">
+      <span>Drag</span><span class="work-hint-arrow" aria-hidden="true">→</span>
+    </button>
+  </div>
+  <div class="filmstrip" id="filmstrip">
+    <div class="filmstrip-track" id="filmstripTrack">
+      <article class="frame">
+        <div class="frame-img"><img class="crop-silk" src="assets/images/work-silk.jpg" alt="An avant-garde couture gown of sculptural white silk" loading="lazy" /></div>
+        <div class="frame-meta"><span class="frame-num">01</span><h3>Rendered Silk</h3><p>A gown drawn from memory, not fabric.</p></div>
+      </article>
+      <article class="frame">
+        <div class="frame-img frame-img--dark"><img class="crop-scent" src="assets/images/work-scent.jpg" alt="A luminous perfume bottle in low light" loading="lazy" /></div>
+        <div class="frame-meta"><span class="frame-num">02</span><h3>Scent as Light</h3><p>Forty seconds of a smell you have never met.</p></div>
+      </article>
+      <article class="frame">
+        <div class="frame-img frame-img--dark"><img class="crop-places" src="assets/images/work-places.jpg" alt="A surreal staircase rising from still water into fog" loading="lazy" /></div>
+        <div class="frame-meta"><span class="frame-num">03</span><h3>Places That Aren&rsquo;t</h3><p>An advertisement for somewhere that does not exist.</p></div>
+      </article>
+      <article class="frame">
+        <div class="frame-img"><img class="crop-cover" src="assets/images/spread-milk.jpg" alt="Mara Vale, an unprinted magazine cover portrait" loading="lazy" /></div>
+        <div class="frame-meta"><span class="frame-num">04</span><h3>Cover, Unprinted</h3><p>A magazine that runs only inside the mind.</p></div>
+      </article>
+      <article class="frame">
+        <div class="frame-img"><img class="crop-lookback" src="assets/images/work-lookback.jpg" alt="Mara Vale walking through a gallery, turning to look back" loading="lazy" /></div>
+        <div class="frame-meta"><span class="frame-num">05</span><h3>The Look Back</h3><p>I don&rsquo;t design the image. I design what stays.</p></div>
+      </article>
+    </div>
+  </div>
+  <div class="filmstrip-progress" aria-hidden="true"><span id="filmstripBar"></span></div>
+</section>
+
+<!-- 6 · MEMORY MOMENT -->
+<section class="memory" id="memory">
+  <div class="memory-sticky">
+    <div class="memory-img"></div>
+    <div class="memory-shade"></div>
+    <div class="memory-text">
+      <p class="memory-q">What do you remember<br />after someone leaves the room?</p>
+      <p class="memory-a">That — is the brand.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · PHILOSOPHY -->
+<section class="philosophy section-milk" id="philosophy">
+  <figure class="philosophy-figure philosophy-mask">
+    <img class="crop-philosophy" src="assets/images/philosophy-proofs.jpg" alt="Mara Vale sitting on a studio floor among printed proofs" loading="lazy" />
+  </figure>
+  <div class="philosophy-copy">
+    <p class="section-index philosophy-label">The person behind the work</p>
+    <p class="philosophy-lead">Mara Vale is not a portfolio. It is a point of view rendered as a world.</p>
+    <div class="philosophy-body">
+      <p>The work moves between fashion, AI image-making, art direction and moving image — but it is held together by one thing: a way of seeing. Identity, website, motion and selected work are shaped around a single recognisable presence, so that the brand is felt before it is understood.</p>
+      <p>A personal brand is not a logo, a face or a feed. It is the expectation people carry before you enter the room — and the impression they keep after you leave it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · SERVICES -->
+<section class="services section-noir" id="services">
+  <p class="section-index reveal">What can be shaped together</p>
+  <ul class="services-list" role="list">
+    <li class="service"><span class="service-num">01</span><div class="service-body"><h3>Creative Direction</h3><p>The idea, the feeling and the through-line — before anything is designed.</p></div></li>
+    <li class="service"><span class="service-num">02</span><div class="service-body"><h3>Brand &amp; Art Direction</h3><p>Identity, typography, image language and the world they live inside.</p></div></li>
+    <li class="service"><span class="service-num">03</span><div class="service-body"><h3>Motion &amp; Image</h3><p>Editorial film, AI-crafted visuals and campaigns that move.</p></div></li>
+  </ul>
+</section>
+
+<!-- 9 · INQUIRY -->
+<section class="inquiry section-noir" id="inquiry">
+  <div class="inquiry-portrait" aria-hidden="true"></div>
+  <div class="inquiry-copy">
+    <p class="eyebrow inquiry-label">Inquiry</p>
+    <h2 class="inquiry-title">Let the work be felt first.</h2>
+    <p class="inquiry-sub">For a brand, a founder or a world ready to be perceived at its real value.</p>
+    <a class="inquiry-link" href="mailto:hello@ayamuse.com?subject=Mara%20Vale%20%E2%80%94%20Inquiry">hello@ayamuse.com</a>
+  </div>
+  <footer class="site-foot">
+    <p class="foot-note">Independent portfolio study · Self-initiated concept</p>
+    <p class="foot-brand">Personal Brand World — by <a href="https://ayamuse.com/atelier.html">Aya Muse World</a></p>
+  </footer>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

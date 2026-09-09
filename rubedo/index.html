@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#100708">
+  <meta name="description" content="RUBEDO — a cinematic concept couture maison by Aya Muse World.">
+  <title>RUBEDO — The House of the Red Hour</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --night:#100708;
+      --night-soft:#1a0c0f;
+      --wine:#62131c;
+      --red:#9f2530;
+      --rose:#c98c87;
+      --gold:#b6925c;
+      --paper:#eee7dc;
+      --mist:rgba(246,239,226,.78);
+      --muted:rgba(246,239,226,.52);
+      --faint:rgba(246,239,226,.28);
+      --ink:#1d1513;
+      --serif:"Cormorant Garamond",Georgia,serif;
+      --sans:"Inter",Arial,sans-serif;
+      --ease:cubic-bezier(.22,.72,.18,1);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;background:var(--night)}
+    body{background:var(--night);color:var(--mist);font-family:var(--sans);font-weight:300;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    body.loading,body.menu-open,body.modal-open{overflow:hidden}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit;color:inherit}
+    img,video{display:block;max-width:100%}
+    ::selection{background:rgba(159,37,48,.8);color:#f7f0e5}
+
+    .noise{position:fixed;inset:0;z-index:80;pointer-events:none;opacity:.045;mix-blend-mode:soft-light;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E")}
+    .progress{position:fixed;top:0;left:0;z-index:100;width:100%;height:1px;transform:scaleX(0);transform-origin:left;background:linear-gradient(90deg,var(--wine),var(--gold));pointer-events:none}
+
+    .loader{position:fixed;inset:0;z-index:200;display:grid;place-items:center;background:var(--night);transition:opacity 1s var(--ease),visibility 1s}
+    .loader.done{opacity:0;visibility:hidden}
+    .loader-mark{font-family:var(--serif);font-size:clamp(2rem,5vw,4.8rem);letter-spacing:.42em;padding-left:.42em;color:rgba(246,239,226,.88)}
+    .loader-line{width:120px;height:1px;margin:22px auto 0;overflow:hidden;background:rgba(255,255,255,.12)}
+    .loader-line::after{content:"";display:block;width:100%;height:100%;background:var(--gold);transform:translateX(-100%);animation:loadLine 1.4s var(--ease) infinite}
+    @keyframes loadLine{to{transform:translateX(100%)}}
+
+    .site-header{position:fixed;inset:0 0 auto;z-index:70;display:flex;align-items:center;justify-content:space-between;padding:24px clamp(22px,4vw,64px);transition:padding .5s var(--ease),background .5s,border-color .5s;border-bottom:1px solid transparent}
+    .site-header.scrolled{padding-top:15px;padding-bottom:15px;background:rgba(16,7,8,.74);backdrop-filter:blur(16px);border-color:rgba(255,255,255,.07)}
+    .logo{font-family:var(--serif);font-size:1.42rem;line-height:1;letter-spacing:.42em;padding-left:.42em;color:rgba(255,255,255,.9)}
+    .desktop-nav{display:flex;align-items:center;gap:34px}
+    .desktop-nav a,.menu-toggle{position:relative;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.64);transition:color .3s}
+    .desktop-nav a::after{content:"";position:absolute;left:0;right:.2em;bottom:-7px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .45s var(--ease)}
+    .desktop-nav a:hover,.desktop-nav a:focus-visible{color:rgba(255,255,255,.94)}
+    .desktop-nav a:hover::after,.desktop-nav a:focus-visible::after{transform:scaleX(1);transform-origin:left}
+    .menu-toggle{display:none;border:0;background:none;cursor:pointer;padding:10px 0}
+    .menu-toggle span{display:inline-block;width:26px;height:1px;background:currentColor;vertical-align:middle;position:relative;transition:.4s}
+    .menu-toggle span::after{content:"";position:absolute;left:7px;top:6px;width:19px;height:1px;background:currentColor;transition:.4s}
+    .menu-open .menu-toggle span{transform:rotate(45deg)}
+    .menu-open .menu-toggle span::after{left:0;top:0;width:26px;transform:rotate(90deg)}
+
+    .menu-panel{position:fixed;inset:0;z-index:60;display:grid;align-content:center;padding:100px 9vw;background:rgba(16,7,8,.97);clip-path:inset(0 0 100% 0);transition:clip-path .75s var(--ease);pointer-events:none}
+    .menu-open .menu-panel{clip-path:inset(0);pointer-events:auto}
+    .menu-panel nav{display:grid;gap:8px}
+    .menu-panel a{font-family:var(--serif);font-size:clamp(2.8rem,12vw,5.4rem);line-height:1.04;color:rgba(246,239,226,.78)}
+    .menu-panel a em{display:inline-block;width:36px;font-family:var(--sans);font-size:.62rem;font-style:normal;letter-spacing:.18em;color:var(--gold);vertical-align:middle}
+    .menu-note{margin-top:42px;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--faint)}
+
+    .wrap{width:min(100% - 44px,1240px);margin-inline:auto}
+    .kicker{font-size:.62rem;font-weight:400;letter-spacing:.31em;text-transform:uppercase;color:rgba(199,157,92,.84)}
+    .display{font-family:var(--serif);font-weight:400;line-height:.91;letter-spacing:-.025em;color:rgba(248,242,232,.88)}
+    .copy{color:var(--muted);font-size:clamp(.94rem,1.3vw,1.06rem)}
+
+    .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;background:#12090a}
+    .hero-media,.hero-shade{position:absolute;inset:0}
+    .hero-media{overflow:hidden}
+    .hero-media video{width:100%;height:100%;object-fit:cover;object-position:center 43%;transform:scale(1.035);will-change:transform;filter:saturate(.82) contrast(1.04) brightness(.8)}
+    .hero-shade{background:linear-gradient(180deg,rgba(8,3,4,.3),transparent 34%,rgba(10,4,5,.18) 57%,rgba(10,4,5,.93));z-index:1}
+    .hero-shade::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,5,6,.26),transparent 45%,rgba(12,5,6,.1))}
+    .hero-content{position:relative;z-index:2;padding:150px 0 clamp(72px,9vh,112px)}
+    .hero-content.wrap{width:min(100% - 44px,1240px)}
+    .hero-title{font-size:clamp(5.2rem,17vw,14rem);letter-spacing:.035em;margin:.08em 0 .02em;margin-left:-.025em;color:rgba(248,242,232,.58)}
+    .hero-title span{display:inline-block;opacity:0;transform:translateY(48px);animation:titleIn 1.5s var(--ease) forwards}
+    .hero-title span:nth-child(2){animation-delay:.08s}.hero-title span:nth-child(3){animation-delay:.16s}.hero-title span:nth-child(4){animation-delay:.24s}.hero-title span:nth-child(5){animation-delay:.32s}.hero-title span:nth-child(6){animation-delay:.4s}
+    @keyframes titleIn{to{opacity:1;transform:none}}
+    .hero-bottom{display:grid;grid-template-columns:1fr 1fr;align-items:end;gap:30px}
+    .hero-intro{max-width:420px;font-family:var(--serif);font-size:clamp(1.32rem,2.1vw,2rem);font-style:italic;line-height:1.2;color:rgba(246,239,226,.55)}
+    .hero-meta{justify-self:end;max-width:310px;font-size:.7rem;line-height:1.7;letter-spacing:.09em;text-transform:uppercase;color:rgba(246,239,226,.42)}
+    .enter-link{position:absolute;z-index:3;right:clamp(22px,4vw,64px);bottom:32px;display:flex;align-items:center;gap:13px;font-size:.61rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+    .enter-link::after{content:"";width:52px;height:1px;background:linear-gradient(90deg,var(--gold),transparent);transition:width .4s}
+    .enter-link:hover::after{width:76px}
+
+    .intro{background:var(--paper);color:var(--ink);padding:clamp(100px,15vw,210px) 0}
+    .intro-grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(320px,.7fr);gap:clamp(56px,10vw,150px);align-items:center}
+    .intro-copy{padding-left:clamp(0px,4vw,60px)}
+    .intro .kicker{color:rgba(104,65,35,.62)}
+    .intro h2{font-family:var(--serif);font-size:clamp(3rem,6.2vw,6rem);font-weight:400;line-height:.94;letter-spacing:-.035em;color:rgba(29,21,19,.87);margin:.35em 0 .42em}
+    .intro p{max-width:560px;color:rgba(29,21,19,.59);font-size:clamp(1rem,1.25vw,1.12rem)}
+    .intro p+p{margin-top:1.3em}
+    .portrait-shell{position:relative;width:min(100%,490px);justify-self:end}
+    .portrait-shell::before{content:"";position:absolute;inset:-22px 22px 22px -22px;border:1px solid rgba(98,19,28,.22)}
+    .portrait-shell img{position:relative;width:100%;height:auto;aspect-ratio:816/1456;object-fit:cover;object-position:center 48%;filter:saturate(.8) contrast(1.03)}
+    .portrait-index{position:absolute;right:-4px;bottom:-32px;font-size:.58rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(29,21,19,.4)}
+
+    .cinema-section{position:relative;background:var(--night);padding:clamp(38px,5vw,76px) 0;overflow:hidden}
+    .cinema-frame{position:relative;width:100%;aspect-ratio:832/464;margin:0;overflow:hidden;border-radius:0;background:#080405}
+    .cinema-frame video{width:100%;height:100%;object-fit:cover;filter:saturate(.82) contrast(1.06) brightness(.72)}
+    .cinema-frame.manifesto video{object-position:center 45%}
+    .cinema-frame.world video{object-position:center 50%}
+    .cinema-frame.red-hour video{object-position:center 52%}
+    .cinema-scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,5,6,.78),rgba(13,5,6,.15) 68%),linear-gradient(0deg,rgba(13,5,6,.52),transparent 55%)}
+    .cinema-copy{position:absolute;z-index:2;left:clamp(24px,8vw,130px);bottom:clamp(35px,9vh,95px);max-width:min(660px,78vw)}
+    .cinema-copy h2{font-size:clamp(3.1rem,7vw,7.5rem);margin:.17em 0 .18em}
+    .cinema-copy blockquote{font-family:var(--serif);font-size:clamp(2.5rem,5.2vw,5.5rem);line-height:.98;color:rgba(248,242,232,.82);max-width:12ch}
+    .cinema-copy p{max-width:46ch;color:rgba(246,239,226,.53)}
+
+    .collection{padding:clamp(88px,10vw,150px) 0 clamp(70px,8vw,112px);background:var(--night)}
+    .section-head{display:grid;grid-template-columns:1fr 1fr;align-items:end;gap:50px;margin-bottom:clamp(58px,7vw,96px)}
+    .section-head h2{font-size:clamp(4rem,9vw,9rem);margin-top:.1em}
+    .section-head .copy{justify-self:end;max-width:420px;padding-bottom:1vw}
+    .looks-grid{display:grid;grid-template-columns:repeat(12,1fr);column-gap:clamp(14px,2vw,30px);row-gap:clamp(50px,6vw,90px);align-items:start}
+    .look-card{position:relative;display:block;width:100%;border:0;background:none;text-align:left;cursor:pointer;overflow:visible}
+    .look-card:nth-child(1){grid-column:1/5}.look-card:nth-child(2){grid-column:5/9;margin-top:4vw}.look-card:nth-child(3){grid-column:9/13;margin-top:1.5vw}
+    .look-card:nth-child(4){grid-column:1/5}.look-card:nth-child(5){grid-column:5/9;margin-top:4vw}.look-card:nth-child(6){grid-column:9/13;margin-top:1.5vw}
+    .look-media{position:relative;overflow:hidden;background:var(--night-soft);aspect-ratio:816/1456}
+    .look-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 65%,rgba(12,5,6,.42));opacity:.5;transition:opacity .6s}
+    .look-media img{width:100%;height:100%;object-fit:cover;object-position:center center;filter:saturate(.82) brightness(.9);transition:transform 1.4s var(--ease),filter .8s}
+    .look-card:hover .look-media img,.look-card:focus-visible .look-media img{transform:scale(1.035);filter:saturate(.98) brightness(.98)}
+    .look-card:hover .look-media::after{opacity:0}
+    .look-caption{display:flex;justify-content:space-between;gap:20px;padding-top:15px;border-top:1px solid rgba(255,255,255,.11);margin-top:12px}
+    .look-caption span{font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(246,239,226,.38)}
+    .look-caption strong{font-family:var(--serif);font-size:1.18rem;font-weight:400;color:rgba(246,239,226,.68)}
+
+    .details{padding:clamp(100px,13vw,180px) 0;background:#180b0e}
+    .details-grid{display:grid;grid-template-columns:.86fr 1.14fr;gap:clamp(28px,6vw,90px);align-items:end}
+    .detail-image{overflow:hidden}
+    .detail-image img{width:100%;height:auto;aspect-ratio:816/1456;object-fit:cover;filter:saturate(.74) contrast(1.05)}
+    .detail-image:first-child{max-width:480px}
+    .detail-image:last-child{max-width:570px;justify-self:end;margin-bottom:10vw}
+    .detail-quote{grid-column:1/-1;margin-top:4vw;display:flex;justify-content:flex-end}
+    .detail-quote p{max-width:760px;font-family:var(--serif);font-size:clamp(2.5rem,5vw,5.3rem);line-height:1;color:rgba(246,239,226,.67)}
+
+    .emblem{padding:clamp(110px,15vw,210px) 0;background:var(--paper);color:var(--ink)}
+    .emblem-grid{display:grid;grid-template-columns:minmax(300px,.82fr) 1fr;gap:clamp(60px,10vw,150px);align-items:center}
+    .emblem-image{position:relative}
+    .emblem-image img{width:100%;height:auto;aspect-ratio:816/1456;object-fit:cover;object-position:center 45%;filter:saturate(.78)}
+    .emblem-image::after{content:"";position:absolute;inset:auto -26px -26px 26px;height:55%;border:1px solid rgba(98,19,28,.25);z-index:0}
+    .emblem-copy{position:relative;z-index:1}
+    .emblem .kicker{color:rgba(104,65,35,.6)}
+    .emblem h2{font-family:var(--serif);font-size:clamp(3.2rem,6vw,6.5rem);font-weight:400;line-height:.94;letter-spacing:-.035em;color:rgba(29,21,19,.86);margin:.35em 0 .3em}
+    .emblem p{max-width:520px;color:rgba(29,21,19,.56)}
+    .emblem-rule{width:74px;height:1px;background:rgba(98,19,28,.45);margin:34px 0}
+    .emblem-sign{font-family:var(--serif);font-size:1.45rem;font-style:italic;color:rgba(98,19,28,.65);margin-top:25px}
+
+    .atelier{position:relative;min-height:94svh;display:grid;place-items:center;text-align:center;padding:130px 22px;overflow:hidden;background:var(--night)}
+    .atelier::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 45%,rgba(112,21,31,.32),transparent 35%),linear-gradient(rgba(12,5,6,.38),rgba(12,5,6,.92)),url("assets/world-poster.jpg") center/cover;filter:saturate(.7);transform:scale(1.04)}
+    .atelier-content{position:relative;z-index:1;max-width:980px}
+    .atelier h2{font-size:clamp(4rem,9vw,9.5rem);margin:.18em 0 .14em}
+    .atelier-copy{max-width:670px;margin:0 auto;color:rgba(246,239,226,.5)}
+    footer{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;padding:38px clamp(22px,4vw,64px);border-top:1px solid rgba(255,255,255,.08);background:var(--night);font-size:.58rem;line-height:1.7;letter-spacing:.15em;text-transform:uppercase;color:rgba(246,239,226,.31)}
+    footer .footer-mark{font-family:var(--serif);font-size:1.25rem;letter-spacing:.38em;color:rgba(246,239,226,.62)}
+    footer a{color:rgba(199,157,92,.7)}
+
+    .reveal{opacity:0;transform:translateY(42px);transition:opacity 1.25s var(--ease),transform 1.25s var(--ease)}
+    .reveal.in{opacity:1;transform:none}
+    .reveal-clip{overflow:hidden;clip-path:none}
+    .reveal-clip img{opacity:1;transform:scale(1.035);transition:transform 1.5s var(--ease)}
+    .reveal-clip.in img{opacity:1;transform:none}
+
+    .lightbox{position:fixed;inset:0;z-index:120;display:grid;grid-template-columns:minmax(260px,1fr) minmax(260px,.8fr);gap:clamp(26px,6vw,90px);align-items:center;padding:clamp(70px,8vw,110px) clamp(22px,7vw,120px);background:rgba(12,5,6,.96);opacity:0;visibility:hidden;transition:opacity .55s,visibility .55s}
+    .lightbox.open{opacity:1;visibility:visible}
+    .lightbox-image{height:min(78svh,860px);justify-self:center}
+    .lightbox-image img{width:auto;height:100%;object-fit:contain}
+    .lightbox-copy .kicker{margin-bottom:15px}
+    .lightbox-copy h3{font-family:var(--serif);font-size:clamp(3rem,6vw,6rem);font-weight:400;line-height:.95;color:rgba(246,239,226,.84)}
+    .lightbox-copy p{max-width:380px;margin-top:24px;color:var(--muted)}
+    .lightbox-close{position:absolute;right:clamp(22px,4vw,60px);top:clamp(22px,4vw,46px);width:42px;height:42px;border:1px solid rgba(255,255,255,.2);border-radius:50%;background:none;cursor:pointer;color:rgba(255,255,255,.7);transition:.3s}
+    .lightbox-close:hover,.lightbox-close:focus-visible{background:#fff;color:var(--night)}
+
+    :focus-visible{outline:1px solid var(--gold);outline-offset:5px}
+
+    @media(max-width:900px){
+      .desktop-nav{display:none}.menu-toggle{display:block}
+      .hero-bottom,.section-head{grid-template-columns:1fr}.hero-meta{display:none}
+      .section-head .copy{justify-self:start}
+      .intro-grid{grid-template-columns:1fr;gap:72px}.intro-copy{padding-left:0}.portrait-shell{justify-self:center;width:min(86vw,500px)}
+      .emblem-grid{grid-template-columns:1fr}.emblem-image{width:min(84vw,500px);margin:auto}.emblem-copy{max-width:650px}
+      .lightbox{grid-template-columns:1fr 1fr}
+    }
+
+    @media(max-width:680px){
+      .wrap{width:min(100% - 36px,1240px)}
+      .site-header{padding:21px 18px}.site-header.scrolled{padding:14px 18px}.logo{font-size:1.2rem}
+      .hero-content{padding-bottom:88px}.hero-content.wrap{width:calc(100% - 36px)}.hero-title{font-size:clamp(3.9rem,17.5vw,5.5rem);letter-spacing:-.035em;white-space:nowrap}
+      .hero-intro{font-size:1.25rem;max-width:270px}.enter-link{right:18px;bottom:27px}
+      .hero-media video{object-position:54% center}
+      .intro{padding:105px 0}.intro h2{font-size:3.5rem}
+      .cinema-section{padding:28px 0}.cinema-frame{width:100%;height:auto;aspect-ratio:auto;overflow:hidden}.cinema-frame video{width:100%;height:auto;aspect-ratio:832/464;object-fit:contain}.cinema-copy{position:relative;left:auto;bottom:auto;max-width:none;padding:32px 22px 43px}.cinema-copy h2{font-size:3.5rem}.cinema-copy blockquote{font-size:3.15rem}
+      .collection{padding:105px 0}.section-head{margin-bottom:65px}.section-head h2{font-size:4.5rem}.looks-grid{grid-template-columns:1fr 1fr;gap:42px 12px}
+      .look-card:nth-child(n){grid-column:auto;margin-top:0}.look-card:nth-child(even){margin-top:54px}.look-caption{display:block}.look-caption strong{display:block;margin-top:3px;font-size:1rem}
+      .details{padding:100px 0}.details-grid{grid-template-columns:1fr 1fr;gap:14px}.detail-image:last-child{margin-bottom:70px}.detail-quote{margin-top:36px}.detail-quote p{font-size:2.85rem}
+      .emblem{padding:110px 0}.emblem h2{font-size:3.7rem}
+      .atelier{min-height:88svh}.atelier h2{font-size:4.3rem}
+      footer{display:block;text-align:center}.footer-mark{margin-bottom:18px}
+      .lightbox{display:block;padding:76px 22px 35px;overflow:auto}.lightbox-image{height:58svh}.lightbox-copy{padding-top:25px}.lightbox-copy h3{font-size:3.1rem}.lightbox-copy p{margin-top:12px;font-size:.9rem}
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}.hero-title span{animation:none;opacity:1;transform:none}.reveal,.reveal-clip{opacity:1;transform:none;clip-path:none;transition:none}.loader-line::after{animation:none}
+    }
+  </style>
+</head>
+<body class="loading">
+  <div class="loader" id="loader" aria-hidden="true">
+    <div><div class="loader-mark">RUBEDO</div><div class="loader-line"></div></div>
+  </div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader">
+    <a class="logo" href="#top" aria-label="RUBEDO — back to top">RUBEDO</a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#maison">La Maison</a>
+      <a href="#collection">Collection</a>
+      <a href="#emblem">Emblem</a>
+      <a href="#atelier">Atelier</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menuPanel"><span></span></button>
+  </header>
+
+  <aside class="menu-panel" id="menuPanel" aria-hidden="true">
+    <nav aria-label="Mobile navigation">
+      <a href="#maison"><em>01</em>La Maison</a>
+      <a href="#collection"><em>02</em>Collection</a>
+      <a href="#emblem"><em>03</em>Emblem</a>
+      <a href="#atelier"><em>04</em>Atelier</a>
+    </nav>
+    <p class="menu-note">A concept world by Aya Muse World · MMXXVI</p>
+  </aside>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-media">
+        <video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/hero-poster.jpg">
+          <source src="assets/hero-film.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="hero-shade"></div>
+      <div class="hero-content wrap">
+        <p class="kicker reveal">Maison de Couture · Est. in a dream</p>
+        <h1 class="display hero-title" aria-label="RUBEDO"><span>R</span><span>U</span><span>B</span><span>E</span><span>D</span><span>O</span></h1>
+        <div class="hero-bottom">
+          <p class="hero-intro reveal">The house of the red hour — where a woman stops waiting to be chosen.</p>
+          <p class="hero-meta reveal">An independent brand-world study<br>Creative direction · Film · Digital</p>
+        </div>
+      </div>
+      <a class="enter-link" href="#maison">Enter the world</a>
+    </section>
+
+    <section class="intro" id="maison">
+      <div class="wrap intro-grid">
+        <div class="intro-copy reveal">
+          <p class="kicker">01 · La Maison</p>
+          <h2>Every house begins with a feeling.</h2>
+          <p>RUBEDO begins with the red hour — that charged dusk when the garden deepens, the candles are lit, and a woman becomes entirely herself.</p>
+          <p>The name is borrowed from the alchemists: <em>rubedo</em>, the reddening, the final stage of becoming whole.</p>
+        </div>
+        <figure class="portrait-shell reveal-clip">
+          <img src="assets/maison-portrait.jpg" alt="Portrait among white roses and candlelight" width="816" height="1456">
+          <figcaption class="portrait-index">Portrait I · The red hour</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="cinema-section" id="manifesto" aria-label="Manifesto film">
+      <div class="cinema-frame manifesto" data-cinema>
+        <video muted loop playsinline preload="metadata" poster="assets/manifesto-poster.jpg">
+          <source src="assets/manifesto-film.mp4" type="video/mp4">
+        </video>
+        <div class="cinema-scrim"></div>
+        <div class="cinema-copy reveal">
+          <p class="kicker">The Manifesto</p>
+          <blockquote>One impossible idea, carried into everything.</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="collection" id="collection">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <div><p class="kicker">02 · Rouge · N° I</p><h2 class="display">The Collection</h2></div>
+          <p class="copy">Six gowns for the red hour — structure and ruffle, wine and ivory. Each is a room in the same house. Select a look to enter it.</p>
+        </header>
+
+        <div class="looks-grid">
+          <button class="look-card reveal" type="button" data-image="assets/look-01.jpg" data-look="Look I" data-title="La Sculptée" data-description="Burgundy structure held against the softness of the garden.">
+            <span class="look-media"><img src="assets/look-01.jpg" alt="Sculptural burgundy gown among crimson roses" width="816" height="1456" loading="lazy"></span>
+            <span class="look-caption"><span>Look I</span><strong>La Sculptée</strong></span>
+          </button>
+          <button class="look-card reveal" type="button" data-image="assets/look-02.jpg" data-look="Look II" data-title="L'Heure Rouge" data-description="A dark silhouette moving through smoke, candlelight and roses.">
+            <span class="look-media"><img src="assets/look-02.jpg" alt="Dark structured gown in the rose garden" width="816" height="1456" loading="lazy"></span>
+            <span class="look-caption"><span>Look II</span><strong>L'Heure Rouge</strong></span>
+          </button>
+          <button class="look-card reveal" type="button" data-image="assets/look-03.jpg" data-look="Look III" data-title="La Mousse d'Ivoire" data-description="Ivory ruffles becoming a pale bloom at the edge of dusk.">
+            <span class="look-media"><img src="assets/look-03.jpg" alt="Ivory ruffled gown among roses" width="816" height="1456" loading="lazy"></span>
+            <span class="look-caption"><span>Look III</span><strong>La Mousse d'Ivoire</strong></span>
+          </button>
+          <button class="look-card reveal" type="button" data-image="assets/look-04.jpg" data-look="Look IV" data-title="Le Jardin Blanc" data-description="A white garden carried as a dress, framed by deep crimson.">
+            <span class="look-media"><img src="assets/look-04.jpg" alt="Ivory gown framed by red flowers" width="816" height="1456" loading="lazy"></span>
+            <span class="look-caption"><span>Look IV</span><strong>Le Jardin Blanc</strong></span>
+          </button>
+          <button class="look-card reveal" type="button" data-image="assets/look-05.jpg" data-look="Look V" data-title="La Reine Pâle" data-description="A pale queen, tiered in light and surrounded by the red hour.">
+            <span class="look-media"><img src="assets/look-05.jpg" alt="Tiered ivory couture gown in a rose garden" width="816" height="1456" loading="lazy"></span>
+            <span class="look-caption"><span>Look V</span><strong>La Reine Pâle</strong></span>
+          </button>
+          <button class="look-card reveal" type="button" data-image="assets/look-06.jpg" data-look="Look VI" data-title="La Promise" data-description="The final look: ivory volume held between shadow and bloom.">
+            <span class="look-media"><img src="assets/look-06.jpg" alt="Ivory couture look in the candlelit garden" width="816" height="1456" loading="lazy"></span>
+            <span class="look-caption"><span>Look VI</span><strong>La Promise</strong></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="cinema-section" id="world-film" aria-label="The world film">
+      <div class="cinema-frame world" data-cinema>
+        <video muted loop playsinline preload="metadata" poster="assets/world-poster.jpg">
+          <source src="assets/world-film.mp4" type="video/mp4">
+        </video>
+        <div class="cinema-scrim"></div>
+        <div class="cinema-copy reveal">
+          <p class="kicker">The World</p>
+          <h2 class="display">A table that never ends.</h2>
+          <p>Wonder begins where the expected ends. RUBEDO is not a rack of clothes. It is a place held together by candlelight and one deep red idea.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="details" aria-label="Details of the house">
+      <div class="wrap details-grid">
+        <figure class="detail-image reveal-clip"><img src="assets/world-detail-garden.jpg" alt="A candlelit garden table surrounded by roses" width="816" height="1456" loading="lazy"></figure>
+        <figure class="detail-image reveal-clip"><img src="assets/world-detail-table.jpg" alt="The long table of the RUBEDO world with candles, flowers and glass" width="816" height="1456" loading="lazy"></figure>
+        <div class="detail-quote reveal"><p>Not a logo, but a world you can walk into.</p></div>
+      </div>
+    </section>
+
+    <section class="cinema-section" id="red-hour" aria-label="The red hour film">
+      <div class="cinema-frame red-hour" data-cinema>
+        <video muted loop playsinline preload="metadata" poster="assets/red-hour-poster.jpg">
+          <source src="assets/red-hour-film.mp4" type="video/mp4">
+        </video>
+        <div class="cinema-scrim"></div>
+        <div class="cinema-copy reveal"><p class="kicker">Chapter III</p><h2 class="display">The red hour.</h2></div>
+      </div>
+    </section>
+
+    <section class="emblem" id="emblem">
+      <div class="wrap emblem-grid">
+        <figure class="emblem-image reveal-clip"><img src="assets/emblem.jpg" alt="A crimson rose and a small golden key" width="816" height="1456" loading="lazy"></figure>
+        <div class="emblem-copy reveal">
+          <p class="kicker">03 · The Emblem</p>
+          <h2>One object you would know in the dark.</h2>
+          <div class="emblem-rule"></div>
+          <p>A single rose and a small golden key — the signature of RUBEDO. Every house needs one object a woman could recognise blindfolded. This is ours: the key to the red hour.</p>
+          <p class="emblem-sign">Beauty, sealed and kept.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="atelier" id="atelier">
+      <div class="atelier-content reveal">
+        <p class="kicker">04 · The Atelier Behind the House</p>
+        <h2 class="display">RUBEDO does not exist — yet.</h2>
+        <p class="atelier-copy">A concept brand world by Aya Muse World. Strategy, identity, editorial film and digital atmosphere shaped from one thought — so a brand is felt before it is explained.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><div class="footer-mark">RUBEDO</div><p>Fictional maison</p></div>
+    <p>A world by <a href="https://ayamuse.com/atelier.html" target="_blank" rel="noopener">Aya Muse World</a> · MMXXVI</p>
+  </footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close look">×</button>
+    <div class="lightbox-image"><img id="lightboxImage" src="assets/look-01.jpg" alt=""></div>
+    <div class="lightbox-copy">
+      <p class="kicker" id="lightboxKicker">Look I</p>
+      <h3 id="lightboxTitle">La Sculptée</h3>
+      <p id="lightboxDescription"></p>
+    </div>
+  </div>
+
+  <script>
+    (()=>{
+      const body=document.body;
+      const loader=document.getElementById('loader');
+      const header=document.getElementById('siteHeader');
+      const progress=document.getElementById('progress');
+      const menuToggle=document.getElementById('menuToggle');
+      const menuPanel=document.getElementById('menuPanel');
+      const videos=[...document.querySelectorAll('video')];
+      const heroVideo=document.getElementById('heroVideo');
+      const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let scrollTick=false;
+
+      const finishLoading=()=>{
+        loader.classList.add('done');
+        body.classList.remove('loading');
+        heroVideo.play().catch(()=>{});
+      };
+      addEventListener('load',()=>setTimeout(finishLoading,420),{once:true});
+      setTimeout(finishLoading,2600);
+
+      const setMenu=open=>{
+        body.classList.toggle('menu-open',open);
+        menuToggle.setAttribute('aria-expanded',String(open));
+        menuToggle.setAttribute('aria-label',open?'Close menu':'Open menu');
+        menuPanel.setAttribute('aria-hidden',String(!open));
+      };
+      menuToggle.addEventListener('click',()=>setMenu(!body.classList.contains('menu-open')));
+      menuPanel.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>setMenu(false)));
+
+      const updateScroll=()=>{
+        const y=scrollY;
+        const max=Math.max(1,document.documentElement.scrollHeight-innerHeight);
+        progress.style.transform=`scaleX(${Math.min(1,y/max)})`;
+        header.classList.toggle('scrolled',y>40);
+        if(!reduceMotion){
+          const heroProgress=Math.min(1,y/Math.max(innerHeight,1));
+          heroVideo.style.transform=`scale(${1.035+heroProgress*.075}) translateY(${heroProgress*2.5}%)`;
+        }
+        scrollTick=false;
+      };
+      addEventListener('scroll',()=>{if(!scrollTick){scrollTick=true;requestAnimationFrame(updateScroll)}},{passive:true});
+      addEventListener('resize',updateScroll,{passive:true});
+      updateScroll();
+
+      const revealEls=document.querySelectorAll('.reveal,.reveal-clip');
+      if(reduceMotion){revealEls.forEach(el=>el.classList.add('in'))}
+      else{
+        const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+          if(entry.isIntersecting){entry.target.classList.add('in');revealObserver.unobserve(entry.target)}
+        }),{threshold:.12,rootMargin:'0px 0px -6%'});
+        revealEls.forEach(el=>revealObserver.observe(el));
+      }
+
+      const videoObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+        const video=entry.target.querySelector('video')||entry.target;
+        if(entry.isIntersecting&&entry.intersectionRatio>.35){
+          video.play().catch(()=>{});
+          videos.forEach(v=>{if(v!==video)v.muted=true});
+          video.muted=true;
+        }else if(video!==heroVideo){video.pause()}
+      }),{threshold:[0,.35,.65]});
+      document.querySelectorAll('.hero,.cinema-frame').forEach(el=>videoObserver.observe(el));
+
+      const lightbox=document.getElementById('lightbox');
+      const lightboxClose=document.getElementById('lightboxClose');
+      const lightboxImage=document.getElementById('lightboxImage');
+      const lightboxKicker=document.getElementById('lightboxKicker');
+      const lightboxTitle=document.getElementById('lightboxTitle');
+      const lightboxDescription=document.getElementById('lightboxDescription');
+      let lastTrigger=null;
+      const closeLightbox=()=>{
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden','true');
+        body.classList.remove('modal-open');
+        lastTrigger?.focus();
+      };
+      document.querySelectorAll('.look-card').forEach(card=>card.addEventListener('click',()=>{
+        lastTrigger=card;
+        lightboxImage.src=card.dataset.image;
+        lightboxImage.alt=card.querySelector('img').alt;
+        lightboxKicker.textContent=card.dataset.look;
+        lightboxTitle.textContent=card.dataset.title;
+        lightboxDescription.textContent=card.dataset.description;
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden','false');
+        body.classList.add('modal-open');
+        lightboxClose.focus();
+      }));
+      lightboxClose.addEventListener('click',closeLightbox);
+      lightbox.addEventListener('click',event=>{if(event.target===lightbox)closeLightbox()});
+
+      addEventListener('keydown',event=>{
+        if(event.key==='Escape'){
+          if(lightbox.classList.contains('open'))closeLightbox();
+          if(body.classList.contains('menu-open'))setMenu(false);
+        }
+      });
+
+    })();
+  </script>
+</body>
+</html>

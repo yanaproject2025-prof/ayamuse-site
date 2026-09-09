@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paris — The Walk · Journeys with Aya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#f4ece0; --mute:rgba(244,236,224,.7);
+  --font-head:"Playfair Display",Georgia,serif;
+  --font-accent:"Cormorant Garamond",Georgia,serif;
+  --font-ui:"Montserrat",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:auto;}
+body{background:#0c0a08;color:var(--ink);font-family:var(--font-accent);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+
+/* top bar */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;justify-content:space-between;align-items:center;
+  padding:16px 26px;mix-blend-mode:difference;pointer-events:none;}
+.topbar .mark{font-family:var(--font-head);font-style:italic;font-size:17px;letter-spacing:.4px;color:#fff;}
+.topbar .tag{font-family:var(--font-ui);font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:#fff;}
+
+/* WALK — tall scroll area with a sticky stage */
+.walk{position:relative;height:760vh;}
+.stage{position:sticky;top:0;height:100svh;overflow:hidden;background:#0c0a08;}
+.scene{position:absolute;inset:0;opacity:0;will-change:opacity,clip-path;}
+.scene video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.02);will-change:transform;}
+.scene::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(8,6,4,.36) 0%,rgba(8,6,4,0) 26%,rgba(8,6,4,.05) 60%,rgba(8,6,4,.62) 100%);}
+.grain{position:absolute;inset:0;z-index:5;pointer-events:none;opacity:.06;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");}
+
+/* HUD */
+.hud{position:absolute;left:26px;bottom:30px;z-index:8;pointer-events:none;}
+.hud__time{font-family:var(--font-ui);font-size:12px;letter-spacing:.3em;color:#fff;opacity:.92;}
+.hud__place{font-family:var(--font-head);font-style:italic;font-size:clamp(1.1rem,2.4vw,1.7rem);color:#fff;margin-top:6px;text-shadow:0 2px 24px rgba(0,0,0,.5);}
+.hud__line{font-family:var(--font-accent);font-size:clamp(1rem,2vw,1.35rem);color:rgba(255,255,255,.9);max-width:34ch;margin-top:8px;line-height:1.35;text-shadow:0 2px 20px rgba(0,0,0,.5);}
+/* day clock */
+.clock{position:absolute;right:26px;bottom:34px;z-index:8;width:120px;height:2px;background:rgba(255,255,255,.25);pointer-events:none;}
+.clock__fill{position:absolute;left:0;top:0;bottom:0;width:0;background:#fff;}
+
+/* HERO overlay */
+.hero-ov{position:absolute;inset:0;z-index:8;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;pointer-events:none;padding:0 24px;}
+.hero-ov h1{font-family:var(--font-head);font-weight:400;letter-spacing:.14em;font-size:clamp(3rem,10vw,7rem);color:#fff;text-shadow:0 4px 50px rgba(0,0,0,.5);}
+.hero-ov p{font-family:var(--font-accent);font-style:italic;font-size:clamp(1.1rem,2.6vw,1.7rem);color:rgba(255,255,255,.92);margin-top:14px;}
+.hero-ov .scroll{margin-top:40px;font-family:var(--font-ui);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.85);display:flex;flex-direction:column;align-items:center;gap:10px;}
+.hero-ov .scroll .bar{width:1px;height:42px;background:linear-gradient(#fff,transparent);animation:sb 2.4s var(--ease) infinite;}
+@keyframes sb{0%{transform:scaleY(0);transform-origin:top;}45%{transform:scaleY(1);transform-origin:top;}55%{transform:scaleY(1);transform-origin:bottom;}100%{transform:scaleY(0);transform-origin:bottom;}}
+
+/* ARRIVAL */
+.arrival{position:relative;z-index:2;background:#0c0a08;color:var(--ink);text-align:center;padding:clamp(90px,16vw,180px) 24px;}
+.arrival .k{font-family:var(--font-ui);font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--mute);}
+.arrival h2{font-family:var(--font-head);font-weight:400;font-size:clamp(2rem,5vw,3.4rem);margin:20px auto;max-width:16ch;}
+.arrival a{display:inline-block;margin-top:14px;font-family:var(--font-ui);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#fff;border-bottom:1px solid rgba(244,236,224,.5);padding-bottom:5px;pointer-events:auto;}
+.arrival a:hover{border-color:#fff;}
+.foot{padding:64px 24px 74px;text-align:center;}
+.foot__mark{font-family:var(--font-head);font-style:italic;font-size:19px;letter-spacing:.4px;color:var(--ink);}
+.foot__sub{font-family:var(--font-accent);font-style:italic;font-size:15px;color:var(--mute);margin-top:6px;}
+.foot__by{font-family:var(--font-ui);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-top:16px;}
+.foot__by a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(244,236,224,.3);padding-bottom:2px;transition:color .3s var(--ease);}
+.foot__by a:hover{color:#d9b877;}
+
+@media(prefers-reduced-motion:reduce){
+  .scene video{transform:none!important;}
+  .hero-ov .scroll .bar{animation:none;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="mark">Aya · Paris</span>
+  <span class="tag">The Walk</span>
+</div>
+
+<section class="walk" id="walk">
+  <div class="stage">
+    <!-- scenes injected as <div class="scene"> with <video> -->
+    <div class="scene" data-i="0"><video src="assets/hero.mp4" muted loop playsinline preload="auto"></video></div>
+    <div class="scene" data-i="1"><video src="assets/room.mp4" muted loop playsinline preload="auto"></video></div>
+    <div class="scene" data-i="2"><video src="assets/balcony.mp4" muted loop playsinline preload="auto" data-nopush style="object-position:50% 0%;transform:scale(1)"></video></div>
+    <div class="scene" data-i="3"><video src="assets/montmartre.mp4" muted loop playsinline preload="auto"></video></div>
+    <div class="scene" data-i="4"><video src="assets/opera.mp4" muted loop playsinline preload="auto"></video></div>
+    <div class="scene" data-i="5"><video src="assets/bridge.mp4" muted loop playsinline preload="auto"></video></div>
+
+    <div class="grain"></div>
+
+    <!-- hero overlay (scene 0) -->
+    <div class="hero-ov" id="heroOv">
+      <h1>PARIS</h1>
+      <p>not a list. a way through the city.</p>
+    </div>
+
+    <!-- HUD -->
+    <div class="hud" id="hud" style="opacity:0">
+      <div class="hud__time" id="hudTime">08:37</div>
+      <div class="hud__place" id="hudPlace">Rue de l'Université</div>
+      <div class="hud__line" id="hudLine"></div>
+    </div>
+    <div class="clock"><div class="clock__fill" id="clockFill"></div></div>
+  </div>
+</section>
+
+<section class="arrival">
+  <p class="k">The end of the walk</p>
+  <h2>Everything you passed, kept.</h2>
+  <a href='/places'>17 places from this walk →</a>
+</section>
+
+<div class="foot">
+  <div class="foot__mark">Paris — The Walk</div>
+  <div class="foot__sub">A way through the city</div>
+  <div class="foot__by">A world by <a href="https://ayamuse.com/atelier.html" target="_blank" rel="noopener">Aya Muse World</a> · MMXXVI</div>
+</div>
+
+<script>
+const scenes=[...document.querySelectorAll('.scene')];
+const vids=scenes.map(s=>s.querySelector('video'));
+const N=scenes.length;
+const walk=document.getElementById('walk');
+const heroOv=document.getElementById('heroOv');
+const hud=document.getElementById('hud');
+const hudTime=document.getElementById('hudTime');
+const hudPlace=document.getElementById('hudPlace');
+const hudLine=document.getElementById('hudLine');
+const clockFill=document.getElementById('clockFill');
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+const META=[
+  {t:"08:10", p:"Toward the Tower",      l:"you don't arrive in Paris. you start walking into it."},
+  {t:"08:40", p:"A room, shutters open",  l:"Paris is already awake downstairs."},
+  {t:"10:30", p:"Above the rooftops",     l:"the city looks different from one floor up."},
+  {t:"12:00", p:"Montmartre",             l:"up here, Paris finally shows its scale."},
+  {t:"16:00", p:"Palais — the colonnade", l:"walk through slowly. the light changes every few steps."},
+  {t:"18:41", p:"Pont Alexandre III",     l:"the hour the city turns gold — just once."}
+];
+const WIPES=['inset','inset','inset','inset','inset','inset']; // reveal direction handled by index parity
+
+let ticking=false;
+function onScroll(){
+  if(ticking)return; ticking=true;
+  requestAnimationFrame(()=>{
+    const top=walk.offsetTop;
+    const total=walk.offsetHeight-window.innerHeight;
+    let progress=(window.scrollY-top)/total;
+    progress=Math.min(1,Math.max(0,progress));
+    const seg=progress*N;
+    let i=Math.min(N-1,Math.floor(seg));
+    let f=seg-i;                      // 0..1 within current scene
+
+    // push-in: camera keeps moving with the scroll (skipped for tightly-framed clips)
+    const noPush=scenes[i].querySelector('video').hasAttribute('data-nopush');
+    const push=(reduce||noPush)?1.0:(1.02+f*0.05);
+
+    // transition window near the end of each segment
+    const TW=0.80;
+    let t=0;
+    if(f>TW && i<N-1){ t=(f-TW)/(1-TW); } // 0..1 crossfade to next
+
+    scenes.forEach((sc,idx)=>{
+      let op=0, clip='none';
+      if(idx===i){ op=1-t*0.15; sc.querySelector('video').style.transform='scale('+push+')'; }
+      else if(idx===i+1 && t>0){
+        op=t;
+        if(!reduce){
+          const amt=(1-t)*100;
+          // alternate wipe direction per boundary
+          clip = (i%2===0) ? `inset(0 ${amt}% 0 0)` : `inset(0 0 0 ${amt}%)`;
+        }
+      }
+      sc.style.opacity=op;
+      sc.style.clipPath=clip;
+    });
+
+    // hero vs hud
+    heroOv.style.opacity = String(Math.max(0,1-seg*1.6));
+    hud.style.opacity = seg>0.85 ? String(Math.min(1,(seg-0.85)/0.4)) : '0';
+
+    const m=META[i];
+    hudTime.textContent=m.t; hudPlace.textContent=m.p; hudLine.textContent=m.l;
+    clockFill.style.width=(progress*100).toFixed(1)+'%';
+
+    // play only active + next, pause the rest (smoothness)
+    vids.forEach((v,idx)=>{
+      if(idx===i||idx===i+1){ if(v.paused) v.play().catch(()=>{}); }
+      else if(!v.paused){ v.pause(); }
+    });
+    ticking=false;
+  });
+}
+// init first two
+vids[0].play().catch(()=>{});vids[1].play().catch(()=>{});
+scenes[0].style.opacity=1;
+addEventListener('scroll',onScroll,{passive:true});
+addEventListener('resize',onScroll,{passive:true});
+onScroll();
+</script>
+</body>
+</html>

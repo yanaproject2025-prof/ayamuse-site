@@ -14,7 +14,7 @@
       "world": "Botanical restaurant / wine room / private dining",
       "mood": "Mediterranean, warm, botanical, cinematic, elegant",
       "image": "assets/images/atelier/01-vaia-restaurant-homepage.jpg",
-      "url": "https://vaia-restaurant.netlify.app",
+      "url": "/vaia/",
       "description": "A live landing page for a Lisbon botanical restaurant and wine room — coastal light, warm stone, olive green and the feeling of a long table waiting. Built to make the restaurant feel like a destination before the guest reaches the reservation flow."
     },
     {
@@ -27,7 +27,7 @@
       "subtitle": "Land, bloodline, and the tawny hour.",
       "video": "assets/video/fauve-feature.mp4",
       "poster": "assets/video/fauve-feature-poster.jpg",
-      "url": "https://fauve.netlify.app/",
+      "url": "/fauve/",
       "linkLabel": "Enter FAUVE",
       "description": "A fictional equestrian wine estate shaped from one idea — land, bloodline and the tawny hour. Carried through identity, imagery, film and digital atmosphere to show how a brand becomes a place that can be felt before it is explained."
     },
@@ -39,7 +39,7 @@
       "world": "Private members club / women of taste / curated leisure",
       "mood": "Elegant, confidential, feminine, heritage, cinematic",
       "image": "assets/images/atelier/03-aya-private-club-homepage.jpg",
-      "url": "https://aya-private-club.netlify.app",
+      "url": "/aya-club/",
       "description": "A live landing page for a private members club for women — selective, quiet and invitation-only by design. Built around belonging, ritual and discretion, with a membership flow that feels more like being invited than being sold to."
     },
     {
@@ -50,7 +50,7 @@
       "world": "Tuscan estate / hospitality / seasonal escapes",
       "mood": "Golden, romantic, heritage, warm, cinematic",
       "image": "assets/images/atelier/04-toscana-palace-homepage.jpg",
-      "url": "https://toscana-palace.netlify.app",
+      "url": "/toscana-palace/",
       "description": "A live landing page for a boutique Tuscan estate hotel — golden afternoon light, terracotta, cypresses and the slow rhythm of seasonal escapes. Built to make a weekend feel already imagined before the guest reaches the booking flow."
     },
     {
@@ -63,7 +63,7 @@
       "subtitle": "Not a list. A way through the city.",
       "video": "assets/video/paris-feature.mp4",
       "poster": "assets/video/paris-feature-poster.png",
-      "url": "https://paris-concept.netlify.app/",
+      "url": "/paris/",
       "linkLabel": "Enter PARIS",
       "description": "A cinematic walk through Paris, shaped through rooms, balconies, Montmartre, the Opéra and the Seine. A digital travel world built from movement, memory and everything the city leaves behind."
     },
@@ -116,7 +116,7 @@
       "world": "Creative direction / fashion / digital realism / motion",
       "mood": "Cinematic, editorial, intelligent, quietly magnetic",
       "image": "assets/images/atelier/10-mara-vale-homepage.jpg",
-      "url": "https://maravale.netlify.app",
+      "url": "/mara-vale/",
       "linkLabel": "View project",
       "description": "A personal brand concept exploring how a founder, creative or public-facing expert can become a complete visual world. From first impression to website, imagery and motion — every element is shaped around one recognisable point of view."
     }

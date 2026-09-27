@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ayamuse.com/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-27</lastmod>
   </url>
   <url>
     <loc>https://ayamuse.com/aya-world.html</loc>
@@ -55,5 +55,9 @@
   <url>
     <loc>https://ayamuse.com/legal-app-ru.html</loc>
     <lastmod>2026-09-02</lastmod>
+  </url>
+  <url>
+    <loc>https://ayamuse.com/eclose/</loc>
+    <lastmod>2026-09-27</lastmod>
   </url>
 </urlset>

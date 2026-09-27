@@ -77,6 +77,11 @@
   .flagship h2,.flagship--paris h2,.flagship--fauve h2,.flagship--rubedo h2{margin-top:10px}
   .reel img{left:0;width:100%;max-width:100%}
 }
+.flagship--eclose .flagship-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;transition:transform 1.5s var(--ease)}
+.flagship--eclose:hover .flagship-media img{transform:scale(1.035)}
+.flagship--eclose h2{line-height:.9;margin-top:30px}
+@media(max-width:680px){.flagship--eclose .flagship-media{aspect-ratio:4/5}.flagship--eclose .flagship-media:after{background:none}}
+@media(prefers-reduced-motion:reduce){.flagship--eclose .flagship-media img{transition:none;transform:none!important}}
 </style>
 </head>
 <body>
@@ -111,7 +116,7 @@
 <div class="work worlds-intro">
 <div class="section-head">
 <h2 class="section-title reveal" id="worlds-title">Selected<br><em>worlds</em></h2>
-<p class="reveal">Seven independent concepts across hospitality, private membership, fashion, personal identity and editorial travel. Each world moves between atmosphere, identity, film and a working digital journey.</p>
+<p class="reveal">Eight independent projects across hospitality, private membership, fashion, fragrance, personal identity and editorial travel. Explore the identities, films and working websites.</p>
 </div>
 </div>
 <div class="work worlds-slice">
@@ -204,6 +209,15 @@
 </article>
 </div>
 </div>
+<section class="flagship flagship--project flagship--eclose" aria-labelledby="eclose-title">
+<div class="flagship-media">
+<img src="eclose/cover.jpg" alt="Rose Nocturne perfume surrounded by blooming roses in a terracotta garden niche" width="1200" height="630" loading="lazy" decoding="async">
+</div>
+<div class="flagship-content">
+<div><p class="eyebrow reveal">08 / Self-Initiated Concept / Fragrance House</p><h2 class="reveal" id="eclose-title">ÉCLOSE</h2></div>
+<div class="flagship-copy reveal"><p>Five floral fragrances, five gardens. A fragrance identity and interactive website, with flowers that open inside each bottle as you scroll.</p><a class="link" href="/eclose/" target="_blank" rel="noreferrer">Enter ÉCLOSE</a></div>
+</div>
+</section>
 </section>
 <section class="brandbooks" aria-labelledby="books-title">
 <div class="section-head">

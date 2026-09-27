@@ -90,7 +90,10 @@
     raf=requestAnimationFrame(tick);
   }
   function play() {
-    if (raf || replaying) return;
+    if (raf) return;
+    // Explicit taps still work when the visitor has scrolled past the autoplay threshold.
+    const rect=media.getBoundingClientRect();
+    active=rect.bottom>0 && rect.top<innerHeight;
     failed.clear();
     if (motion.matches) {
       target=pos>=30 ? 0 : 60;

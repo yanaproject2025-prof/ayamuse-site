@@ -77,11 +77,20 @@
   .flagship h2,.flagship--paris h2,.flagship--fauve h2,.flagship--rubedo h2{margin-top:10px}
   .reel img{left:0;width:100%;max-width:100%}
 }
-.flagship--eclose .flagship-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;transition:transform 1.5s var(--ease)}
-.flagship--eclose:hover .flagship-media img{transform:scale(1.035)}
-.flagship--eclose h2{line-height:.9;margin-top:30px}
-@media(max-width:680px){.flagship--eclose .flagship-media{aspect-ratio:4/5}.flagship--eclose .flagship-media:after{background:none}}
-@media(prefers-reduced-motion:reduce){.flagship--eclose .flagship-media img{transition:none;transform:none!important}}
+.flagship--eclose .flagship-media{container-type:size;overflow:hidden}
+.eclose-stage{position:absolute;top:50%;left:50%;width:max(100cqw,178.44cqh);aspect-ratio:2400/1345;transform:translate(-50%,-50%)}
+.eclose-stage>img{position:absolute;inset:0;width:100%;height:100%}
+.eclose-niche{position:absolute;left:41.5%;top:28.5%;width:18%;height:53.5%;border-radius:50% 50% 0 0 / 30% 30% 0 0;overflow:hidden;container-type:size}
+.eclose-niche img,.eclose-niche canvas{position:absolute;left:50%;width:112cqw;height:auto;aspect-ratio:1288/1608;transform:translateX(-50%);bottom:calc(112cqw * 1.2484 * -.075);-webkit-mask-image:linear-gradient(to right,transparent,#000 16%,#000 84%,transparent),linear-gradient(to bottom,transparent,#000 22%,#000);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent,#000 16%,#000 84%,transparent),linear-gradient(to bottom,transparent,#000 22%,#000);mask-composite:intersect}
+.eclose-niche:after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 18px 26px -14px rgba(60,35,20,.35)}
+.flagship--eclose .flagship-media:after{pointer-events:none;background:linear-gradient(90deg,rgba(5,4,4,.68),rgba(5,4,4,.02) 45%,rgba(5,4,4,.02) 60%,rgba(5,4,4,.64))}
+.flagship--eclose .flagship-content{pointer-events:none;grid-template-columns:minmax(0,1fr) minmax(240px,300px)}
+.flagship--eclose .flagship-content a,.flagship--eclose .flagship-content button{pointer-events:auto}
+.flagship--eclose h2{font-size:clamp(4.6rem,10vw,10rem);line-height:.95;margin-top:30px}
+.eclose-replay{position:absolute;z-index:3;top:100px;right:var(--pad);display:flex;align-items:center;gap:10px;min-height:44px;padding:8px 14px;border:1px solid rgba(238,231,220,.3);background:rgba(25,8,12,.6);backdrop-filter:blur(8px);color:var(--paper);font-size:10px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+.eclose-replay[hidden]{display:none}.eclose-replay:before{content:"↻";font-size:20px}.eclose-replay:hover{color:#e5c3a2}.eclose-replay:focus-visible{outline:1px solid var(--paper);outline-offset:6px}
+@media(max-width:1000px) and (min-width:681px){.flagship--eclose .flagship-content{grid-template-columns:1fr;gap:22px}.flagship--eclose .flagship-copy{justify-self:start;max-width:280px}.flagship--eclose .flagship-media:after{background:linear-gradient(90deg,rgba(5,4,4,.7),transparent 60%)}.flagship--eclose .eclose-stage{left:65%}}
+@media(max-width:680px){.flagship--eclose .flagship-media{aspect-ratio:4/5}.flagship--eclose .flagship-media:after{background:none}.flagship--eclose .flagship-content{grid-template-columns:1fr}.flagship--eclose h2{font-size:clamp(4.6rem,20vw,7rem);margin-top:26px}.flagship--eclose .flagship-copy{max-width:none;justify-self:start}.eclose-replay{top:auto;bottom:16px;right:16px}}
 </style>
 </head>
 <body>
@@ -211,7 +220,11 @@
 </div>
 <section class="flagship flagship--project flagship--eclose" aria-labelledby="eclose-title">
 <div class="flagship-media">
-<img src="eclose/cover.jpg" alt="Rose Nocturne perfume surrounded by blooming roses in a terracotta garden niche" width="1200" height="630" loading="lazy" decoding="async">
+<div class="eclose-stage" role="img" aria-label="Rose Nocturne perfume in a rose garden, with flowers opening inside the bottle">
+<img src="eclose/bg/rose.webp" alt="" width="2400" height="1345" loading="lazy" decoding="async">
+<div class="eclose-niche"><img src="eclose/frames/rose/f_01.webp" alt="" width="1288" height="1608" loading="lazy" decoding="async"><canvas width="640" height="799"></canvas></div>
+</div>
+<button class="eclose-replay" type="button" hidden>Replay the bloom</button>
 </div>
 <div class="flagship-content">
 <div><p class="eyebrow reveal">08 / Self-Initiated Concept / Fragrance House</p><h2 class="reveal" id="eclose-title">ÉCLOSE</h2></div>
@@ -399,6 +412,7 @@ location.href="mailto:hello@ayamuse.com?subject="+subject+"&body="+body;
   });
 })();
 </script>
+<script src="js/eclose-preview.js" defer></script>
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-app.js";
 import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-firestore.js";

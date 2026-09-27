@@ -271,8 +271,9 @@ a{color:inherit}
       this.cv = sec.querySelector('canvas'); this.ctx = this.cv.getContext('2d');
       this.marker = document.getElementById(s.k);
       this.button = sec.querySelector('.hint');
-      this.cache = new Map(); this.pending = new Map(); this.queue = [];
+      this.cache = new Map(); this.pending = new Map(); this.queue = []; this.failed = new Set();
       this.pos = 0; this.target = 0; this.drawn = -1; this.raf = 0; this.epoch = 0;
+      this.velocity = 0;
       this.active = false; this.manual = false; this.scrollPos = 0;
       this.cv.width = innerWidth <= 760 ? 480 : 720;
       this.cv.height = Math.round(this.cv.width * 1608 / 1288);
@@ -285,7 +286,7 @@ a{color:inherit}
       this.niche.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); this.go(this.target < N / 2); } });
     }
     request(i) {
-      if (this.cache.has(i) || this.pending.has(i) || this.queue.includes(i)) return;
+      if (this.cache.has(i) || this.pending.has(i) || this.queue.includes(i) || this.failed.has(i)) return;
       this.queue.push(i);
       this.pump();
     }
@@ -303,36 +304,50 @@ a{color:inherit}
             frame = await createImageBitmap(blob, {resizeWidth:this.cv.width, resizeHeight:this.cv.height});
             if (epoch !== this.epoch) { frame.close(); return; }
             this.cache.set(i, frame);
-            if (i === Math.round(this.pos)) this.draw(i);
+            if (i === Math.floor(this.pos) || i === Math.ceil(this.pos)) this.draw(this.pos);
             while (this.cache.size > 12) {
-              const farthest = [...this.cache.keys()].sort((a,b) => Math.abs(b-this.pos)-Math.abs(a-this.pos))[0];
+              const direction = this.target >= this.pos ? 1 : -1;
+              const rank = index => Math.abs(index-this.pos) + ((index-this.pos)*direction < -2 ? N : 0);
+              const farthest = [...this.cache.keys()].sort((a,b) => rank(b)-rank(a))[0];
               this.cache.get(farthest).close(); this.cache.delete(farthest);
             }
           } catch (error) {
             // Keep the photograph visible if a frame cannot be fetched or decoded.
+            if (epoch === this.epoch && error.name !== 'AbortError') this.failed.add(i);
           } finally {
             if (epoch === this.epoch) { this.pending.delete(i); this.pump(); }
           }
         })();
       }
     }
-    draw(i) {
-      const im = this.cache.get(i);
-      if (!im || i === this.drawn) return;
+    draw(pos) {
+      const low = Math.floor(pos), high = Math.ceil(pos);
+      const first = this.cache.get(low), second = this.cache.get(high);
+      if (!first || !second) return false;
+      if (pos === this.drawn) return true;
       this.ctx.clearRect(0, 0, this.cv.width, this.cv.height);
-      this.ctx.drawImage(im, 0, 0, this.cv.width, this.cv.height);
-      this.drawn = i;
+      this.ctx.drawImage(first, 0, 0, this.cv.width, this.cv.height);
+      if (low !== high) {
+        // Blend adjacent source frames so the 61-frame film remains fluid at display refresh rate.
+        this.ctx.globalAlpha = pos - low;
+        this.ctx.drawImage(second, 0, 0, this.cv.width, this.cv.height);
+        this.ctx.globalAlpha = 1;
+      }
+      this.drawn = pos;
+      return true;
     }
     frame(pos) {
-      const direction = pos >= this.pos ? 1 : -1;
-      this.pos = pos;
-      const i = Math.round(pos);
+      const direction = this.target >= this.pos ? 1 : -1;
+      const low = Math.floor(pos), high = Math.ceil(pos);
       this.queue = [];
-      this.request(i); this.draw(i);
-      if (!reduce) for (let d = 1; d <= 4; d++) {
-        const next = i + direction * d;
+      this.request(low); this.request(high);
+      const ready = this.draw(pos);
+      if (ready || reduce) this.pos = pos;
+      if (!reduce) for (let d = 1; d <= 8; d++) {
+        const next = (direction > 0 ? high : low) + direction * d;
         if (next >= 0 && next < N) this.request(next);
       }
+      return ready;
     }
     state(open) {
       this.niche.setAttribute('aria-pressed', String(open));
@@ -342,17 +357,33 @@ a{color:inherit}
     }
     go(open) {
       this.manual = true;
+      this.failed.clear();
       this.target = open ? N - 1 : 0;
       this.state(open);
-      cancelAnimationFrame(this.raf);
       if (reduce) { this.frame(this.target); return; }
+      this.animate();
+    }
+    animate() {
+      if (this.raf) return;
       let last = performance.now();
       const tick = now => {
         if (document.hidden) { this.raf = 0; return; }
-        const dt = Math.min(64, now - last) / 1000; last = now;
-        const up = this.target > this.pos, speed = (N - 1) / (up ? this.s.open : 2.2);
-        this.frame(up ? Math.min(this.target, this.pos + speed * dt) : Math.max(this.target, this.pos - speed * dt));
-        if (this.pos !== this.target) this.raf = requestAnimationFrame(tick); else this.raf = 0;
+        const dt = Math.min(40, now - last) / 1000; last = now;
+        const gap = this.target - this.pos;
+        const speed = (N - 1) / (gap >= 0 ? this.s.open * 1.25 : 3.6);
+        const desired = Math.max(-speed, Math.min(speed, gap * 4));
+        // Ease into movement and gently brake; wheel deltas only change the destination.
+        this.velocity += (desired - this.velocity) * (1 - Math.exp(-dt / .16));
+        let next = Math.max(0, Math.min(N - 1, this.pos + this.velocity * dt));
+        if ((this.target - next) * gap <= 0 || Math.abs(gap) < .015) next = this.target;
+        const ready = this.frame(next);
+        // Do not let the playhead race past frames that are still downloading.
+        if (!ready) this.velocity = 0;
+        if (this.failed.has(Math.floor(next)) || this.failed.has(Math.ceil(next))) {
+          this.raf = 0; this.velocity = 0; return;
+        }
+        if (this.pos !== this.target || !ready) this.raf = requestAnimationFrame(tick);
+        else { this.raf = 0; this.velocity = 0; }
       };
       this.raf = requestAnimationFrame(tick);
     }
@@ -360,14 +391,16 @@ a{color:inherit}
       this.scrollPos = progress;
       if (this.manual || reduce) return;
       this.target = progress * (N - 1);
-      this.frame(this.target);
+      this.animate();
       this.state(progress > .5);
     }
     release() {
       cancelAnimationFrame(this.raf); this.raf = 0;
+      this.velocity = 0;
       this.epoch++;
       this.pending.forEach(controller => controller.abort()); this.pending.clear();
       this.cache.forEach(frame => frame.close()); this.cache.clear(); this.queue = [];
+      this.failed.clear();
       this.manual = false;
     }
   }

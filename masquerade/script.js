@@ -35,7 +35,7 @@
     looksEl.innerHTML = C.looks.map(function (l) {
       return '<figure class="look reveal" role="listitem" tabindex="0" style="--sw:' + (swatches[l.id] || "#b8935a") + '">' +
         '<div class="look-media">' +
-          '<video class="lazy-video" muted playsinline preload="none" poster="' + esc(l.poster) + '" aria-label="' + esc(l.alt) + '">' +
+          '<video class="lazy-video" muted loop playsinline preload="none" poster="' + esc(l.poster) + '" aria-label="' + esc(l.alt) + '">' +
             '<source data-src="' + esc(l.video) + '" type="video/mp4"></video>' +
           '<span class="look-swatch" aria-hidden="true"></span>' +
           '</div><figcaption class="look-head"><span class="look-chapter">' + esc(l.chapter) + '</span>' +
@@ -43,6 +43,72 @@
             '<p class="look-text">' + esc(l.text) + "</p></figcaption>" +
         "</figure>";
     }).join("");
+  }
+
+  /* Repeat the mobile strip without a visible jump; copies stay out of tab order. */
+  if (looksEl) {
+    looksEl.id = "looks-gallery";
+    looksEl.classList.add("has-carousel");
+    $$(".look", looksEl).forEach(function (look) {
+      var copy = look.cloneNode(true);
+      copy.classList.remove("reveal"); copy.classList.add("is-copy", "is-in");
+      copy.removeAttribute("tabindex"); copy.setAttribute("aria-hidden", "true"); copy.inert = true;
+      looksEl.appendChild(copy);
+    });
+    var controls = document.createElement("div");
+    controls.className = "gallery-controls";
+    controls.innerHTML = '<button type="button" data-gallery-step="-1" aria-controls="looks-gallery" aria-label="Previous look">←</button>' +
+      '<button type="button" data-gallery-toggle aria-controls="looks-gallery" aria-pressed="false">Pause gallery</button>' +
+      '<button type="button" data-gallery-step="1" aria-controls="looks-gallery" aria-label="Next look">→</button>';
+    looksEl.after(controls);
+    var mobileGallery = matchMedia("(max-width:899px)");
+    var galleryPaused = reduce, galleryVisible = false, galleryFrame = 0, galleryLast = 0, galleryPosition = 0;
+    var galleryToggle = $("[data-gallery-toggle]", controls);
+    function galleryCycle() {
+      var first = $(".look", looksEl), repeat = $(".is-copy", looksEl);
+      return repeat.offsetLeft - first.offsetLeft;
+    }
+    function galleryTick(now) {
+      var elapsed = Math.min(50, now - galleryLast); galleryLast = now;
+      var cycle = galleryCycle();
+      if (cycle > 0) {
+        galleryPosition = (galleryPosition + elapsed * .025) % cycle;
+        looksEl.scrollLeft = galleryPosition;
+      }
+      galleryFrame = requestAnimationFrame(galleryTick);
+    }
+    function syncGallery() {
+      if (galleryFrame) cancelAnimationFrame(galleryFrame);
+      galleryFrame = 0;
+      var running = mobileGallery.matches && galleryVisible && !galleryPaused && !document.hidden;
+      looksEl.classList.toggle("is-auto", running);
+      galleryToggle.textContent = galleryPaused ? "Play gallery" : "Pause gallery";
+      galleryToggle.setAttribute("aria-pressed", String(galleryPaused));
+      if (running) {
+        galleryPosition = looksEl.scrollLeft; galleryLast = performance.now();
+        galleryFrame = requestAnimationFrame(galleryTick);
+      }
+    }
+    function pauseGallery() { galleryPaused = true; syncGallery(); }
+    galleryToggle.addEventListener("click", function () { galleryPaused = !galleryPaused; syncGallery(); });
+    $$("[data-gallery-step]", controls).forEach(function (button) {
+      button.addEventListener("click", function () {
+        pauseGallery();
+        var step = $(".look", looksEl).getBoundingClientRect().width + 16;
+        var cycle = galleryCycle(), position = looksEl.scrollLeft;
+        if (position >= cycle) { position -= cycle; looksEl.scrollLeft = position; }
+        if (position < 1 && Number(button.dataset.galleryStep) < 0) { position = cycle; looksEl.scrollLeft = position; }
+        looksEl.scrollTo({ left: position + Number(button.dataset.galleryStep) * step, behavior: reduce ? "auto" : "smooth" });
+      });
+    });
+    looksEl.addEventListener("pointerdown", pauseGallery, { passive: true });
+    looksEl.addEventListener("wheel", pauseGallery, { passive: true });
+    looksEl.addEventListener("focusin", pauseGallery);
+    new IntersectionObserver(function (entries) { galleryVisible = entries[0].isIntersecting; syncGallery(); }, { threshold: .15 }).observe(looksEl);
+    mobileGallery.addEventListener("change", syncGallery);
+    window.addEventListener("resize", syncGallery);
+    document.addEventListener("visibilitychange", syncGallery);
+    syncGallery();
   }
 
   var prog = $("[data-programme]");

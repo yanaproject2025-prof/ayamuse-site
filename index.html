@@ -94,7 +94,13 @@
 .work.worlds-slice--saphir{padding-block:0}.worlds-slice--saphir .project-no{gap:18px}.worlds-slice--saphir .project-no span:last-child{text-align:right}.worlds-slice--saphir .project-media{display:block}
 .worlds-slice--saphir .project-copy h3{line-height:1}
 @media(max-width:680px){.worlds-slice--saphir .reel img{left:0;width:100%}}
-.work.worlds-slice--masquerade{padding-block:0}.worlds-slice--masquerade .project-no{gap:18px}.worlds-slice--masquerade .project-no span:last-child{text-align:right}.worlds-slice--masquerade .project-media{display:block}.worlds-slice--masquerade .project-copy h3{font-size:clamp(2.8rem,3.7vw,4.5rem);line-height:1.05}.worlds-slice--masquerade .reel img{left:0;width:100%}
+.flagship--masquerade .flagship-media video{object-position:center}
+.flagship--masquerade .flagship-media:after{background:linear-gradient(180deg,rgba(8,6,5,.08) 25%,rgba(8,6,5,.8)),linear-gradient(90deg,rgba(8,6,5,.25),transparent 65%)}
+.flagship--masquerade .flagship-content{grid-template-columns:minmax(0,1fr) minmax(260px,340px);gap:clamp(40px,6vw,110px)}
+.flagship--masquerade h2{margin-top:26px;font-size:clamp(4rem,7.6vw,8.5rem);line-height:.95}
+.flagship--masquerade .flagship-copy{max-width:340px}
+@media(max-width:1000px) and (min-width:681px){.flagship--masquerade .flagship-content{grid-template-columns:1fr;gap:26px}.flagship--masquerade .flagship-copy{justify-self:start;max-width:460px}}
+@media(max-width:680px){.flagship--masquerade .flagship-media{aspect-ratio:16/9}.flagship--masquerade .flagship-media:after{background:none}.flagship--masquerade .flagship-content{grid-template-columns:1fr;gap:16px}.flagship--masquerade h2{font-size:clamp(2.8rem,12vw,5rem);line-height:1;margin-top:20px}.flagship--masquerade .flagship-copy{max-width:none;justify-self:start}}
 </style>
 </head>
 <body>
@@ -253,24 +259,15 @@
 </article>
 </div>
 </div>
-<div class="work worlds-slice worlds-slice--masquerade">
-<div class="projects">
-<article class="project" aria-labelledby="masquerade-title">
-<div class="project-copy reveal">
-<p class="project-no"><span>10</span><span>Self-Initiated Concept · Bespoke Event World</span></p>
-<h3 id="masquerade-title">Midnight<br>Masquerade</h3>
-<p>A private palazzo, five couture disguises and an invitation written just for you. A fictional celebration imagined as a cinematic digital world, from the first arrival to the midnight moment.</p>
-<a class="link" href="/masquerade/" target="_blank" rel="noreferrer">Enter the Masquerade</a>
+<section class="flagship flagship--project flagship--masquerade" aria-labelledby="masquerade-title">
+<div class="flagship-media">
+<video muted loop playsinline preload="none" poster="masquerade/assets/hero-palazzo.jpg" aria-hidden="true"><source src="masquerade/assets/hero-palazzo.mp4" type="video/mp4"></video>
 </div>
-<a class="project-media reel reveal" href="/masquerade/" target="_blank" rel="noreferrer" aria-label="Explore the Midnight Masquerade event concept">
-<picture>
-<source media="(max-width: 680px)" srcset="assets/images/atelier/10-masquerade-homepage-mobile.jpg">
-<img src="assets/images/atelier/10-masquerade-homepage-full.jpg" alt="The Midnight Masquerade website, from a candlelit palazzo to couture portraits and a personalised invitation" loading="lazy" decoding="async">
-</picture>
-</a>
-</article>
+<div class="flagship-content">
+<div><p class="eyebrow reveal">10 / Self-Initiated Concept / Bespoke Event World</p><h2 class="reveal" id="masquerade-title">Midnight<br>Masquerade</h2></div>
+<div class="flagship-copy reveal"><p>A private palazzo, five couture disguises and an invitation written just for you. A fictional celebration imagined as a cinematic digital world, from the first arrival to the midnight moment.</p><a class="link" href="/masquerade/" target="_blank" rel="noreferrer">Enter the Masquerade</a></div>
 </div>
-</div>
+</section>
 </section>
 <section class="brandbooks" aria-labelledby="books-title">
 <div class="section-head">
@@ -371,7 +368,7 @@ nav.addEventListener("click",e=>{if(!e.target.closest("a"))return;nav.classList.
 const reveal=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");reveal.unobserve(entry.target)}}),{threshold:.14});
 document.querySelectorAll(".reveal").forEach(el=>reveal.observe(el));
 const filmObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{const video=entry.target;if(entry.isIntersecting)video.play().catch(()=>{});else video.pause()}),{threshold:.28});
-document.querySelectorAll(".flagship--project video").forEach(video=>filmObserver.observe(video));
+document.querySelectorAll(".flagship--project video").forEach(video=>{if(reduced&&video.closest('.flagship--masquerade'))return;filmObserver.observe(video)});
 if(!reduced){
 const reelStates=new WeakMap();
 function prepareReel(reel){

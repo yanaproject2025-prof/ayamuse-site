@@ -101,6 +101,14 @@
 .flagship--masquerade .flagship-copy{max-width:340px}
 @media(max-width:1000px) and (min-width:681px){.flagship--masquerade .flagship-content{grid-template-columns:1fr;gap:26px}.flagship--masquerade .flagship-copy{justify-self:start;max-width:460px}}
 @media(max-width:680px){.flagship--masquerade .flagship-media{aspect-ratio:16/9}.flagship--masquerade .flagship-media:after{background:none}.flagship--masquerade .flagship-content{grid-template-columns:1fr;gap:16px}.flagship--masquerade h2{font-size:clamp(3.4rem,18vw,5.6rem);line-height:.95;margin-top:26px}.flagship--masquerade .flagship-copy{max-width:none;justify-self:start}}
+.work.worlds-slice--bel-etage{padding-block:0}
+.worlds-slice--bel-etage .project-no{gap:18px}.worlds-slice--bel-etage .project-no span:last-child{text-align:right}
+.worlds-slice--bel-etage .project-copy h3{line-height:.95}.worlds-slice--bel-etage .project-copy h3 em{font-weight:400}
+.residence-preview{display:block;overflow:hidden;aspect-ratio:3/2;background:#e2c9ae}
+.residence-preview picture{display:block;height:100%}.residence-preview img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.residence-preview:hover img{transform:scale(1.025)}.residence-preview:focus-visible{outline:2px solid var(--red);outline-offset:6px}
+@media(max-width:680px){.residence-preview{aspect-ratio:4/3}}
+@media(prefers-reduced-motion:reduce){.residence-preview:hover img{transform:none}}
 </style>
 </head>
 <body>
@@ -135,7 +143,7 @@
 <div class="work worlds-intro">
 <div class="section-head">
 <h2 class="section-title reveal" id="worlds-title">Selected<br><em>worlds</em></h2>
-<p class="reveal">Ten independent projects across hospitality, private membership, fashion, fragrance, high jewellery, private celebrations, personal identity and editorial travel. Explore the identities, films and working websites.</p>
+<p class="reveal">Eleven independent projects across hospitality, private membership, fashion, fragrance, high jewellery, private celebrations, personal identity, editorial travel and residential design. Explore the identities, films and working websites.</p>
 </div>
 </div>
 <div class="work worlds-slice">
@@ -268,6 +276,24 @@
 <div class="flagship-copy reveal"><p>A private palazzo, five couture disguises and an invitation written just for you. A fictional celebration imagined as a cinematic digital world, from the first arrival to the midnight moment.</p><a class="link" href="/masquerade/" target="_blank" rel="noreferrer">Enter the Masquerade</a></div>
 </div>
 </section>
+<div class="work worlds-slice worlds-slice--bel-etage" id="le-bel-etage">
+<div class="projects">
+<article class="project" aria-labelledby="bel-etage-title">
+<div class="project-copy reveal">
+<p class="project-no"><span>11</span><span>Self-Initiated Concept · Parisian Residence</span></p>
+<h3 id="bel-etage-title">Le Bel<br><em>Étage</em></h3>
+<p>A Parisian residence imagined through five rooms, a balcony and the traces of its absent owner. Art direction, an interior palette and an editorial website that invites you inside.</p>
+<a class="link" href="/bel-etage/" target="_blank" rel="noreferrer">Enter the residence</a>
+</div>
+<a class="project-media residence-preview reveal" href="/bel-etage/" target="_blank" rel="noreferrer" aria-label="Explore Le Bel Étage, a conceptual Parisian residence">
+<picture>
+<source media="(max-width: 680px)" srcset="bel-etage/assets/img/facade-corner-m.jpg">
+<img src="bel-etage/assets/img/facade-corner.jpg" alt="A Parisian corner residence with wrought-iron balconies in warm afternoon light" loading="lazy" decoding="async" width="1536" height="1024">
+</picture>
+</a>
+</article>
+</div>
+</div>
 </section>
 <section class="brandbooks" aria-labelledby="books-title">
 <div class="section-head">
